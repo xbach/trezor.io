@@ -21,7 +21,7 @@ except:
     sys.exit("Could not find pyScss, please install: sudo easy_install pyScss")
 
 
-CSS_PATH = 'static/css'
+CSS_PATH = ['static/css', 'static/css/custom']
 
 for path in fileList(CSS_PATH):
 
