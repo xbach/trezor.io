@@ -1,0 +1,44 @@
+.navbar
+  background: $black
+  background: $black_a
+  font-weight: 300
+  z-index: 10
+  +border-radius(0)
+
+  .navbar-toggler
+    &:focus, &:active
+      outline: none
+
+  .navbar-brand
+    position: relative
+    width: 140px
+    overflow: hidden
+    @media screen and (max-width: $sm)
+      width: 26px
+      margin-right: .25rem
+
+    .trezor-logo
+      height: 32px
+
+    .trezor-title
+      position: absolute
+      top: 0
+      right: 145px
+
+  form
+    color: $navlink_grey
+    cursor: pointer
+
+  select
+    background: transparent
+    border: 0
+    padding-left: 14px
+    margin-left: -14px
+    color: $navlink_grey
+    padding-top: .425rem
+    padding-bottom: .425rem
+    +border-radius(0)
+    +appearance-none()
+
+    &:focus, &:active
+      outline: none
