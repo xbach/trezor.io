@@ -1,49 +1,61 @@
 {% load i18n %}
 <nav class="navbar navbar-dark bg-inverse" role="navigation" aria-label="Global Navigation">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"
-            aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar1"
+            aria-controls="exCollapsingNavbar1" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
     </button>
-    <div class="container collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-        <a class="navbar-brand hidden-xs-down" href="#"><img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
-                                                             onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
-                                                             alt="TREZOR logo"/><span class="trezor-title">TREZOR.io</span></a>
-        <ul class="nav navbar-nav pull-xs-right">
-            <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Shop" %}</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">{% trans "Trezor" %}<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Wallet" %}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Docs" %}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Blog" %}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">{% trans "Contact" %}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="ion-social-facebook"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="ion-social-reddit"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="ion-social-github"></span></a>
-            </li>
-            <li class="nav-item">
-                <form class="ion-earth form-inline pull-xs-right">
-                    <select>
-                        <option value="volvo">English</option>
-                        <option value="saab">Czech</option>
-                    </select>
-                </form>
-            </li>
-        </ul>
+    <div class="container">
+        <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
+            <a class="navbar-brand hidden-sm-down" href="#"><img class="trezor-logo"
+                                                                 src="{% static '/images/trezor-logo.svg' %}"
+                                                                 onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
+                                                                 alt="TREZOR logo"/><span
+                    class="trezor-title">TREZOR.io</span></a>
+            <ul class="nav navbar-nav center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Shop" %}</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Wallet" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Docs" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Blog" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{% trans "Contact" %}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-sm-right">
+                <li class="nav-item">
+                    <form class="ion-earth form-inline pull-xs-right">
+                        <select>
+                            <option value="volvo">en</option>
+                            <option value="saab">cz</option>
+                        </select>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="ion-social-twitter"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="ion-social-reddit"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="ion-social-instagram"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="ion-social-facebook"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="ion-social-github"></span></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

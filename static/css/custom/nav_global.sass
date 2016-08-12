@@ -1,9 +1,21 @@
 .navbar
-  background: $black
-  background: $black_a
-  font-weight: 300
-  z-index: 10
+  background: $c_black
+  background: $c_black_a
+  font-weight: 400
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  padding: .2rem
+  z-index: 9999
+  text-align: left
+  +unselectable()
   +border-radius(0)
+
+  @media screen and (min-width: $sm)
+    text-align: center
+    ul.center
+      display: inline-block
 
   .navbar-toggler
     &:focus, &:active
@@ -13,7 +25,7 @@
     position: relative
     width: 140px
     overflow: hidden
-    @media screen and (max-width: $sm)
+    @media screen and (max-width: $md)
       width: 26px
       margin-right: .25rem
 
@@ -26,22 +38,25 @@
       right: 145px
 
   .nav-link
-    color: $navlink !important
+    color: $c_navlink
 
   form
-    color: $navlink
+    color: rgba(255,255,255,.5)
 
   select
     background: transparent
     border: 0
     padding-left: 14px
     margin-left: -14px
-    color: $navlink
+    color: rgba(255,255,255,.5)
     padding-top: .425rem
     padding-bottom: .425rem
     cursor: pointer
     +border-radius(0)
     +appearance-none()
+
+    &:hover
+      color: #fff
 
     &:focus, &:active
       outline: none

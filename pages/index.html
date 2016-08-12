@@ -3,10 +3,24 @@
 {% block body %}
 <div class="jumbotron">
     <div class="container">
-        {% blocktrans %}<h1 class="display-4 text-xs-center">Original hardware wallet.</h1>{% endblocktrans %}
-        <p class="lead text-xs-center">{% trans "This is a placeholder for the big headline." %}</p>
+        {% blocktrans %}<h1 class="display-3 text-xs-right">Original hardware wallet.</h1>{% endblocktrans %}
+        <p class="lead text-xs-right">{% trans "This is a placeholder for the big headline." %}</p>
+        <p class="lead text-xs-right">
+            <br />
+            <a class="btn btn-secondary-outline" href="#" role="button">{% trans "Buy now" %}</a>
+        </p>
     </div>
 </div>
+
+<div class="container">
+    <nav class="nav nav-inline">
+        <a class="nav-link active" href="#">{% trans "Usage" %}</a>
+        <a class="nav-link" href="#">{% trans "Features" %}</a>
+        <a class="nav-link" href="#">{% trans "Developers" %}</a>
+        <a class="nav-link" href="#">{% trans "Team" %}</a>
+    </nav>
+</div>
+
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
