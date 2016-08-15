@@ -8,16 +8,27 @@
   left: 0
   padding: .2rem
   z-index: 9999
-  text-align: left
+  text-align: center
   +unselectable()
   +border-radius(0)
 
   @media screen and (min-width: $sm)
     text-align: center
+
     ul.center
       display: inline-block
 
+  @media screen and (max-width: $sm)
+    .nav-item
+      float: left
+      clear: both
+      margin-left: -10px !important
+      padding-left: 0
+      &:focus, &:active
+        outline: none
+
   .navbar-toggler
+    float: left
     &:focus, &:active
       outline: none
 
@@ -36,6 +47,14 @@
       position: absolute
       top: 0
       right: 145px
+
+  .navbar-brand-mini
+    position: relative
+    display: inline-block
+    overflow: hidden
+    width: 25px
+    .trezor-logo
+      height: 32px
 
   .nav-link
     color: $c_navlink

@@ -4,6 +4,10 @@
             aria-controls="exCollapsingNavbar1" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
     </button>
+    <a class="navbar-brand-mini hidden-md-up" href="#"><img class="trezor-logo"
+                                                            src="{% static '/images/trezor-logo.svg' %}"
+                                                            onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
+                                                            alt="TREZOR logo"/></a>
     <div class="container">
         <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
             <a class="navbar-brand hidden-sm-down" href="#"><img class="trezor-logo"
@@ -31,29 +35,29 @@
                     <a class="nav-link" href="#">{% trans "Contact" %}</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav pull-sm-right">
+            <ul class="nav navbar-nav pull-sm-right social">
                 <li class="nav-item">
                     <form class="ion-earth form-inline pull-xs-right">
                         <select>
-                            <option value="volvo">en</option>
-                            <option value="saab">cz</option>
+                            <option value="en">en</option>
+                            <option value="cz">cz</option>
                         </select>
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="ion-social-twitter"></span></a>
+                    <a class="nav-link" href="https://twitter.com/bitcointrezor"><span class="ion-social-twitter"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="ion-social-reddit"></span></a>
+                    <a class="nav-link" href="https://www.reddit.com/r/trezor"><span class="ion-social-reddit"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="ion-social-instagram"></span></a>
+                    <a class="nav-link" href="https://www.instagram.com/bitcointrezor/"><span class="ion-social-instagram"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="ion-social-facebook"></span></a>
+                    <a class="nav-link" href="https://www.facebook.com/BitcoinTrezor/"><span class="ion-social-facebook"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="ion-social-github"></span></a>
+                    <a class="nav-link" href="https://github.com/satoshilabs/"><span class="ion-social-github"></span></a>
                 </li>
             </ul>
         </div>
