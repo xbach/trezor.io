@@ -5,13 +5,24 @@
 @import custom/colors
 @import custom/mixins
 @import custom/buttons
+@import custom/headers
 
 @import custom/nav_global
 @import custom/jumbotron
 @import custom/nav_sub
+@import custom/section_intro
+@import custom/section_usage
+
 
 body, html
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   padding-top: 0
   font-family: 'Open Sans', sans-serif
+
+p
+  font: 400 15px/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: $c_grey_font
+
+a
+  color: $c_blue

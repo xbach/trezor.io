@@ -12,48 +12,62 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container sub-nav hidden-sm-down">
     <nav class="nav nav-inline">
         <a class="nav-link active" href="#">{% trans "Usage" %}</a>
         <a class="nav-link" href="#">{% trans "Features" %}</a>
         <a class="nav-link" href="#">{% trans "Developers" %}</a>
         <a class="nav-link" href="#">{% trans "Team" %}</a>
+        <a class="btn btn-primary-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99" %}</a>
     </nav>
 </div>
-
+<section class="intro">
 <div class="container">
-    <!-- Example row of columns -->
     <div class="row">
-
-        <div class="col-lg-3">
-            <h2>Full featured template engine</h2>
-
-            <p>Cactus uses and extends Django's templating engine. If you've built sites using Django before, you'll
-                feel right at home.</p>
+        <div class="col-lg-12 text-xs-center">
+            {% blocktrans %}
+                <h2>Secure your digital life</h2>
+                <p>in 3 simple steps</p>
+            {% endblocktrans %}
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-xs-center">
+            <h4>{% trans "Set up in private." %}</h4>
+            <p>{% trans "Get started within minutes in the comfort of your home. Completely registration-free. No identity reuse, device tracking or backdoors. " %}<br /><a href="">{% trans "Learn more" %}</a></p>
         </div>
 
-        <div class="col-lg-3">
-            <h2>Pretty URLs</h2>
-
-            <p>Cactus can prettify URLs, so you can turn <code>/about.html</code> into a fancier <code>/about/</code>.
-            </p>
+        <div class="col-md-4 text-xs-center">
+            <h4>{% trans "Use with ease." %}</h4>
+            <p>{% trans "Trust your own eyes and your own hands. Defend your digital life with a simple button click." %}<br /><a href="">{% trans "Learn more" %}</a></p>
         </div>
 
-        <div class="col-lg-3">
-            <h2>Minification & Fingerprinting</h2>
-
-            <p>For maximum performance, Cactus can minify and fingerprint your static assets. As for your pages, Cactus
-                will automatically compress them.</p>
+        <div class="col-md-4 text-xs-center">
+            <h4>{% trans "Restore when lost." %}</h4>
+            <p>{% trans "Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected money, transaction history, websites or documents." %}<br /><a href="">{% trans "Learn more" %}</a></p>
         </div>
-
-        <div class="col-lg-3">
-            <h2>And much more</h2>
-
-            <p>There's of course a lot more you can do with Cactus. Plus, Cactus's plugin framework lets you easily
-                extend its functionality.</p>
-        </div>
-
 
     </div>
 </div>
+</section>
+<section class="usage">
+    <div class="container money">
+        <div class="row">
+            <h2>Secure your digital money</h2>
+            <p>Bitcoins, Litecoins, DASH and Ethereum.</p>
+            <p>With one TREZOR and ultimate peace of mind.</p>
+        </div>
+    </div>
+    <div class="container identity">
+        <div class="row">
+
+        </div>
+    </div>
+    <div class="container documents">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
 {% endblock %}
