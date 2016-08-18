@@ -14,7 +14,6 @@
 
   @media screen and (min-width: $sm)
     text-align: center
-
     ul.center
       display: inline-block
 
@@ -27,6 +26,9 @@
       &:focus, &:active
         outline: none
 
+    .social
+      clear: both
+
   .navbar-toggler
     float: left
     &:focus, &:active
@@ -36,9 +38,6 @@
     position: relative
     width: 140px
     overflow: hidden
-    @media screen and (max-width: $md)
-      width: 26px
-      margin-right: .25rem
 
     .trezor-logo
       height: 32px
@@ -57,6 +56,23 @@
 
   .nav-link
     color: $c_navlink
+    +transition(color 0.4s ease)
+
+    &[data-amount]:not([data-amount="0"])
+      position: relative
+      &::before
+        content: attr(data-amount)
+        display: inline-block
+        width: 16px
+        height: 16px
+        line-height: 16px
+        margin-right: 5px
+        font-size: 12px
+        font-weight: bold
+        background: $c_red
+        color: $c_white
+        +transform(translateY(-15%))
+        +border-radius(50%)
 
   form
     color: rgba(255,255,255,.5)
@@ -74,7 +90,21 @@
     +appearance-none()
 
     &:hover
-      color: #fff
+      color: $c_white
 
     &:focus, &:active
       outline: none
+
+.dropdown-item
+  color: $c_grey_font
+  padding: 5px 20px 5px 5px
+
+  &:hover
+    background: white
+    color: $c_black
+
+  span
+    display: inline-block
+    float: left
+    width: 35px
+    text-align: center

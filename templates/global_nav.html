@@ -5,7 +5,8 @@
         &#9776;
     </button>
     <a class="navbar-brand-mini hidden-md-up" href="#"><img class="trezor-logo"
-                                                            src="{% static '/images/trezor-logo-mini.png' %}"
+                                                            src="{% static '/images/trezor-logo.svg' %}"
+                                                            onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                                                             alt="TREZOR logo"/></a>
     <div class="container">
         <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
@@ -16,7 +17,7 @@
                     class="trezor-title">TREZOR.io</span></a>
             <ul class="nav navbar-nav center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{% trans "Shop" %}</a>
+                    <a class="nav-link" href="#" data-amount="0">{% trans "Shop" %}</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
@@ -34,29 +35,24 @@
                     <a class="nav-link" href="#">{% trans "Contact" %}</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav pull-sm-right social">
+            <ul class="nav navbar-nav pull-md-right pull-sm-left social">
                 <li class="nav-item">
-                    <form class="ion-earth form-inline pull-xs-right">
+                    <form class="ion-earth form-inline">
                         <select>
-                            <option value="en">en</option>
-                            <option value="cz">cz</option>
+                            <option value="en">{% trans "en" %}</option>
+                            <option value="cz">{% trans "cz" %}</option>
                         </select>
                     </form>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/bitcointrezor"><span class="ion-social-twitter"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.reddit.com/r/trezor"><span class="ion-social-reddit"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/bitcointrezor/"><span class="ion-social-instagram"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.facebook.com/BitcoinTrezor/"><span class="ion-social-facebook"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/satoshilabs/"><span class="ion-social-github"></span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Follow us" %}</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="https://twitter.com/bitcointrezor"><span class="ion-social-twitter"></span> Twitter</a>
+                        <a class="dropdown-item" href="https://www.reddit.com/r/trezor"><span class="ion-social-reddit"></span> Reddit</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/bitcointrezor/"><span class="ion-social-instagram"></span> Instagram</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/BitcoinTrezor/"><span class="ion-social-facebook"></span> Facebook</a>
+                        <a class="dropdown-item" href="https://github.com/satoshilabs/"><span class="ion-social-github"></span> Github</a>
+                    </div>
                 </li>
             </ul>
         </div>
