@@ -11,16 +11,20 @@
         </p>
     </div>
 </div>
-
-<div class="container sub-nav hidden-sm-down">
-    <nav class="nav nav-inline">
-        <a class="nav-link active" href="#">{% trans "Usage" %}</a>
-        <a class="nav-link" href="#">{% trans "Features" %}</a>
-        <a class="nav-link" href="#">{% trans "Developers" %}</a>
-        <a class="nav-link" href="#">{% trans "Team" %}</a>
-        <a class="btn btn-primary-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99" %}</a>
-    </nav>
-</div>
+<section class="sticky"  data-toggle="sticky-onscroll">
+    <div class="container sub-nav">
+        <nav class="nav nav-inline">
+            <a class="nav-link">
+                <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}" onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;" alt="TREZOR logo"/>
+            </a>
+            <a class="nav-link active" href="#">{% trans "Usage" %}</a>
+            <a class="nav-link" href="#">{% trans "Features" %}</a>
+            <a class="nav-link" href="#">{% trans "Developers" %}</a>
+            <a class="nav-link" href="#">{% trans "Team" %}</a>
+            <a class="btn btn-primary-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99" %}</a>
+        </nav>
+    </div>
+</section>
 <section class="intro-section">
     <div class="container">
         <div class="row">
@@ -66,7 +70,6 @@
         <div class="row heading">
             <div class="col-lg-12  text-xs-center">
                 <h2>{% trans "Digital money" %}</h2>
-
                 <p>{% trans "Bitcoins, Litecoins, DASH and Ethereum. With one TREZOR and ultimate peace of mind." %}</p>
                 <br/>
                 <br/>
@@ -107,8 +110,7 @@
             </div>
             <div class="col-lg-6">
                 <h3>{% trans "Digital Assets and Contracts. All Smart." %}</h3>
-
-                <p>Protect digitally issued valuables such as:</p>
+                <p>{% trans "Protect digitally issued valuables such as:" %}</p>
                 <ul>
                     <li>{% trans "incentive points or blabla" %}</li>
                     <li>{% trans "stocks and share - rights" %}</li>
@@ -147,7 +149,6 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-
             </div>
             <div class="col-lg-6">
                 <h3>{% trans "Passwords In Your Hands." %}</h3>
@@ -165,7 +166,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3>{% trans "2nd Factor Authentication - Done Right!" %}</h3>
-                <p>Are you sticking with your old weak passwords? You can! TREZOR is the world's most secure personal 2nd factor authenticator that secures your accounts event way better than anything else.</p>
+                <p>{% trans "Are you sticking with your old weak passwords? You can! TREZOR is the world's most secure personal 2nd factor authenticator that secures your accounts event way better than anything else." %}</p>
                 <ul>
                     <li>{% trans "Unique phishing protection: use your TREZOR's display to avoid scammy sites." %}</li>
                     <li>{% trans "Log in to websites with pressing a button of your TREZOR. This is something no virus can do instead of you." %}</li>
@@ -175,7 +176,6 @@
                 <a href="">{% trans "Learn more" %}</a>
             </div>
             <div class="col-lg-6">
-
             </div>
         </div>
 
@@ -185,7 +185,7 @@
             </div>
             <div class="col-lg-6">
                 <h3>{% trans "Be Free. Password-free Login." %}</h3>
-                <p>Ask for the best. Log into your favorite websites, systems and apps without ever touching a password again.</p>
+                <p>{% trans "Ask for the best. Log into your favorite websites, systems and apps without ever touching a password again." %}</p>
                 <ul>
                     <li>{% trans "Secure your user accounts against hackers and unauthorized access" %}</li>
                     <li>{% trans "Sign up to websites without having to reveal your name or email address" %}</li>
@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3>{% trans "Secure Admin Access. Secure SSH." %}</h3>
-                <p>Another great feature for professionals. Protect access to your servers, data or websites administration.</p>
+                <p>{% trans "Another great feature for professionals. Protect access to your servers, data or websites administration." %}</p>
                 <ul>
                     <li>{% trans "SSH login – simple or multiple sessions from a sub-shell" %}</li>
                     <li>{% trans "Githubs SSH authentication" %}</li>
@@ -216,7 +216,7 @@
         <div class="row heading">
             <div class="col-lg-12  text-xs-center">
                 {% blocktrans %}
-                <h2>Encrypt documents & communication</h2>
+                <h2>Documents & communication</h2>
                 <p>Using GPG has never been easier or more secure than today.</p>
                 {% endblocktrans %}
                 <br/>
@@ -225,15 +225,14 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-
             </div>
             <div class="col-lg-6">
-                <h3>{% trans "Secure Admin Access. Secure SSH." %}</h3>
-                <p>Another great feature for professionals. Protect access to your servers, data or websites administration.</p>
+                <h3>{% trans "One Click. Secure files or trade secrets." %}</h3>
+                <p>{% trans "The first truly secure and offline way to create GPG keys! Encrypt any files with one touch." %}</p>
                 <ul>
-                    <li>{% trans "SSH login – simple or multiple sessions from a sub-shell" %}</li>
-                    <li>{% trans "Githubs SSH authentication" %}</li>
-                    <li>{% trans "Admin access to your Wordpress sites with a TREZOR." %}</li>
+                    <li>{% trans "Online before uploading to your private cloud" %}</li>
+                    <li>{% trans "Offline to a smart card inserted into the SD slot" %}</li>
+                    <li>{% trans "Backup and re-create your GPG keys anew if needed" %}</li>
                 </ul>
                 <a href="">{% trans "Learn more" %}</a>
             </div>
@@ -241,13 +240,8 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <h3>{% trans "Secure Admin Access. Secure SSH." %}</h3>
-                <p>Another great feature for professionals. Protect access to your servers, data or websites administration.</p>
-                <ul>
-                    <li>{% trans "SSH login – simple or multiple sessions from a sub-shell" %}</li>
-                    <li>{% trans "Githubs SSH authentication" %}</li>
-                    <li>{% trans "Admin access to your Wordpress sites with a TREZOR." %}</li>
-                </ul>
+                <h3>{% trans "Encrypted emails - Like a Pro." %}</h3>
+                <p>{% trans "As you type your Gmail, Protonmail or Thunderbird message, TREZOR encrypts every keystroke that you make, one by one, before it even reaches your computer. Simply plug TREZOR between your keyboard and your computer." %}</p>
                 <a href="">{% trans "Learn more" %}</a>
             </div>
             <div class="col-lg-6">
