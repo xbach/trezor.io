@@ -1,4 +1,4 @@
-.usage-section
+.usage-section, .usage-section2
   .heading
     padding: 60px 0 10px 0
 
@@ -32,3 +32,38 @@
     .card-title
       font-weight: bold
 
+.usage-section2
+  .card
+    &.money
+      background: $c_blue
+      border-color: $c_blue
+  
+    &.identity
+      background: $c_purple
+      border-color: $c_purple
+  
+    &.other
+      background: $c_orange
+      border-color: $c_orange
+  
+
+.usage-section3
+  .heading
+    padding: 60px 0 10px 0
+
+  .sub-heading
+    display: block
+    padding-top: 20px
+    height: 50px
+    position: relative
+
+    div
+      position: absolute
+      bottom: 20%
+
+
+  .card
+    height: 120px
+    background: transparent
+    border-color: transparent
+    overflow: hidden
