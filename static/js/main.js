@@ -1,27 +1,34 @@
-$(document).ready(function() {
-    var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+$(document).ready(function () {
+    var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
         var stickyHeight = sticky.outerHeight();
         var stickyTop = stickyWrapper.offset().top;
-        if (scrollElement.scrollTop() >= stickyTop){
+        if (scrollElement.scrollTop() >= stickyTop) {
             stickyWrapper.height(stickyHeight);
             sticky.addClass("is-sticky");
         }
-        else{
+        else {
             sticky.removeClass("is-sticky");
             stickyWrapper.height('auto');
         }
     };
 
-    $('[data-toggle="sticky-onscroll"]').each(function() {
+    $('[data-toggle="sticky-onscroll"]').each(function () {
         var sticky = $(this);
         var stickyWrapper = $('<div>').addClass('sticky-wrapper');
         sticky.before(stickyWrapper);
         sticky.addClass('sticky');
 
-        $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
+        $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
             stickyToggle(sticky, stickyWrapper, $(this));
         });
 
         stickyToggle(sticky, stickyWrapper, $(window));
     });
+
+    $('.card').click(function () {
+        $(this).prependTo( '#usage-container' );
+        $(this).addClass('open');
+    });
+
+
 });

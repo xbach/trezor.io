@@ -1,4 +1,6 @@
-.usage-section, .usage-section2
+.usage-section
+  position: relative
+
   .heading
     padding: 60px 0 10px 0
 
@@ -12,11 +14,25 @@
       position: absolute
       bottom: 20%
 
-
   .card
     height: 120px
     background: black
     overflow: hidden
+    border: 0
+    cursor: pointer
+    +transition(all 0.45s)
+
+    &.money
+      background: $c_blue
+      border-color: $c_blue
+
+    &.identity
+      background: $c_purple
+      border-color: $c_purple
+
+    &.other
+      background: $c_orange
+      border-color: $c_orange
 
     .card-img
       position: absolute
@@ -26,44 +42,21 @@
       top: 50%
       left: 50%
       opacity: .6
-      -webkit-filter: blur(.8px)
-      +transform(translate(-50%, -50%))
-    
+      +transition(all 0.35s)
+      +transform(translate3d(-50%, -50%, 0px))
+
     .card-title
       font-weight: bold
 
-.usage-section2
-  .card
-    &.money
-      background: $c_blue
-      border-color: $c_blue
-  
-    &.identity
-      background: $c_purple
-      border-color: $c_purple
-  
-    &.other
-      background: $c_orange
-      border-color: $c_orange
+    &:hover
+      +box-shadow(0 0 10px $c_grey)
+
+      .card-img
+        +transform(translate3d(-50%, -50%, 0px) scale(1.2))
+
+    &.open
+      position: relative
+      height: 400px
+      width: 100%
   
 
-.usage-section3
-  .heading
-    padding: 60px 0 10px 0
-
-  .sub-heading
-    display: block
-    padding-top: 20px
-    height: 50px
-    position: relative
-
-    div
-      position: absolute
-      bottom: 20%
-
-
-  .card
-    height: 120px
-    background: transparent
-    border-color: transparent
-    overflow: hidden
