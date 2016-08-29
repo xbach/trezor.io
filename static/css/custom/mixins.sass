@@ -1,3 +1,13 @@
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
 =box-shadow($val)
   -webkit-box-shadow:   $val
   -moz-box-shadow:      $val
@@ -53,6 +63,11 @@
   -webkit-box-sizing:       $val
   -moz-box-sizing:          $val
   box-sizing:               $val
+
+=animation-delay($val)
+  -webkit-animation-delay:  $val
+  -moz-animation-delay:     $val
+  animation-delay:          $val
 
 =transition-delay($val)
   -webkit-transition-delay: $val

@@ -1,12 +1,12 @@
 $(document).ready(function () {
+
     var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
         var stickyHeight = sticky.outerHeight();
         var stickyTop = stickyWrapper.offset().top;
         if (scrollElement.scrollTop() >= stickyTop) {
             stickyWrapper.height(stickyHeight);
             sticky.addClass("is-sticky");
-        }
-        else {
+        } else {
             sticky.removeClass("is-sticky");
             stickyWrapper.height('auto');
         }
@@ -29,6 +29,5 @@ $(document).ready(function () {
         $(this).prependTo( '#usage-container' );
         $(this).addClass('open');
     });
-
 
 });
