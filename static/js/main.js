@@ -30,4 +30,11 @@ $(document).ready(function () {
         $(this).addClass('open');
     });
 
+    $("a.scrollTo").click(function(e){
+        e.preventDefault();
+        $('html').scrollTo(this.hash, 1000, {
+            offset:-63
+        });
+    });
+
 });
