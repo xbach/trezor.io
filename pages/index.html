@@ -16,7 +16,7 @@
     </div>
     <div class="sticky" data-toggle="sticky-onscroll">
         <div class="container sub-nav">
-            <div class="nav-inline nav">
+            <div class="nav-inline nav" id="sub-nav">
                 <a class="nav-link">
                     <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
                          onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
@@ -30,293 +30,303 @@
             </div>
         </div>
     </div>
-    <section class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-xs-center">
-                    {% blocktrans %}
-                    <h2>Easy. Secure.</h2>
+    <div id="usage">
+        <section class="intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-xs-center">
+                        {% blocktrans %}
+                        <h2>Easy. Secure.</h2>
 
-                    <p>3 simple steps</p>
-                    {% endblocktrans %}
-                    <br/>
+                        <p>3 simple steps</p>
+                        {% endblocktrans %}
+                        <br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-xs-center">
+                        {% blocktrans %}
+                        <h4>1. Setup.</h4>
+
+                        <p>Get started within minutes in the comfort of your home. Completely registration-free. No
+                            identity reuse, device tracking or backdoors.</p>
+                        {% endblocktrans %}
+                        <a href="">{% trans "Learn more" %}</a>
+                    </div>
+
+                    <div class="col-md-4 text-xs-center">
+                        {% blocktrans %}
+                        <h4>2. Use with ease.</h4>
+
+                        <p>Trust your own eyes and your own hands. Defend your digital life with a simple button
+                            click.</p>
+                        {% endblocktrans %}
+                        <a href="">{% trans "Learn more" %}</a>
+                    </div>
+
+                    <div class="col-md-4 text-xs-center">
+                        {% blocktrans %}
+                        <h4>3. Lost? Restore.</h4>
+
+                        <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected
+                            money,
+                            transaction history, websites or documents.</p>
+                        {% endblocktrans %}
+                        <a href="">{% trans "Learn more" %}</a>
+                    </div>
+
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 text-xs-center">
-                    {% blocktrans %}
-                    <h4>1. Setup.</h4>
+        </section>
 
-                    <p>Get started within minutes in the comfort of your home. Completely registration-free. No
-                        identity reuse, device tracking or backdoors.</p>
-                    {% endblocktrans %}
-                    <a href="">{% trans "Learn more" %}</a>
-                </div>
-
-                <div class="col-md-4 text-xs-center">
-                    {% blocktrans %}
-                    <h4>2. Use with ease.</h4>
-
-                    <p>Trust your own eyes and your own hands. Defend your digital life with a simple button
-                        click.</p>
-                    {% endblocktrans %}
-                    <a href="">{% trans "Learn more" %}</a>
-                </div>
-
-                <div class="col-md-4 text-xs-center">
-                    {% blocktrans %}
-                    <h4>3. Lost? Restore.</h4>
-
-                    <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected money,
-                        transaction history, websites or documents.</p>
-                    {% endblocktrans %}
-                    <a href="">{% trans "Learn more" %}</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <section class="video-section" id="usage">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-xs-center">
-                    <a href="#" class="watch-video"><i class="ion-ios-play-outline"></i>{% trans "Watch video" %}</a>
+        <section class="video-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-xs-center">
+                        <a href="#" class="watch-video"><i class="ion-ios-play-outline"></i>{% trans "Watch video"
+                            %}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="usage-section">
-        <div class="container">
-            <div class="row heading">
-                <div class="col-lg-12  text-xs-center">
-                    <h2>{% trans "Trezilion of functions." %}</h2>
+        <section class="usage-section">
+            <div class="container">
+                <div class="row heading">
+                    <div class="col-lg-12  text-xs-center">
+                        <h2>{% trans "Trezilion of functions." %}</h2>
 
-                    <p>{% trans "Number of great usage still grows and multiply!" %}</p>
-                    <br/>
-                    <br/>
-                </div>
-            </div>
-
-            <div class="row-fluid" id="usage-container">
-                <div class="col-lg-4 col-lg-offset-1">
-                    <div class="row sub-heading">
-                        <div class="col-md-12">
-                            <h5 class="font-c-blue">{% trans "Digital money" %}</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="card card-inverse money">
-                                <img class="card-img"
-                                     src="https://s3.amazonaws.com/main-newsbtc-images/2016/08/22101834/1217.sdt-news.jpg"
-                                     alt="Card image">
-
-                                <div class="card-img-overlay">
-                                    <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card card-inverse money">
-                                <img class="card-img"
-                                     src="http://www.wpl-legal.com/wp-content/uploads/2016/05/AdobeStock_77656720-reduced-file-size-300x200.jpg"
-                                     alt="Card image">
-
-                                <div class="card-img-overlay">
-                                    <h6 class="card-title">{% trans "Digital Assets & Contracts" %}</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="card card-inverse money">
-                                <img class="card-img"
-                                     src="https://s3.amazonaws.com/main-newsbtc-images/2015/08/24204151/What-are-ALTCOINS.jpg"
-                                     alt="Card image">
-
-                                <div class="card-img-overlay">
-                                    {% blocktrans %}
-                                    <h6 class="card-title">Multiple currencies.<br/>One TREZOR.</h6>
-                                    {% endblocktrans %}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card card-inverse money">
-                                <img class="card-img"
-                                     src="https://media.coindesk.com/uploads/2013/08/shutterstock_120348985-300x185.jpg"
-                                     alt="Card image">
-
-                                <div class="card-img-overlay">
-                                    {% blocktrans %}
-                                    <h6 class="card-title">Exchange.<br/>Send.<br/>Pay invoices.</h6>
-                                    {% endblocktrans %}
-                                </div>
-                            </div>
-                        </div>
+                        <p>{% trans "Number of great usage still grows and multiply!" %}</p>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="row sub-heading">
-                        <div class="col-md-12">
-                            <h5 class="font-c-purple">{% trans "Identity protection" %}</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="card card-inverse identity">
-                                <img class="card-img"
-                                     src="https://s3.amazonaws.com/digitaltrends-uploads-prod/2015/03/Password-Header.jpg"
-                                     alt="Card image">
 
-                                <div class="card-img-overlay">
-                                    <h6 class="card-title">{% trans "Password Management" %}</h6>
+                <div class="row-fluid" id="usage-container">
+                    <div class="col-lg-4 col-lg-offset-1">
+                        <div class="row sub-heading">
+                            <div class="col-md-12">
+                                <h5 class="font-c-blue">{% trans "Digital money" %}</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card card-inverse money">
+                                    <img class="card-img"
+                                         src="https://s3.amazonaws.com/main-newsbtc-images/2016/08/22101834/1217.sdt-news.jpg"
+                                         alt="Card image">
+
+                                    <div class="card-img-overlay">
+                                        <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-inverse money">
+                                    <img class="card-img"
+                                         src="http://www.wpl-legal.com/wp-content/uploads/2016/05/AdobeStock_77656720-reduced-file-size-300x200.jpg"
+                                         alt="Card image">
+
+                                    <div class="card-img-overlay">
+                                        <h6 class="card-title">{% trans "Digital Assets & Contracts" %}</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="card card-inverse identity">
-                                <img class="card-img"
-                                     src="https://cointelegraph.com/storage/uploads/view/1582a54b4011b369940705e1a7a8ec05.jpg"
-                                     alt="Card image">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card card-inverse money">
+                                    <img class="card-img"
+                                         src="https://s3.amazonaws.com/main-newsbtc-images/2015/08/24204151/What-are-ALTCOINS.jpg"
+                                         alt="Card image">
 
-                                <div class="card-img-overlay">
-                                    <h6 class="card-title">{% trans "2nd Factor Authentication" %}</h6>
+                                    <div class="card-img-overlay">
+                                        {% blocktrans %}
+                                        <h6 class="card-title">Multiple currencies.<br/>One TREZOR.</h6>
+                                        {% endblocktrans %}
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="card card-inverse money">
+                                    <img class="card-img"
+                                         src="https://media.coindesk.com/uploads/2013/08/shutterstock_120348985-300x185.jpg"
+                                         alt="Card image">
 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="card card-inverse identity">
-                                <img class="card-img"
-                                     src="http://2sep653x2vim4375oc23b3j9.wpengine.netdna-cdn.com/wp-content/uploads/2015/04/passwordless-authentication.jpg"
-                                     alt="Card image">
-
-                                <div class="card-img-overlay">
-                                    {% blocktrans %}
-                                    <h6 class="card-title">Password-less Login.</h6>
-                                    {% endblocktrans %}
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card card-inverse identity">
-                                <img class="card-img"
-                                     src="https://blogs.vmware.com/vsphere/files/2016/04/ssh.png"
-                                     alt="Card image">
-
-                                <div class="card-img-overlay">
-                                    {% blocktrans %}
-                                    <h6 class="card-title">Secure Admin Access.<br/>Secure SSH.</h6>
-                                    {% endblocktrans %}
+                                    <div class="card-img-overlay">
+                                        {% blocktrans %}
+                                        <h6 class="card-title">Exchange.<br/>Send.<br/>Pay invoices.</h6>
+                                        {% endblocktrans %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="row sub-heading">
-                        <div class="col-md-12">
-                            {% blocktrans %}
-                            <h5 class="font-c-orange">Documents & communication</h5>
-                            {% endblocktrans %}
+                    <div class="col-lg-4">
+                        <div class="row sub-heading">
+                            <div class="col-md-12">
+                                <h5 class="font-c-purple">{% trans "Identity protection" %}</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-inverse other">
-                                <img class="card-img"
-                                     src="https://www.lexisnexis.com/LexTalk/cfs-file.ashx/__key/communityserver-components-userfiles/00-00-00-23-56-attached+files/shutterstock_5F00_153352382.jpg"
-                                     alt="Card image">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card card-inverse identity">
+                                    <img class="card-img"
+                                         src="https://s3.amazonaws.com/digitaltrends-uploads-prod/2015/03/Password-Header.jpg"
+                                         alt="Card image">
 
-                                <div class="card-img-overlay">
-                                    {% blocktrans %}
-                                    <h6 class="card-title">Private Files Or Trade Secrets.</h6>
-                                    {% endblocktrans %}
+                                    <div class="card-img-overlay">
+                                        <h6 class="card-title">{% trans "Password Management" %}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-inverse identity">
+                                    <img class="card-img"
+                                         src="https://cointelegraph.com/storage/uploads/view/1582a54b4011b369940705e1a7a8ec05.jpg"
+                                         alt="Card image">
+
+                                    <div class="card-img-overlay">
+                                        <h6 class="card-title">{% trans "2nd Factor Authentication" %}</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card card-inverse identity">
+                                    <img class="card-img"
+                                         src="http://2sep653x2vim4375oc23b3j9.wpengine.netdna-cdn.com/wp-content/uploads/2015/04/passwordless-authentication.jpg"
+                                         alt="Card image">
+
+                                    <div class="card-img-overlay">
+                                        {% blocktrans %}
+                                        <h6 class="card-title">Password-less Login.</h6>
+                                        {% endblocktrans %}
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card card-inverse identity">
+                                    <img class="card-img"
+                                         src="https://blogs.vmware.com/vsphere/files/2016/04/ssh.png"
+                                         alt="Card image">
+
+                                    <div class="card-img-overlay">
+                                        {% blocktrans %}
+                                        <h6 class="card-title">Secure Admin Access.<br/>Secure SSH.</h6>
+                                        {% endblocktrans %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-inverse other">
-                                <img class="card-img"
-                                     src="http://www.startupticker.ch/uploads/Image/Articles/ProntonMail.jpg"
-                                     alt="Card image">
+                    <div class="col-lg-2">
+                        <div class="row sub-heading">
+                            <div class="col-md-12">
+                                {% blocktrans %}
+                                <h5 class="font-c-orange">Documents & communication</h5>
+                                {% endblocktrans %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-inverse other">
+                                    <img class="card-img"
+                                         src="https://www.lexisnexis.com/LexTalk/cfs-file.ashx/__key/communityserver-components-userfiles/00-00-00-23-56-attached+files/shutterstock_5F00_153352382.jpg"
+                                         alt="Card image">
 
-                                <div class="card-img-overlay">
-                                    {% blocktrans %}
-                                    <h6 class="card-title">Secure Your Email Communication.</h6>
-                                    {% endblocktrans %}
+                                    <div class="card-img-overlay">
+                                        {% blocktrans %}
+                                        <h6 class="card-title">Private Files Or Trade Secrets.</h6>
+                                        {% endblocktrans %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-inverse other">
+                                    <img class="card-img"
+                                         src="http://www.startupticker.ch/uploads/Image/Articles/ProntonMail.jpg"
+                                         alt="Card image">
+
+                                    <div class="card-img-overlay">
+                                        {% blocktrans %}
+                                        <h6 class="card-title">Secure Your Email Communication.</h6>
+                                        {% endblocktrans %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+    <div id="features">
+        <section class="features-section">
+            <div class="container">
+                <div class="row heading">
+                    <div class="col-lg-12  text-xs-center">
+                        <h2>{% trans "Security by design." %}</h2>
+                        {% blocktrans %}
+                        <p>Trim away everything that could get hacked. Add powerful hardware features and software
+                            logic.</p>
+                        {% endblocktrans %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <canvas id="featureCanvas" width="500" height="500"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="features-section" id="features">
-        <div class="container">
-            <div class="row heading">
-                <div class="col-lg-12  text-xs-center">
-                    <h2>{% trans "Security by design." %}</h2>
-                    {% blocktrans %}
-                    <p>Trim away everything that could get hacked. Add powerful hardware features and software
-                        logic.</p>
-                    {% endblocktrans %}
+        <section class="experts-section">
+            <div class="container">
+                <div class="row heading">
+                    <div class="col-lg-12  text-xs-center">
+                        <h2>{% trans "Endrosed by Experts." %}</h2>
+                        {% blocktrans %}
+                        <p>Used by thousands ...</p>
+                        {% endblocktrans %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-xs-center">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
+                        <h4>Andreas M. Antonopoulos</h4>
+                        <blockquote>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4 text-xs-center">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
+                        <h4>Amir Taaki</h4>
+                        <blockquote>
+                            TREZOR is anonymous digital cryptocurrency you can safely put in your pocket. A tool for
+                            people
+                            to be their own banks. I want one.
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4 text-xs-center">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
+                        <h4>Tony Gallippi</h4>
+                        <blockquote>
+                            A hardware wallet will help add extra security to Bitcoin. It provides safe, secure storage
+                            for
+                            any business or person who wishes to hold bitcoin.
+                        </blockquote>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <canvas id="featureCanvas" width="500" height="500"></canvas>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="experts-section">
-        <div class="container">
-            <div class="row heading">
-                <div class="col-lg-12  text-xs-center">
-                    <h2>{% trans "Endrosed by Experts." %}</h2>
-                    {% blocktrans %}
-                    <p>Used by thousands ...</p>
-                    {% endblocktrans %}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-xs-center">
-                    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200" />
-                    <h4>Andreas M. Antonopoulos</h4>
-                    <blockquote>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                    </blockquote>
-                </div>
-                <div class="col-md-4 text-xs-center">
-                    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200" />
-                    <h4>Amir Taaki</h4>
-                    <blockquote>
-                        TREZOR is anonymous digital cryptocurrency you can safely put in your pocket. A tool for people to be their own banks. I want one.
-                    </blockquote>
-                </div>
-                <div class="col-md-4 text-xs-center">
-                    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200" />
-                    <h4>Tony Gallippi</h4>
-                    <blockquote>
-                        A hardware wallet will help add extra security to Bitcoin. It provides safe, secure storage for any business or person who wishes to hold bitcoin.
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <section class="devs-section" id="developers">
         <div class="container">
             <div class="row heading">
