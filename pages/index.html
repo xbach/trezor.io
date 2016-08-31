@@ -67,8 +67,8 @@
                     {% blocktrans %}
                     <h4>3. Lost? Restore.</h4>
 
-                    <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected
-                        money, transaction history, websites or documents.</p>
+                    <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected money,
+                        transaction history, websites or documents.</p>
                     {% endblocktrans %}
                     <a href="">{% trans "Learn more" %}</a>
                 </div>
@@ -76,7 +76,7 @@
             </div>
         </div>
     </section>
-    <section class="video-section">
+    <section class="video-section" id="usage">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-xs-center">
@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <section class="usage-section"  id="usage">
+    <section class="usage-section">
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
@@ -267,7 +267,10 @@
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
                     <h2>{% trans "Security by design." %}</h2>
-                    <p>{% trans "Trim away everything that could get hacked. Add powerful hardware features and software logic." %}</p>
+                    {% blocktrans %}
+                    <p>Trim away everything that could get hacked. Add powerful hardware features and software
+                        logic.</p>
+                    {% endblocktrans %}
                 </div>
             </div>
             <div class="row">
@@ -283,8 +286,9 @@
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
                     <h2>{% trans "Endrosed by Experts." %}</h2>
-
-                    <p>{% trans "Meet the people behind the world-leading bitcoin innovations delivered by SatoshiLabs." %}</p>
+                    {% blocktrans %}
+                    <p>Meet the people behind the world-leading bitcoin innovations delivered by SatoshiLabs.</p>
+                    {% endblocktrans %}
                 </div>
             </div>
             <div class="row">
@@ -310,74 +314,70 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 text-xs-center button-area">
-                    <a class="btn btn-secondary-outline" href="https://github.com/trezor" role="button"><i class="ion-social-github"></i> {% trans "github.com/trezor"%}</a>
-                    <a class="btn btn-secondary-outline" href="https://gitter.im/trezor/community" role="button"><i class="ion-android-chat"></i> {% trans "Community"%}</a>
-                    <a class="plain" href="https://doc.satoshilabs.com/trezor-tech/index.html">{% trans "Learn from Developer’s Guide"%}</a>
+                    <a class="btn btn-secondary-outline" href="https://github.com/trezor" role="button"><i
+                            class="ion-social-github"></i> {% trans "github.com/trezor"%}</a>
+                    <a class="btn btn-secondary-outline" href="https://gitter.im/trezor/community" role="button"><i
+                            class="ion-android-chat"></i> {% trans "Community"%}</a>
+                    <a class="plain" href="https://doc.satoshilabs.com/trezor-tech/index.html">
+                        {% trans "Learn from Developer’s Guide"%}
+                    </a>
                 </div>
                 <div class="col-sm-6">
-                    <h3>Learn. Collaborate. Innovate.</h3>
-                    <p>Join bitcoin & security movement working on top-notch global projects. Become a part of our team standing behind several projects that marked milestones in the Bitcoin world. We love to work with talented and enthusiastic developers, marketers or designers.</p>
+                    <h3>{% trans "Learn. Collaborate. Innovate."%}</h3>
+                    {% blocktrans %}
+                    <p>Join bitcoin & security movement working on top-notch global projects. Become a part of our team
+                        standing behind several projects that marked milestones in the Bitcoin world. We love to work
+                        with talented and enthusiastic developers, marketers or designers.</p>
+                    {% endblocktrans %}
                 </div>
             </div>
         </div>
     </section>
 
     <section class="team-section" id="team">
-        <div class="container">
+        <div class="container-full">
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
                     <h2>{% trans "Meet the Team." %}</h2>
-
-                    <p>{% trans "Meet the people behind the world-leading bitcoin innovations delivered by SatoshiLabs." %}</p>
+                    {% blocktrans %}
+                    <p>Meet the people behind the world-leading bitcoin innovations delivered by SatoshiLabs.</p>
+                    {% endblocktrans %}
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 person">
-                    <img src="{% static '/images/face.jpg' %}" />
-                    <div class="name">Slush</div>
-                    <div class="title">Executive mastermind</div>
-                    <div class="desc">Marek, also known as slush, is the inventor of the bitcoin mining pool concept and operator of the Slush’s mining pool, designer of the lightweight Stratum protocol and the core programmer of TREZOR.</div>
+                <div class="col-md-2 person">
+                    <div class="header">
+                        <img src="{% static '/images/team_faces/slush.jpg' %}"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <div class="name"><h6>Marek "Slush" Palatinus</h6></div>
+                            <div class="title">Architect</div>
+                        </div>
+                        <p class="text">Marek, also known as slush, is the inventor of the bitcoin mining pool concept
+                            and operator of the Slush’s mining pool, designer of the lightweight Stratum protocol and
+                            the core programmer of TREZOR.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-md-3 person">
-                    Alena
-                </div>
-                <div class="col-md-3 person">
-                    Stick
-                </div>
-                <div class="col-md-3 person">
-                    Buly
-                </div>
-                <div class="col-md-3 person">
-                    Peca
-                </div>
-                <div class="col-md-3 person">
-                    Jochen
-                </div>
-                <div class="col-md-3 person">
-                    Honza
-                </div>
-                <div class="col-md-3 person">
-                    Karel
-                </div>
-                <div class="col-md-3 person">
-                    Tereza
-                </div>
-                <div class="col-md-3 person">
-                    Ja
-                </div>
-                <div class="col-md-3 person">
-                    Vojta
-                </div>
-                <div class="col-md-3 person">
-                    Bach
-                </div>
-                <div class="col-md-3 person">
-                    Karel/Ben
-                </div>
-                <div class="col-md-3 person">
-                    Pepitka
+
+                <div class="col-md-2 person">
+                    <div class="header">
+                        <img src="{% static '/images/team_faces/slush.jpg' %}"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <div class="name"><h6>Marek "Slush" Palatinus</h6></div>
+                            <div class="title">Architect</div>
+                        </div>
+                        <p>Marek, also known as slush, is the inventor of the bitcoin mining pool concept
+                            and operator of the Slush’s mining pool, designer of the lightweight Stratum protocol and
+                            the core programmer of TREZOR.
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 </main>
