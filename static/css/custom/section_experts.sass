@@ -1,5 +1,29 @@
 .experts-section
   min-height: 500px
+  padding-bottom: 60px
 
   .heading
-    padding: 60px 0 0 0
+    padding: 60px 0 30px 0
+
+  img
+    border: 10px solid white
+    // +box-shadow(0 0 10px rgba($c_grey, .1))
+    +border-radius(50%)
+
+  h4
+    font-size: 1.3em
+
+  blockquote
+    padding: 0.5em 10px
+    font-style: italic
+    font-size: .9em
+    quotes: "\201C""\201C""\201C""\2019"
+
+    &:before
+      font-family: Georgia, serif
+      color: $c_grey
+      content: open-quote
+      font-size: 4em
+      line-height: 0.1em
+      margin-right: 0.25em
+      vertical-align: -0.4em
