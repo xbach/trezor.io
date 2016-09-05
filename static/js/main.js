@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     $("a.scrollTo").click(function(e){
         e.preventDefault();
-        $('html').scrollTo(this.hash, 1000, {
+        $('html').scrollTo(this.hash, 700, {
             offset:-63,
             interrupt:true
         });
