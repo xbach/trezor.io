@@ -40,49 +40,61 @@
 
                         <p>3 simple steps</p>
                         {% endblocktrans %}
-                        <br/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-xs-center">
-                        {% blocktrans %}
-                        <h4>1. Setup.</h4>
+                        <div class="text-block">
+                            {% blocktrans %}
+                            <h4>1. Setup.</h4>
 
-                        <p>Get started within minutes in the comfort of your home. Completely registration-free. No
-                            identity reuse, device tracking or backdoors.</p>
-                        {% endblocktrans %}
+                            <p>Get started within minutes in the comfort of your home. Completely registration-free. No
+                                identity reuse, device tracking or backdoors.</p>
+                            {% endblocktrans %}
+                        </div>
                     </div>
-                    <div class="col-md-6 text-xs-center">
-                        video 1
+                    <div class="col-md-6p text-xs-center">
+                        <iframe width="auto" height="215" src="https://www.youtube.com/embed/0cJXIuJ2iCg"
+                                frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-xs-center">
-                        video 2
+                        <iframe width="auto" height="215" src="https://www.youtube.com/embed/Mcf_dekZPzk"
+                                frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="col-md-6 text-xs-center">
-                        {% blocktrans %}
-                        <h4>2. Use with ease.</h4>
+                        <div class="text-block">
+                            {% blocktrans %}
+                            <h4>2. Use with ease.</h4>
 
-                        <p>Trust your own eyes and your own hands. Defend your digital life with a simple button
-                            click.</p>
-                        {% endblocktrans %}
+                            <p>Trust your own eyes and your own hands. Defend your digital life with a simple button
+                                click.</p>
+                            {% endblocktrans %}
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-xs-center">
-                        {% blocktrans %}
-                        <h4>3. Lost? Restore.</h4>
+                        <div class="text-block">
+                            {% blocktrans %}
+                            <h4>3. Lost? Restore.</h4>
 
-                        <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected
-                            money,
-                            transaction history, websites or documents.</p>
-                        {% endblocktrans %}
+                            <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected
+                                money,
+                                transaction history, websites or documents.</p>
+                            {% endblocktrans %}
+                        </div>
                     </div>
                     <div class="col-md-6 text-xs-center">
-                        video 3
+                        <iframe width="auto" height="215" src="https://www.youtube.com/embed/ZWpInEKVG7E"
+                                frameborder="0" allowfullscreen></iframe>
                     </div>
-
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-xs-center">
+                        <a href="">{% trans "Learn more about Usage" %}</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -109,10 +121,6 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="card card-inverse money">
-                                    <img class="card-img"
-                                         src="https://s3.amazonaws.com/main-newsbtc-images/2016/08/22101834/1217.sdt-news.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
                                     </div>
@@ -120,10 +128,6 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="card card-inverse money">
-                                    <img class="card-img"
-                                         src="http://www.wpl-legal.com/wp-content/uploads/2016/05/AdobeStock_77656720-reduced-file-size-300x200.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         <h6 class="card-title">{% trans "Digital Assets & Contracts" %}</h6>
                                     </div>
@@ -133,10 +137,6 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="card card-inverse money">
-                                    <img class="card-img"
-                                         src="https://s3.amazonaws.com/main-newsbtc-images/2015/08/24204151/What-are-ALTCOINS.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         {% blocktrans %}
                                         <h6 class="card-title">Multiple currencies.<br/>One TREZOR.</h6>
@@ -146,10 +146,6 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="card card-inverse money">
-                                    <img class="card-img"
-                                         src="https://media.coindesk.com/uploads/2013/08/shutterstock_120348985-300x185.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         {% blocktrans %}
                                         <h6 class="card-title">Exchange.<br/>Send.<br/>Pay invoices.</h6>
@@ -168,10 +164,6 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="card card-inverse identity">
-                                    <img class="card-img"
-                                         src="https://s3.amazonaws.com/digitaltrends-uploads-prod/2015/03/Password-Header.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         <h6 class="card-title">{% trans "Password Manager" %}</h6>
                                     </div>
@@ -179,10 +171,6 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="card card-inverse identity">
-                                    <img class="card-img"
-                                         src="https://cointelegraph.com/storage/uploads/view/1582a54b4011b369940705e1a7a8ec05.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         <h6 class="card-title">{% trans "2nd Factor Authentication" %}</h6>
                                     </div>
@@ -193,10 +181,6 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="card card-inverse identity">
-                                    <img class="card-img"
-                                         src="http://2sep653x2vim4375oc23b3j9.wpengine.netdna-cdn.com/wp-content/uploads/2015/04/passwordless-authentication.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         {% blocktrans %}
                                         <h6 class="card-title">Password-less Login.</h6>
@@ -207,10 +191,6 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="card card-inverse identity">
-                                    <img class="card-img"
-                                         src="https://blogs.vmware.com/vsphere/files/2016/04/ssh.png"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         {% blocktrans %}
                                         <h6 class="card-title">Secure Admin Access.<br/>Secure SSH.</h6>
@@ -231,10 +211,6 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card card-inverse other">
-                                    <img class="card-img"
-                                         src="https://www.lexisnexis.com/LexTalk/cfs-file.ashx/__key/communityserver-components-userfiles/00-00-00-23-56-attached+files/shutterstock_5F00_153352382.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         {% blocktrans %}
                                         <h6 class="card-title">Private Files Or Trade Secrets.</h6>
@@ -246,10 +222,6 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card card-inverse other">
-                                    <img class="card-img"
-                                         src="http://www.startupticker.ch/uploads/Image/Articles/ProntonMail.jpg"
-                                         alt="Card image">
-
                                     <div class="card-img-overlay">
                                         {% blocktrans %}
                                         <h6 class="card-title">Secure Your Email Communication.</h6>
@@ -339,7 +311,7 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Endrosed by Experts." %}</h2>
+                        <h2>{% trans "Endorsed by Experts." %}</h2>
                         {% blocktrans %}
                         <p>Used by thousands ...</p>
                         {% endblocktrans %}
@@ -385,15 +357,15 @@
     <section class="devs-section" id="developers">
         <div class="container">
             <div class="row heading">
-                <div class="col-lg-12  text-xs-center">
+                <div class="col-lg-12 text-xs-center">
                     <h2>{% trans "Open call for Developers!" %}</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 text-xs-center button-area">
-                    <a class="btn btn-secondary-outline" href="https://github.com/trezor" role="button"><i
+                    <a class="btn btn-primary-outline" href="https://github.com/trezor" role="button"><i
                             class="ion-social-github"></i> {% trans "github.com/trezor"%}</a>
-                    <a class="btn btn-secondary-outline" href="https://gitter.im/trezor/community" role="button"><i
+                    <a class="btn btn-primary-outline" href="https://gitter.im/trezor/community" role="button"><i
                             class="ion-android-chat"></i> {% trans "Community"%}</a>
                     <a class="plain" href="https://doc.satoshilabs.com/trezor-tech/index.html">
                         {% trans "Learn from Developer’s Guide"%}
@@ -421,36 +393,190 @@
                     {% endblocktrans %}
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-md-2 person">
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
                     <div class="header">
-                        <img src="{% static '/images/team_faces/slush.jpg' %}"/>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
                     </div>
                     <div class="content">
                         <div class="description">
-                            <div class="name"><h6>Marek "Slush" Palatinus</h6></div>
-                            <div class="title">Architect</div>
+                            <h4>Alena Vranova</h4>
+
+                            <p class="title">Champion</p>
                         </div>
-                        <p class="text">Marek, also known as slush, is the inventor of the bitcoin mining pool concept
-                            and operator of the Slush’s mining pool, designer of the lightweight Stratum protocol and
-                            the core programmer of TREZOR.
-                        </p>
                     </div>
                 </div>
 
-                <div class="col-md-2 person">
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
                     <div class="header">
-                        <img src="{% static '/images/team_faces/slush.jpg' %}"/>
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
                     </div>
                     <div class="content">
                         <div class="description">
-                            <div class="name"><h6>Marek "Slush" Palatinus</h6></div>
-                            <div class="title">Architect</div>
+                            <h4>Marek "Slush" Palatinus</h4>
+
+                            <p class="title">Architect</p>
                         </div>
-                        <p>Marek, also known as slush, is the inventor of the bitcoin mining pool concept
-                            and operator of the Slush’s mining pool, designer of the lightweight Stratum protocol and
-                            the core programmer of TREZOR.
-                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Pavol "Stick" Rusnak</h4>
+
+                            <p class="title">Alchemist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Peter Bulák</h4>
+
+                            <p class="title">Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Pepitka</h4>
+
+                            <p class="title">Nap Time Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Johoe</h4>
+
+                            <p class="title">Hacker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Jan Pecinovský</h4>
+
+                            <p class="title">Operations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Tereza "TereZorka" Marešová</h4>
+
+                            <p class="title">Office Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Jan Pochyla</h4>
+
+                            <p class="title">Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Karel Bílek</h4>
+
+                            <p class="title">Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Peter Jensen</h4>
+
+                            <p class="title">Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Vojtěch Černý</h4>
+
+                            <p class="title">Support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Karel Benčič</h4>
+
+                            <p class="title">Support</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-sm-4 person text-xs-center">
+                    <div class="header">
+                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                    </div>
+                    <div class="content">
+                        <div class="description">
+                            <h4>Bach Nguyen</h4>
+
+                            <p class="title">Community Manager</p>
+                        </div>
                     </div>
                 </div>
             </div>
