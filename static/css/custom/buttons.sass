@@ -1,11 +1,19 @@
 .btn
   border-width: 2px
   +transition(all 0.4s ease)
-
+  
+.btn-primary-noline
+  color: $c_green
+  &:hover
+    color: $c_green
+    text-decoration: underline
+  
 .btn-primary-outline
   color: $c_green
   border-color: $c_green
+
   &:hover
+    color: $c_white
     background: $c_green
     border-color: $c_green
 
