@@ -15,12 +15,14 @@
       position: absolute
       bottom: 20%
 
-  .card
-    height: 120px
-    background: black
-    overflow: hidden
+  .item
+    width: 145px
+    height: 100px
+    padding: 10px
     border: 0
+    color: $c_white
     cursor: pointer
+    +border-radius(.25rem)
     +transition(all 0.45s)
 
     &.money
@@ -35,29 +37,14 @@
       background: $c_orange
       border-color: $c_orange
 
-    .card-img
-      position: absolute
-      min-width: 100%
-      width: 100%
-      min-height: 100%
-      top: 50%
-      left: 50%
-      opacity: .6
-      +transition(all 0.35s)
-      +transform(translate3d(-50%, -50%, 0px))
+    &:hover
+      +box-shadow(0 0 10px rgba($c_grey, .8))
 
     .card-title
-      font-weight: bold
+      font-size: 1.15em
 
-    &:hover
-      +box-shadow(0 0 10px $c_grey)
+    .content
+      display: none
 
-      .card-img
-        +transform(translate3d(-50%, -50%, 0px) scale(1.2))
-
-    &.open
-      position: relative
-      height: 400px
-      width: 100%
-
-
+  .expanded
+    width: 300px
