@@ -96,7 +96,7 @@ $(document).ready(function () {
                 paintEntry(key);
             });
 
-            console.log(features);
+            //console.log(features);
 
         };
         img.src = "./static/images/trezor.png";

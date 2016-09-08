@@ -41,45 +41,11 @@ $(document).ready(function () {
     });
 
     //
-    // FREEWALL MOSAIC LAYOUT in USAGE SECTION
-    //
-    var wall = new Freewall("#usage-container");
-
-    wall.reset({
-        selector: '.item',
-        fixSize: false,
-        draggable: false,
-        cellW: 145,
-        cellH: 100,
-        onResize: function() {
-            this.fitWidth();
-        }
-    });
-
-    $(".filter").click(function() {
-        $(".filter").removeClass("active");
-        var filter = $(this).addClass('active').data('filter');
-        if (filter) {
-            wall.filter(filter);
-        } else {
-            wall.unFilter();
-        }
-    });
-
-    wall.fitWidth();
-
-    $(".item").click(function() {
-        $(".expanded").addClass("closed").removeClass("expanded");
-        $(this).removeClass("closed").addClass('expanded');
-        wall.filter(".closed");
-    });
-
-    //
     // SCROLLING TO PROPER SECTION IN SUB NAV
     //
     $("a.scrollTo").click(function(e){
         e.preventDefault();
-        $('html').scrollTo(this.hash, 700, {
+        $('html').scrollTo(this.hash, 1200, {
             offset:-63,
             interrupt:true
         });
