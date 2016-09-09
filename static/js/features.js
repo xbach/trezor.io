@@ -68,9 +68,37 @@ $(document).ready(function () {
         };
     }
 
+    function wrapText(text, x, y, maxWidth, lineHeight) {
+        var cars = text.split("\n");
+
+        for (var ii = 0; ii < cars.length; ii++) {
+
+            var line = "";
+            var words = cars[ii].split(" ");
+
+            for (var n = 0; n < words.length; n++) {
+                var testLine = line + words[n] + " ";
+                var metrics = ctx.measureText(testLine);
+                var testWidth = metrics.width;
+
+                if (testWidth > maxWidth) {
+                    ctx.fillText(line, x, y);
+                    line = words[n] + " ";
+                    y += lineHeight;
+                }
+                else {
+                    line = testLine;
+                }
+            }
+
+            ctx.fillText(line, x, y);
+            y += lineHeight;
+        }
+    }
+
     function paintEntry(key) {
         ctx.beginPath();
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 1;
         ctx.strokeStyle = '#ddd';
 
         // obtain source target coordinates
@@ -105,15 +133,33 @@ $(document).ready(function () {
         ctx.stroke();
 
         // draw text - headline
-        var textBlock = document.getElementById(key);
-        var title = textBlock.getElementsByTagName('h3')[0].innerHTML;
+        var entryBlock = document.getElementById(key);
+        var title = entryBlock.getElementsByTagName('h3')[0].innerHTML;
 
         ctx.fillStyle = '#ddd';
         ctx.font="23px 'Open Sans', sans-serif";
         var titleWidth = ctx.measureText(title).width;
         ctx.fillText(title, txtX < trgtX ? txtX : txtX - titleWidth, txtY - 12);
 
-        // var text =  textBlock.getElementsByTagName('p')[0].innerHTML;
+        // hide underline effect
+        ctx.fillStyle = '#111111';
+        if(txtX < trgtX) {
+            ctx.fillRect(txtX, txtY - 1, titleWidth + 15, 4);
+        } else {
+            ctx.fillRect(txtX - titleWidth - 15, txtY - 1, titleWidth + 15, 4);
+        }
+
+        // draw text block
+        ctx.fillStyle = '#99979c';
+        ctx.font="400 15px/1.75 'Helvetica Neue',Helvetica,Arial,sans-serif";
+        var text =  entryBlock.getElementsByTagName('p')[0].innerHTML;
+        ctx.textAlign="left";
+        if(txtX < trgtX) {
+            wrapText(text, txtX, txtY + 10, titleWidth, 17);
+        } else {
+            wrapText(text, txtX - titleWidth, txtY + 10, titleWidth, 17);
+        }
+
         // console.log(title, text);
     }
 
@@ -135,6 +181,8 @@ $(document).ready(function () {
         };
         img.src = "./static/images/trezor.png";
     }
+
+
 
     draw();
     $(window).resize(function () {
