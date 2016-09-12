@@ -11,14 +11,14 @@
             <p class="lead text-xs-right">
                 <br/>
                 <a class="btn btn-primary-outline" href="#" role="button">{% trans "Buy now" %}</a>
-                <a class="btn btn-secondary-noline" href="#" role="button">{% trans "Getting started" %}</a>
+                <a class="btn btn-primary-noline" href="#" role="button">{% trans "Getting started" %}</a>
             </p>
         </div>
     </div>
     <div class="sticky hidden-xs-down" data-toggle="sticky-onscroll">
         <div class="container sub-nav">
             <div class="nav-inline nav" id="sub-nav">
-                <a class="nav-link">
+                <a class="nav-link" href="{% url '/' %}">
                     <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
                          onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                          alt="TREZOR logo"/>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-xs-center">
-                        <a href="" class="btn-primary-noline">{% trans "Learn more about Usage" %}</a>
+                        <a href="{% url '/usage.html' %}" class="btn-primary-noline">{% trans "Learn more about Usage" %}</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-social-bitcoin icon money"></span> Money</h3>
+                            <h3><span class="ion-social-bitcoin icon money"></span> {% trans "Money"%}</h3>
                         </div>
                         <div class="row">
                             <div class="" id="money-expand"></div>
@@ -130,12 +130,14 @@
                             <div class="item money closed">
                                 <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
                                 <div class="content">
+                                    {% blocktrans %}
                                     <ul>
                                         <li>the most trusted and secure way to store your bitcoins</li>
                                         <li>receive and pay without risk</li>
                                         <li>enjoy great comfort and ease of use</li>
                                         <li>compatible with the best Bitcoin wallets and services</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -143,12 +145,14 @@
                                 <h6 class="card-title">{% trans "Digital Assets & Contracts" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <ul>
                                         <li>Protect more and more digital currencies your Ethereum, Litecoins and DASH
                                         </li>
                                         <li>with a single TREZOR</li>
                                         <li>and the currency wallet of your choice</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -157,12 +161,14 @@
                                 <h6 class="card-title">Multiple currencies. One TREZOR.</h6>
                                 {% endblocktrans %}
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Protect digitally issued valuables such as:</p>
                                     <ul>
                                         <li>incentive points or blabla</li>
                                         <li>stocks and share - rights</li>
                                         <li>with the colored coins or Ethereum wallets of your choice</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -171,6 +177,7 @@
                                 <h6 class="card-title">Exchange.<br/>Send.<br/>Pay invoices.</h6>
                                 {% endblocktrans %}
                                 <div class="content">
+                                    {% blocktrans %}
                                     <ul>
                                         <li>Pay bills and invoices to international bank accounts using TREZOR and
                                             bitcoins.
@@ -180,13 +187,14 @@
                                         </li>
                                         <li>International same-day settlements for bargain fees</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-person icon identity"></span> Identity</h3>
+                            <h3><span class="ion-person icon identity"></span> {% trans "Identity"%}</h3>
                         </div>
                         <div class="row">
                             <div class="" id="identity-expand"></div>
@@ -196,6 +204,7 @@
                                 <h6 class="card-title">{% trans "Password Manager" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>TREZOR Password Manager is a no-master-password another security application</p>
                                     <ul>
                                         <li>Creates strong and unique passwords</li>
@@ -203,6 +212,7 @@
                                         <li>Auto-syncs encrypted passwords to your private cloud storage</li>
                                         <li>Lets you easily access your passwords from any computer, hassle-free</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -211,6 +221,7 @@
                                 <h6 class="card-title">Secure Admin Access.<br/>Secure SSH.</h6>
                                 {% endblocktrans %}
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Another great feature for professionals. Protect access to your servers, data or
                                         websites administration.</p>
                                     <ul>
@@ -218,6 +229,7 @@
                                         <li>Githubs SSH authentication</li>
                                         <li>Admin access to your Wordpress sites with a TREZOR.</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -226,6 +238,7 @@
                                 <h6 class="card-title">{% trans "Password-less Login" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Ask for the best. Log into your favorite websites, systems and apps without ever
                                         touching a password again.</p>
                                     <ul>
@@ -233,6 +246,7 @@
                                         <li>Sign up to websites without having to reveal your name or email address</li>
                                         <li>Avoid social engineering and big data analysis on every move you do</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -240,6 +254,7 @@
                                 <h6 class="card-title">{% trans "2nd Factor Authentication" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Are you sticking with your old weak passwords? You can! TREZOR is the world's
                                         most secure personal 2nd factor authenticator that secures your accounts event
                                         way better than anything else.</p>
@@ -255,13 +270,14 @@
                                         </li>
                                         <li>TREZOR Recovery allows you to easily restore access when needed</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-document-text icon other"></span> Documents &amp; Email</h3>
+                            <h3><span class="ion-document-text icon other"></span> {% trans "Documents &amp; Email" %}</h3>
                         </div>
                         <div class="row">
                             <div class="" id="other-expand"></div>
@@ -271,6 +287,7 @@
                                 <h6 class="card-title">{% trans "Private Files Or Trade Secrets" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>The first truly secure and offline way to create GPG keys! Encrypt any files with
                                         one touch.</p>
                                     <ul>
@@ -278,6 +295,7 @@
                                         <li>Offline to a smart card inserted into the SD slot</li>
                                         <li>Backup and re-create your GPG keys anew if needed</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -285,9 +303,11 @@
                                 <h6 class="card-title">{% trans "Secure Your Email" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>As you type your Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
                                         keystroke that you make, one by one, before it even reaches your computer..
                                         Simply plug TREZOR between your keyboard and your computer.</p>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>
@@ -312,24 +332,28 @@
                                 <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <ul>
                                         <li>the most trusted and secure way to store your bitcoins</li>
                                         <li>receive and pay without risk</li>
                                         <li>enjoy great comfort and ease of use</li>
                                         <li>compatible with the best Bitcoin wallets and services</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
                             <div class="item money closed">
                                 <h6 class="card-title">{% trans "Digital Assets & Contracts" %}</h6>
                                 <div class="content">
+                                    {% blocktrans %}
                                     <ul>
                                         <li>Protect more and more digital currencies your Ethereum, Litecoins and DASH
                                         </li>
                                         <li>with a single TREZOR</li>
                                         <li>and the currency wallet of your choice</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -338,12 +362,14 @@
                                 <h6 class="card-title">Multiple currencies. One TREZOR.</h6>
                                 {% endblocktrans %}
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Protect digitally issued valuables such as:</p>
                                     <ul>
                                         <li>incentive points or blabla</li>
                                         <li>stocks and share - rights</li>
                                         <li>with the colored coins or Ethereum wallets of your choice</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -352,6 +378,7 @@
                                 <h6 class="card-title">Exchange.<br/>Send.<br/>Pay invoices.</h6>
                                 {% endblocktrans %}
                                 <div class="content">
+                                    {% blocktrans %}
                                     <ul>
                                         <li>Pay bills and invoices to international bank accounts using TREZOR and
                                             bitcoins.
@@ -361,6 +388,7 @@
                                         </li>
                                         <li>International same-day settlements for bargain fees</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -368,6 +396,7 @@
                                 <h6 class="card-title">{% trans "Password Manager" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>TREZOR Password Manager is a no-master-password another security application</p>
                                     <ul>
                                         <li>Creates strong and unique passwords</li>
@@ -375,6 +404,7 @@
                                         <li>Auto-syncs encrypted passwords to your private cloud storage</li>
                                         <li>Lets you easily access your passwords from any computer, hassle-free</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -383,6 +413,7 @@
                                 <h6 class="card-title">Secure Admin Access.<br/>Secure SSH.</h6>
                                 {% endblocktrans %}
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Another great feature for professionals. Protect access to your servers, data or
                                         websites administration.</p>
                                     <ul>
@@ -390,6 +421,7 @@
                                         <li>Githubs SSH authentication</li>
                                         <li>Admin access to your Wordpress sites with a TREZOR.</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -398,6 +430,7 @@
                                 <h6 class="card-title">{% trans "Password-less Login" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Ask for the best. Log into your favorite websites, systems and apps without ever
                                         touching a password again.</p>
                                     <ul>
@@ -405,6 +438,7 @@
                                         <li>Sign up to websites without having to reveal your name or email address</li>
                                         <li>Avoid social engineering and big data analysis on every move you do</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -412,6 +446,7 @@
                                 <h6 class="card-title">{% trans "2nd Factor Authentication" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>Are you sticking with your old weak passwords? You can! TREZOR is the world's
                                         most secure personal 2nd factor authenticator that secures your accounts event
                                         way better than anything else.</p>
@@ -427,6 +462,7 @@
                                         </li>
                                         <li>TREZOR Recovery allows you to easily restore access when needed</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -434,6 +470,7 @@
                                 <h6 class="card-title">{% trans "Private Files Or Trade Secrets" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>The first truly secure and offline way to create GPG keys! Encrypt any files with
                                         one touch.</p>
                                     <ul>
@@ -441,6 +478,7 @@
                                         <li>Offline to a smart card inserted into the SD slot</li>
                                         <li>Backup and re-create your GPG keys anew if needed</li>
                                     </ul>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
 
@@ -448,9 +486,11 @@
                                 <h6 class="card-title">{% trans "Secure Your Email" %}</h6>
 
                                 <div class="content">
+                                    {% blocktrans %}
                                     <p>As you type your Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
                                         keystroke that you make, one by one, before it even reaches your computer..
                                         Simply plug TREZOR between your keyboard and your computer.</p>
+                                    {% endblocktrans %}
                                 </div>
                             </div>
                         </div>
@@ -497,9 +537,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 hidden-sm-down">
+                    <div class="col-lg-12 hidden-sm-down text-xs-center">
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
+                        <a href="{% url '/features.html' %}" class="btn-primary-noline">{% trans "Learn more about Features" %}</a>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -599,7 +641,7 @@
                         <div class="description">
                             <h4>Alena Vranova</h4>
 
-                            <p class="title">Champion</p>
+                            <p class="title">{% trans "Champion" %}</p>
                         </div>
                     </div>
                 </div>
@@ -612,7 +654,7 @@
                         <div class="description">
                             <h4>Marek "Slush" Palatinus</h4>
 
-                            <p class="title">Architect</p>
+                            <p class="title">{% trans "Architect" %}</p>
                         </div>
                     </div>
                 </div>
@@ -625,7 +667,7 @@
                         <div class="description">
                             <h4>Pavol "Stick" Rusnak</h4>
 
-                            <p class="title">Alchemist</p>
+                            <p class="title">{% trans "Alchemist" %}</p>
                         </div>
                     </div>
                 </div>
@@ -638,7 +680,7 @@
                         <div class="description">
                             <h4>Peter Bulák</h4>
 
-                            <p class="title">Director</p>
+                            <p class="title">{% trans "Director" %}</p>
                         </div>
                     </div>
                 </div>
@@ -651,7 +693,7 @@
                         <div class="description">
                             <h4>Pepitka</h4>
 
-                            <p class="title">Nap Time Coordinator</p>
+                            <p class="title">{% trans "Nap Time Coordinator" %}</p>
                         </div>
                     </div>
                 </div>
@@ -665,7 +707,7 @@
                         <div class="description">
                             <h4>Johoe</h4>
 
-                            <p class="title">Hacker</p>
+                            <p class="title">{% trans "Hacker" %}</p>
                         </div>
                     </div>
                 </div>
@@ -679,7 +721,7 @@
                         <div class="description">
                             <h4>Jan Pecinovský</h4>
 
-                            <p class="title">Operations</p>
+                            <p class="title">{% trans "Operations" %}</p>
                         </div>
                     </div>
                 </div>
@@ -692,7 +734,7 @@
                         <div class="description">
                             <h4>Tereza "TereZorka" Marešová</h4>
 
-                            <p class="title">Office Manager</p>
+                            <p class="title">{% trans "Office Manager" %}</p>
                         </div>
                     </div>
                 </div>
@@ -705,7 +747,7 @@
                         <div class="description">
                             <h4>Jan Pochyla</h4>
 
-                            <p class="title">Developer</p>
+                            <p class="title">{% trans "Developer" %}</p>
                         </div>
                     </div>
                 </div>
@@ -719,7 +761,7 @@
                         <div class="description">
                             <h4>Karel Bílek</h4>
 
-                            <p class="title">Developer</p>
+                            <p class="title">{% trans "Developer" %}</p>
                         </div>
                     </div>
                 </div>
@@ -732,7 +774,7 @@
                         <div class="description">
                             <h4>Peter Jensen</h4>
 
-                            <p class="title">Developer</p>
+                            <p class="title">{% trans "Developer" %}</p>
                         </div>
                     </div>
                 </div>
@@ -745,7 +787,7 @@
                         <div class="description">
                             <h4>Vojtěch Černý</h4>
 
-                            <p class="title">Support</p>
+                            <p class="title">{% trans "Support" %}</p>
                         </div>
                     </div>
                 </div>
@@ -760,7 +802,7 @@
                         <div class="description">
                             <h4>Karel Benčič</h4>
 
-                            <p class="title">Support</p>
+                            <p class="title">{% trans "Support" %}</p>
                         </div>
                     </div>
                 </div>
@@ -774,7 +816,7 @@
                         <div class="description">
                             <h4>Bach Nguyen</h4>
 
-                            <p class="title">Community Manager</p>
+                            <p class="title">{% trans "Community Manager" %}</p>
                         </div>
                     </div>
                 </div>

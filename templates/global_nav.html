@@ -4,13 +4,13 @@
             aria-controls="exCollapsingNavbar1" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
     </button>
-    <a class="navbar-brand-mini hidden-md-up" href="#"><img class="trezor-logo"
+    <a class="navbar-brand-mini hidden-md-up" href="{% url '/' %}"><img class="trezor-logo"
                                                             src="{% static '/images/trezor-logo.svg' %}"
                                                             onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                                                             alt="TREZOR logo"/></a>
     <div class="container">
         <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
-            <a class="navbar-brand hidden-sm-down" href="#"><img class="trezor-logo"
+            <a class="navbar-brand hidden-sm-down" href="{% url '/' %}"><img class="trezor-logo"
                                                                  src="{% static '/images/trezor-logo.svg' %}"
                                                                  onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                                                                  alt="TREZOR logo"/><span
@@ -20,7 +20,7 @@
                     <a class="nav-link" href="https://shop.trezor.io" data-amount="0">{% trans "Shop" %}</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url '/' %}">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://wallet.trezor.io/">{% trans "Wallet" %}</a>
