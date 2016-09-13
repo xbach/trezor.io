@@ -114,7 +114,7 @@ $(document).ready(function () {
         var entryBlock = document.getElementById(key);
         var title = entryBlock.getElementsByTagName('h3')[0].innerHTML;
 
-        if(renderLine) drawLinesNCircle(trgtX, trgtY, txtX, txtY, 250);
+        drawLinesNCircle(trgtX, trgtY, txtX, txtY, 250);
 
         ctx.fillStyle = '#ddd';
         ctx.font = "23px 'Open Sans', sans-serif";
@@ -207,14 +207,14 @@ $(document).ready(function () {
             if (txtX < trgtX) {
                 // text on left
                 if (txtX < mouseX && mouseX < txtX + 250) {
-                    if (txtY - 10 < mouseY && mouseY < txtY + 70) {
+                    if (txtY - 20 < mouseY && mouseY < txtY + 70) {
                         tempKey = key;
                     }
                 }
             } else {
                 // text on right
                 if (txtX - 250 < mouseX && mouseX < txtX) {
-                    if (txtY - 10 < mouseY && mouseY < txtY + 70) {
+                    if (txtY - 20 < mouseY && mouseY < txtY + 70) {
                         tempKey = key;
                     }
                 }
