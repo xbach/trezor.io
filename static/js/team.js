@@ -23,5 +23,5 @@
 
 })(jQuery);
 $(document).ready(function () {
-  $('.person').shuffle();
+  $('.shuffle').shuffle();
 });
