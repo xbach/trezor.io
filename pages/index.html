@@ -27,6 +27,7 @@
                 </a>
                 <a class="nav-link active scrollTo" href="#usage">{% trans "Usage" %}</a>
                 <a class="nav-link scrollTo" href="#features">{% trans "Features" %}</a>
+                <a class="nav-link scrollTo" href="#specification">{% trans "Specs" %}</a>
                 <a class="nav-link scrollTo" href="#developers">{% trans "Developers" %}</a>
                 <a class="nav-link scrollTo" href="#team">{% trans "Team" %}</a>
                 <a class="btn btn-primary-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99"%}</a>
@@ -105,7 +106,8 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-xs-center">
-                        <a href="{% url '/usage.html' %}" class="btn-primary-noline">{% trans "Learn more about Usage" %}</a>
+                        <a href="{% url '/usage.html' %}" class="btn-primary-noline">{% trans "Learn more about Usage"
+                            %}</a>
                     </div>
                 </div>
             </div>
@@ -128,6 +130,7 @@
                         <div class="usage-container">
                             <div class="item money closed">
                                 <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
+
                                 <div class="content">
                                     {% blocktrans %}
                                     <ul>
@@ -279,7 +282,8 @@
                     </div>
                     <div class="col-md-12 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-document-text icon other"></span> {% trans "Documents &amp; Email" %}</h3>
+                            <h3><span class="ion-document-text icon other"></span> {% trans "Documents &amp; Email" %}
+                            </h3>
                         </div>
                         <div class="usage-container">
                             <div class="item other closed">
@@ -333,31 +337,63 @@
                 <div class="hidden-md-up" id="features-list">
                     <div class="1 entry text-xs-center" id="case">
                         <h3>{% trans "Small and Brilliant" %}</h3>
-                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.{% endblocktrans %}</p>
+
+                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt.{% endblocktrans %}</p>
                     </div>
                     <div class="2 entry text-xs-center" id="usb">
                         <h3>{% trans "Unhackable" %}</h3>
-                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.{% endblocktrans %}</p>
+
+                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt.{% endblocktrans %}</p>
                     </div>
                     <div class="3 entry  text-xs-center" id="display">
                         <h3>{% trans "Trust your own eyes" %}</h3>
-                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.{% endblocktrans %}</p>
+
+                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt.{% endblocktrans %}</p>
                     </div>
                     <div class="4 entry" id="buttons">
                         <h3>{% trans "Trust your own hands" %}</h3>
-                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.{% endblocktrans %}</p>
+
+                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor.{% endblocktrans %}</p>
                     </div>
                     <div class="5 entry" id="inside">
                         <h3>{% trans "Powerful Cryptography" %}</h3>
-                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.{% endblocktrans %}</p>
+
+                        <p>{% blocktrans %}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt.{% endblocktrans %}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 hidden-sm-down text-xs-center">
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
-                        <a href="{% url '/features.html' %}" class="btn-primary-noline">{% trans "Learn more about Features" %}</a>
+                        <a href="{% url '/features.html' %}" class="btn-primary-noline">{% trans "Learn more about
+                            Features" %}</a>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <section class="specification-section" id="specification">
+            <div class="container">
+                <div class="row heading">
+                    <div class="col-lg-12  text-xs-center">
+                        <h2>{% trans "Technical specification" %}</h2>
+                        {% blocktrans %}
+                        <p>Trim away everything that could get hacked. Add powerful hardware features and software
+                            logic.</p>
+                        {% endblocktrans %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        shape.jpg
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"></div>
                 </div>
             </div>
         </section>
