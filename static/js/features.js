@@ -4,7 +4,8 @@ $(document).ready(function () {
         ctx = can.getContext('2d'),
         featuresList = document.getElementById("features-list"),
         features = featuresList.getElementsByClassName("entry"),
-        width, height, center, feature = 0;
+        width, height, center, feature = 0,
+        img = new Image();
 
     function recalculate() {
         width = can.width = can.scrollWidth;
@@ -14,53 +15,53 @@ $(document).ready(function () {
             y: height / 2
         };
         feature = {
-            'display' : {
-                'headline' : featuresList.getElementsByTagName('h2')[0],
+            'display': {
+                'headline': featuresList.getElementsByTagName('h2')[0],
                 'coor_text': {
                     x: 20,
                     y: 80
                 },
-                'coor_target' : {
+                'coor_target': {
                     x: center.x + 5,
                     y: center.y - 43
                 }
             },
-            'case' : {
+            'case': {
                 'coor_text': {
                     x: width - 20,
                     y: 80
                 },
-                'coor_target' : {
+                'coor_target': {
                     x: center.x + 5,
                     y: center.y - 125
                 }
             },
-            'buttons' : {
+            'buttons': {
                 'coor_text': {
                     x: 20,
                     y: center.y - 20
                 },
-                'coor_target' : {
+                'coor_target': {
                     x: center.x - 20,
                     y: center.y + 23
                 }
             },
-            'inside' : {
+            'inside': {
                 'coor_text': {
                     x: width - 20,
                     y: center.y + 20
                 },
-                'coor_target' : {
+                'coor_target': {
                     x: center.x + 25,
                     y: center.y + 95
                 }
             },
-            'usb'  : {
+            'usb': {
                 'coor_text': {
                     x: 20,
                     y: height - 120
                 },
-                'coor_target' : {
+                'coor_target': {
                     x: center.x + 10,
                     y: center.y + 185
                 }
@@ -96,7 +97,7 @@ $(document).ready(function () {
         }
     }
 
-    function paintEntry(key) {
+    function paintEntry(key, renderLine) {
         ctx.beginPath();
         ctx.lineWidth = 1;
         ctx.strokeStyle = '#ddd';
@@ -109,13 +110,40 @@ $(document).ready(function () {
         var txtX = feature[key].coor_text.x;
         var txtY = feature[key].coor_text.y;
 
+        // draw text - headline
+        var entryBlock = document.getElementById(key);
+        var title = entryBlock.getElementsByTagName('h3')[0].innerHTML;
+
+        if(renderLine) drawLinesNCircle(trgtX, trgtY, txtX, txtY, 250);
+
+        ctx.fillStyle = '#ddd';
+        ctx.font = "23px 'Open Sans', sans-serif";
+        var titleWidth = 250; //ctx.measureText(title).width;
+        ctx.fillText(title, txtX < trgtX ? txtX : txtX - titleWidth, txtY - 12);
+
+        // draw text block
+        ctx.fillStyle = '#99979c';
+        ctx.font = "400 15px/1.75 'Helvetica Neue',Helvetica,Arial,sans-serif";
+        var text = entryBlock.getElementsByTagName('p')[0].innerHTML;
+        ctx.textAlign = "left";
+        if (txtX < trgtX) {
+            wrapText(text, txtX, txtY + 10, titleWidth, 17);
+        } else {
+            wrapText(text, txtX - titleWidth, txtY + 10, titleWidth, 17);
+        }
+
+        // console.log(title, text);
+    }
+
+    function drawLinesNCircle(trgtX, trgtY, txtX, txtY, titleWidth) {
         // paint source target circle
-        ctx.arc(txtX < trgtX ? trgtX + 6 : trgtX - 6,trgtY,6,0,2*Math.PI);
+        ctx.beginPath();
+        ctx.arc(txtX < trgtX ? trgtX + 6 : trgtX - 6, trgtY, 6, 0, 2 * Math.PI);
 
         // calculate difference step
         var temp = trgtY - txtY;
-        ctx.moveTo(trgtX , trgtY);
-        if(txtX < trgtX) {
+        ctx.moveTo(trgtX, trgtY);
+        if (txtX < trgtX) {
             // text on left
             var newX = trgtX - 120;
             ctx.lineTo(newX, trgtY);
@@ -132,62 +160,68 @@ $(document).ready(function () {
         ctx.lineTo(txtX, txtY);
         ctx.stroke();
 
-        // draw text - headline
-        var entryBlock = document.getElementById(key);
-        var title = entryBlock.getElementsByTagName('h3')[0].innerHTML;
-
-        ctx.fillStyle = '#ddd';
-        ctx.font="23px 'Open Sans', sans-serif";
-        var titleWidth = ctx.measureText(title).width;
-        ctx.fillText(title, txtX < trgtX ? txtX : txtX - titleWidth, txtY - 12);
-
         // hide underline effect
         ctx.fillStyle = '#111111';
-        if(txtX < trgtX) {
+        if (txtX < trgtX) {
             ctx.fillRect(txtX, txtY - 1, titleWidth + 15, 4);
         } else {
             ctx.fillRect(txtX - titleWidth - 15, txtY - 1, titleWidth + 15, 4);
         }
-
-        // draw text block
-        ctx.fillStyle = '#99979c';
-        ctx.font="400 15px/1.75 'Helvetica Neue',Helvetica,Arial,sans-serif";
-        var text =  entryBlock.getElementsByTagName('p')[0].innerHTML;
-        ctx.textAlign="left";
-        if(txtX < trgtX) {
-            wrapText(text, txtX, txtY + 10, titleWidth, 17);
-        } else {
-            wrapText(text, txtX - titleWidth, txtY + 10, titleWidth, 17);
-        }
-
-        // console.log(title, text);
     }
 
-    function draw() {
+    function draw(tempKey) {
         recalculate();
-
         // TREZOR IMAGE
-        var img = new Image();
-        img.onload = function () {
-            ctx.beginPath();
-            ctx.drawImage(img, center.x - 82, (height - 380) / 2, 164, 380);
-
-            Object.keys(feature).map(function (key) {
-                paintEntry(key);
-            });
-
-            //console.log(features);
-
-        };
-        img.src = "./static/images/trezor.png";
+        ctx.beginPath();
+        ctx.drawImage(img, center.x - 82, (height - 380) / 2, 164, 380);
+        Object.keys(feature).map(function (key) {
+            paintEntry(key, tempKey == key);
+        });
     }
 
-
-
-    draw();
+    img.onload = function () {
+        draw(null);
+    };
+    img.src = "./static/images/trezor.png";
     $(window).resize(function () {
-        draw();
+        draw(null);
     });
 
+
+    can.addEventListener('mousemove', function (e) {
+        var mouseX = e.offsetX;
+        var mouseY = e.offsetY;
+        var tempKey = null;
+
+        Object.keys(feature).map(function (key) {
+            // obtain source target coordinates
+
+
+            var trgtX = feature[key].coor_target.x;
+            var trgtY = feature[key].coor_target.y;
+
+            // obtain text block coordinates
+            var txtX = feature[key].coor_text.x;
+            var txtY = feature[key].coor_text.y;
+
+            if (txtX < trgtX) {
+                // text on left
+                if (txtX < mouseX && mouseX < txtX + 250) {
+                    if (txtY - 10 < mouseY && mouseY < txtY + 70) {
+                        tempKey = key;
+                    }
+                }
+            } else {
+                // text on right
+                if (txtX - 250 < mouseX && mouseX < txtX) {
+                    if (txtY - 10 < mouseY && mouseY < txtY + 70) {
+                        tempKey = key;
+                    }
+                }
+            }
+        });
+        draw(tempKey);
+        tempKey = null;
+    }, true);
 
 });
