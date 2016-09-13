@@ -1,6 +1,6 @@
 .usage-section
   position: relative
-  padding-bottom: 120px
+  padding-bottom: 50px
 
   .heading
     padding: 10px 0 20px 0
@@ -27,7 +27,7 @@
     +transition(all 0.45s)
 
 
-    &:hover
+    &:hover, &.active
       +box-shadow(0 0 10px rgba($c_grey, .4))
 
     .card-title
@@ -60,18 +60,25 @@
 
     .card-title
       font-size: 2em
-
+  .preview
+    height: 0
+    background: $c_white
+    
   .expanded
-    margin: 0 14px 14px 14px
+    margin: 14px 14px 14px 14px
     padding: 20px
+    height: auto
     text-align: left
     background: rgba($c_grey_font, .04)
     color: $c_grey_font
     +border-radius(.25rem)
-    +transition(all 0.45s)
 
     .card-title
       font-size: 1.5rem
+
+    ul
+      padding-left: 20px
+      font: 400 15px/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif
 
   h3
     font-size: 1.4em

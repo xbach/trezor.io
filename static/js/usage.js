@@ -31,11 +31,13 @@ $(document).ready(function () {
    */
 
   $(".item").click(function () {
+    $(".item").removeClass('active');
+    $(this).addClass('active');
     $('#money-expand').html('').removeClass('expanded');
     $('#identity-expand').html('').removeClass('expanded');
     $('#other-expand').html('').removeClass('expanded');
-    var klasa = $(this).attr("class").split(' ')[ 1 ];
-    $('#' + klasa + '-expand').html($(this).html()).addClass('expanded');
+    var classType = $(this).attr("class").split(' ')[ 1 ];
+    $('#' + classType + '-expand').html($(this).html()).addClass('expanded');
 
     //$(".expanded").addClass("closed").removeClass("expanded");
     //$(this).removeClass("closed").addClass('expanded');
