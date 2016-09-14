@@ -14,7 +14,7 @@
             </p>
         </div>
         <div class="strip text-xs-center">
-            <p>Already has TREZOR? <a href="#">Get started and setup</a></p>
+            <p>Already haz TREZOR? <a href="#">Get started and setup</a></p>
         </div>
     </div>
     <div class="sticky hidden-xs-down" data-toggle="sticky-onscroll">
@@ -91,8 +91,7 @@
                             <h4>3. Lost? Restore.</h4>
 
                             <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected
-                                money,
-                                transaction history, websites or documents.</p>
+                                money, transaction history, websites or documents.</p>
                             {% endblocktrans %}
                         </div>
                     </div>
@@ -106,8 +105,11 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-xs-center">
-                        <a href="{% url '/usage.html' %}" class="btn-primary-noline">{% trans "Learn more about Usage"
-                            %}</a>
+                        <a href="{% url '/usage.html' %}" class="btn-primary-noline">
+                            {% blocktrans %}
+                            Learn more about Usage
+                            {% endblocktrans %}
+                        </a>
                     </div>
                 </div>
             </div>
@@ -369,35 +371,16 @@
                 <div class="row">
                     <div class="col-lg-12 hidden-sm-down text-xs-center">
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
-                        <a href="{% url '/features.html' %}" class="btn-primary-noline">{% trans "Learn more about
-                            Features" %}</a>
+                        <a href="{% url '/features.html' %}" class="btn-primary-noline">
+                            {% blocktrans %}
+                            Learn more about Features
+                            {% endblocktrans %}
+                        </a>
                     </div>
 
                 </div>
             </div>
         </section>
-
-        <section class="specification-section" id="specification">
-            <div class="container">
-                <div class="row heading">
-                    <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Technical specification" %}</h2>
-                        {% blocktrans %}
-                        <p>Trim away everything that could get hacked. Add powerful hardware features and software
-                            logic.</p>
-                        {% endblocktrans %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        shape.jpg
-                    </div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4"></div>
-                </div>
-            </div>
-        </section>
-
         <section class="experts-section">
             <div class="container">
                 <div class="row heading">
@@ -408,7 +391,7 @@
                         {% endblocktrans %}
                     </div>
                 </div>
-                <div class="row">
+                <div class="row experts">
                     <div class="col-md-4 text-xs-center">
                         <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
                         <h4>Andreas M. Antonopoulos</h4>
@@ -442,9 +425,93 @@
                         </blockquote>
                     </div>
                 </div>
+                <div class="row heading">
+                    <div class="col-lg-12  text-xs-center">
+                        <h2>{% trans "In Media" %}</h2>
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-md-2 text-xs-center">
+                        <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/"><img src="{% static '/images/logos/forbes-logo.png' %}" alt=""/></a>
+                    </div>
+                    <div class="col-md-2  text-xs-center">
+                        <a href="https://vimeo.com/116250492"><img src="{% static '/images/logos/cnn-logo.png' %}" alt=""/></a>
+                    </div>
+                    <div class="col-md-2 text-xs-center">
+                        <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/"><img src="{% static '/images/logos/coindesk-logo.png' %}" alt=""/></a>
+                    </div>
+                    <div class="col-md-2 text-xs-center">
+                        <a href="http://cointelegraph.com/news/112947/who-will-keep-you-safe-a-comparison-of-bitcoin-wallets-that-arent-digital"><img src="{% static '/images/logos/cointelegraph-logo.png' %}" alt=""/></a>
+                    </div>
+                    <div class="col-md-2 text-xs-center">
+                        <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208"><img src="{% static '/images/logos/insidebtc-logo.png' %}" alt=""/></a>
+                    </div>
+                    <div class="col-md-2 text-xs-center">
+                        <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/"><img src="{% static '/images/logos/btcmag-logo.png' %}" alt=""/></a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+    <section class="specification-section" id="specification">
+        <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12  text-xs-center">
+                    <h2>{% trans "Technical specification" %}</h2>
+                    {% blocktrans %}
+                    <p>Trim away everything that could get hacked. Add powerful hardware features and software
+                        logic.</p>
+                    {% endblocktrans %}
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="row spec">
+                        <p class="spec-block">
+                            <b>CPU</b><span>120 MHz embedded ARM processor (Cortex M3)</span>
+                        </p>
+
+                        <p class="spec-block">
+                            <b>Screen</b><span>Bright OLED - 128x64 pixels</span>
+                        </p>
+                        <p class="spec-block">
+                            <b>Size</b><span>60mm x 30mm x 6mm<br />(2.4 x 1.2 x 0.2 in)</span>
+                        </p>
+
+                        <p class="spec-block">
+                            <b>Weight</b><span>12g (0.42 oz)</span>
+                        </p>
+
+                        <p class="spec-block">
+                            <b>Temperature</b><span>-20°C to +60°C (-4°F - +140°F)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"/>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="row spec">
+                        <p class="spec-block">
+                            <b>Conection</b><span>MicroUSB to desktop or mobile</span>
+                        </p>
+                        <p class="spec-block">
+                            <b>Desktop</b><span>Windows, macOS, Linux</span>
+                        </p>
+                        <p class="spec-block">
+                            <b>Mobile</b><span>Android</span>
+                        </p>
+                        <p class="spec-block">
+                            <b>Certified</b><span>CE and RoHS certified (quality, reliability and
+                        environmental standards)</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="devs-section" id="developers">
         <div class="container">
             <div class="row heading">

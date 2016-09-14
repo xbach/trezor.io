@@ -124,7 +124,7 @@ $(document).ready(function () {
     // draw text block
     ctx.fillStyle = '#99979c';
     ctx.font = "400 15px/1.75 'Helvetica Neue',Helvetica,Arial,sans-serif";
-    var text = entryBlock.getElementsByTagName('p')[ 0 ].innerHTML;
+    var text = entryBlock.getElementsByTagName('p')[ 0 ].innerHTML.trim();
     ctx.textAlign = "left";
     if (txtX < trgtX) {
       wrapText(text, txtX, txtY + 10, titleWidth, 17);

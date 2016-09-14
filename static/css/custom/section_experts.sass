@@ -1,28 +1,43 @@
 .experts-section
   min-height: 500px
-  padding-bottom: 60px
+  padding-bottom: 10px
 
   .heading
-    padding: 40px 0 30px 0
+    padding: 50px 0 10px 0
+
+  .experts
+    img
+      border: 10px solid white
+      +border-radius(50%)
+
+    h4
+      font-size: 1.3em
+
+    blockquote
+      padding: 0.5em 10px
+      font-style: italic
+      font-size: .9em
+      quotes: "\201C""\201C""\201C""\2019"
+
+      &:before
+        font-family: Georgia, serif
+        color: $c_grey
+        content: open-quote
+        font-size: 4em
+        line-height: 0.1em
+        margin-right: 0.25em
+        vertical-align: -0.4em
+
+.media
 
   img
-    border: 10px solid white
-    +border-radius(50%)
-
-  h4
-    font-size: 1.3em
-
-  blockquote
-    padding: 0.5em 10px
-    font-style: italic
-    font-size: .9em
-    quotes: "\201C""\201C""\201C""\2019"
-
-    &:before
-      font-family: Georgia, serif
-      color: $c_grey
-      content: open-quote
-      font-size: 4em
-      line-height: 0.1em
-      margin-right: 0.25em
-      vertical-align: -0.4em
+    height: 36px
+    opacity: .5
+    width: auto
+    -webkit-filter: grayscale(100%)
+    -moz-filter: grayscale(100%)
+    -ms-filter: grayscale(100%)
+    -o-filter: grayscale(100%)
+    filter: grayscale(100%)
+    filter: url(grayscale.svg)
+    filter: gray
