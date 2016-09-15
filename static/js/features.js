@@ -116,6 +116,10 @@ $(document).ready(function () {
 
     drawLinesNCircle(trgtX, trgtY, txtX, txtY, 250);
 
+    if (renderLine) {
+      $('#g').css({top: trgtY - 3, left: txtX < trgtX ? trgtX + 18 : trgtX + 6});
+    }
+
     ctx.fillStyle = '#ddd';
     ctx.font = "23px 'Open Sans', sans-serif";
     var titleWidth = 250; //ctx.measureText(title).width;
@@ -124,7 +128,7 @@ $(document).ready(function () {
     // draw text block
     ctx.fillStyle = '#99979c';
     ctx.font = "400 15px/1.75 'Helvetica Neue',Helvetica,Arial,sans-serif";
-    var text = entryBlock.getElementsByTagName('p')[ 0 ].innerHTML.trim();
+    var text = $(entryBlock.getElementsByTagName('p')[ 0 ]).text().replace(/\s+/g, " ");
     ctx.textAlign = "left";
     if (txtX < trgtX) {
       wrapText(text, txtX, txtY + 10, titleWidth, 17);
@@ -174,9 +178,15 @@ $(document).ready(function () {
     // TREZOR IMAGE
     ctx.beginPath();
     ctx.drawImage(img, center.x - 82, (height - 380) / 2, 164, 380);
+    if(tempKey == null) {
+      $('#g').hide();
+    }
     Object.keys(feature).map(function (key) {
       paintEntry(key, tempKey == key);
     });
+    if(tempKey != null) {
+      $('#g').show();
+    }
   }
 
   img.onload = function () {

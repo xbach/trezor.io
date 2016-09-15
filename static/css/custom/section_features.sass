@@ -1,4 +1,5 @@
 .features-section
+  position: relative
   min-height: 500px
   background: $c_black
   padding-bottom: 60px
@@ -20,6 +21,42 @@
     
 
   canvas#featureCanvas
+    position: relative
     height: 500px
     width: 100%
     display: block
+    z-index: 0
+
+  .point
+    position: absolute
+    background: rgba($c_white, .6)
+    top: 432px
+    left: 583px
+    width: 6px
+    height: 6px
+    z-index: 1
+    +border-radius(50%)
+
+    &:before
+      position: absolute
+      left: -17px
+      top: -17px
+      content: ""
+      width: 40px
+      height: 40px
+      background: rgba($c_white, .4)
+      opacity: 0
+      +border-radius(50%)
+      +animation(pulsate 1.8s infinite ease-out)
+
+    &:after
+      position: absolute
+      left: -17px
+      top: -17px
+      content: ""
+      width: 40px
+      height: 40px
+      background: rgba($c_white, .4)
+      opacity: 0
+      +border-radius(50%)
+      +animation(pulsate 1.8s infinite ease-out 0.4s)
