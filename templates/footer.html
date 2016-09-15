@@ -1,0 +1,64 @@
+{% load i18n %}
+<footer>
+    <div class="share">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-xs-center">
+                    <h5>Tell a friend ... </h5>
+                    <a href="https://twitter.com/bitcointrezor"><span class="ion-social-twitter"></span></a>
+                    <a href="https://www.reddit.com/r/trezor"><span class="ion-social-reddit"></span></a>
+                    <a href="https://www.instagram.com/bitcointrezor/"><span class="ion-social-instagram"></span></a>
+                    <a href="https://www.facebook.com/BitcoinTrezor/"><span class="ion-social-facebook"></span></a>
+                    <a href="https://github.com/satoshilabs/"><span class="ion-email"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="{% url '/' %}"><img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
+                                                 onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
+                                                 alt="TREZOR logo"/></a>
+                    <p>
+                        SatoshiLabs s.r.o.<br />
+                        Švábky 52/2<br />
+                        18000 Praha 8<br />
+                        Czech Republic
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer-nav">
+                        <li class="">
+                            <a class="nav-link" href="https://shop.trezor.io" data-amount="0">{% trans "Shop" %}</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url '/' %}">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://wallet.trezor.io/">{% trans "Wallet" %}</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="http://doc.satoshilabs.com/">{% trans "Docs" %}</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://blog.trezor.io/">{% trans "Blog" %}</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="#">{% trans "Contact" %}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-7">
+                    <h5>Don't miss a good news.</h5>
+                    <form action="">
+                        <input type="email" id="email" name="EMAIL" required="" placeholder="Your E-mail Address">
+                        <a class="btn btn-third-outline">Get updates</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>

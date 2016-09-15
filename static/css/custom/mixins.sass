@@ -20,6 +20,16 @@
   -o-appearance:        none
   appearance:           none
 
+=grey($val)
+  -webkit-filter: grayscale($val)
+  -moz-filter: grayscale($val)
+  -ms-filter: grayscale($val)
+  -o-filter: grayscale($val)
+  filter: grayscale($val)
+  filter: url("/static/images/grayscale.svg")
+  filter: gray
+
+
 =animation($val)
   -webkit-animation:    $val
   -moz-animation:       $val

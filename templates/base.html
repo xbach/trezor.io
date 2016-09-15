@@ -49,6 +49,10 @@
     {% block body %}
     {% endblock %}
 
+    {% include "footer.html" %}
+    </body>
+
+  {% block scripts %}
     <script src="{% static '/static/js/vendor/jquery-1.10.1.js' %}"></script>
     <script src="{% static '/static/js/vendor/freewall.js' %}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
@@ -58,9 +62,5 @@
     <script src="{% static '/static/js/usage.js' %}"></script>
     <script src="{% static '/static/js/features.js' %}"></script>
     <script src="{% static '/static/js/team.js' %}"></script>
-
-    </body>
-
-  {% block scripts %}
   {% endblock %}
 </html>
