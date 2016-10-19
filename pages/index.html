@@ -4,11 +4,11 @@
 <main class="main-content">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3 text-xs-right">{% trans "Original hardware wallet." %}</h1>
+            <h1 class="display-3 text-xs-left">{% trans "Original hardware wallet." %}</h1>
 
-            <p class="lead text-xs-right">{% trans "This is a placeholder for the big headline." %}</p>
+            <p class="lead text-xs-left">{% trans "This is a placeholder for the big headline." %}</p>
 
-            <p class="lead text-xs-right">
+            <p class="lead text-xs-left">
                 <br/>
                 <a class="btn btn-third-outline" href="#" role="button">{% trans "Buy now" %}</a>
             </p>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 text-xs-center hidden-xs-down">
-                        <div class="video-play">
+                        <div class="video-play setup">
                             <a href="#" class="watch-video vertical-align">
                                 <i class="ion-ios-play-outline"></i>{% trans "Watch video"%}
                             </a>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 text-xs-center hidden-xs-down">
-                        <div class="video-play">
+                        <div class="video-play use">
                             <a href="#" class="watch-video vertical-align">
                                 <i class="ion-ios-play-outline"></i>{% trans "Watch video"%}
                             </a>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 text-xs-center hidden-xs-down">
-                        <div class="video-play">
+                        <div class="video-play recover">
                             <a href="#" class="watch-video vertical-align">
                                 <i class="ion-ios-play-outline"></i>{% trans "Watch video"%}
                             </a>
@@ -394,34 +394,33 @@
                 </div>
                 <div class="row experts">
                     <div class="col-md-4 text-xs-center">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
-                        <h4>Andreas M. Antonopoulos</h4>
+                        <img src="{% url '/static/images/experts_faces/balaji.jpg' %}" />
+                        <h4>Balaji S. Srinivasan, PhD</h4>
+                        <p class="title">{% trans "CEO and Cofounder, 21" %}</p>
                         <blockquote>
                             {% blocktrans %}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                            TREZOR is a pioneering hardware wallet, and a great way to store your digital currency locally.
                             {% endblocktrans %}
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
                         <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
-                        <h4>Amir Taaki</h4>
+                        <h4>Pamela Morgan</h4>
+                        <p class="title">{% trans " CEO Third Key Solutions LLC" %}</p>
                         <blockquote>
                             {% blocktrans %}
-                            TREZOR is anonymous digital cryptocurrency you can safely put in your pocket. A tool for
-                            people
-                            to be their own banks. I want one.
+                            With TREZOR you don't need to be a security expert to have expert level security.
                             {% endblocktrans %}
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97200&w=200&h=200"/>
-                        <h4>Tony Gallippi</h4>
+                        <img src="{% url '/static/images/experts_faces/matonis.jpg' %}" />
+                        <h4>Jon Matonis</h4>
+                        <p class="title">{% trans "Economist" %}</p>
                         <blockquote>
                             {% blocktrans %}
-                            A hardware wallet will help add extra security to Bitcoin. It provides safe, secure storage
-                            for
-                            any business or person who wishes to hold bitcoin.
+                            Hardware wallets have become the standard for secure, long-term bitcoin storage.
+                            Trezor is the gold standard for hardware wallets.
                             {% endblocktrans %}
                         </blockquote>
                     </div>
