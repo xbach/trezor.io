@@ -22,8 +22,8 @@ $(document).ready(function () {
           y: 80
         },
         'coor_target': {
-          x: center.x + 5,
-          y: center.y - 43
+          x: center.x - 14,
+          y: center.y - 15
         }
       },
       'case': {
@@ -32,8 +32,8 @@ $(document).ready(function () {
           y: 80
         },
         'coor_target': {
-          x: center.x + 5,
-          y: center.y - 125
+          x: center.x + 25,
+          y: center.y - 95
         }
       },
       'buttons': {
@@ -42,8 +42,8 @@ $(document).ready(function () {
           y: center.y - 20
         },
         'coor_target': {
-          x: center.x - 20,
-          y: center.y + 23
+          x: center.x - 10,
+          y: center.y + 73
         }
       },
       'inside': {
@@ -177,7 +177,7 @@ $(document).ready(function () {
     recalculate();
     // TREZOR IMAGE
     ctx.beginPath();
-    ctx.drawImage(img, center.x - 82, (height - 380) / 2, 164, 380);
+    ctx.drawImage(img, center.x - 182, (height - 468) / 2, 364, 568);
     if(tempKey == null) {
       $('#g').hide();
     }
@@ -192,7 +192,7 @@ $(document).ready(function () {
   img.onload = function () {
     draw(null);
   };
-  img.src = "./static/images/trezor.png";
+  img.src = "./static/images/trezor-black.png";
   $(window).resize(function () {
     draw(null);
   });
