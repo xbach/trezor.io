@@ -25,3 +25,16 @@
 $(document).ready(function () {
   $('.shuffle').shuffle();
 });
+
+window.washingmashine = function () {
+  $('.team-section .person .header img').each(function() {
+    var obj = $(this);
+    var time = Math.random() * 2;
+    var spin = Math.random() < 0.5;
+    if (spin) {
+      obj.css('animation', 'spin '+time+'s linear infinite');
+    } else {
+      obj.css('animation', 'spinleft '+time+'s linear infinite'); 
+    }
+  });
+};
