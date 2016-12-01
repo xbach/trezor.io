@@ -4,15 +4,16 @@
 <main class="main-content">
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-4 text-xs-left">{% trans "This is Bitcoin wallet." %}</h1>
-            <p class="lead text-xs-left">{% trans "It keeps your digital assets ultra-secure." %}</p>
+            <p class="lead text-xs-left">{% trans "Digitally Smart" %}</p>
+            <h1 class="display-4 text-xs-left">{% trans "Safe By Design" %}</h1>
+            <p>{% trans "Protect your digital money, passwords, accounts, documents and emails." %}<br />{% trans "It's as simple as pie!" %}</p>
             <p class="text-xs-left">
                 <br/>
                 <a class="btn btn-primary-full" href="#" role="button">{% trans "Buy now!" %}</a>
             </p>
         </div>
         <div class="strip text-xs-center">
-            <p>Already own one? <a href="#">Get started and setup</a></p>
+            <p>Got yours? <a href="#">START HERE</a></p>
         </div>
     </div>
     <div class="sticky hidden-xs-down" data-toggle="sticky-onscroll">
@@ -23,11 +24,12 @@
                          onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                          alt="TREZOR logo"/>
                 </a>
-                <a class="nav-link active scrollTo" href="#usage">{% trans "Usage" %}</a>
-                <a class="nav-link scrollTo" href="#features">{% trans "Features" %}</a>
-                <a class="nav-link scrollTo" href="#specification">{% trans "Specs" %}</a>
+                <a class="nav-link active scrollTo" href="#usage">{% trans "Use TREZOR" %}</a>
+                <a class="nav-link scrollTo" href="#features">{% trans "Security Features" %}</a>
+                <a class="nav-link scrollTo" href="#specification">{% trans "Product Specs" %}</a>
                 <a class="nav-link scrollTo" href="#developers">{% trans "Developers" %}</a>
                 <a class="nav-link scrollTo" href="#team">{% trans "Team" %}</a>
+                <a class="nav-link scrollTo" href="#story">{% trans "Story" %}</a>
                 <a class="btn btn-third-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99"%}</a>
             </div>
         </div>
@@ -38,9 +40,9 @@
                 <div class="row">
                     <div class="col-lg-12 text-xs-center">
                         {% blocktrans %}
-                        <h2>Easy. Secure.</h2>
+                        <h2>Security Made Easy</h2>
 
-                        <p>3 simple steps</p>
+                        <p>in 3 simple steps</p>
                         {% endblocktrans %}
                     </div>
                 </div>
@@ -50,8 +52,7 @@
                             {% blocktrans %}
                             <h4>1. Setup.</h4>
 
-                            <p>Get started within minutes in the comfort of your home. Completely registration-free. No
-                                identity reuse, device tracking or backdoors.</p>
+                            <p>Get your TREZOR ready within minutes in a completely private, registration-free process.</p>
                             {% endblocktrans %}
                         </div>
                     </div>
@@ -74,10 +75,9 @@
                     <div class="col-sm-6 text-xs-center">
                         <div class="text-block">
                             {% blocktrans %}
-                            <h4>2. Use with ease.</h4>
+                            <h4>2. Click &amp; Done</h4>
 
-                            <p>Trust your own eyes and your own hands. Defend your digital life with a simple button
-                                click.</p>
+                            <p>Using TREZOR is just easy. Just follow instructions on the display and click the button to confirm important actions.</p>
                             {% endblocktrans %}
                         </div>
                     </div>
@@ -86,10 +86,9 @@
                     <div class="col-sm-6 text-xs-center">
                         <div class="text-block">
                             {% blocktrans %}
-                            <h4>3. Lost? Restore.</h4>
+                            <h4>3. Stay Cool</h4>
 
-                            <p>Use your secret sentence of 24 words to quickly regain acces to all your TREZOR protected
-                                money, transaction history, websites or documents.</p>
+                            <p>Device lost? No problem!<br />Restore your TREZOR anytime using your unique Recovery seed.<br />And don't worry, your bitcoins stay safe.</p>
                             {% endblocktrans %}
                         </div>
                     </div>
@@ -105,7 +104,7 @@
                     <div class="col-lg-12 text-xs-center">
                         <a href="{% url '/usage.html' %}" class="btn-primary-noline">
                             {% blocktrans %}
-                            Learn more about Usage
+                            Learn more...<br />Basic Operations With TREZOR
                             {% endblocktrans %}
                         </a>
                     </div>
@@ -117,19 +116,20 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
-                        <h2>{% trans "Functions." %}</h2>
+                        <h2>{% trans "Use TREZOR" %}</h2>
+                        <h2>{% trans "To Protect Your Digital Life And Money." %}</h2>
 
-                        <p>{% trans "Number of great usage still grows and multiply!" %}</p>
+                        <p>{% trans "From Bitcoin to passwords, accounts, documents or emails." %}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-social-bitcoin icon money"></span> {% trans "Money"%}</h3>
+                            <h3><span class="ion-social-bitcoin icon money"></span> {% trans "DIGITAL MONEY"%}</h3>
                         </div>
                         <div class="usage-container">
                             <div class="item money closed">
-                                <h6 class="card-title">{% trans "Bitcoin hardware wallet" %}</h6>
+                                <h6 class="card-title">{% trans "Bitcoin" %}</h6>
 
                                 <div class="content">
                                     {% blocktrans %}
@@ -160,7 +160,7 @@
 
                             <div class="item money closed">
                                 {% blocktrans %}
-                                <h6 class="card-title">Multiple currencies. One TREZOR.</h6>
+                                <h6 class="card-title">Dash, Zcash, Litecoin</h6>
                                 {% endblocktrans %}
                                 <div class="content">
                                     {% blocktrans %}
@@ -176,7 +176,7 @@
 
                             <div class="item money closed">
                                 {% blocktrans %}
-                                <h6 class="card-title">Exchange.<br/>Send.<br/>Pay invoices.</h6>
+                                <h6 class="card-title">Pay &amp; Get Paid</h6>
                                 {% endblocktrans %}
                                 <div class="content">
                                     {% blocktrans %}
@@ -199,7 +199,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-person icon identity"></span> {% trans "Identity"%}</h3>
+                            <h3><span class="ion-person icon identity"></span> {% trans "IDENTITY"%}</h3>
                         </div>
                         <div class="usage-container">
                             <div class="item identity closed">
@@ -253,7 +253,7 @@
                             </div>
 
                             <div class="item identity closed">
-                                <h6 class="card-title">{% trans "2nd Factor Authentication" %}</h6>
+                                <h6 class="card-title">{% trans "2-Factor Authentication" %}</h6>
 
                                 <div class="content">
                                     {% blocktrans %}
@@ -282,12 +282,12 @@
                     </div>
                     <div class="col-md-12 col-lg-4 text-xs-center">
                         <div class="row">
-                            <h3><span class="ion-document-text icon other"></span> {% trans "Documents &amp; Email" %}
+                            <h3><span class="ion-document-text icon other"></span> {% trans "DOCUMENTS &amp; EMAIL" %}
                             </h3>
                         </div>
                         <div class="usage-container">
                             <div class="item other closed">
-                                <h6 class="card-title">{% trans "Private Files Or Trade Secrets" %}</h6>
+                                <h6 class="card-title">{% trans "Encrypt &amp; Sign Files" %}</h6>
 
                                 <div class="content">
                                     {% blocktrans %}
@@ -303,7 +303,19 @@
                             </div>
 
                             <div class="item other closed">
-                                <h6 class="card-title">{% trans "Secure Your Email" %}</h6>
+                                <h6 class="card-title">{% trans "Sign &amp; Encrypt Emails" %}</h6>
+
+                                <div class="content">
+                                    {% blocktrans %}
+                                    <p>As you type your Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
+                                        keystroke that you make, one by one, before it even reaches your computer..
+                                        Simply plug TREZOR between your keyboard and your computer.</p>
+                                    {% endblocktrans %}
+                                </div>
+                            </div>
+
+                            <div class="item other closed">
+                                <h6 class="card-title">{% trans "Sign Messages" %}</h6>
 
                                 <div class="content">
                                     {% blocktrans %}
@@ -327,36 +339,35 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Security by design." %}</h2>
+                        <h2>{% trans "Security By Design" %}</h2>
                         {% blocktrans %}
-                        <p>Trim away everything that could get hacked. Add powerful hardware features and software
-                            logic.</p>
+                        <p>Advanced cryptography, reliable hardware, simple interface.<br>All in perfect union.</p>
                         {% endblocktrans %}
                     </div>
                 </div>
                 <div class="hidden-md-up" id="features-list">
                     <div class="1 entry text-xs-center" id="case">
-                        <h3>{% trans "Small and Durable" %}</h3>
-                        <p>{% blocktrans %}TREZOR is a tiny 12 gram computer that fits into your palm. Tamper-proof, water-resistant and durable.{% endblocktrans %}</p>
+                        <h3>{% trans "Small and Sturdy" %}</h3>
+                        <p>{% blocktrans %}Fits into your palm.<br>Tamper-proof, water-resistant and extremely durable.{% endblocktrans %}</p>
                     </div>
                     <div class="2 entry text-xs-center" id="usb">
                         <h3>{% trans "Unhackable" %}</h3>
-                        <p>{% blocktrans %}TREZOR has no online connectivity to avoid hacking attacks. Its strict USB connection effectively guards you against trouble.{% endblocktrans %}</p>
+                        <p>{% blocktrans %}TREZOR has no online connectivity and a secure USB connection.<br>The safe haven is offline!{% endblocktrans %}</p>
                     </div>
                     <div class="3 entry  text-xs-center" id="display">
-                        <h3>{% trans "Trust Your Own Eyes" %}</h3>
-                        <p>{% blocktrans %}Visually check important transaction details before you hit Confirm. No matter how infected your computer, TREZOR's display always tells you the truth.
+                        <h3>{% trans "Trust your own eyes" %}</h3>
+                        <p>{% blocktrans %}Visually check important transaction details before you hit Confirm.<br>No matter how infected your computer, this display always tells you the truth.
                             {% endblocktrans %}</p>
                     </div>
                     <div class="4 entry" id="buttons">
-                        <h3>{% trans "Trust Your Own Hands" %}</h3>
-                        <p>{% blocktrans %}Nothing happens without your explicit approval. No hacker or virus can hit the Confirm button instead of you.
+                        <h3>{% trans "Trust your own hands" %}</h3>
+                        <p>{% blocktrans %}Everything important only happens with your direct physical approval.<br>No hacker or virus can hit the 'Confirm' button instead of you.
                             {% endblocktrans %}</p>
                     </div>
                     <div class="5 entry" id="inside">
                         <h3>{% trans "Powerful Cryptography" %}</h3>
 
-                        <p>{% blocktrans %}Your data are well stored even without a battery. TREZOR powers up when you plug it to your computer.
+                        <p>{% blocktrans %}TREZOR uses and creates the most advanced standards in cryptography and Bitcoin.
                             {% endblocktrans %}</p>
                     </div>
                 </div>
@@ -366,7 +377,7 @@
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
                         <a href="{% url '/features.html' %}" class="btn-primary-noline">
                             {% blocktrans %}
-                            Learn more about Features
+                            Learn more: TREZOR Security Features
                             {% endblocktrans %}
                         </a>
                     </div>
@@ -378,10 +389,8 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Endorsed by Experts." %}</h2>
-                        {% blocktrans %}
-                        <p>Used by thousands ...</p>
-                        {% endblocktrans %}
+                        <h2>{% trans "Endorsed By Experts" %}</h2>
+                        <h2>{% trans "Loved by users worldwide" %}</h2>
                     </div>
                 </div>
                 <div class="row experts">
@@ -419,7 +428,7 @@
                 </div>
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "In Media" %}</h2>
+                        <h2>{% trans "TREZOR In The Media" %}</h2>
                     </div>
                 </div>
                 <div class="row media">
@@ -508,26 +517,19 @@
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12 text-xs-center">
-                    <h2>{% trans "Developer, come along!" %}</h2>
+                    <h2>{% trans "Developers, welcome!" %}</h2>
+                    <p>Interested in online security and privacy? Care to make the digital world a more better place?<br>Join our open network of security experts and programmers.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 text-xs-center button-area">
+                <div class="col-sm-12 text-xs-center button-area">
                     <a class="btn btn-primary-outline" href="https://github.com/trezor" role="button"><i
-                            class="ion-social-github"></i> {% trans "github.com/trezor"%}</a>
+                            class="ion-social-github"></i> {% trans "Github Repos"%}</a>
                     <a class="btn btn-primary-outline" href="https://gitter.im/trezor/community" role="button"><i
-                            class="ion-android-chat"></i> {% trans "Community"%}</a>
+                            class="ion-android-chat"></i> {% trans "Dev Community Chat"%}</a>
                     <a class="plain btn-primary-noline" href="https://doc.satoshilabs.com/trezor-tech/index.html">
-                        {% trans "Learn from Developer’s Guide"%}
+                        {% trans "Learn more: TREZOR Developer's Guide"%}
                     </a>
-                </div>
-                <div class="col-sm-6 col-xs-12 text-sm-left text-xs-center">
-                    <h3>{% trans "Learn. Collaborate. Innovate."%}</h3>
-                    {% blocktrans %}
-                    <p>Join bitcoin & security movement working on top-notch global projects. Become a part of our team
-                        standing behind several projects that marked milestones in the Bitcoin world. We love to work
-                        with talented and enthusiastic developers, marketers or designers.</p>
-                    {% endblocktrans %}
                 </div>
             </div>
         </div>
@@ -536,9 +538,9 @@
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
-                    <h2>{% trans "Meet the Family." %}</h2>
+                    <h2>{% trans "Meet Our Team." %}</h2>
                     {% blocktrans %}
-                    <p>Meet the people behind the world-leading bitcoin innovations delivered by SatoshiLabs.</p>
+                    <p>Our team counts some of the most recognized bitcoin and security experts, dedicated support team, as well as the most qualified Jack Russell in the world.</p>
                     {% endblocktrans %}
                 </div>
             </div>
@@ -734,6 +736,35 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+    <section class="devs-section" id="story">
+        <div class="container">
+            <div class="row heading">
+                <div class="col-lg-12 text-xs-center">
+                    <h2>{% trans "Our Story" %}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 text-sm-left text-xs-center">
+                    <h3>The history of hardware wallets begins with TREZOR.</h3>
+
+                    <p>Early 2013, Alena, Pavol and Marek, the core team and co-founders of SatoshiLabs announced their new project of a bitcoin hardware wallet. What started as a hobby project a few months earlier, resulted in TREZOR, world’s first and most secure hardware wallet.</p>
+
+                    <p>TREZOR implements original state-of-the-art cryptographic algorithms and security practices to ensure that a user’s bitcoins stay completely secure.</p>
+
+                    <p>Gradually, TREZOR has introduced new functionalities expanding its benefits to major digital currencies (Bitcoin, Ethereum, Litecoin, Dash, Zcash, Dogecoin, Namecoin), password-less login to websites, 2nd factor authentication (U2F by FIDO), SSH login or even GPG encryption for emails and documents. TREZOR also introduced it's own Password Manager, the first ultimately secure storage for your login credentials online. TREZOR Password Manager completely elimminates the use of a master password, typical security weakness of other password managers.</p>
+
+                    <p>TREZOR has made it easy for anyone to hold and transact bitcoins with a complete peace of mind. It has returned the bitcoins to the hands of individual users, without having to entrust their money to other companies. TREZOR took away the fear of making mistakes with bitcoin from newbies. That's why TREZOR has practically become synonymous with “hardware wallet” and found its happy users in over 100 countries.</p>
+                </div>
+                <div class="col-lg-12 text-xs-center">
+                    <a href="http://localhost:8000/usage/" class="btn-primary-noline">
+
+                        Download: TREZOR Press Kit
+
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 </main>
