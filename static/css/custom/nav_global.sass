@@ -1,0 +1,114 @@
+.navbar
+  background: $c_black
+  background: $c_black_a
+  font-weight: 400
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  padding: .2rem
+  z-index: 9999
+  text-align: center
+  +animation(fadeIn ease-in 1s)
+  +unselectable()
+  +border-radius(0)
+
+  @media screen and (min-width: $sm)
+    text-align: center
+    ul.center
+      display: inline-block
+
+  @media screen and (max-width: $sm)
+    .nav-item
+      float: left
+      clear: both
+      margin-left: -10px !important
+      padding-left: 0
+      &:focus, &:active
+        outline: none
+
+    .social
+      clear: both
+
+  .navbar-toggler
+    float: left
+    color: $c_white
+
+    &:focus, &:active
+      outline: none
+
+  .navbar-brand
+    position: relative
+    width: 140px
+    overflow: hidden
+
+    .trezor-logo
+      height: 32px
+
+    .trezor-title
+      position: absolute
+      top: 0
+      right: 145px
+
+  .navbar-brand-mini
+    position: relative
+    display: inline-block
+    overflow: hidden
+
+    .trezor-logo
+      height: 32px
+
+  .nav-link
+    color: $c_navlink
+    +transition(color 0.4s ease)
+
+    &[data-amount]:not([data-amount="0"])
+      position: relative
+      &::before
+        content: attr(data-amount)
+        display: inline-block
+        width: 16px
+        height: 16px
+        line-height: 16px
+        margin-right: 5px
+        font-size: 12px
+        font-weight: bold
+        background: $c_red
+        color: $c_white
+        +transform(translateY(-15%))
+        +border-radius(50%)
+
+  form
+    color: rgba(255,255,255,.5)
+
+  select
+    background: transparent
+    border: 0
+    padding-left: 14px
+    margin-left: -14px
+    color: rgba(255,255,255,.5)
+    padding-top: .425rem
+    padding-bottom: .425rem
+    cursor: pointer
+    +border-radius(0)
+    +appearance-none()
+
+    &:hover
+      color: $c_white
+
+    &:focus, &:active
+      outline: none
+
+.dropdown-item
+  color: $c_grey_font
+  padding: 5px 20px 5px 5px
+
+  &:hover
+    background: white
+    color: $c_black
+
+  span
+    display: inline-block
+    float: left
+    width: 35px
+    text-align: center
