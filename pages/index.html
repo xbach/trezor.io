@@ -4,16 +4,26 @@
 <main class="main-content">
     <div class="jumbotron">
         <div class="container">
-            <p class="lead text-xs-left">{% trans "Digitally Smart" %}</p>
-            <h1 class="display-4 text-xs-left">{% trans "Safe By Design" %}</h1>
-            <p>{% trans "Protect your digital money, passwords, accounts, documents and emails." %}<br />{% trans "It's as simple as pie!" %}</p>
+            <h1 class="display-4 text-xs-left">{% trans "Security is easy." %}</h1>
+            <p class="lead text-xs-left">
+                {% trans "Protecting your money, passwords, accounts, emails ..." %}
+            </p>
             <p class="text-xs-left">
                 <br/>
-                <a class="btn btn-primary-full" href="#" role="button">{% trans "Buy now!" %}</a>
+                <a class="btn btn-primary-full" href="#" role="button">{% trans "Get one" %}</a>
+                <br/><br/>
+                <span>{% trans "Supported platforms" %}</span>
+                <br/>
+                <span class="platform-icons">
+                    <i class="fa fa-apple" aria-hidden="true"></i>
+                    <i class="fa fa-windows" aria-hidden="true"></i>
+                    <i class="fa fa-linux" aria-hidden="true"></i>
+                    <i class="fa fa-android" aria-hidden="true"></i>
+                </span>
             </p>
         </div>
         <div class="strip text-xs-center">
-            <p>Got yours? <a href="#">START HERE</a></p>
+            <p>{% trans "Trezor owner?" %}<a href="https://wallet.trezor.io/">{% trans "START NOW" %}</a></p>
         </div>
     </div>
     <div class="sticky hidden-xs-down" data-toggle="sticky-onscroll">
@@ -24,12 +34,11 @@
                          onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                          alt="TREZOR logo"/>
                 </a>
-                <a class="nav-link active scrollTo" href="#usage">{% trans "Use TREZOR" %}</a>
-                <a class="nav-link scrollTo" href="#features">{% trans "Security Features" %}</a>
-                <a class="nav-link scrollTo" href="#specification">{% trans "Product Specs" %}</a>
+                <a class="nav-link active scrollTo" href="#usage">{% trans "Usage" %}</a>
+                <a class="nav-link scrollTo" href="#features">{% trans "Features" %}</a>
+                <a class="nav-link scrollTo" href="#specification">{% trans "Specifications" %}</a>
                 <a class="nav-link scrollTo" href="#developers">{% trans "Developers" %}</a>
                 <a class="nav-link scrollTo" href="#team">{% trans "Team" %}</a>
-                <a class="nav-link scrollTo" href="#story">{% trans "Story" %}</a>
                 <a class="btn btn-third-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99"%}</a>
             </div>
         </div>
@@ -39,64 +48,44 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-xs-center">
-                        {% blocktrans %}
-                        <h2>Security Made Easy</h2>
-
-                        <p>in 3 simple steps</p>
-                        {% endblocktrans %}
+                        <h2>{% trans "Easy &amp; Secure" %}</h2>
+                        <p>{% trans "3 simple steps" %}</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 text-xs-center">
+                    <div class="col-sm-4 text-xs-center">
                         <div class="text-block">
+                            <div class="presentation setup">
+                                <h4>{% trans "Setup." %}</h4>
+                            </div>
                             {% blocktrans %}
-                            <h4>1. Setup.</h4>
-
-                            <p>Get your TREZOR ready within minutes in a completely private, registration-free process.</p>
+                            <p>Get your TREZOR ready within minutes in a completely private, registration-free
+                                process.</p>
                             {% endblocktrans %}
                         </div>
                     </div>
-                    <div class="col-sm-6 text-xs-center hidden-xs-down">
-                        <div class="video-play setup">
-                            <a href="#" class="watch-video vertical-align">
-                                <i class="ion-ios-play-outline"></i>{% trans "Watch video"%}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 text-xs-center hidden-xs-down">
-                        <div class="video-play use">
-                            <a href="#" class="watch-video vertical-align">
-                                <i class="ion-ios-play-outline"></i>{% trans "Watch video"%}
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 text-xs-center">
-                        <div class="text-block">
-                            {% blocktrans %}
-                            <h4>2. Click &amp; Done</h4>
 
-                            <p>Using TREZOR is just easy. Just follow instructions on the display and click the button to confirm important actions.</p>
+                    <div class="col-sm-4 text-xs-center">
+                        <div class="text-block">
+                            <div class="presentation use">
+                                <h4>{% trans "Use with ease." %}</h4>
+                            </div>
+                            {% blocktrans %}
+                            <p>Using TREZOR is just easy. Just follow instructions on the display and click the button
+                                to confirm important actions.</p>
                             {% endblocktrans %}
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 text-xs-center">
-                        <div class="text-block">
-                            {% blocktrans %}
-                            <h4>3. Stay Cool</h4>
 
-                            <p>Device lost? No problem!<br />Restore your TREZOR anytime using your unique Recovery seed.<br />And don't worry, your bitcoins stay safe.</p>
+                    <div class="col-sm-4 text-xs-center">
+                        <div class="text-block">
+                            <div class="presentation recover">
+                                <h4>{% trans "Lost? Restore." %}</h4>
+                            </div>
+                            {% blocktrans %}
+                            <p>Use your secret words to quickly regain acces to all your
+                                money, transaction history, websites or documents.</p>
                             {% endblocktrans %}
-                        </div>
-                    </div>
-                    <div class="col-sm-6 text-xs-center hidden-xs-down">
-                        <div class="video-play recover">
-                            <a href="#" class="watch-video vertical-align">
-                                <i class="ion-ios-play-outline"></i>{% trans "Watch video"%}
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +93,7 @@
                     <div class="col-lg-12 text-xs-center">
                         <a href="{% url '/usage.html' %}" class="btn-primary-noline">
                             {% blocktrans %}
-                            Learn more...<br />Basic Operations With TREZOR
+                            Learn more about usage.
                             {% endblocktrans %}
                         </a>
                     </div>
@@ -348,32 +337,37 @@
                 <div class="hidden-md-up" id="features-list">
                     <div class="1 entry text-xs-center" id="case">
                         <h3>{% trans "Small and Sturdy" %}</h3>
-                        <p>{% blocktrans %}Fits into your palm.<br>Tamper-proof, water-resistant and extremely durable.{% endblocktrans %}</p>
+                        <p>{% blocktrans %}Fits into your palm.<br>Tamper-proof, water-resistant and extremely
+                            durable.{% endblocktrans %}</p>
                     </div>
                     <div class="2 entry text-xs-center" id="usb">
                         <h3>{% trans "Unhackable" %}</h3>
-                        <p>{% blocktrans %}TREZOR has no online connectivity and a secure USB connection.<br>The safe haven is offline!{% endblocktrans %}</p>
+                        <p>{% blocktrans %}TREZOR has no online connectivity and a secure USB connection.<br>The safe
+                            haven is offline!{% endblocktrans %}</p>
                     </div>
                     <div class="3 entry  text-xs-center" id="display">
                         <h3>{% trans "Trust your own eyes" %}</h3>
-                        <p>{% blocktrans %}Visually check important transaction details before you hit Confirm.<br>No matter how infected your computer, this display always tells you the truth.
+                        <p>{% blocktrans %}Visually check important transaction details before you hit Confirm.<br>No
+                            matter how infected your computer, this display always tells you the truth.
                             {% endblocktrans %}</p>
                     </div>
                     <div class="4 entry" id="buttons">
                         <h3>{% trans "Trust your own hands" %}</h3>
-                        <p>{% blocktrans %}Everything important only happens with your direct physical approval.<br>No hacker or virus can hit the 'Confirm' button instead of you.
+                        <p>{% blocktrans %}Everything important only happens with your direct physical approval.<br>No
+                            hacker or virus can hit the 'Confirm' button instead of you.
                             {% endblocktrans %}</p>
                     </div>
                     <div class="5 entry" id="inside">
                         <h3>{% trans "Powerful Cryptography" %}</h3>
 
-                        <p>{% blocktrans %}TREZOR uses and creates the most advanced standards in cryptography and Bitcoin.
+                        <p>{% blocktrans %}TREZOR uses and creates the most advanced standards in cryptography and
+                            Bitcoin.
                             {% endblocktrans %}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 hidden-sm-down text-xs-center">
-                        <div class="point" id="g"> </div>
+                        <div class="point" id="g"></div>
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
                         <a href="{% url '/features.html' %}" class="btn-primary-noline">
                             {% blocktrans %}
@@ -395,12 +389,13 @@
                 </div>
                 <div class="row experts">
                     <div class="col-md-4 text-xs-center">
-                        <img src="{% url '/static/images/experts_faces/balaji.jpg' %}" />
+                        <img src="{% url '/static/images/experts_faces/balaji.jpg' %}"/>
                         <h4>Balaji S. Srinivasan, PhD</h4>
                         <p class="title">{% trans "CEO and Cofounder, 21" %}</p>
                         <blockquote>
                             {% blocktrans %}
-                            TREZOR is a pioneering hardware wallet, and a great way to store your digital currency locally.
+                            TREZOR is a pioneering hardware wallet, and a great way to store your digital currency
+                            locally.
                             {% endblocktrans %}
                         </blockquote>
                     </div>
@@ -415,7 +410,7 @@
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
-                        <img src="{% url '/static/images/experts_faces/matonis.jpg' %}" />
+                        <img src="{% url '/static/images/experts_faces/matonis.jpg' %}"/>
                         <h4>Jon Matonis</h4>
                         <p class="title">{% trans "Economist" %}</p>
                         <blockquote>
@@ -433,22 +428,28 @@
                 </div>
                 <div class="row media">
                     <div class="col-md-2 text-xs-center">
-                        <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/"><img src="{% static '/images/logos/forbes-logo.png' %}" alt=""/></a>
+                        <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/"><img
+                                src="{% static '/images/logos/forbes-logo.png' %}" alt=""/></a>
                     </div>
                     <div class="col-md-2  text-xs-center">
-                        <a href="https://vimeo.com/116250492"><img src="{% static '/images/logos/cnn-logo.png' %}" alt=""/></a>
+                        <a href="https://vimeo.com/116250492"><img src="{% static '/images/logos/cnn-logo.png' %}"
+                                                                   alt=""/></a>
                     </div>
                     <div class="col-md-2 text-xs-center">
-                        <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/"><img src="{% static '/images/logos/coindesk-logo.png' %}" alt=""/></a>
+                        <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/"><img
+                                src="{% static '/images/logos/coindesk-logo.png' %}" alt=""/></a>
                     </div>
                     <div class="col-md-2 text-xs-center">
-                        <a href="http://cointelegraph.com/news/112947/who-will-keep-you-safe-a-comparison-of-bitcoin-wallets-that-arent-digital"><img src="{% static '/images/logos/cointelegraph-logo.png' %}" alt=""/></a>
+                        <a href="http://cointelegraph.com/news/112947/who-will-keep-you-safe-a-comparison-of-bitcoin-wallets-that-arent-digital"><img
+                                src="{% static '/images/logos/cointelegraph-logo.png' %}" alt=""/></a>
                     </div>
                     <div class="col-md-2 text-xs-center">
-                        <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208"><img src="{% static '/images/logos/insidebtc-logo.png' %}" alt=""/></a>
+                        <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208"><img
+                                src="{% static '/images/logos/insidebtc-logo.png' %}" alt=""/></a>
                     </div>
                     <div class="col-md-2 text-xs-center">
-                        <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/"><img src="{% static '/images/logos/btcmag-logo.png' %}" alt=""/></a>
+                        <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/"><img
+                                src="{% static '/images/logos/btcmag-logo.png' %}" alt=""/></a>
                     </div>
                 </div>
             </div>
@@ -477,7 +478,7 @@
                             <b>Screen</b><span>Bright OLED - 128x64 pixels</span>
                         </p>
                         <p class="spec-block">
-                            <b>Size</b><span>60mm x 30mm x 6mm<br />(2.4 x 1.2 x 0.2 in)</span>
+                            <b>Size</b><span>60mm x 30mm x 6mm<br/>(2.4 x 1.2 x 0.2 in)</span>
                         </p>
 
                         <p class="spec-block">
@@ -518,7 +519,8 @@
             <div class="row heading">
                 <div class="col-lg-12 text-xs-center">
                     <h2>{% trans "Developers, welcome!" %}</h2>
-                    <p>Interested in online security and privacy? Care to make the digital world a more better place?<br>Join our open network of security experts and programmers.</p>
+                    <p>Interested in online security and privacy? Care to make the digital world a more better
+                        place?<br>Join our open network of security experts and programmers.</p>
                 </div>
             </div>
             <div class="row">
@@ -540,7 +542,8 @@
                 <div class="col-lg-12  text-xs-center">
                     <h2>{% trans "Meet Our Team." %}</h2>
                     {% blocktrans %}
-                    <p>Our team counts some of the most recognized bitcoin and security experts, dedicated support team, as well as the most qualified Jack Russell in the world.</p>
+                    <p>Our team counts some of the most recognized bitcoin and security experts, dedicated support team,
+                        as well as the most qualified Jack Russell in the world.</p>
                     {% endblocktrans %}
                 </div>
             </div>
@@ -557,19 +560,6 @@
                             <h4>Pepitka</h4>
 
                             <p class="title">{% trans "Nap Time Coordinator" %}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
-                    </div>
-                    <div class="content">
-                        <div class="description">
-                            <h4>Alena Vranova</h4>
-
-                            <p class="title">{% trans "Champion" %}</p>
                         </div>
                     </div>
                 </div>
@@ -615,18 +605,17 @@
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
                     <div class="header">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=140%C3%97140&w=140&h=140"/>
+                        <img src="./static/images/team_faces/jochen.jpg"/>
                     </div>
                     <div class="content">
                         <div class="description">
-                            <h4>Johoe</h4>
+                            <h4>Jochen Hoenicke</h4>
 
                             <p class="title">{% trans "Hacker" %}</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
                     <div class="header">
                         <img src="./static/images/team_faces/peca.jpg"/>
@@ -639,6 +628,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="row">
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
                     <div class="header">
@@ -705,8 +697,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
                     <div class="header">
@@ -720,7 +710,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="row">
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
                     <div class="header">
@@ -736,35 +728,6 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-    <section class="devs-section" id="story">
-        <div class="container">
-            <div class="row heading">
-                <div class="col-lg-12 text-xs-center">
-                    <h2>{% trans "Our Story" %}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-xs-12 text-sm-left text-xs-center">
-                    <h3>The history of hardware wallets begins with TREZOR.</h3>
-
-                    <p>Early 2013, Alena, Pavol and Marek, the core team and co-founders of SatoshiLabs announced their new project of a bitcoin hardware wallet. What started as a hobby project a few months earlier, resulted in TREZOR, world’s first and most secure hardware wallet.</p>
-
-                    <p>TREZOR implements original state-of-the-art cryptographic algorithms and security practices to ensure that a user’s bitcoins stay completely secure.</p>
-
-                    <p>Gradually, TREZOR has introduced new functionalities expanding its benefits to major digital currencies (Bitcoin, Ethereum, Litecoin, Dash, Zcash, Dogecoin, Namecoin), password-less login to websites, 2nd factor authentication (U2F by FIDO), SSH login or even GPG encryption for emails and documents. TREZOR also introduced it's own Password Manager, the first ultimately secure storage for your login credentials online. TREZOR Password Manager completely elimminates the use of a master password, typical security weakness of other password managers.</p>
-
-                    <p>TREZOR has made it easy for anyone to hold and transact bitcoins with a complete peace of mind. It has returned the bitcoins to the hands of individual users, without having to entrust their money to other companies. TREZOR took away the fear of making mistakes with bitcoin from newbies. That's why TREZOR has practically become synonymous with “hardware wallet” and found its happy users in over 100 countries.</p>
-                </div>
-                <div class="col-lg-12 text-xs-center">
-                    <a href="http://localhost:8000/usage/" class="btn-primary-noline">
-
-                        Download: TREZOR Press Kit
-
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 </main>

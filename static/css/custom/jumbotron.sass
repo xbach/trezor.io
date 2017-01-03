@@ -4,7 +4,7 @@
   z-index: 1
   position: relative
   margin-bottom: 0
-  background: url("/static/images/photos/test4.jpg")
+  background: url("/static/images/photos/bg.jpg")
   background-repeat: no-repeat
   background-position: top center
   +background-size(cover)
@@ -16,14 +16,19 @@
     h1, p
       color: $c_white
       position: relative
-      top: 34%
-      transform: translateY(-50%)
+      top: 30%
+      transform: translateY(-30%)
 
     h1
       font-size: 3.8em
       color: $c_white
 
     .lead
+      font-size: 1.8em
+  .platform-icons
+
+    i
+      padding: 10px 15px 0 0
       font-size: 1.8em
 
   .strip
@@ -32,7 +37,7 @@
     left: 0
     right: 0
     width: 100%
-    background: rgba($c_white, .9)
+    background: rgba($c_grey_bg, .7)
 
     p
       margin: 10px 0 10px 0

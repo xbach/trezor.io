@@ -4,7 +4,7 @@
   .nav
     .trezor-logo
       width: 0
-      +transition(all .7s ease)
+      +transition(all .5s ease 0s)
 
     a.nav-link
       text-transform: uppercase
@@ -19,11 +19,12 @@
       margin-top: -10px
 
 .sticky
-  +transition(all .7s ease)
+  +transition(all .5s ease 0s)
+  background-color: $c_grey_bg
 
   &.is-sticky
     position: fixed
-    background: $c_black
+    background-color: $c_black
     left: 0
     right: 0
     top: 0
