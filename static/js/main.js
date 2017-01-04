@@ -5,6 +5,21 @@
 /* our code */
 $(document).ready(function () {
 
+  var OSName="unknown";
+  if (navigator.appVersion.indexOf("Win")!=-1) OSName="win";
+  if (navigator.appVersion.indexOf("Mac")!=-1) OSName="mac";
+  if (navigator.appVersion.indexOf("X11")!=-1) OSName="unix";
+  if (navigator.appVersion.indexOf("Linux")!=-1) OSName="linux";
+  $("#" + OSName).prependTo("#platforms");
+
+
+  $('#lead-typer').typed({
+    stringsElement: $('#lead-ghost'),
+    backDelay: 500,
+    backSpeed: 100,
+    loop: true
+  });
+
   function stickyToggle (sticky, stickyWrapper, scrollElement) {
     var stickyHeight = sticky.outerHeight();
     var stickyTop = stickyWrapper.offset().top;

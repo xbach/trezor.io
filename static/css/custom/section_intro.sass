@@ -11,16 +11,18 @@
     position: relative
     margin: 0 auto
 
+  h4
+    color: $c_green
+    font-weight: bold
+    font-size: 1.1em
+
   .presentation
     width: 200px
     height: 200px
     position: relative
     margin: 0 auto
+    +box-shadow(0 0 24px rgba(0, 0, 0, 0.05))
     +border-radius(50%)
-
-    h4
-      color: $c_white
-      background-color: $c_green
 
     &.setup
       background: url("/static/images/photos/setup.jpg")

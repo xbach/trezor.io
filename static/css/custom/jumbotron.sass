@@ -6,30 +6,49 @@
   margin-bottom: 0
   background: url("/static/images/photos/bg.jpg")
   background-repeat: no-repeat
-  background-position: top center
+  background-position: center center
   +background-size(cover)
   +border-radius(0)
 
   .container
     height: 100vh
 
+    .top
+      position: relative
+      top: 20%
+      transform: translateY(-20%)
+
+    .bottom
+      position: absolute
+      bottom: 50px
+      left: 0
+      right: 0
+
     h1, p
       color: $c_white
-      position: relative
-      top: 30%
-      transform: translateY(-30%)
 
     h1
-      font-size: 3.8em
+      font-size: 3.2em
       color: $c_white
 
-    .lead
-      font-size: 1.8em
-  .platform-icons
+    .lead-ghost
+      opacity: 0
+      visibility: hidden
+      display: block
+      width: 1px
+      height: 1px
+      overflow: hidden
 
+    .lead
+      font-size: 1.9em
+      position: absolute
+      left: 0
+      right: 0
+
+  .platform-icons
     i
       padding: 10px 15px 0 0
-      font-size: 1.8em
+      font-size: 1.5em
 
   .strip
     position: absolute
@@ -41,3 +60,9 @@
 
     p
       margin: 10px 0 10px 0
+
+  .typed-cursor
+    opacity: 1
+    -webkit-animation: blink 0.7s infinite
+    -moz-animation: blink 0.7s infinite
+    animation: blink 0.7s infinite
