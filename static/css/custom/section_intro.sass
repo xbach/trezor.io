@@ -3,8 +3,8 @@
   padding-bottom: 80px
   background-color: $c_grey_bg
 
-  .row
-    padding: 40px 0
+  .heading
+    padding-bottom: 30px
 
   .text-block
     width: 70%
@@ -17,30 +17,30 @@
     font-size: 1.1em
 
   .presentation
-    width: 200px
-    height: 200px
+    width: 100%
+    max-width: 200px
+    max-height: 200px
     position: relative
     margin: 0 auto
+    background: url("/static/images/photos/usage.png")
+    background-repeat: no-repeat
+    background-size: 450%
     +box-shadow(0 0 24px rgba(0, 0, 0, 0.05))
     +border-radius(50%)
 
+    &:after
+      content: ""
+      display: block
+      padding-bottom: 100%
+
     &.setup
-      background: url("/static/images/photos/setup.jpg")
-      background-repeat: no-repeat
-      background-position: center center
-      +background-size(cover)
+      background-position: 0 0
 
     &.use
-      background: url("/static/images/photos/use.jpg")
-      background-repeat: no-repeat
-      background-position: center center
-      +background-size(cover)
+      background-position: 46% 0
 
     &.recover
-      background: url("/static/images/photos/recover.jpg")
-      background-repeat: no-repeat
-      background-position: center center
-      +background-size(cover)
+      background-position: 90% 0
 
   @media screen and (max-width: $sm)
     &

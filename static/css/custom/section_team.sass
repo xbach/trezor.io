@@ -2,24 +2,58 @@
   min-height: 500px
   padding-top: 80px
   padding-bottom: 80px
+  background-color: $c_grey_bg
 
   .heading
-    padding: 30px 0 40px 0
+    padding-bottom: 30px
 
   .person
     .header
       width: 100%
+      max-width: 179px
+      max-height: 179px
       display: block
       overflow: hidden
       position: relative
+      margin: 0 auto
       margin-bottom: 8px
+      background: url("/static/images/team_faces/faces.png")
+      background-repeat: no-repeat
+      background-size: 100%
 
-      img
-        width: 100%
-        max-width: 180px
-        border: 7px solid white
-        +border-radius(50%)
+      +border-radius(50%)
 
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+      &.bach
+        background-position: 0 0%
+      &.ben
+        background-position: 0 8.333333%
+      &.honza
+        background-position: 0 16.666667%
+      &.jensen
+        background-position: 0 25%
+      &.jochen
+        background-position: 0 33.334%
+      &.karel
+        background-position: 0 41.666667%
+      &.kata
+        background-position: 0 50%
+      &.marek
+        background-position: 0 58.334%
+      &.pavol
+        background-position: 0 66.666667%
+      &.peca
+        background-position: 0 75%
+      &.pepitka
+        background-position: 0 83.334%
+      &.peter
+        background-position: 0 91.666667%
+      &.vojtech
+        background-position: 0 100%
     h4
       padding: 0
       margin: 0

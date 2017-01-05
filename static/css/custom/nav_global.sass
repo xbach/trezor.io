@@ -1,34 +1,9 @@
 .navbar
   background: $c_black
-  background: $c_black_a
   font-weight: 400
-  position: absolute
-  top: 0
-  right: 0
-  left: 0
   padding: .2rem
-  z-index: 9999
-  text-align: center
-  +animation(fadeIn ease-in 1s)
+  margin-bottom: -48px
   +unselectable()
-  +border-radius(0)
-
-  @media screen and (min-width: $sm)
-    text-align: center
-    ul.center
-      display: inline-block
-
-  @media screen and (max-width: $sm)
-    .nav-item
-      float: left
-      clear: both
-      margin-left: -10px !important
-      padding-left: 0
-      &:focus, &:active
-        outline: none
-
-    .social
-      clear: both
 
   .navbar-toggler
     float: left
@@ -75,6 +50,7 @@
         font-weight: bold
         background: $c_red
         color: $c_white
+        will-change: transform
         +transform(translateY(-15%))
         +border-radius(50%)
 
@@ -112,3 +88,15 @@
     float: left
     width: 35px
     text-align: center
+
+@media(max-width: $sm)
+  .navbar .navbar-nav>.nav-item
+    float: none
+    margin-left: .1rem
+
+  .navbar .navbar-nav
+    float: none
+
+  .navbar .collapse.in, .navbar .collapsing
+    clear: both
+

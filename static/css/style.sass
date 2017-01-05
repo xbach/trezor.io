@@ -26,21 +26,17 @@
 
 
 body, html
-  text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
   padding-top: 0
-  font-family: 'Open Sans', sans-serif
   background: $c_white
+  font-family: $default_font
+  +antialiased()
 
-.main-content
-  height: 100%
-  overflow: auto
-  position: relative
 
+h1, h2, h3, h4, h5
+  font-family: 'Open Sans', sans-serif
 
 p
-  font: 400 17px/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif
+  font: 400 17px/1.75 $default_font
   color: $c_grey_font
 
 a

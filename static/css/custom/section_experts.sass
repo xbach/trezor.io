@@ -4,15 +4,34 @@
   padding-bottom: 80px
 
   .heading
-    padding: 50px 0 10px 0
+    padding-bottom: 30px
 
   .experts
-    img
-      width: 240px
-      height: 240px
-
-      border: 10px solid white
+    .header
+      width: 100%
+      max-width: 240px
+      max-height: 240px
+      display: block
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      background: url("/static/images/experts_faces/experts.png")
+      background-repeat: no-repeat
+      background-size: 240px
       +border-radius(50%)
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+      &.balaji
+        background-position: 0 0
+      &.pamela
+        background-position: 0 100%
+      &.jon
+        background-position: 0 50%
 
     h4
       font-size: 1.3em

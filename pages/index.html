@@ -5,13 +5,15 @@
     <div class="jumbotron">
         <div class="container">
             <div class="top">
-                <h1 class="display-4 text-xs-center">{% trans "We make security easy." %}</h1>
-                <p class="lead text-xs-center">Bulletproof protection of your <span id="lead-typer">money</span></p>
-                <div class="lead-ghost" id="lead-ghost">
-                    <p>{% trans "money." %}</p>
-                    <p>{% trans "passwords." %}</p>
-                    <p>{% trans "accounts." %}</p>
-                    <p>{% trans "emails." %}</p>
+                <div class="width-wrapper">
+                    <h1 class="display-4 text-xs-center" id="headline">{% trans "We make security easy." %}</h1>
+                    <p class="lead" id="lead">Bulletproof protection of your <span id="lead-typer">money.</span></p>
+                    <div class="lead-ghost" id="lead-ghost">
+                        <p>{% trans "money." %}</p>
+                        <p>{% trans "passwords." %}</p>
+                        <p>{% trans "accounts." %}</p>
+                        <p>{% trans "emails." %}</p>
+                    </div>
                 </div>
             </div>
             <div class="bottom">
@@ -53,7 +55,7 @@
     <div id="usage">
         <section class="intro-section">
             <div class="container">
-                <div class="row">
+                <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
                         <h2>{% trans "Easy &amp; Secure." %}</h2>
                         <p>{% trans "As one, two, three ..." %}</p>
@@ -391,7 +393,7 @@
                 </div>
                 <div class="row experts">
                     <div class="col-md-4 text-xs-center">
-                        <img src="{% url '/static/images/experts_faces/balaji.jpg' %}"/>
+                        <div class="header balaji"></div>
                         <h4>Balaji S. Srinivasan, PhD</h4>
                         <p class="title">{% trans "CEO and Cofounder, 21" %}</p>
                         <blockquote>
@@ -402,7 +404,7 @@
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
-                        <img src="{% url '/static/images/experts_faces/pamela.jpg' %}"/>
+                        <div class="header pamela"></div>
                         <h4>Pamela Morgan</h4>
                         <p class="title">{% trans " CEO Third Key Solutions LLC" %}</p>
                         <blockquote>
@@ -412,7 +414,7 @@
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
-                        <img src="{% url '/static/images/experts_faces/matonis.jpg' %}"/>
+                        <div class="header jon"></div>
                         <h4>Jon Matonis</h4>
                         <p class="title">{% trans "Economist" %}</p>
                         <blockquote>
@@ -520,20 +522,28 @@
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12 text-xs-center">
-                    <h2>{% trans "Developers, welcome!" %}</h2>
+                    <h2>{% trans "Developers, come along!" %}</h2>
                     <p>Interested in online security and privacy? Care to make the digital world a more better
                         place?<br>Join our open network of security experts and programmers.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 text-xs-center button-area">
+                <div class="col-sm-6 text-xs-center button-area">
                     <a class="btn btn-primary-outline" href="https://github.com/trezor" role="button"><i
                             class="ion-social-github"></i> {% trans "Github Repos"%}</a>
                     <a class="btn btn-primary-outline" href="https://gitter.im/trezor/community" role="button"><i
                             class="ion-android-chat"></i> {% trans "Dev Community Chat"%}</a>
                     <a class="plain btn-primary-noline" href="https://doc.satoshilabs.com/trezor-tech/index.html">
-                        {% trans "Learn more: TREZOR Developer's Guide"%}
+                        {% trans "Learn from TREZOR Developer's Guide"%}
                     </a>
+                </div>
+                <div class="col-sm-6 col-xs-12 text-sm-left text-xs-center">
+                    <h3>{% trans "Learn. Collaborate. Innovate."%}</h3>
+                    {% blocktrans %}
+                    <p>Join Us in bitcoin and security movement working on top-notch global projects. Become a part of our team
+                        standing behind several projects that marked milestones in the Bitcoin world. We love to work
+                        with talented and enthusiastic developers, marketers or designers.</p>
+                    {% endblocktrans %}
                 </div>
             </div>
         </div>
@@ -554,9 +564,7 @@
 
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/pepitka.jpg"/>
-                    </div>
+                    <div class="header pepitka"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Pepitka</h4>
@@ -567,9 +575,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/marek.jpg"/>
-                    </div>
+                    <div class="header marek"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Marek "Slush" Palatinus</h4>
@@ -580,9 +586,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/pavol.jpg"/>
-                    </div>
+                    <div class="header pavol"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Pavol "Stick" Rusnak</h4>
@@ -593,9 +597,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/peter.jpg"/>
-                    </div>
+                    <div class="header peter"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Peter "Buly" Bulak</h4>
@@ -606,9 +608,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/jochen.jpg"/>
-                    </div>
+                    <div class="header jochen"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Jochen Hoenicke</h4>
@@ -619,9 +619,7 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/peca.jpg"/>
-                    </div>
+                    <div class="header peca"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Jan Pecinovsky</h4>
@@ -635,26 +633,20 @@
             <div class="row">
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/terka.jpg"/>
-                    </div>
+                    <div class="header kata"></div>
                     <div class="content">
                         <div class="description">
-                            <h4>Tereza Maresova</h4>
-
+                            <h4>Katerina Nemeckova</h4>
                             <p class="title">{% trans "Office Manager" %}</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/honza.jpg"/>
-                    </div>
+                    <div class="header honza"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Jan Pochyla</h4>
-
                             <p class="title">{% trans "Developer" %}</p>
                         </div>
                     </div>
@@ -662,35 +654,27 @@
 
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/karel.jpg"/>
-                    </div>
+                    <div class="header karel"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Karel Bilek</h4>
-
                             <p class="title">{% trans "Developer" %}</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/jensen.jpg"/>
-                    </div>
+                    <div class="header jensen"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Peter Jensen</h4>
-
                             <p class="title">{% trans "Developer" %}</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/vojtech.jpg"/>
-                    </div>
+                    <div class="header vojtech"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Vojtech Cerny</h4>
@@ -701,13 +685,10 @@
                 </div>
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/ben.jpg"/>
-                    </div>
+                    <div class="header ben"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Karel Benčič</h4>
-
                             <p class="title">{% trans "Support" %}</p>
                         </div>
                     </div>
@@ -717,9 +698,7 @@
             <div class="row">
 
                 <div class="col-lg-2 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header">
-                        <img src="./static/images/team_faces/bach.jpg"/>
-                    </div>
+                    <div class="header bach"></div>
                     <div class="content">
                         <div class="description">
                             <h4>Bach Nguyen</h4>
