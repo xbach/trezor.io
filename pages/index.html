@@ -2,7 +2,7 @@
 {% load i18n %}
 {% block body %}
 <main class="main-content">
-    <div class="jumbotron">
+    <div class="jumbotron" id="jumbotron">
         <div class="container">
             <div class="top">
                 <div class="width-wrapper">
@@ -19,15 +19,14 @@
             <div class="bottom">
                 <p class="text-xs-center">
                     <a class="btn btn-primary-full" href="#" role="button">{% trans "Add to Cart" %}</a>
-                    <br/><br/>
-                    <span>{% trans "Supported platforms:" %}</span>
-                    <br/>
-                    <span class="platform-icons" id="platforms">
+                <div class="hidden-xs-down platform-icons">
+                    <div>{% trans "Supported platforms:" %}</div>
                     <i class="fa fa-apple" aria-hidden="true" id="mac"></i>
                     <i class="fa fa-windows" aria-hidden="true" id="win"></i>
                     <i class="fa fa-linux" aria-hidden="true" id="linux"></i>
                     <i class="fa fa-android" aria-hidden="true" id="unknown"></i>
                 </span>
+                </div>
                 </p>
             </div>
         </div>
@@ -35,7 +34,7 @@
             <p>{% trans "New TREZOR owner?" %} <a href="https://wallet.trezor.io/">{% trans "Start now!" %}</a></p>
         </div>
     </div>
-    <div class="sticky hidden-xs-down" data-toggle="sticky-onscroll">
+    <div class="sticky hidden-xs-down" id="sticky-nav" data-toggle="sticky-onscroll">
         <div class="container sub-nav">
             <div class="nav-inline nav" id="sub-nav">
                 <a class="nav-link" href="{% url '/' %}">
@@ -45,10 +44,10 @@
                 </a>
                 <a class="nav-link active scrollTo" href="#usage">{% trans "Usage" %}</a>
                 <a class="nav-link scrollTo" href="#features">{% trans "Features" %}</a>
-                <a class="nav-link scrollTo" href="#specification">{% trans "Specifications" %}</a>
+                <a class="nav-link scrollTo" href="#specification">{% trans "Specs" %}</a>
                 <a class="nav-link scrollTo" href="#developers">{% trans "Developers" %}</a>
                 <a class="nav-link scrollTo" href="#team">{% trans "Team" %}</a>
-                <a class="btn btn-third-outline buy pull-xs-right" href="#" role="button">{% trans "Buy for $99"%}</a>
+                <a class="btn btn-third-outline buy float-sm-right" href="#" role="button">{% trans "Buy for $99"%}</a>
             </div>
         </div>
     </div>
@@ -334,7 +333,8 @@
                     <div class="col-lg-12  text-xs-center">
                         <h2>{% trans "Security By Design" %}</h2>
                         {% blocktrans %}
-                        <p>Advanced cryptography, reliable hardware, simple interface.<br>All in perfect cooperation.</p>
+                        <p>Advanced cryptography, reliable hardware, simple interface.<br>All in perfect cooperation.
+                        </p>
                         {% endblocktrans %}
                     </div>
                 </div>
@@ -540,7 +540,8 @@
                 <div class="col-sm-6 col-xs-12 text-sm-left text-xs-center">
                     <h3>{% trans "Learn. Collaborate. Innovate."%}</h3>
                     {% blocktrans %}
-                    <p>Join Us in bitcoin and security movement working on top-notch global projects. Become a part of our team
+                    <p>Join Us in bitcoin and security movement working on top-notch global projects. Become a part of
+                        our team
                         standing behind several projects that marked milestones in the Bitcoin world. We love to work
                         with talented and enthusiastic developers, marketers or designers.</p>
                     {% endblocktrans %}
