@@ -5,9 +5,10 @@
         <title>TREZOR The Original Hardware Wallet</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" href="/static/images/favicon.ico">
-        <link rel="canonical" href="/contact/" />
+        <link rel="canonical" href="." />
 
         
         <meta name="keywords" content="trezor official bitcoin eshop ultra secure hardware wallet">
@@ -36,32 +37,31 @@
         <meta name="twitter:image:src" content="/trezor-for-social.png">
         <meta name="twitter:domain" content="https://www.trezor.io/">
         
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="/static/css/style.css">
-        <script src="/static/js/vendor/modernizr-2.6.2.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous" data-viewport-units-buggyfill="ignore">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" data-viewport-units-buggyfill="ignore">
+        <link rel="stylesheet" href="./static/css/style.css">
+        <script src="./static/js/vendor/modernizr-2.6.2.js"></script>
     </head>
 
     <body>
     
-<nav class="navbar navbar-dark" role="navigation" aria-label="Global Navigation">
+<nav class="navbar navbar-dark navbar-full" role="navigation" aria-label="Global Navigation">
     <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar1"
             aria-controls="exCollapsingNavbar1" aria-expanded="false" aria-label="Toggle navigation">
         &#9776;
     </button>
     <a class="navbar-brand-mini hidden-md-up" href="/"><img class="trezor-logo"
-                                                            src="/static/images/trezor-logo.svg"
-                                                            onerror="this.src='/static/images/trezor-logo.png'; this.onerror=null;"
+                                                            src="./static/images/trezor-logo.svg"
+                                                            onerror="this.src='./images/trezor-logo.png'; this.onerror=null;"
                                                             alt="TREZOR logo"/></a>
     <div class="container">
         <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
             <a class="navbar-brand hidden-sm-down" href="/"><img class="trezor-logo"
-                                                                 src="/static/images/trezor-logo.svg"
-                                                                 onerror="this.src='/static/images/trezor-logo.png'; this.onerror=null;"
+                                                                 src="./static/images/trezor-logo.svg"
+                                                                 onerror="this.src='./images/trezor-logo.png'; this.onerror=null;"
                                                                  alt="TREZOR logo"/><span
                     class="trezor-title">TREZOR.io</span></a>
-            <ul class="nav navbar-nav center">
+            <ul class="nav navbar-nav float-sm-right float-xs-left social">
                 <li class="nav-item">
                     <a class="nav-link" href="https://shop.trezor.io" data-amount="0">Shop</a>
                 </li>
@@ -79,16 +79,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav pull-md-right pull-sm-left social">
-                <li class="nav-item">
-                    <form class="ion-earth form-inline">
-                        <select>
-                            <option value="en">en</option>
-                            <option value="cz">cz</option>
-                        </select>
-                    </form>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Follow us</a>
@@ -181,14 +171,14 @@
     </body>
 
   
-    <script src="/static/js/vendor/jquery-1.10.1.js"></script>
-    <script src="/static/js/vendor/freewall.js"></script>
+    <script src="./static/js/vendor/jquery-1.10.1.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="./static/js/vendor/typed.js"></script>
+    <script src="./static/js/vendor/fittext.js"></script>
     <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="/static/js/main.js"></script>
-    <script src="/static/js/usage.js"></script>
-    <script src="/static/js/features.js"></script>
-    <script src="/static/js/team.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script src="./static/js/features.js"></script>
+    <script src="./static/js/team.js"></script>
   
 </html>

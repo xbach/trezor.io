@@ -1,55 +1,41 @@
+/* our code */
 $(document).ready(function () {
 
-  function stickyToggle (sticky, stickyWrapper, scrollElement) {
-    var stickyHeight = sticky.outerHeight();
-    var stickyTop = stickyWrapper.offset().top;
-    if (scrollElement.scrollTop() >= stickyTop) {
-      stickyWrapper.height(stickyHeight);
-      sticky.addClass("is-sticky");
-    } else {
-      sticky.removeClass("is-sticky");
-      stickyWrapper.height('auto');
+  var OSName="unknown",
+      pos = $('#usage').offset().top,
+      doc = $(document);
+  if (navigator.appVersion.indexOf("Win")!=-1) OSName="win";
+  if (navigator.appVersion.indexOf("Mac")!=-1) OSName="mac";
+  if (navigator.appVersion.indexOf("X11")!=-1) OSName="linux";
+  if (navigator.appVersion.indexOf("Linux")!=-1) OSName="linux";
+  $("#" + OSName).prependTo("#platforms");
+
+  // jumbotron headline fitting
+  $("#headline").fitText(1.1);
+  $("#lead").fitText(1.8);
+
+  // jumbo height hotfix
+  // $('#jumbotron').css('height', $(window).height() + 'px');
+
+  $('#lead-typer').typed({
+    stringsElement: $('#lead-ghost'),
+    backDelay: 500,
+    backSpeed: 100,
+    loop: true
+  });
+
+  function createStickyNav(sticky) {
+    if (typeof sticky !== 'undefined') {
+      doc.on('scroll', function() {
+        checkPosition(sticky);
+      });
     }
   }
 
-  function onScroll (event) {
-    var scrollPos = $(document).scrollTop();
-    $('#sub-nav a.scrollTo').each(function () {
-      var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
-      if (refElement.position().top - 64 <= scrollPos && refElement.position().top - 64 + refElement.height() > scrollPos) {
-        $('#sub-nav a.scrollTo').removeClass("active");
-        currLink.addClass("active");
-      }
-      else {
-        currLink.removeClass("active");
-      }
-    });
+  function checkPosition(sticky) {
+    doc.scrollTop() >= pos ? sticky.addClass("is-sticky") : sticky.removeClass("is-sticky");
   }
 
-  $('[data-toggle="sticky-onscroll"]').each(function () {
-    var sticky = $(this);
-    var stickyWrapper = $('<div>').addClass('sticky-wrapper');
-    sticky.before(stickyWrapper);
-    sticky.addClass('sticky');
-
-    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
-      stickyToggle(sticky, stickyWrapper, $(this));
-    });
-
-    stickyToggle(sticky, stickyWrapper, $(window));
-  });
-
-  //
-  // SCROLLING TO PROPER SECTION IN SUB NAV
-  //
-  $("a.scrollTo").click(function (e) {
-    e.preventDefault();
-    $('html').scrollTo(this.hash, 1200, {
-      offset: -63,
-      interrupt: true
-    });
-  });
-
-  $(document).on("scroll", onScroll);
+  createStickyNav($("#sticky-nav"));
 });
+
