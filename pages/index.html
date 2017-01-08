@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block body %}
-<main class="main-content">
+<header>
     <div class="jumbotron" id="jumbotron">
         <div class="container">
             <div class="top">
@@ -25,7 +25,7 @@
                     <i class="fa fa-windows" aria-hidden="true" id="win"></i>
                     <i class="fa fa-linux" aria-hidden="true" id="linux"></i>
                     <i class="fa fa-android" aria-hidden="true" id="unknown"></i>
-                </span>
+                    </span>
                 </div>
                 </p>
             </div>
@@ -34,6 +34,8 @@
             <p>{% trans "New TREZOR owner?" %} <a href="https://wallet.trezor.io/">{% trans "Start now!" %}</a></p>
         </div>
     </div>
+</header>
+<main class="main-content">
     <div class="sticky hidden-xs-down" id="sticky-nav" data-toggle="sticky-onscroll">
         <div class="container sub-nav">
             <div class="nav-inline nav" id="sub-nav">
