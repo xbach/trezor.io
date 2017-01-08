@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   var OSName="unknown",
       pos = $('#usage').offset().top,
-      doc = $(document);
+      win = $('html');
   if (navigator.appVersion.indexOf("Win")!=-1) OSName="win";
   if (navigator.appVersion.indexOf("Mac")!=-1) OSName="mac";
   if (navigator.appVersion.indexOf("X11")!=-1) OSName="linux";
@@ -26,16 +26,17 @@ $(document).ready(function () {
 
   function createStickyNav(sticky) {
     if (typeof sticky !== 'undefined') {
-      doc.on('scroll', function() {
+      /*
+      win.on('mousewheel', function() {
         checkPosition(sticky);
       });
+      */
     }
   }
 
   function checkPosition(sticky) {
-    doc.scrollTop() >= pos ? sticky.addClass("is-sticky") : sticky.removeClass("is-sticky");
+    console.warn('oi ', pos);
   }
-
-  createStickyNav($("#sticky-nav"));
+  // createStickyNav($("#sticky-nav"));
 });
 
