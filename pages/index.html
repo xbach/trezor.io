@@ -59,7 +59,7 @@
                 <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
                         <h2>{% trans "Easy &amp; Secure." %}</h2>
-                        <p>{% trans "As one, two, three ..." %}</p>
+                        <!-- <p>{% trans "As one, two, three ..." %}</p> -->
                     </div>
                 </div>
                 <div class="row">
@@ -125,7 +125,7 @@
 
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>The most trusted and secure way to store your bitcoins. Receive and pay without
+                                <p>The most trusted and secure way to store your bitcoins. Receive and send without
                                     risk, enjoy great comfort and ease of use. <!-- Compatible with the best Bitcoin
                                     wallets and services. --> </p>
                                 {% endblocktrans %}
@@ -146,19 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item money">
-                            {% blocktrans %}
-                            <h4 class="card-title">Pay &amp; Get Paid</h4>
-                            {% endblocktrans %}
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>Pay bills and invoices to international bank accounts with bitcoins. Receive payroll or new bitcoins from exchanges directly to
-                                    the safety of your TREZOR, thanks to multiple integrations.</p>
-                                {% endblocktrans %}
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
                             <h4 class="card-title">{% trans "Password Manager" %}</h4>
@@ -177,7 +165,7 @@
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Protect access to your servers, data or websites administration. SSH login with
-                                    simple or multiple sessions from a sub-shell.</p>
+                                    simple or multiple sessions<!-- from a sub-shell-->.</p>
                                 {% endblocktrans %}
                             </div>
                         </div>
@@ -187,9 +175,11 @@
                             <h4 class="card-title">{% trans "Password-less Login" %}</h4>
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Sign up to websites without having to reveal your name or email
+                                <p><!-- Sign up to websites without having to reveal your name or email
                                     address. Secure your user accounts against hackers and unauthorized access via
-                                    TREZOR Connect.</p>
+                                    TREZOR Connect. -->
+                                    Securely sign up and login with a click of a button, using TREZOR Connect.
+                                </p>
                                 {% endblocktrans %}
                             </div>
                         </div>
@@ -201,7 +191,7 @@
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
-                                    email you make, one by one with support of GPG.</p>
+                                    email you create with the support of GPG.</p>
                                 {% endblocktrans %}
                             </div>
                         </div>
@@ -211,7 +201,7 @@
                             <h4 class="card-title">{% trans "2-Factor Authentication" %}</h4>
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Add extra security to your online accounts. Authenticate with a press of a button on TREZOR. <!-- Your TREZOR confirms access to the website with a
+                                <p>Add extra security to your online accounts. Enjoy U2F with TREZOR. <!-- Your TREZOR confirms access to the website with a
                                     unique signature, securely created and sealed on its memory. --> </p>
                                 {% endblocktrans %}
                             </div>
@@ -223,7 +213,20 @@
 
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Easily prove your ownership or verify others' messages and documents. <!-- It is very simple with TREZOR. --> </p>
+                                <p>Easily prove your ownership of messages and documents, or verify others'. <!-- It is very simple with TREZOR. --> </p>
+                                {% endblocktrans %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item money">
+                           
+                            <h4 class="card-title">{% trans "Explore Integrations" %}</h4>
+                            
+                            <div class="content text-block">
+                                {% blocktrans %}
+                                <p>Connect your TREZOR to third party wallets and services.<!-- Pay bills and invoices to international bank accounts with bitcoins. Receive payroll or new bitcoins from exchanges directly to
+                                    the safety of your TREZOR, thanks to multiple integrations. --></p>
                                 {% endblocktrans %}
                             </div>
                         </div>
@@ -252,19 +255,19 @@
                     </div>
                     <div class="2 entry text-xs-center" id="usb">
                         <h3>{% trans "Unhackable" %}</h3>
-                        <p>{% blocktrans %}TREZOR has no online connectivity and a secure USB connection.<!-- <br>The safe
+                        <p>{% blocktrans %}TREZOR has no online connectivity, but only a secure USB connection.<!-- <br>The safe
                             haven is offline! --> {% endblocktrans %}</p>
                     </div>
                     <div class="3 entry  text-xs-center" id="display">
                         <h3>{% trans "Trust your own eyes" %}</h3>
-                        <p>{% blocktrans %}Visually check important transaction details before you hit Confirm.<br /> No
-                            matter how infected is your computer, this display will always tell you the truth.
+                        <p>{% blocktrans %}Check important transaction details before you hit Confirm.<br /><!-- No
+                            matter how infected is your computer, -->This display will always tell you the truth.
                             {% endblocktrans %}</p>
                     </div>
                     <div class="4 entry" id="buttons">
                         <h3>{% trans "Trust your own hands" %}</h3>
-                        <p>{% blocktrans %}Everything important only happens after your direct physical approval.<br/> No
-                            hacker or virus can hit the 'Confirm' button instead of you.
+                        <p>{% blocktrans %}Everything important needs your direct physical approval.<br/> Just click 'Confirm'.<!-- No
+                            hacker or virus can hit the 'Confirm' button instead of you. -->
                             {% endblocktrans %}</p>
                     </div>
                     <div class="5 entry" id="inside">
@@ -365,7 +368,7 @@
                 <div class="col-lg-12  text-xs-center">
                     <h2>{% trans "Technical specification." %}</h2>
                     {% blocktrans %}
-                    <p>We trim away everything that could get hacked and focus on powerful hardware features and software
+                    <p>We trimmed away everything that could get hacked and focused on powerful hardware features and software
                         logic.</p>
                     {% endblocktrans %}
                 </div>
@@ -455,7 +458,7 @@
                 <div class="col-lg-12  text-xs-center">
                     <h2>{% trans "Meet Our Team." %}</h2>
                     {% blocktrans %}
-                    <p>Our team features some of the most recognized bitcoin and security experts, a dedicated support team,
+                    <p>Our team features some of the most recognized Bitcoin and security experts, a dedicated support team,
                         as well as the most qualified Jack Russell in the world.</p>
                     {% endblocktrans %}
                 </div>
