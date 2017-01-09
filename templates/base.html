@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
-        <link rel="canonical" href="." />
+        <link rel="canonical" href="{{ CURRENT_PAGE.absolute_final_url }}" />
 
         {% block meta %}
         <meta name="keywords" content="trezor official bitcoin eshop ultra secure security hardware wallet cryptography cryptocurrency u2f password manager gpg">
@@ -37,8 +37,7 @@
         <meta name="twitter:image:src" content="/trezor-for-social.png">
         <meta name="twitter:domain" content="https://www.trezor.io/">
         {% endblock twitter-meta %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous" data-viewport-units-buggyfill="ignore">
-        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" data-viewport-units-buggyfill="ignore">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static '/static/css/style.css' %}">
         <script type="text/javascript" src="{% static '/static/js/vendor/vendors.js' %}"></script>
     </head>

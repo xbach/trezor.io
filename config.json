@@ -1,4 +1,9 @@
 {
+  "site-url": "https://trezor.io",
   "prettify": true,
-  "USE_L10N" : true
+  "USE_L10N" : true,
+  "optimize": [
+    "js",
+    "css"
+  ]
 }
