@@ -24,16 +24,23 @@
 @import custom/page_usage
 @import custom/page_features
 
-
 body, html
   padding: 0
   margin: 0
-  height: 100%
-  overflow-y: scroll
-  -webkit-overflow-scrolling: touch
   background: $c_white
   font-family: $default_font
   +antialiased()
+
+html
+  overflow: hidden
+  height: 100%
+
+body
+  overflow: auto
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  -ms-overflow-style: -ms-autohiding-scrollbar
+  height: 100%
 
 header
   position: relative
