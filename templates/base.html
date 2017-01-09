@@ -40,7 +40,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous" data-viewport-units-buggyfill="ignore">
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" data-viewport-units-buggyfill="ignore">
         <link rel="stylesheet" href="{% static '/static/css/style.css' %}">
-        <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
+        <script type="text/javascript" src="{% static '/static/js/vendor/vendors.js' %}"></script>
     </head>
 
     <body>
@@ -53,14 +53,9 @@
     </body>
 
   {% block scripts %}
-    <script src="{% static '/static/js/vendor/jquery-1.10.1.js' %}"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-    <script src="{% static '/static/js/vendor/typed.js' %}"></script>
-    <script src="{% static '/static/js/vendor/fittext.js' %}"></script>
-    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="{% static '/static/js/main.js' %}"></script>
-    <script src="{% static '/static/js/features.js' %}"></script>
-    <script src="{% static '/static/js/team.js' %}"></script>
+
+    <script type="text/javascript" src="{% static '/static/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/js/features.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/js/team.js' %}"></script>
   {% endblock %}
 </html>

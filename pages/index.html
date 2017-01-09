@@ -7,9 +7,9 @@
             <div class="top">
                 <div class="width-wrapper">
                     <h1 class="display-4 text-xs-center" id="headline">{% trans "We make security easy." %}</h1>
-                    <p class="lead" id="lead">Bulletproof protection of your <span id="lead-typer">money.</span></p>
+                    <p class="lead" id="lead">Bulletproof protection of your <span id="lead-typer">bitcoins.</span></p>
                     <div class="lead-ghost" id="lead-ghost">
-                        <p>{% trans "money." %}</p>
+                        <p>{% trans "bitcoins." %}</p>
                         <p>{% trans "passwords." %}</p>
                         <p>{% trans "accounts." %}</p>
                         <p>{% trans "emails." %}</p>
@@ -96,8 +96,9 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="row">
-                    <div class="col-lg-12 text-xs-center">
+                    <div class="col-lg-12 text-xs-center learn-more">
                         <a href="{% url '/usage.html' %}" class="btn-primary-noline">
                             {% blocktrans %}
                             Learn more about usage.
@@ -105,6 +106,7 @@
                         </a>
                     </div>
                 </div>
+                -->
             </div>
         </section>
 
@@ -274,16 +276,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 hidden-sm-down text-xs-center">
+                    <div class="col-lg-12 hidden-sm-down text-xs-center learn-more">
                         <div class="point" id="g"></div>
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
-                        <a href="{% url '/features.html' %}" class="btn-primary-noline">
-                            {% blocktrans %}
-                            Learn more about features.
-                            {% endblocktrans %}
-                        </a>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -331,7 +327,7 @@
                 </div>
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "A few media mentions." %}</h2>
+                        <h2>{% trans "Just a few media mentions ..." %}</h2>
                     </div>
                 </div>
                 <div class="row media">
