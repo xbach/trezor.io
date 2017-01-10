@@ -25,7 +25,6 @@
                     <i class="fa fa-windows" aria-hidden="true" id="win"></i>
                     <i class="fa fa-linux" aria-hidden="true" id="linux"></i>
                     <i class="fa fa-android" aria-hidden="true" id="unknown"></i>
-                    </span>
                 </div>
                 </p>
             </div>
@@ -35,24 +34,24 @@
         </div>
     </div>
 </header>
-<main class="main-content" id="main">
-    <div class="sticky hidden-xs-down" id="sticky-nav" data-toggle="sticky-onscroll">
-        <div class="container sub-nav">
-            <div class="nav-inline nav" id="sub-nav">
-                <a class="nav-link" href="{% url '/' %}">
-                    <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
-                         onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
-                         alt="TREZOR logo"/>
-                </a>
-                <a class="nav-link active scrollTo hidden-sm-down" href="#usage">{% trans "Usage" %}</a>
-                <a class="nav-link scrollTo hidden-sm-down" href="#features">{% trans "Features" %}</a>
-                <a class="nav-link scrollTo hidden-sm-down" href="#specification">{% trans "Specs" %}</a>
-                <a class="nav-link scrollTo hidden-sm-down" href="#developers">{% trans "Developers" %}</a>
-                <a class="nav-link scrollTo hidden-sm-down" href="#team">{% trans "Team" %}</a>
-                <a class="btn btn-third-outline buy float-sm-right" href="https://shop.trezor.io" role="button">{% trans "Buy for $99"%}</a>
-            </div>
+<div class="sticky hidden-xs-down" id="sticky-nav">
+    <div class="container sub-nav">
+        <div class="nav-inline nav" id="sub-nav">
+            <a class="nav-link" href="{% url '/' %}">
+                <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
+                     onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
+                     alt="TREZOR logo"/>
+            </a>
+            <a class="nav-link active scrollTo hidden-sm-down" href="#usage">{% trans "Usage" %}</a>
+            <a class="nav-link scrollTo hidden-sm-down" href="#features">{% trans "Features" %}</a>
+            <a class="nav-link scrollTo hidden-sm-down" href="#specification">{% trans "Specs" %}</a>
+            <a class="nav-link scrollTo hidden-sm-down" href="#developers">{% trans "Developers" %}</a>
+            <a class="nav-link scrollTo hidden-sm-down" href="#team">{% trans "Team" %}</a>
+            <a class="btn btn-third-outline buy float-sm-right" href="https://shop.trezor.io" role="button">{% trans "Buy for $99"%}</a>
         </div>
     </div>
+</div>
+<main class="main-content" id="main">
     <div id="usage">
         <section class="intro-section">
             <div class="container">

@@ -2,20 +2,17 @@
 body, html
   padding: 0
   margin: 0
+  height: 100%
   background: $c_white
   font-family: $default_font
   +antialiased()
 
-html
-  overflow: hidden
-  height: 100%
-
 body
+  min-height: 100%
   overflow: auto
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: -ms-autohiding-scrollbar
-  height: 100%
 
 header
   position: relative
