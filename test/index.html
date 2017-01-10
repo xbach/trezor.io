@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" id="window">
     <head>
         <title>TREZOR The Original Hardware Wallet</title>
         <meta charset="utf-8">
@@ -8,19 +8,19 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" href="/static/images/favicon.ico">
-        <link rel="canonical" href="." />
+        <link rel="canonical" href="https://www.trezor.io/test/" />
 
         
-        <meta name="keywords" content="trezor official bitcoin eshop ultra secure hardware wallet">
+        <meta name="keywords" content="trezor official bitcoin eshop ultra secure security hardware wallet cryptography cryptocurrency u2f password manager gpg">
         <meta name="description" content="Official TREZOR website">
         
 
         
         <meta property="og:type" content="product" />
         <meta property="fb:app_id" content="198891850249377" />
-        <meta property="og:title" content="TREZOR The Bitcoin Safe" />
+        <meta property="og:title" content="TREZOR" />
         <meta property="og:image" content="https://www.buytrezor.com/static/img/trezor_white.jpg" />
-        <meta property="og:description" content="TREZOR is the hardware bitcoin wallet" />
+        <meta property="og:description" content="TREZOR | Security Made Easy" />
         <meta property="og:url" content="https://www.trezor.io/" />
         <meta property="product:brand" content="TREZOR" />
         <meta property="product:category" content="Electronics" />
@@ -33,14 +33,13 @@
         <meta name="twitter:card" content="photo">
         <meta name="twitter:site" content="@BitcoinTrezor">
         <meta name="twitter:creator" content="@BitcoinTrezor">
-        <meta name="twitter:title" content="TREZOR | The Bitcoin Hardware Wallet">
+        <meta name="twitter:title" content="TREZOR | Security Made Easy">
         <meta name="twitter:image:src" content="/trezor-for-social.png">
         <meta name="twitter:domain" content="https://www.trezor.io/">
         
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous" data-viewport-units-buggyfill="ignore">
-        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" data-viewport-units-buggyfill="ignore">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="./static/css/style.css">
-        <script src="./static/js/vendor/modernizr-2.6.2.js"></script>
+        <script type="text/javascript" src="./static/js/vendor/vendors.js"></script>
     </head>
 
     <body>
@@ -52,13 +51,13 @@
     </button>
     <a class="navbar-brand-mini hidden-md-up" href="/"><img class="trezor-logo"
                                                             src="./static/images/trezor-logo.svg"
-                                                            onerror="this.src='./images/trezor-logo.png'; this.onerror=null;"
+                                                            onerror="this.src='./staticimages/trezor-logo.png'; this.onerror=null;"
                                                             alt="TREZOR logo"/></a>
     <div class="container">
         <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
             <a class="navbar-brand hidden-sm-down" href="/"><img class="trezor-logo"
                                                                  src="./static/images/trezor-logo.svg"
-                                                                 onerror="this.src='./images/trezor-logo.png'; this.onerror=null;"
+                                                                 onerror="this.src='./static/images/trezor-logo.png'; this.onerror=null;"
                                                                  alt="TREZOR logo"/><span
                     class="trezor-title">TREZOR.io</span></a>
             <ul class="nav navbar-nav float-sm-right float-xs-left social">
@@ -83,11 +82,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Follow us</a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="https://twitter.com/bitcointrezor"><span class="ion-social-twitter"></span> Twitter</a>
-                        <a class="dropdown-item" href="https://www.reddit.com/r/trezor"><span class="ion-social-reddit"></span> Reddit</a>
-                        <a class="dropdown-item" href="https://www.instagram.com/bitcointrezor/"><span class="ion-social-instagram"></span> Instagram</a>
-                        <a class="dropdown-item" href="https://www.facebook.com/BitcoinTrezor/"><span class="ion-social-facebook"></span> Facebook</a>
-                        <a class="dropdown-item" href="https://github.com/satoshilabs/"><span class="ion-social-github"></span> Github</a>
+                        <a class="dropdown-item" href="https://twitter.com/bitcointrezor"><span class="fa fa-twitter"></span> Twitter</a>
+                        <a class="dropdown-item" href="https://www.reddit.com/r/trezor"><span class="fa fa-reddit-alien"></span> Reddit</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/bitcointrezor/"><span class="fa fa-instagram"></span> Instagram</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/BitcoinTrezor/"><span class="fa fa-facebook"></span> Facebook</a>
+                        <a class="dropdown-item" href="https://github.com/satoshilabs/"><span class="fa fa-github-alt"></span> Github</a>
                     </div>
                 </li>
             </ul>
@@ -96,15 +95,15 @@
 </nav>
 
     
-<main class="main-content">
+<header>
     <div class="jumbotron" id="jumbotron">
         <div class="container">
             <div class="top">
                 <div class="width-wrapper">
                     <h1 class="display-4 text-xs-center" id="headline">We make security easy.</h1>
-                    <p class="lead" id="lead">Bulletproof protection of your <span id="lead-typer">money.</span></p>
+                    <p class="lead" id="lead">Bulletproof protection for your <span id="lead-typer">bitcoins.</span></p>
                     <div class="lead-ghost" id="lead-ghost">
-                        <p>money.</p>
+                        <p>bitcoins.</p>
                         <p>passwords.</p>
                         <p>accounts.</p>
                         <p>emails.</p>
@@ -113,14 +112,14 @@
             </div>
             <div class="bottom">
                 <p class="text-xs-center">
-                    <a class="btn btn-primary-full" href="#" role="button">Add to Cart</a>
+                    <a class="btn btn-primary-full" href="https://shop.trezor.io" role="button">Add to Cart</a>
                 <div class="hidden-xs-down platform-icons">
                     <div>Supported platforms:</div>
                     <i class="fa fa-apple" aria-hidden="true" id="mac"></i>
                     <i class="fa fa-windows" aria-hidden="true" id="win"></i>
                     <i class="fa fa-linux" aria-hidden="true" id="linux"></i>
                     <i class="fa fa-android" aria-hidden="true" id="unknown"></i>
-                </span>
+                    </span>
                 </div>
                 </p>
             </div>
@@ -129,6 +128,8 @@
             <p>New TREZOR owner? <a href="https://wallet.trezor.io/">Start now!</a></p>
         </div>
     </div>
+</header>
+<main class="main-content" id="main">
     <div class="sticky hidden-xs-down" id="sticky-nav" data-toggle="sticky-onscroll">
         <div class="container sub-nav">
             <div class="nav-inline nav" id="sub-nav">
@@ -137,12 +138,12 @@
                          onerror="this.src='./static/images/trezor-logo.png'; this.onerror=null;"
                          alt="TREZOR logo"/>
                 </a>
-                <a class="nav-link active scrollTo" href="#usage">Usage</a>
-                <a class="nav-link scrollTo" href="#features">Features</a>
-                <a class="nav-link scrollTo" href="#specification">Specs</a>
-                <a class="nav-link scrollTo" href="#developers">Developers</a>
-                <a class="nav-link scrollTo" href="#team">Team</a>
-                <a class="btn btn-third-outline buy float-sm-right" href="#" role="button">Buy for $99</a>
+                <a class="nav-link active scrollTo hidden-sm-down" href="#usage">Usage</a>
+                <a class="nav-link scrollTo hidden-sm-down" href="#features">Features</a>
+                <a class="nav-link scrollTo hidden-sm-down" href="#specification">Specs</a>
+                <a class="nav-link scrollTo hidden-sm-down" href="#developers">Developers</a>
+                <a class="nav-link scrollTo hidden-sm-down" href="#team">Team</a>
+                <a class="btn btn-third-outline buy float-sm-right" href="https://shop.trezor.io" role="button">Buy for $99</a>
             </div>
         </div>
     </div>
@@ -152,11 +153,11 @@
                 <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
                         <h2>Easy &amp; Secure.</h2>
-                        <p>As one, two, three ...</p>
+                        <!-- <p>As one, two, three ...</p> -->
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4 text-xs-center">
+                    <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
                             <div class="presentation setup"></div>
                             <h4>Quick setup.</h4>
@@ -167,37 +168,39 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4 text-xs-center">
+                    <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
                             <div class="presentation use"></div>
                             <h4>Use with ease.</h4>
                             
-                            <p>Using TREZOR is easy. Just follow instructions on the display and click the button
+                            <p>Using TREZOR is easy. Just follow the instructions on the display and click the button
                                 to confirm important actions.</p>
                             
                         </div>
                     </div>
 
-                    <div class="col-sm-4 text-xs-center">
+                    <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
                             <div class="presentation recover"></div>
                             <h4>Lost? Restore.</h4>
                             
-                            <p>No worries, use your secret words to quickly regain acces to all your
-                                money, transaction history, accounts and emails.</p>
+                            <p>No worries, use your secret words to quickly regain access to all your
+                                keys, money, history, accounts and emails.</p>
                             
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="row">
-                    <div class="col-lg-12 text-xs-center">
-                        <a href="/usage/" class="btn-primary-noline">
+                    <div class="col-lg-12 text-xs-center learn-more">
+                        <a href="/usage.html" class="btn-primary-noline">
                             
                             Learn more about usage.
                             
                         </a>
                     </div>
                 </div>
+                -->
             </div>
         </section>
 
@@ -205,216 +208,121 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
-                        <h2>Explore great functions.</h2>
+                        <h2>Explore functions.</h2>
                         <p>From Bitcoin to passwords, accounts, documents or emails.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="row">
-                            <h3><span class="ion-social-bitcoin icon money"></span> DIGITAL MONEY</h3>
-                        </div>
-                        <div class="usage-container">
-                            <div class="item money closed">
-                                <h6 class="card-title">Bitcoin</h6>
+                        <div class="item money">
+                            <h4 class="card-title">Bitcoin</h4>
 
-                                <div class="content">
-                                    
-                                    <ul>
-                                        <li>the most trusted and secure way to store your bitcoins</li>
-                                        <li>receive and pay without risk</li>
-                                        <li>enjoy great comfort and ease of use</li>
-                                        <li>compatible with the best Bitcoin wallets and services</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="item money closed">
-                                <h6 class="card-title">Digital Assets & Contracts</h6>
-
-                                <div class="content">
-                                    
-                                    <ul>
-                                        <li>Protect more and more digital currencies your Ethereum, Litecoins and DASH
-                                        </li>
-                                        <li>with a single TREZOR</li>
-                                        <li>and the currency wallet of your choice</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="item money closed">
+                            <div class="content text-block">
                                 
-                                <h6 class="card-title">Dash, Zcash, Litecoin</h6>
+                                <p>The most trusted and secure way to store your bitcoins. Receive and send without
+                                    risk, enjoy great comfort and ease of use. <!-- Compatible with the best Bitcoin
+                                    wallets and services. --> </p>
                                 
-                                <div class="content">
-                                    
-                                    <p>Protect digitally issued valuables such as:</p>
-                                    <ul>
-                                        <li>incentive points or blabla</li>
-                                        <li>stocks and share - rights</li>
-                                        <li>with the colored coins or Ethereum wallets of your choice</li>
-                                    </ul>
-                                    
-                                </div>
                             </div>
-
-                            <div class="item money closed">
-                                
-                                <h6 class="card-title">Pay &amp; Get Paid</h6>
-                                
-                                <div class="content">
-                                    
-                                    <ul>
-                                        <li>Pay bills and invoices to international bank accounts using TREZOR and
-                                            bitcoins.
-                                        </li>
-                                        <li>Receive your payroll or new bitcoins from your exchange directly to the
-                                            safety of your TREZOR
-                                        </li>
-                                        <li>International same-day settlements for bargain fees</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="preview" id="money-expand"></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="row">
-                            <h3><span class="ion-person icon identity"></span> IDENTITY</h3>
-                        </div>
-                        <div class="usage-container">
-                            <div class="item identity closed">
-                                <h6 class="card-title">Password Manager</h6>
+                        <div class="item money">
+                            <h4 class="card-title">Dash, Litecoin and others</h4>
 
-                                <div class="content">
-                                    
-                                    <p>TREZOR Password Manager is a no-master-password another security application</p>
-                                    <ul>
-                                        <li>Creates strong and unique passwords</li>
-                                        <li>Encrypts login credentials with your personal TREZOR</li>
-                                        <li>Auto-syncs encrypted passwords to your private cloud storage</li>
-                                        <li>Lets you easily access your passwords from any computer, hassle-free</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="item identity closed">
+                            <div class="content text-block">
                                 
-                                <h6 class="card-title">Secure Admin Access.<br/>Secure SSH.</h6>
+                                <p>
+                                    Protect a variety of alternative digital currencies. <!-- Ethereum, --> Litecoin, DASH
+                                    and Zcash with a single device. <!-- Combine TREZOR powers with growing possibilities. -->
+                                </p>
                                 
-                                <div class="content">
-                                    
-                                    <p>Another great feature for professionals. Protect access to your servers, data or
-                                        websites administration.</p>
-                                    <ul>
-                                        <li>SSH login – simple or multiple sessions from a sub-shell</li>
-                                        <li>Githubs SSH authentication</li>
-                                        <li>Admin access to your Wordpress sites with a TREZOR.</li>
-                                    </ul>
-                                    
-                                </div>
                             </div>
-
-
-                            <div class="item identity closed">
-                                <h6 class="card-title">Password-less Login</h6>
-
-                                <div class="content">
-                                    
-                                    <p>Ask for the best. Log into your favorite websites, systems and apps without ever
-                                        touching a password again.</p>
-                                    <ul>
-                                        <li>Secure your user accounts against hackers and unauthorized access</li>
-                                        <li>Sign up to websites without having to reveal your name or email address</li>
-                                        <li>Avoid social engineering and big data analysis on every move you do</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="item identity closed">
-                                <h6 class="card-title">2-Factor Authentication</h6>
-
-                                <div class="content">
-                                    
-                                    <p>Are you sticking with your old weak passwords? You can! TREZOR is the world's
-                                        most secure personal 2nd factor authenticator that secures your accounts event
-                                        way better than anything else.</p>
-                                    <ul>
-                                        <li>Unique phishing protection: use your TREZOR's display to avoid scammy
-                                            sites
-                                        </li>
-                                        <li>Log in to websites with pressing a button of your TREZOR. This is something
-                                            no virus can do instead of you
-                                        </li>
-                                        <li>Your TREZOR confirms access to the website with a unique signature, securely
-                                            created and sealed on its memory
-                                        </li>
-                                        <li>TREZOR Recovery allows you to easily restore access when needed</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="preview" id="identity-expand"></div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-4 text-xs-center">
-                        <div class="row">
-                            <h3><span class="ion-document-text icon other"></span> DOCUMENTS &amp; EMAIL
-                            </h3>
-                        </div>
-                        <div class="usage-container">
-                            <div class="item other closed">
-                                <h6 class="card-title">Encrypt &amp; Sign Files</h6>
-
-                                <div class="content">
-                                    
-                                    <p>The first truly secure and offline way to create GPG keys! Encrypt any files with
-                                        one touch.</p>
-                                    <ul>
-                                        <li>Online before uploading to your private cloud</li>
-                                        <li>Offline to a smart card inserted into the SD slot</li>
-                                        <li>Backup and re-create your GPG keys anew if needed</li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="item other closed">
-                                <h6 class="card-title">Sign &amp; Encrypt Emails</h6>
-
-                                <div class="content">
-                                    
-                                    <p>As you type your Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
-                                        keystroke that you make, one by one, before it even reaches your computer..
-                                        Simply plug TREZOR between your keyboard and your computer.</p>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="item other closed">
-                                <h6 class="card-title">Sign Messages</h6>
-
-                                <div class="content">
-                                    
-                                    <p>As you type your Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
-                                        keystroke that you make, one by one, before it even reaches your computer..
-                                        Simply plug TREZOR between your keyboard and your computer.</p>
-                                    
-                                </div>
+                    
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item identity">
+                            <h4 class="card-title">Password Manager</h4>
+                            <div class="content text-block">
+                                
+                                <p>Password Manager encrypts login credentials and auto-syncs encrypted passwords to
+                                    your private cloud, hassle-free, with TREZOR.</p>
+                                
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="preview" id="other-expand"></div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item identity">
+                            <h4 class="card-title">Secure Admin Access<br />With SSH
+                            </h4>
+                            <div class="content text-block">
+                                
+                                <p>Protect access to your servers, data or websites administration. SSH login with
+                                    simple or multiple sessions<!-- from a sub-shell-->.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item identity">
+                            <h4 class="card-title">Password-less Login</h4>
+                            <div class="content text-block">
+                                
+                                <p><!-- Sign up to websites without having to reveal your name or email
+                                    address. Secure your user accounts against hackers and unauthorized access via
+                                    TREZOR Connect. -->
+                                    Securely sign up and login with a click of a button, using TREZOR Connect.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item other">
+                            <h4 class="card-title">Sign &amp; Encrypt Emails</h4>
+
+                            <div class="content text-block">
+                                
+                                <p>Gmail, Protonmail or Thunderbird message, TREZOR encrypts every
+                                    email you create with the support of GPG.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item identity">
+                            <h4 class="card-title">2-Factor Authentication</h4>
+                            <div class="content text-block">
+                                
+                                <p>Add extra security to your online accounts. Enjoy U2F with TREZOR. <!-- Your TREZOR confirms access to the website with a
+                                    unique signature, securely created and sealed on its memory. --> </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item other">
+                            <h4 class="card-title">Sign &amp; Verify Messages</h4>
+
+                            <div class="content text-block">
+                                
+                                <p>Easily prove your ownership of messages and documents, or verify others'. <!-- It is very simple with TREZOR. --> </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item money">
+                           
+                            <h4 class="card-title">Explore Integrations</h4>
+                            
+                            <div class="content text-block">
+                                
+                                <p>Connect your TREZOR to third party wallets and services.<!-- Pay bills and invoices to international bank accounts with bitcoins. Receive payroll or new bitcoins from exchanges directly to
+                                    the safety of your TREZOR, thanks to multiple integrations. --></p>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -426,9 +334,9 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>Security By Design</h2>
+                        <h2>Security by Design.</h2>
                         
-                        <p>Advanced cryptography, reliable hardware, simple interface.<br>All in perfect cooperation.
+                        <p>Advanced cryptography, reliable hardware, simple interface.<br /> All in perfect cooperation.
                         </p>
                         
                     </div>
@@ -436,24 +344,24 @@
                 <div class="hidden-md-up" id="features-list">
                     <div class="1 entry text-xs-center" id="case">
                         <h3>Small and Sturdy</h3>
-                        <p>Fits into your palm.<br>Tamper-proof, water-resistant and extremely
+                        <p>Fits into your palm.<br /> Tamper-proof, water-resistant and extremely
                             durable.</p>
                     </div>
                     <div class="2 entry text-xs-center" id="usb">
                         <h3>Unhackable</h3>
-                        <p>TREZOR has no online connectivity and a secure USB connection.<br>The safe
-                            haven is offline!</p>
+                        <p>TREZOR has no online connectivity, but only a secure USB connection.<!-- <br>The safe
+                            haven is offline! --> </p>
                     </div>
                     <div class="3 entry  text-xs-center" id="display">
                         <h3>Trust your own eyes</h3>
-                        <p>Visually check important transaction details before you hit Confirm.<br>No
-                            matter how infected your computer, this display always tells you the truth.
+                        <p>Check important transaction details before you hit Confirm.<br /><!-- No
+                            matter how infected is your computer, -->This display will always tell you the truth.
                             </p>
                     </div>
                     <div class="4 entry" id="buttons">
                         <h3>Trust your own hands</h3>
-                        <p>Everything important only happens with your direct physical approval.<br>No
-                            hacker or virus can hit the 'Confirm' button instead of you.
+                        <p>Everything important needs your direct physical approval.<br/> Just click 'Confirm'.<!-- No
+                            hacker or virus can hit the 'Confirm' button instead of you. -->
                             </p>
                     </div>
                     <div class="5 entry" id="inside">
@@ -465,16 +373,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 hidden-sm-down text-xs-center">
+                    <div class="col-lg-12 hidden-sm-down text-xs-center learn-more">
                         <div class="point" id="g"></div>
                         <canvas id="featureCanvas" width="500" height="500"></canvas>
-                        <a href="/features/" class="btn-primary-noline">
-                            
-                            Learn more about features.
-                            
-                        </a>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -522,7 +424,7 @@
                 </div>
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>A few media mentions.</h2>
+                        <h2>Just a few media mentions ...</h2>
                     </div>
                 </div>
                 <div class="row media">
@@ -558,9 +460,9 @@
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
-                    <h2>Technical specification</h2>
+                    <h2>Technical specification.</h2>
                     
-                    <p>We trim away everything that could get hacked and add powerful hardware features and software
+                    <p>We trimmed away everything that could get hacked and focused on powerful hardware features and software
                         logic.</p>
                     
                 </div>
@@ -585,7 +487,7 @@
                         </p>
 
                         <p class="spec-block">
-                            <b>Temperature</b><span>-20°C to +60°C (-4°F - +140°F)</span>
+                            <b>Temp</b><span>-20°C to +60°C (-4°F - +140°F)</span>
                         </p>
                     </div>
                 </div>
@@ -618,7 +520,7 @@
             <div class="row heading">
                 <div class="col-lg-12 text-xs-center">
                     <h2>Developers, come along!</h2>
-                    <p>Interested in online security and privacy? Care to make the digital world a more better
+                    <p>Interested in online security and privacy? Care to make the digital world a better
                         place?<br>Join our open network of security experts and programmers.</p>
                 </div>
             </div>
@@ -635,9 +537,9 @@
                 <div class="col-sm-6 col-xs-12 text-sm-left text-xs-center">
                     <h3>Learn. Collaborate. Innovate.</h3>
                     
-                    <p>Join Us in bitcoin and security movement working on top-notch global projects. Become a part of
+                    <p>Join us and work on top-notch global projects related to Bitcoin and security. Become a part of
                         our team
-                        standing behind several projects that marked milestones in the Bitcoin world. We love to work
+                        resposible for several influential projects that marked milestones in the Bitcoin world. We love to work
                         with talented and enthusiastic developers, marketers or designers.</p>
                     
                 </div>
@@ -650,7 +552,7 @@
                 <div class="col-lg-12  text-xs-center">
                     <h2>Meet Our Team.</h2>
                     
-                    <p>Our team counts some of the most recognized bitcoin and security experts, dedicated support team,
+                    <p>Our team features some of the most recognized Bitcoin and security experts, a dedicated support team,
                         as well as the most qualified Jack Russell in the world.</p>
                     
                 </div>
@@ -663,9 +565,9 @@
                     <div class="header pepitka"></div>
                     <div class="content">
                         <div class="description">
-                            <h4>Pepitka</h4>
+                            <h4>Pepita</h4>
 
-                            <p class="title">Nap Time Coordinator</p>
+                            <p class="title">Door Supervisor</p>
                         </div>
                     </div>
                 </div>
@@ -698,7 +600,7 @@
                         <div class="description">
                             <h4>Peter "Buly" Bulak</h4>
 
-                            <p class="title">Director</p>
+                            <p class="title">Catalyst</p>
                         </div>
                     </div>
                 </div>
@@ -818,11 +720,12 @@
             <div class="row">
                 <div class="col-sm-12 text-xs-center">
                     <h5>Tell a friend ... </h5>
-                    <a href="https://twitter.com/bitcointrezor"><span class="ion-social-twitter"></span></a>
-                    <a href="https://www.reddit.com/r/trezor"><span class="ion-social-reddit"></span></a>
-                    <a href="https://www.instagram.com/bitcointrezor/"><span class="ion-social-instagram"></span></a>
-                    <a href="https://www.facebook.com/BitcoinTrezor/"><span class="ion-social-facebook"></span></a>
-                    <a href="https://github.com/satoshilabs/"><span class="ion-email"></span></a>
+                    <a href="https://twitter.com/bitcointrezor"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                    <a href="https://www.reddit.com/r/trezor"><span class="fa fa-reddit-alien" aria-hidden="true"></span></a>
+                    <a href="https://www.instagram.com/bitcointrezor/"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+                    <a href="https://www.facebook.com/BitcoinTrezor/"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                    <a href="https://github.com/satoshilabs/"><span class="fa fa-github-alt" aria-hidden="true"></span></a>
+                    <a href="https://github.com/satoshilabs/"><span class="fa fa-envelope" aria-hidden="true"></span></a>
                 </div>
             </div>
         </div>
@@ -831,8 +734,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <a href="/"><img class="trezor-logo" src="/static/images/trezor-logo.svg"
-                                                 onerror="this.src='/static/images/trezor-logo.png'; this.onerror=null;"
+                    <a href="/"><img class="trezor-logo" src="./static/images/trezor-logo.svg"
+                                                 onerror="this.src='./static/images/trezor-logo.png'; this.onerror=null;"
                                                  alt="TREZOR logo"/></a>
                     <p>
                         SatoshiLabs s.r.o.<br />
@@ -873,19 +776,13 @@
             </div>
         </div>
     </div>
-
 </footer>
     </body>
 
   
-    <script src="./static/js/vendor/jquery-1.10.1.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-    <script src="./static/js/vendor/typed.js"></script>
-    <script src="./static/js/vendor/fittext.js"></script>
-    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="./static/js/main.js"></script>
-    <script src="./static/js/features.js"></script>
-    <script src="./static/js/team.js"></script>
+
+    <script type="text/javascript" src="./static/js/main.js"></script>
+    <script type="text/javascript" src="./static/js/features.js" async></script>
+    <script type="text/javascript" src="./static/js/team.js" async></script>
   
 </html>

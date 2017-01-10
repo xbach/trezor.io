@@ -1,0 +1,327 @@
+/* SUB NAVIGATION */
+
+.sub-nav
+  padding: 18px 0
+
+  .nav
+    .trezor-logo
+      width: 110px
+      margin-top: -5px
+
+    a.nav-link
+      text-transform: uppercase
+      font-weight: bold
+      font-size: .85rem
+      color: $c_grey
+      +unselectable()
+
+    a.buy
+      margin-top: -10px
+      margin-bottom: -10px
+
+.sticky
+  position: fixed
+  left: 0
+  top: 0
+  height: 64px
+  width: 100%
+  overflow-y: hidden
+  overflow: hidden
+  background: $c_black
+  z-index: 2
+
+
+/* INTRO SECTION */
+
+.intro-section
+  background-color: $c_grey_bg
+
+  .text-block
+    width: 70%
+    position: relative
+    margin: 0 auto
+    padding-bottom: 20px
+
+  h4
+    font-size: 1.1em
+    font-style: $default_font
+    font-weight: bolder
+    color: $c_grey_font
+
+  .presentation
+    width: 100%
+    max-width: 200px
+    max-height: 200px
+    position: relative
+    margin: 0 auto
+    background: url("../images/photos/usage.png")
+    background-repeat: no-repeat
+    background-size: 450%
+    +box-shadow(0 0 24px rgba(0, 0, 0, 0.05))
+    +border-radius(50%)
+
+    &:after
+      content: ""
+      display: block
+      padding-bottom: 100%
+
+    &.setup
+      background-position: 0 0
+
+    &.use
+      background-position: 46% 0
+
+    &.recover
+      background-position: 90% 0
+
+  @media screen and (max-width: $sm)
+    &
+      padding-top: 60px
+
+
+
+/* USAGE SECTION */
+
+.usage-section
+  .item
+    h4
+      font-size: 1.1em
+      font-style: $default_font
+      font-weight: bolder
+      color: $c_grey_font
+
+    .text-block
+      width: 90%
+      position: relative
+      margin: 0 auto
+      padding-bottom: 20px
+
+
+/* FEATURES SECTION */
+
+.features-section
+  position: relative
+  background: $c_black
+  color: $c_white
+  p
+    color: $c_grey
+
+  .hidden-content
+    position: absolute
+    top: 0
+    left: 0
+    width: 1px
+    height: 1px
+    visibility: hidden
+
+
+  canvas#featureCanvas
+    position: relative
+    height: 500px
+    width: 100%
+    display: block
+    z-index: 0
+
+  .point
+    position: absolute
+    background: rgba($c_white, .6)
+    top: 432px
+    left: 583px
+    width: 6px
+    height: 6px
+    z-index: 1
+    +border-radius(50%)
+
+    &:before
+      position: absolute
+      left: -17px
+      top: -17px
+      content: ""
+      width: 40px
+      height: 40px
+      background: rgba($c_white, .4)
+      opacity: 0
+      +border-radius(50%)
+      +animation(pulsate 1.8s infinite ease-out)
+
+    &:after
+      position: absolute
+      left: -17px
+      top: -17px
+      content: ""
+      width: 40px
+      height: 40px
+      background: rgba($c_white, .4)
+      opacity: 0
+      +border-radius(50%)
+      +animation(pulsate 1.8s infinite ease-out 0.4s)
+
+
+
+/* EXPERTS SECTION */
+
+.experts-section
+  .experts
+    .header
+      width: 100%
+      max-width: 240px
+      max-height: 240px
+      display: block
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      background: url("../images/experts_faces/experts.png")
+      background-repeat: no-repeat
+      background-size: 240px
+      +border-radius(50%)
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+      &.balaji
+        background-position: 0 0
+      &.pamela
+        background-position: 0 100%
+      &.jon
+        background-position: 0 50%
+
+    h4
+      font-size: 1.3em
+
+    .title
+      font-weight: bold
+      margin-top: -15px
+      color: $c_grey
+
+    blockquote
+      padding: 0.5em 10px
+      font-style: italic
+      font-size: .9em
+      quotes: "\201C""\201C""\201C""\2019"
+
+      &:before
+        font-family: Georgia, serif
+        color: $c_grey
+        content: open-quote
+        font-size: 4em
+        line-height: 0.1em
+        margin-right: 0.25em
+        vertical-align: -0.4em
+
+
+
+/* MEDIA SECTION */
+
+.media
+  img
+    height: 36px
+    opacity: .6
+    width: auto
+    +grey(100%)
+
+/* SPECIFICATION SECTION */
+
+.specification-section
+  background-color: $c_grey_bg
+
+  .shape
+    max-width: 100%
+    opacity: .5
+
+  .spec
+    position: relative
+    width: 90%
+    margin: 0 auto
+    margin-top: 20px
+
+  .spec-block
+    position: relative
+
+    b
+      position: absolute
+      font-size: .9em
+      display: inline-block
+
+    span
+      margin-left: 100px
+      display: inline-block
+      position: relative
+
+
+
+/* DEVELOPERS SECTION */
+
+.devs-section
+  .button-area
+    .btn
+      margin: 10px
+
+    a.plain
+      display: block
+      margin-top: 30px
+
+
+
+/* TEAM SECTION */
+
+.team-section
+  background-color: $c_grey_bg
+
+  .person
+    .header
+      width: 100%
+      max-width: 179px
+      max-height: 179px
+      display: block
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      background: url("../images/team_faces/faces.png")
+      background-repeat: no-repeat
+      background-size: 100%
+
+      +border-radius(50%)
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+      &.bach
+        background-position: 0 0%
+      &.ben
+        background-position: 0 8.333333%
+      &.honza
+        background-position: 0 16.666667%
+      &.jensen
+        background-position: 0 25%
+      &.jochen
+        background-position: 0 33.334%
+      &.karel
+        background-position: 0 41.666667%
+      &.kata
+        background-position: 0 50%
+      &.marek
+        background-position: 0 58.334%
+      &.pavol
+        background-position: 0 66.666667%
+      &.peca
+        background-position: 0 75%
+      &.pepitka
+        background-position: 0 83.334%
+      &.peter
+        background-position: 0 91.666667%
+      &.vojtech
+        background-position: 0 100%
+    h4
+      padding: 0
+      margin: 0
+      font-size: 1em
+
+    .title
+      font-weight: bold
+      color: $c_grey

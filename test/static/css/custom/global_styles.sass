@@ -1,0 +1,45 @@
+
+body, html
+  padding: 0
+  margin: 0
+  background: $c_white
+  font-family: $default_font
+  +antialiased()
+
+html
+  overflow: hidden
+  height: 100%
+
+body
+  overflow: auto
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  -ms-overflow-style: -ms-autohiding-scrollbar
+  height: 100%
+
+header
+  position: relative
+  display: block
+  height: 100%
+  width: 100%
+  z-index: 3
+
+h1, h2, h3, h4, h5
+  font-family: 'Open Sans', sans-serif
+
+p
+  font: 400 17px/1.75 $default_font
+  color: $c_grey_font
+
+a
+  color: $c_green
+
+section
+  padding-top: 80px
+  padding-bottom: 80px
+
+  .heading
+    padding-bottom: 30px
+
+  .learn-more
+    margin-top: 20px

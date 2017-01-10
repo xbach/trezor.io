@@ -127,7 +127,7 @@ $(document).ready(function () {
 
     // draw text block
     ctx.fillStyle = '#99979c';
-    ctx.font = "400 15px/1.75 'Helvetica Neue',Helvetica,Arial,sans-serif";
+    ctx.font = "400 15px/1.75 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif";
     var text = $(entryBlock.getElementsByTagName('p')[ 0 ]).text().replace(/\s+/g, " ");
     ctx.textAlign = "left";
     if (txtX < trgtX) {
