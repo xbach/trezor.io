@@ -5,5 +5,10 @@
   "optimize": [
     "js",
     "css"
-  ]
+  ],
+  "context": {
+    "CURRENT_PAGE": {
+      "absolute_final_url":"https://trezor.io/"
+    }
+  }
 }
