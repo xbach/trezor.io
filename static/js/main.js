@@ -21,8 +21,6 @@ $(document).ready(function () {
   $("#headline").fitText(1.1);
   $("#lead").fitText(1.8);
 
-  // jumbo height hotfix
-  // $('#jumbotron').css('height', $(window).height() + 'px');
 
   $('#lead-typer').typed({
     stringsElement: $('#lead-ghost'),
