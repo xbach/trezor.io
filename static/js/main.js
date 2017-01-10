@@ -10,6 +10,13 @@ $(document).ready(function () {
   if (navigator.appVersion.indexOf("Linux")!=-1) OSName="linux";
   $("#" + OSName).prependTo("#platforms");
 
+  // jumbo height fixer
+  var $jumbo = $('#jumbotron'),
+    $header = $('#header'),
+    h = window.innerHeight;
+  $jumbo.css('max-height', h + 'px');
+  $header.css('max-height', h + 'px');
+
   // jumbotron headline fitting
   $("#headline").fitText(1.1);
   $("#lead").fitText(1.8);
