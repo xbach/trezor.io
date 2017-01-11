@@ -123,9 +123,13 @@ $(document).ready(function () {
 
   $('.scrollTo').on('click touchstart', function (e) {
     e.preventDefault();
+    var target = this.hash,
+      $target = $(target);
     $('html, body').stop().animate({
-      scrollTop: $($(this).attr('href')).offset().top
-    }, 400);
+      scrollTop: $target.offset().top
+    },  500, 'swing', function () {
+      window.location.hash = target;
+    });
   });
 
 });
