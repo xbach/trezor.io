@@ -55,7 +55,8 @@ $(document).ready(function () {
     //remove second level subdomain
     var regexParse = new RegExp('([a-z\-0-9]{2,63})\.([a-z\.]{2,5})$');
     var urlParts = regexParse.exec(parser.hostname);
-    return urlParts[1] + '.' + urlParts[2];
+    return urlParts && (urlParts.length > 1) ? urlParts[1] + '.' + urlParts[2] : null;
+
   }
 
   function handleAffil () {
@@ -69,9 +70,9 @@ $(document).ready(function () {
       prepareAffilAnchors('?h=' + hParam);
       return;
     }
-    var referrer = domain(document.referrer);
+    var referrer = domainKey(domain(document.referrer));
     if (referrer) {
-      prepareAffilAnchors('?h=' + hexlify(domainKey(referrer)));
+      prepareAffilAnchors('?h=' + hexlify(referrer));
       return;
     }
   }
