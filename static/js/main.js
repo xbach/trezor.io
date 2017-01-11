@@ -121,5 +121,12 @@ $(document).ready(function () {
   shuffleTeam($('.shuffle'));
   // createStickyNav($("#sticky-nav"));
 
+  $('.scrollTo').on('click touchstart', function (e) {
+    e.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 400);
+  });
+
 });
 
