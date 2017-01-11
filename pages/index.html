@@ -134,7 +134,6 @@
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item money">
                             <h4 class="card-title">{% trans "Dash, Litecoin and others" %}</h4>
-
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>
@@ -151,22 +150,24 @@
                             <h4 class="card-title">{% trans "Password Manager" %}</h4>
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p><a href="https://passwords.trezor.io/">Password Manager</a> encrypts login credentials and auto-syncs them to
+                                <p>Password Manager encrypts login credentials and auto-syncs them to
                                     your private cloud, hassle-free, with TREZOR.</p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://passwords.trezor.io/">{% trans "passwords.trezor.io" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
-                            <h4 class="card-title">{% trans "Secure Admin Access" %}<br />{% trans "With SSH" %}
+                            <h4 class="card-title">{% trans "Secure Admin SSH Access" %}
                             </h4>
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Protect access to your servers, data or websites administration. <a href="https://github.com/romanz/trezor-agent">SSH login</a> with
+                                <p>Protect access to your servers, data or websites administration. SSH login with
                                     single or multiple sessions<!-- from a sub-shell-->.</p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://github.com/romanz/trezor-agent">{% trans "SSH Agent on GitHub" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
@@ -177,10 +178,11 @@
                                 <p><!-- Sign up to websites without having to reveal your name or email
                                     address. Secure your user accounts against hackers and unauthorized access via
                                     TREZOR Connect. -->
-                                    Securely sign up and login with a click of a button, using <a href="https://github.com/trezor/connect"TREZOR Connect</a>.
+                                    Securely sign up and login with a click of a button, using TREZOR Connect.
                                 </p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://github.com/trezor/connect">{% trans "TREZOR Connect on GitHub" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
@@ -190,9 +192,10 @@
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Gmail, Protonmail or Thunderbird, TREZOR encrypts every
-                                    email you create with <a href="https://github.com/romanz/trezor-agent/blob/master/README-GPG.md">GPG</a>.</p>
+                                    email you create with GPG.</p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://github.com/romanz/trezor-agent">{% trans "GPG via SSH Agent" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
@@ -200,10 +203,11 @@
                             <h4 class="card-title">{% trans "2-Factor Authentication" %}</h4>
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Add extra security to your online accounts. Enjoy <a href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af">U2F with TREZOR</a>. <!-- Your TREZOR confirms access to the website with a
+                                <p>Add extra security to your online accounts. Enjoy U2F with TREZOR. <!-- Your TREZOR confirms access to the website with a
                                     unique signature, securely created and sealed on its memory. --> </p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af">{% trans "More about U2F" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
@@ -212,9 +216,10 @@
 
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Easily <a href="https://doc.satoshilabs.com/trezor-user/messages.html">prove your ownership</a> of messages and documents, or verify others'. <!-- It is very simple with TREZOR. --> </p>
+                                <p>Easily prove your ownership of messages and documents, or verify others. <!-- It is very simple with TREZOR. --> </p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://doc.satoshilabs.com/trezor-user/messages.html">{% trans "More about Messages" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
@@ -224,10 +229,11 @@
                             
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p><a href="https://doc.satoshilabs.com/trezor-apps/index.html">Connect your TREZOR</a> to third party wallets and services.<!-- Pay bills and invoices to international bank accounts with bitcoins. Receive payroll or new bitcoins from exchanges directly to
+                                <p>Connect your TREZOR to third party wallets and services.<!-- Pay bills and invoices to international bank accounts with bitcoins. Receive payroll or new bitcoins from exchanges directly to
                                     the safety of your TREZOR, thanks to multiple integrations. --></p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://doc.satoshilabs.com/trezor-apps/index.html">{% trans "TREZOR Apps" %}</a>
                         </div>
                     </div>
                 </div>
@@ -434,7 +440,7 @@
             <div class="row">
                 <div class="col-sm-6 text-xs-center button-area">
                     <a class="btn btn-primary-outline" href="https://github.com/trezor" role="button"><i
-                            class="ion-social-github"></i> {% trans "Github Repos"%}</a>
+                            class="ion-social-github"></i> {% trans "GitHub Repos"%}</a>
                     <a class="btn btn-primary-outline" href="https://gitter.im/trezor/community" role="button"><i
                             class="ion-android-chat"></i> {% trans "Dev Community Chat"%}</a>
                     <a class="plain btn-primary-noline" href="https://doc.satoshilabs.com/trezor-tech/index.html">

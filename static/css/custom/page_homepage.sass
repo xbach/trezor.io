@@ -85,13 +85,28 @@
   .item
     position: relative
     display: block
-    height: 230px
+    height: 250px
 
     h4
       font-size: 1.1em
       font-style: $default_font
       font-weight: bolder
       color: $c_grey_font
+      
+    a
+      &:hover
+        color: $c_green
+        text-decoration: none
+        &:after
+          +transform(translateX(3px) translateY(0))
+          +transition(transform .1s ease-in-out)
+
+      &:after
+        display: inline-block
+        content: '\276f'
+        position: relative
+        padding-left: 4px
+
 
     .text-block
       max-width: 90%
@@ -105,9 +120,10 @@
   position: relative
   background: $c_black
   color: $c_white
+  
+  
   p
     color: $c_grey
-
   .entry
     min-height: 220px
 
