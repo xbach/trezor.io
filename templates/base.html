@@ -12,7 +12,7 @@
 
         {% block meta %}
         <meta name="keywords" content="trezor official bitcoin eshop ultra secure security hardware wallet cryptography cryptocurrency u2f password manager gpg">
-        <meta name="description" content="Official TREZOR website">
+        <meta name="description" content="TREZOR is bulletproof protection for your bitcoins, passwords, accounts and emails.">
         {% endblock meta %}
 
         {% block og-meta %}
@@ -20,7 +20,7 @@
         <meta property="fb:app_id" content="198891850249377" />
         <meta property="og:title" content="TREZOR | We make security easy." />
         <meta property="og:image" content="{% static '/static/images/trezor_social02.jpg' %}" />
-        <meta property="og:description" content="TREZOR " />
+        <meta property="og:description" content="TREZOR is bulletproof protection for your bitcoins, passwords, accounts and emails." />
         <meta property="og:url" content="https://www.trezor.io/" />
         <meta property="product:brand" content="TREZOR" />
         <meta property="product:category" content="Electronics" />
@@ -56,5 +56,15 @@
     <script type="text/javascript" src="{% static '/static/js/features.js' %}" async="async"></script>
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-89067708-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
   {% endblock %}
 </html>

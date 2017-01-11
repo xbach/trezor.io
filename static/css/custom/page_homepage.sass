@@ -15,6 +15,9 @@
       color: $c_grey
       +unselectable()
 
+      &.active
+        color: $c_white !important
+
     a.buy
       margin-top: -10px
       margin-bottom: -10px
@@ -231,7 +234,8 @@
 
 .media
   img
-    height: 36px
+    height: 30px
+    margin: 20px
     opacity: .6
     width: auto
     +grey(100%)

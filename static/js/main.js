@@ -49,6 +49,12 @@ $(document).ready(function () {
     });
   }
 
+  function domainKey (url) {
+    var parser = document.createElement('a');
+    parser.href = url;
+    return parser.hostname;
+  }
+
   function handleAffil () {
     var aParam = getParameterByName('a');
     if (aParam) {
@@ -62,18 +68,29 @@ $(document).ready(function () {
     }
     var referrer = domain(document.referrer);
     if (referrer) {
-      prepareAffilAnchors('?h=' + hexlify(referrer));
+      prepareAffilAnchors('?h=' + hexlify(domainKey(referrer)));
       return;
     }
   }
 
+  function scrolled (event) {
+    var scrollPos = $(document).scrollTop();
+    $('.scrollTo').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.scrollTo').removeClass("active");
+        currLink.addClass("active");
+      }
+      else {
+        currLink.removeClass("active");
+      }
+    });
+  }
+
   function createStickyNav (sticky) {
     if (typeof sticky !== 'undefined') {
-      /*
-       win.on('mousewheel', function() {
-       checkPosition(sticky);
-       });
-       */
+      $(document).on('scroll', scrolled);
     }
   }
 
@@ -81,10 +98,6 @@ $(document).ready(function () {
     if (typeof team !== 'undefined') {
       team.shuffle();
     }
-  }
-
-  function checkPosition (sticky) {
-    console.warn('oi ', pos);
   }
 
   // On the RUN
@@ -119,15 +132,15 @@ $(document).ready(function () {
 
   handleAffil();
   shuffleTeam($('.shuffle'));
-  // createStickyNav($("#sticky-nav"));
+  createStickyNav($("#sticky-nav"));
 
   $('.scrollTo').on('click touchstart', function (e) {
     e.preventDefault();
     var target = this.hash,
       $target = $(target);
     $('html, body').stop().animate({
-      scrollTop: $target.offset().top
-    },  500, 'swing', function () {
+      scrollTop: $target.offset().top + 2
+    }, 500, 'swing', function () {
       window.location.hash = target;
     });
   });
