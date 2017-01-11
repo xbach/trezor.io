@@ -1,13 +1,101 @@
 /* our code */
 $(document).ready(function () {
 
-  var OSName="unknown",
-      pos = $('#usage').offset().top,
-      win = $('html');
-  if (navigator.appVersion.indexOf("Win")!=-1) OSName="win";
-  if (navigator.appVersion.indexOf("Mac")!=-1) OSName="mac";
-  if (navigator.appVersion.indexOf("X11")!=-1) OSName="linux";
-  if (navigator.appVersion.indexOf("Linux")!=-1) OSName="linux";
+  $.fn.shuffle = function () {
+    var allElems = this.get(),
+      getRandom = function (max) {
+        return Math.floor(Math.random() * max);
+      },
+      shuffled = $.map(allElems, function () {
+        var random = getRandom(allElems.length),
+          randEl = $(allElems[ random ]).clone(true)[ 0 ];
+        allElems.splice(random, 1);
+        return randEl;
+      });
+    this.each(function (i) {
+      $(this).replaceWith($(shuffled[ i ]));
+    });
+    return $(shuffled);
+  };
+
+  function getParameterByName (name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[ 2 ]) return '';
+    return decodeURIComponent(results[ 2 ].replace(/\+/g, " "));
+  }
+
+  function domain (url) {
+    var m = url.match(/:\/\/(.[^\/]+)/);
+    return m ? m[ 1 ] : null;
+  }
+
+  function hexlify (str) {
+    var hex = '';
+    for (var i = 0; i < str.length; i++)
+      hex += str.charCodeAt(i).toString(16);
+    return hex;
+  }
+
+  function prepareAffilAnchors (str) {
+    $('a.shop-btn').each(function (idx) {
+      var attr = $(this).attr('href');
+      $(this).attr('href', attr + str);
+    });
+  }
+
+  function handleAffil () {
+    var aParam = getParameterByName('a');
+    if (aParam) {
+      prepareAffilAnchors('?a=' + aParam);
+      return;
+    }
+    var hParam = getParameterByName('h');
+    if (hParam) {
+      prepareAffilAnchors('?h=' + hParam);
+      return;
+    }
+    var referrer = domain(document.referrer);
+    if (referrer) {
+      prepareAffilAnchors('?h=' + hexlify(referrer));
+      return;
+    }
+  }
+
+  function createStickyNav (sticky) {
+    if (typeof sticky !== 'undefined') {
+      /*
+       win.on('mousewheel', function() {
+       checkPosition(sticky);
+       });
+       */
+    }
+  }
+
+  function shuffleTeam (team) {
+    if (typeof team !== 'undefined') {
+      team.shuffle();
+    }
+  }
+
+  function checkPosition (sticky) {
+    console.warn('oi ', pos);
+  }
+
+  // On the RUN
+
+  var OSName = "unknown",
+    pos = $('#usage').offset().top,
+    win = $('html');
+  if (navigator.appVersion.indexOf("Win") != -1) OSName = "win";
+  if (navigator.appVersion.indexOf("Mac") != -1) OSName = "mac";
+  if (navigator.appVersion.indexOf("X11") != -1) OSName = "linux";
+  if (navigator.appVersion.indexOf("Linux") != -1) OSName = "linux";
   $("#" + OSName).prependTo("#platforms");
 
   // jumbo height fixer
@@ -21,7 +109,7 @@ $(document).ready(function () {
   $("#headline").fitText(1.1);
   $("#lead").fitText(1.8);
 
-
+  // typing effect
   $('#lead-typer').typed({
     stringsElement: $('#lead-ghost'),
     backDelay: 500,
@@ -29,19 +117,9 @@ $(document).ready(function () {
     loop: true
   });
 
-  function createStickyNav(sticky) {
-    if (typeof sticky !== 'undefined') {
-      /*
-      win.on('mousewheel', function() {
-        checkPosition(sticky);
-      });
-      */
-    }
-  }
-
-  function checkPosition(sticky) {
-    console.warn('oi ', pos);
-  }
+  handleAffil();
+  shuffleTeam($('.shuffle'));
   // createStickyNav($("#sticky-nav"));
+
 });
 
