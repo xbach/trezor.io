@@ -263,13 +263,13 @@
                             matter how infected is your computer, --> This display will always tell you the truth.
                             {% endblocktrans %}</p>
                     </div>
-                    <div class="4 entry" id="buttons">
+                    <div class="4 entry text-xs-center" id="buttons">
                         <h3>{% trans "Trust your own hands" %}</h3>
                         <p>{% blocktrans %}Everything important needs your direct physical approval. <!-- <br/> Just click 'Confirm'. No
                             hacker or virus can hit the 'Confirm' button instead of you. -->
                             {% endblocktrans %}</p>
                     </div>
-                    <div class="5 entry" id="inside">
+                    <div class="5 entry text-xs-center" id="inside">
                         <h3>{% trans "Powerful Cryptography" %}</h3>
 
                         <p>{% blocktrans %}TREZOR uses and creates the most advanced standards in cryptography and
@@ -396,7 +396,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 hidden-md-down ">
                     <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"/>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -415,7 +415,9 @@
                         environmental standards)</span>
                         </p>
                     </div>
-
+                </div>
+                <div class="col-xs-12 hidden-lg-up ">
+                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"/>
                 </div>
             </div>
         </div>
@@ -592,7 +594,7 @@
                     <div class="header ben"></div>
                     <div class="content">
                         <div class="description">
-                            <h4>Karel Benčič</h4>
+                            <h4>Karel Bencic</h4>
                             <p class="title">{% trans "Support" %}</p>
                         </div>
                     </div>
