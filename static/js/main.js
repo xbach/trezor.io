@@ -52,7 +52,10 @@ $(document).ready(function () {
   function domainKey (url) {
     var parser = document.createElement('a');
     parser.href = url;
-    return parser.hostname;
+    //remove second level subdomain
+    var regexParse = new RegExp('([a-z\-0-9]{2,63})\.([a-z\.]{2,5})$');
+    var urlParts = regexParse.exec(parser.hostname);
+    return urlParts[1] + '.' + urlParts[2];
   }
 
   function handleAffil () {
