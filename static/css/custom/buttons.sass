@@ -17,7 +17,7 @@
   border-color: $c_green
 
   &:hover
-    color: $c_white
+    color: $c_grey_bg
     background: $c_green
     border-color: $c_green
 
@@ -25,6 +25,11 @@
   color: $c_white
   background-color: $c_green
   border-color: $c_green
+  +transition(all 0.15s ease 0s)
+
+  &:hover
+    color: $c_grey_bg
+    +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
   
 .btn-secondary-outline
   color: $c_white
@@ -36,7 +41,7 @@
     border-color: white
 
 .btn-secondary-noline
-  color: $c_white
+  color: $c_grey_bg
   text-decoration: underline
 
   &:hover
@@ -48,6 +53,6 @@
   border-color: $c_green
 
   &:hover
-    color: $c_white
+    color: $c_grey_bg
     background: $c_green
     border-color: $c_green
