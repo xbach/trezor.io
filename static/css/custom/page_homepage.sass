@@ -35,17 +35,20 @@
 .intro-section
   background-color: $c_grey_bg
 
-  .text-block
-    width: 70%
-    position: relative
-    margin: 0 auto
-    padding-bottom: 20px
+  h2
+    padding: 10px 0 20px 0
 
   h4
     font-size: 1.1em
     font-style: $default_font
     font-weight: bolder
     color: $c_grey_font
+
+  .text-block
+    width: 78%
+    position: relative
+    margin: 0 auto
+    padding-bottom: 20px
 
   .presentation
     width: 100%
@@ -93,21 +96,6 @@
       font-weight: bolder
       color: $c_grey_font
       
-    a
-      &:hover
-        color: $c_green
-        text-decoration: none
-        &:after
-          +transform(translateX(3px) translateY(0))
-          +transition(transform .1s ease-in-out)
-
-      &:after
-        display: inline-block
-        content: '\276f'
-        position: relative
-        padding-left: 4px
-
-
     .text-block
       max-width: 90%
       position: relative
@@ -120,10 +108,12 @@
   position: relative
   background: $c_black
   color: $c_white
-  
-  
+
+  .heading
+    padding-bottom: 0
   p
     color: $c_grey
+
   .entry
     min-height: 220px
 
@@ -135,10 +125,13 @@
     height: 1px
     visibility: hidden
 
+  .trezor-render
+    max-width: 80%
+    margin: 0 auto
 
   canvas#featureCanvas
     position: relative
-    height: 500px
+    height: 600px
     width: 100%
     display: block
     z-index: 0

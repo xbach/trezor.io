@@ -36,12 +36,31 @@ p
 a
   color: $c_green
 
+a.arrow
+  color: $c_green
+  &:hover
+    color: $c_green
+    text-decoration: none
+    &:after
+      +transform(translateX(3px) translateY(0))
+      +transition(transform .1s ease-in-out)
+
+  &:after
+    display: inline-block
+    content: '\276f'
+    position: relative
+    padding-left: 4px
+
 section
   padding-top: 80px
   padding-bottom: 80px
 
   .heading
-    padding-bottom: 30px
+    padding-bottom: 40px
+
+    p
+      margin: 0 auto
+      max-width: 70%
 
   .learn-more
     margin-top: 20px

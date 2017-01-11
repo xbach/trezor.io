@@ -16,14 +16,13 @@ $(document).ready(function () {
     };
     feature = {
       'display': {
-        'headline': featuresList.getElementsByTagName('h2')[ 0 ],
         'coor_text': {
           x: 20,
           y: 80
         },
         'coor_target': {
-          x: center.x - 14,
-          y: center.y - 15
+          x: center.x - 12,
+          y: center.y - 60
         }
       },
       'case': {
@@ -32,8 +31,8 @@ $(document).ready(function () {
           y: 80
         },
         'coor_target': {
-          x: center.x + 25,
-          y: center.y - 95
+          x: center.x + 30,
+          y: center.y - 145
         }
       },
       'buttons': {
@@ -43,7 +42,7 @@ $(document).ready(function () {
         },
         'coor_target': {
           x: center.x - 10,
-          y: center.y + 73
+          y: center.y + 33
         }
       },
       'inside': {
@@ -52,18 +51,18 @@ $(document).ready(function () {
           y: center.y + 20
         },
         'coor_target': {
-          x: center.x + 25,
-          y: center.y + 95
+          x: center.x + 5,
+          y: center.y + 120
         }
       },
       'usb': {
         'coor_text': {
           x: 20,
-          y: height - 120
+          y: height - 200
         },
         'coor_target': {
-          x: center.x + 10,
-          y: center.y + 185
+          x: center.x - 10,
+          y: center.y + 205
         }
       }
     };
@@ -177,7 +176,7 @@ $(document).ready(function () {
     recalculate();
     // TREZOR IMAGE
     ctx.beginPath();
-    ctx.drawImage(img, center.x - 182, (height - 468) / 2, 364, 568);
+    ctx.drawImage(img, center.x - 182, (height - 558) / 2, 364, 568);
     if(tempKey == null) {
       $('#g').hide();
     }
@@ -192,7 +191,7 @@ $(document).ready(function () {
   img.onload = function () {
     draw(null);
   };
-  img.src = "./static/images/trezor-black.png";
+  img.src = "./static/images/trezor-black-select.png";
   $(window).resize(function () {
     draw(null);
   });
