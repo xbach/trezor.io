@@ -131,6 +131,7 @@
                                     wallets and services. --> </p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://wallet.trezor.io" class="arrow">{% trans "Go to Wallet" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
@@ -144,6 +145,7 @@
                                 </p>
                                 {% endblocktrans %}
                             </div>
+                            <a href="https://wallet.trezor.io" class="arrow">{% trans "Go to Wallet" %}</a>
                         </div>
                     </div>
                     
@@ -174,6 +176,34 @@
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
+                            <h4 class="card-title">{% trans "2-Factor Authentication" %}</h4>
+                            <div class="content text-block">
+                                {% blocktrans %}
+                                <p>Add extra security to your online accounts. Enjoy FIDO/U2F with TREZOR. <!-- Your TREZOR confirms access to the website with a
+                                    unique signature, securely created and sealed on its memory. --> </p>
+                                {% endblocktrans %}
+                            </div>
+                            <a href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af" class="arrow">{% trans "More about U2F" %}</a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item other">
+                            <h4 class="card-title">{% trans "Sign &amp; Encrypt with GPG" %}</h4>
+
+                            <div class="content text-block">
+                                {% blocktrans %}
+                                <p>TREZOR encrypts every document or
+                                    email you create with GPG.</p>
+                                {% endblocktrans %}
+                            </div>
+                            <a href="https://github.com/romanz/trezor-agent" class="arrow">{% trans "GPG via SSH Agent" %}</a>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-md-6 col-lg-4 text-xs-center">
+                        <div class="item identity">
                             <h4 class="card-title">{% trans "Password-less Login" %}</h4>
                             <div class="content text-block">
                                 {% blocktrans %}
@@ -187,31 +217,9 @@
                             <a href="https://github.com/trezor/connect" class="arrow">{% trans "TREZOR Connect on GitHub" %}</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item other">
-                            <h4 class="card-title">{% trans "Sign &amp; Encrypt Emails" %}</h4>
-
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>Gmail, Protonmail or Thunderbird, TREZOR encrypts every
-                                    email you create with GPG.</p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://github.com/romanz/trezor-agent" class="arrow">{% trans "GPG via SSH Agent" %}</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item identity">
-                            <h4 class="card-title">{% trans "2-Factor Authentication" %}</h4>
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>Add extra security to your online accounts. Enjoy U2F with TREZOR. <!-- Your TREZOR confirms access to the website with a
-                                    unique signature, securely created and sealed on its memory. --> </p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af" class="arrow">{% trans "More about U2F" %}</a>
-                        </div>
-                    </div>
+                    
+                    
+                    
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item other">
                             <h4 class="card-title">{% trans "Sign &amp; Verify Messages" %}</h4>
@@ -263,11 +271,12 @@
                             durable.{% endblocktrans %}</p>
                     </div>
                     <div class="2 entry text-xs-center col-md-6" id="usb">
-                        <h3>{% trans "Unhackable" %}</h3>
-                        <p>{% blocktrans %}TREZOR has no online connectivity, but only a secure USB connection.<!-- <br>The safe
-                            haven is offline! --> {% endblocktrans %}</p>
+                        <h3>{% trans "Minimalistic" %}</h3> 
+                        <p>{% blocktrans %}
+                            We removed everything that could be easily hacked.
+                            {% endblocktrans %}</p>
                     </div>
-                    <div class="3 entry  text-xs-center col-md-6" id="display">
+                    <div class="3 entry text-xs-center col-md-6" id="display">
                         <h3>{% trans "Trust your own eyes" %}</h3>
                         <p>{% blocktrans %}Check important transaction details before you confirm.<br /><!-- No
                             matter how infected is your computer, --> This display will always tell you the truth.
