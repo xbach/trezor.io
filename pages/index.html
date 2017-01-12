@@ -19,7 +19,7 @@
             <div class="bottom">
                 <p class="text-xs-center">
                     <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button">
-                        {% trans "Add to Cart" %}</a>
+                        {% trans "Buy for $99" %}</a>
                 <div class="hidden-xs-down platform-icons">
                     <div>{% trans "Supported platforms:" %}</div>
                     <div id="platforms">
@@ -44,7 +44,7 @@
             <a class="nav-link" href="{% url '/' %}">
                 <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
                      onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
-                     alt="TREZOR logo"/>
+                     alt="TREZOR security device logo"/>
             </a>
             <a class="nav-link active scrollTo hidden-sm-down" href="#usage">{% trans "Usage" %}</a>
             <a class="nav-link scrollTo hidden-sm-down" href="#features">{% trans "Features" %}</a>
@@ -70,7 +70,7 @@
                     <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
                             <div class="presentation setup"></div>
-                            <h4>{% trans "Quick setup." %}</h4>
+                            <h3>{% trans "Quick setup." %}</h3>
                             {% blocktrans %}
                             <p>Get your TREZOR ready within minutes in a completely private, registration-free
                                 process.</p>
@@ -83,7 +83,7 @@
                     <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
                             <div class="presentation use"></div>
-                            <h4>{% trans "Use with ease." %}</h4>
+                            <h3>{% trans "Use with ease." %}</h3>
                             {% blocktrans %}
                             <p>Using TREZOR is easy. Just follow the instructions on the display and click the button
                                 to confirm important actions.</p>
@@ -94,7 +94,7 @@
                     <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
                             <div class="presentation recover"></div>
-                            <h4>{% trans "Lost? Restore." %}</h4>
+                            <h3>{% trans "Lost? Restore." %}</h3>
                             {% blocktrans %}
                             <p>No worries, use your secret words to quickly regain access to all your
                                 keys, money, history, accounts and emails.</p>
@@ -118,7 +118,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item money">
-                            <h4 class="card-title">{% trans "Bitcoin" %}</h4>
+                            <h3 class="card-title">{% trans "Wallet for Bitcoin" %}</h3>
 
                             <div class="content text-block">
                                 {% blocktrans %}
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item money">
-                            <h4 class="card-title">{% trans "Dash, Litecoin and others" %}</h4>
+                            <h3 class="card-title">{% trans "Dash, Litecoin and others" %}</h3>
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>
@@ -141,27 +141,28 @@
                                 </p>
                                 {% endblocktrans %}
                             </div>
-                            <a href="https://wallet.trezor.io" class="arrow">{% trans "Go to Wallet" %}</a>
+                            <a href="https://beta-wallet.trezor.io" class="arrow">{% trans "Go to Beta Wallet" %}</a>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
-                            <h4 class="card-title">{% trans "Password Manager" %}</h4>
+                            <h3 class="card-title">{% trans "Password Manager" %}</h3>
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Password Manager encrypts login credentials and auto-syncs them to
-                                    your private cloud, hassle-free, with TREZOR.</p>
+                                    your private cloud, hassle-free, with TREZOR as security token.</p>
                                 {% endblocktrans %}
                             </div>
-                            <a href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk"
+                            <a href="https://blog.trezor.io/satoshilabs-launches-trezor-password-manager-the-ultimately-secure-no-master-password-cloud-1b260e5fbe6b"
+                               title="Desciption Medium blog about TREZOR Password Manager"
                                class="arrow">{% trans "Password Manager" %}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
-                            <h4 class="card-title">{% trans "Secure Admin SSH Access" %}
-                            </h4>
+                            <h3 class="card-title">{% trans "Secure Admin SSH Access" %}
+                            </h3>
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Protect access to your servers, data or websites administration. SSH login with
@@ -174,7 +175,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
-                            <h4 class="card-title">{% trans "2-Factor Authentication" %}</h4>
+                            <h3 class="card-title">{% trans "2-Factor Authentication" %}</h3>
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Add extra security to your online accounts. Enjoy FIDO/U2F with TREZOR.</p>
@@ -187,7 +188,7 @@
 
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item other">
-                            <h4 class="card-title">{% trans "Sign &amp; Encrypt with GPG" %}</h4>
+                            <h3 class="card-title">{% trans "Sign &amp; Encrypt with GPG" %}</h3>
 
                             <div class="content text-block">
                                 {% blocktrans %}
@@ -203,7 +204,7 @@
 
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
-                            <h4 class="card-title">{% trans "Password-less Login" %}</h4>
+                            <h3 class="card-title">{% trans "Password-less Login" %}</h3>
                             <div class="content text-block">
                                 {% blocktrans %}
                                 <p>Securely sign up and login with a click of a button, using TREZOR Connect.</p>
@@ -217,7 +218,7 @@
 
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item other">
-                            <h4 class="card-title">{% trans "Sign &amp; Verify Messages" %}</h4>
+                            <h3 class="card-title">{% trans "Sign &amp; Verify Messages" %}</h3>
 
                             <div class="content text-block">
                                 {% blocktrans %}
@@ -231,7 +232,7 @@
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item money">
 
-                            <h4 class="card-title">{% trans "Explore Integrations" %}</h4>
+                            <h3 class="card-title">{% trans "Explore Integrations" %}</h3>
 
                             <div class="content text-block">
                                 {% blocktrans %}
@@ -259,7 +260,7 @@
                 </div>
                 <div class="hidden-lg-up" id="features-list">
                     <div class="col-md-12 text-xs-center">
-                        <img class="trezor-render" src="{% static '/images/trezor-black-select.png' %}"/>
+                        <img class="trezor-render" src="{% static '/images/trezor-black-select.png' %}" alt="TREZOR is wallet for bitcoin as well as security device" />
                     </div>
                     <div class="1 entry text-xs-center col-md-6" id="case">
                         <h3>{% trans "Small and Sturdy" %}</h3>
@@ -308,7 +309,7 @@
                 <div class="row experts">
                     <div class="col-md-4 text-xs-center">
                         <div class="header balaji"></div>
-                        <h4>Balaji S. Srinivasan, PhD</h4>
+                        <h3>Balaji S. Srinivasan, PhD</h3>
                         <p class="title">{% trans "CEO and Cofounder, 21" %}</p>
                         <blockquote>
                             {% blocktrans %}
@@ -319,7 +320,7 @@
                     </div>
                     <div class="col-md-4 text-xs-center">
                         <div class="header pamela"></div>
-                        <h4>Pamela Morgan</h4>
+                        <h3>Pamela Morgan</h3>
                         <p class="title">{% trans " CEO Third Key Solutions LLC" %}</p>
                         <blockquote>
                             {% blocktrans %}
@@ -329,7 +330,7 @@
                     </div>
                     <div class="col-md-4 text-xs-center">
                         <div class="header jon"></div>
-                        <h4>Jon Matonis</h4>
+                        <h3>Jon Matonis</h3>
                         <p class="title">{% trans "Economist" %}</p>
                         <blockquote>
                             {% blocktrans %}
@@ -347,27 +348,27 @@
                 <div class="row media">
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/"><img
-                                src="{% static '/images/logos/forbes-logo.png' %}" alt=""/></a>
+                                src="{% static '/images/logos/forbes-logo.png' %}" alt="Forbes mentions TREZOR as wallet for bitcoin with smart design."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="https://vimeo.com/116250492"><img src="{% static '/images/logos/cnn-logo.png' %}"
-                                                                   alt=""/></a>
+                                                                   alt="CNN show where TREZOR is mentioned as bitcoin secured hardware wallet."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/"><img
-                                src="{% static '/images/logos/coindesk-logo.png' %}" alt=""/></a>
+                                src="{% static '/images/logos/coindesk-logo.png' %}" alt="Review of TREZOR hardware wallet for bitcoins and security crypto vault."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="http://cointelegraph.com/news/112947/who-will-keep-you-safe-a-comparison-of-bitcoin-wallets-that-arent-digital"><img
-                                src="{% static '/images/logos/cointelegraph-logo.png' %}" alt=""/></a>
+                        <a href="https://cointelegraph.com/news/trezor-offers-password-less-login-to-other-websites-adds-dash"><img
+                                src="{% static '/images/logos/cointelegraph-logo.png' %}" alt="Cointelegraph review of password-less login via TREZOR security device"/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208"><img
-                                src="{% static '/images/logos/insidebtc-logo.png' %}" alt=""/></a>
+                                src="{% static '/images/logos/insidebtc-logo.png' %}" alt="Logo of Bitcoin inside and review of TREZOR"/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/"><img
-                                src="{% static '/images/logos/btcmag-logo.png' %}" alt=""/></a>
+                                src="{% static '/images/logos/btcmag-logo.png' %}" alt="Bitcoin magazine logo and TREZOR hardware wallet review"/></a>
                     </div>
                 </div>
             </div>
@@ -410,7 +411,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 hidden-md-down ">
-                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"/>
+                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}" alt="Shape of TREZOR security device" />
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="row spec">
@@ -430,7 +431,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 hidden-lg-up ">
-                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"/>
+                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"  alt="Shape of TREZOR security device" />
                 </div>
             </div>
         </div>
