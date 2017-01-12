@@ -42,7 +42,7 @@
     <div class="container sub-nav">
         <div class="nav-inline nav" id="sub-nav">
             <a class="nav-link" href="{% url '/' %}">
-                <img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
+                <img class="trezor-logo lazy" data-original="{% static '/images/trezor-logo.svg' %}"
                      onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                      alt="TREZOR security device logo"/>
             </a>
@@ -260,7 +260,7 @@
                 </div>
                 <div class="hidden-lg-up" id="features-list">
                     <div class="col-md-12 text-xs-center">
-                        <img class="trezor-render" src="{% static '/images/trezor-black-select.png' %}" alt="TREZOR is wallet for bitcoin as well as security device" />
+                        <img class="trezor-render lazy" data-original="{% static '/images/trezor-black-select.png' %}" alt="TREZOR is wallet for bitcoin as well as security device" />
                     </div>
                     <div class="1 entry text-xs-center col-md-6" id="case">
                         <h3>{% trans "Small and Sturdy" %}</h3>
@@ -347,28 +347,29 @@
                 </div>
                 <div class="row media">
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/"><img
-                                src="{% static '/images/logos/forbes-logo.png' %}" alt="Forbes mentions TREZOR as wallet for bitcoin with smart design."/></a>
+                        <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/">
+                            <img class="lazy" data-original="{% static '/images/logos/forbes-logo.png' %}" alt="Forbes mentions TREZOR as wallet for bitcoin with smart design."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://vimeo.com/116250492"><img src="{% static '/images/logos/cnn-logo.png' %}"
+                        <a href="https://vimeo.com/116250492">
+                            <img class="lazy" data-original="{% static '/images/logos/cnn-logo.png' %}"
                                                                    alt="CNN show where TREZOR is mentioned as bitcoin secured hardware wallet."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/"><img
-                                src="{% static '/images/logos/coindesk-logo.png' %}" alt="Review of TREZOR hardware wallet for bitcoins and security crypto vault."/></a>
+                        <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/">
+                            <img class="lazy" data-original="{% static '/images/logos/coindesk-logo.png' %}" alt="Review of TREZOR hardware wallet for bitcoins and security crypto vault."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://cointelegraph.com/news/trezor-offers-password-less-login-to-other-websites-adds-dash"><img
-                                src="{% static '/images/logos/cointelegraph-logo.png' %}" alt="Cointelegraph review of password-less login via TREZOR security device"/></a>
+                        <a href="https://cointelegraph.com/news/trezor-offers-password-less-login-to-other-websites-adds-dash">
+                            <img class="lazy" data-original="{% static '/images/logos/cointelegraph-logo.png' %}" alt="Cointelegraph review of password-less login via TREZOR security device"/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208"><img
-                                src="{% static '/images/logos/insidebtc-logo.png' %}" alt="Logo of Bitcoin inside and review of TREZOR"/></a>
+                        <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208">
+                            <img class="lazy" data-original="{% static '/images/logos/insidebtc-logo.png' %}" alt="Logo of Bitcoin inside and review of TREZOR"/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/"><img
-                                src="{% static '/images/logos/btcmag-logo.png' %}" alt="Bitcoin magazine logo and TREZOR hardware wallet review"/></a>
+                        <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/">
+                            <img class="lazy" data-original="{% static '/images/logos/btcmag-logo.png' %}" alt="Bitcoin magazine logo and TREZOR hardware wallet review"/></a>
                     </div>
                 </div>
             </div>
@@ -411,7 +412,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 hidden-md-down ">
-                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}" alt="Shape of TREZOR security device" />
+                    <img class="shape lazy" data-original="{% static '/images/trezor_shape3.svg' %}" alt="Shape of TREZOR security device" />
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="row spec">
@@ -431,7 +432,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 hidden-lg-up ">
-                    <img class="shape" src="{% static '/images/trezor_shape3.svg' %}"  alt="Shape of TREZOR security device" />
+                    <img class="shape lazy" data-original="{% static '/images/trezor_shape3.svg' %}"  alt="Shape of TREZOR security device" />
                 </div>
             </div>
         </div>

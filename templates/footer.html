@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <a href="{% url '/' %}"><img class="trezor-logo" src="{% static '/images/trezor-logo.svg' %}"
+                    <a href="{% url '/' %}"><img class="trezor-logo lazy" data-original="{% static '/images/trezor-logo.svg' %}"
                                                  onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                                                  alt="TREZOR best bitcoin wallet and security device logo"/></a>
                     <p>

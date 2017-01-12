@@ -39,6 +39,8 @@
         <meta name="twitter:domain" content="https://trezor.io/">
         {% endblock twitter-meta %}
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static '/static/css/style.css' %}">
     </head>
 
     <body>
@@ -48,14 +50,11 @@
     {% endblock %}
 
     {% include "footer.html" %}
-    </body>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static '/static/css/style.css' %}">
-  {% block scripts %}
+    {% block scripts %}
     <script type='text/javascript' src="{% static '/static/js/vendor/vendors.js' %}"></script>
     <script type='text/javascript' src="{% static '/static/js/sources/main.js' %}"></script>
-    <script type='text/javascript' src="{% static '/static/js/sources/features.js' %}" async="async"></script>
+    <script type='text/javascript' src="{% static '/static/js/sources/features.js' %}" async ></script>
     <script type='text/javascript'>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -66,5 +65,7 @@
       ga('send', 'pageview');
 
     </script>
-  {% endblock %}
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    {% endblock %}
+    </body>
 </html>
