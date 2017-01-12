@@ -107,8 +107,12 @@ $(document).ready(function () {
   // On the RUN
 
   var OSName = "unknown",
-    pos = $('#usage').offset().top,
-    win = $('html');
+    win = $('html'),
+    $jumbo = $('#jumbotron'),
+    $header = $('#header'),
+    h = window.innerHeight;
+
+  // reorder platform icons
   if (navigator.appVersion.indexOf("Win") != -1) OSName = "win";
   if (navigator.appVersion.indexOf("Mac") != -1) OSName = "mac";
   if (navigator.appVersion.indexOf("X11") != -1) OSName = "linux";
@@ -116,9 +120,6 @@ $(document).ready(function () {
   $("#" + OSName).prependTo("#platforms");
 
   // jumbo height fixer
-  var $jumbo = $('#jumbotron'),
-    $header = $('#header'),
-    h = window.innerHeight;
   $jumbo.css('max-height', h + 'px');
   $header.css('max-height', h + 'px');
 
