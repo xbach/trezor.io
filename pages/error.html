@@ -16,27 +16,5 @@
 
 {% block scripts %}
   <script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
-  <script type="text/javascript" charset='utf-8'>
-    $(document).ready(function() {
-
-      // Add the missing url to the text
-      $("#url").text(window.location.pathname);
-
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) {
-        raf(function() {
-          $("img.lazy").lazyload({
-            threshold : 500
-          });
-        });
-      }
-
-      // Fix the css locations dynamically
-      $("head link").each(function() {
-        for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
-          $(this).attr("href", "../" + $(this).attr("href"));
-      });
-    })
-  </script>
+  <script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_error.js' %}"></script>
 {% endblock %}
