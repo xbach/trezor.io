@@ -658,5 +658,10 @@
         </div>
     </section>
 </main>
+{% endblock %}
 
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage_features.js' %}" async ></script>
 {% endblock %}
