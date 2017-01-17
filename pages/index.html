@@ -6,14 +6,16 @@
         <div class="container">
             <div class="top">
                 <div class="width-wrapper">
-                    <h1 class="display-4 text-xs-center" id="headline">{% trans "We make security easy." %}</h1>
-                    <p class="lead" id="lead">Bulletproof protection for your <span id="lead-typer">bitcoins.</span></p>
+                    <h1 class="display-4 text-xs-center" id="headline">{% trans "Bitcoin wallet." %}</h1>
+                    <p class="lead" id="lead">The original &amp; most secure hardware wallet.</p>
+                    <!--
                     <div class="lead-ghost" id="lead-ghost">
                         <p>{% trans "bitcoins." %}</p>
                         <p>{% trans "passwords." %}</p>
                         <p>{% trans "accounts." %}</p>
                         <p>{% trans "emails." %}</p>
                     </div>
+                    -->
                 </div>
             </div>
             <div class="bottom">
@@ -64,6 +66,7 @@
                 <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
                         <h2>{% trans "Easy &amp; Secure." %}</h2>
+                        <p>{% trans "Bitcoin wallet of my choice." %}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -107,44 +110,102 @@
             </div>
         </section>
 
+        <section class="bitcoin-section">
+            <div class="container">
+                <div class="row heading">
+                    <div class="col-md-6 hidden-sm-down">
+                        <img class="hand lazy hidden-sm-down" data-original="{% static '/images/trezor-hand.png' %}" />
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-sm-center text-md-left text-xs-center">
+                        <h2>{% trans "TREZOR as Bitcoin wallet." %}</h2>
+                        {% blocktrans %}
+                        <p>The most trusted and secure way to store your bitcoins. Isolate your private keys into the safety of TREZOR and enjoy Bitcoin without risk. The best protection at no cost to your convenience.</p>
+                        {% endblocktrans %}
+                        <br />
+                        <a href="https://wallet.trezor.io" class="arrow">{% trans "Go to Wallet" %}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="business-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 text-xs-center">
+                        <h3>{% trans "Trusted by Bitcoin businesses." %}</h3>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 text-xs-center">
+                                <a href="https://bitstamp.net">
+                                    <img class="bitstamp business-logo lazy" data-original="{% static '/static/images/business_logos/bitstamp.png' %}" />
+                                </a>
+                            </div>
+                            <div class="col-md-4 text-xs-center">
+                                <a href="https://cashila.com">
+                                    <img class="cashila business-logo lazy" data-original="{% static '/static/images/business_logos/cashila.png' %}" />
+                                </a>
+                            </div>
+                            <div class="col-md-4 text-xs-center">
+                                <a href="https://wallet.mycelium.com/">
+                                    <img class="mycelium business-logo lazy" data-original="{% static '/static/images/business_logos/mycelium.png' %}" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 text-xs-center">
+                                <a href="https://coinpayments.net">
+                                    <img class="coinpayments business-logo lazy" data-original="{% static '/static/images/business_logos/coinpayments.png' %}" />
+                                </a>
+                            </div>
+                            <div class="col-md-4 text-xs-center">
+                                <a href="https://copay.io/">
+                                    <img class="bitpay business-logo lazy" data-original="{% static '/static/images/business_logos/bitpay.png' %}" />
+                                </a>
+                            </div>
+                            <div class="col-md-4 text-xs-center">
+                                <a href="https://bitwala.io">
+                                    <img class="bitwala business-logo lazy" data-original="{% static '/static/images/business_logos/bitwala.png' %}" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="altcoin-section">
+            <div class="container">
+                <div class="row heading">
+                    <div class="col-lg-6 text-xs-center">
+                        {% blocktrans %}
+                        <h3 class="card-title">Protecting more coins.<br />Everyday.</h3>
+                        {% endblocktrans %}
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content text-block">
+                            {% blocktrans %}
+                            <p class="text-sm-center text-xs-center text-lg-left">
+                                Not only Bitcoin, but alternative cryptocurrencies can be kept safely too.
+                                Protect your Litecoin, DASH and Zcash keys with a single device.
+                                Store them in TREZOR and ease your mind.
+                            </p>
+                            {% endblocktrans %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="usage-section">
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12 text-xs-center">
-                        <h2>{% trans "Explore functions." %}</h2>
+                        <h2>{% trans "Explore even more functions." %}</h2>
                         <p>{% trans "From Bitcoin to passwords, accounts, documents or emails." %}</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item money">
-                            <h3 class="card-title">{% trans "Wallet for Bitcoin" %}</h3>
-
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>The most trusted and secure way to store your bitcoins. Receive and send without
-                                    risk, enjoy great comfort and ease of use.</p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://wallet.trezor.io" class="arrow">{% trans "Go to Wallet" %}</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item money">
-                            <h3 class="card-title">{% trans "Dash, Litecoin and others" %}</h3>
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>
-                                    Protect a variety of alternative digital currencies. <!-- Ethereum, --> Litecoin,
-                                    DASH
-                                    and Zcash with a single device.
-                                </p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://beta-wallet.trezor.io" class="arrow">{% trans "Go to Beta Wallet" %}</a>
-                        </div>
-                    </div>
-
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
                             <h3 class="card-title">{% trans "Password Manager" %}</h3>
@@ -161,12 +222,11 @@
                     </div>
                     <div class="col-md-6 col-lg-4 text-xs-center">
                         <div class="item identity">
-                            <h3 class="card-title">{% trans "Secure Admin SSH Access" %}
+                            <h3 class="card-title">{% trans "SSH Access &amp; GPG" %}
                             </h3>
                             <div class="content text-block">
                                 {% blocktrans %}
-                                <p>Protect access to your servers, data or websites administration. SSH login with
-                                    single or multiple sessions.</p>
+                                <p>Protected SSH access to your servers. Encrypt data or emails with GPG.</p>
                                 {% endblocktrans %}
                             </div>
                             <a href="https://github.com/romanz/trezor-agent" class="arrow">
@@ -185,64 +245,6 @@
                                class="arrow">{% trans "More about U2F" %}</a>
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item other">
-                            <h3 class="card-title">{% trans "Sign &amp; Encrypt with GPG" %}</h3>
-
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>TREZOR encrypts every document or
-                                    email you create with GPG.</p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://github.com/romanz/trezor-agent" class="arrow">
-                                {% trans "GPG via SSH Agent"%}</a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item identity">
-                            <h3 class="card-title">{% trans "Password-less Login" %}</h3>
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>Securely sign up and login with a click of a button, using TREZOR Connect.</p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://github.com/trezor/connect" class="arrow">
-                                {% trans "TREZOR Connect on GitHub" %}</a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item other">
-                            <h3 class="card-title">{% trans "Sign &amp; Verify Messages" %}</h3>
-
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>Easily prove your ownership of messages and documents, or verify others.</p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://doc.satoshilabs.com/trezor-user/messages.html" class="arrow">
-                                {% trans "More about Messages" %}</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 text-xs-center">
-                        <div class="item money">
-
-                            <h3 class="card-title">{% trans "Explore Integrations" %}</h3>
-
-                            <div class="content text-block">
-                                {% blocktrans %}
-                                <p>Connect your TREZOR to third party wallets and services.</p>
-                                {% endblocktrans %}
-                            </div>
-                            <a href="https://doc.satoshilabs.com/trezor-apps/index.html" class="arrow">
-                                {% trans "TREZOR Apps" %}</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -252,7 +254,7 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Security by Design." %}</h2>
+                        <h2>{% trans "Leading security by design." %}</h2>
                         {% blocktrans %}
                         <p>Advanced cryptography, reliable hardware, simple interface. All in perfect cooperation.</p>
                         {% endblocktrans %}
@@ -302,7 +304,7 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Endorsed by Experts." %}</h2>
+                        <h2>{% trans "Endorsed by experts." %}</h2>
                         <p>{% trans "Loved by thousands of users all over the World." %}</p>
                     </div>
                 </div>
@@ -342,33 +344,7 @@
                 </div>
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Trusted by big Bitcoin business" %}</h2>
-                    </div>
-                </div>
-                <div class="row media">
-                    <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://bitstamp.net">
-                            <img class="lazy" data-original="{% static '/images/logos/bitstamp-logo.png' %}" alt="Bitstamp"/></a>
-                    </div>
-                    <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://bitwala.io">
-                            <img class="lazy" data-original="{% static '/images/logos/bitwala-logo.png' %}" alt="Bitwala"/></a>
-                    </div>
-                    <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://cashila.com">
-                            <img class="lazy" data-original="{% static '/images/logos/cashila-logo.png' %}" alt="Cashila"/></a>
-                    </div>
-                    <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://copay.io/">
-                            <img class="lazy" data-original="{% static '/images/logos/copay-logo.png' %}" alt="Copay"/></a>
-                    </div>
-                    <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://wallet.mycelium.com/">
-                            <img class="lazy" data-original="{% static '/images/logos/mycelium-logo.png' %}" alt="Mycelium"/></a>
-                    </div>
-                    <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
-                        <a href="https://coinpayments.net">
-                            <img class="lazy" data-original="{% static '/images/logos/coinpayments-logo.png' %}" alt="CoinPayments"/></a>
+
                     </div>
                 </div>
                 <div class="row heading">
@@ -504,7 +480,7 @@
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12  text-xs-center">
-                    <h2>{% trans "Meet Our Team." %}</h2>
+                    <h2>{% trans "Meet our team." %}</h2>
                     {% blocktrans %}
                     <p>Our team features some of the most recognized Bitcoin and security experts, a dedicated support
                         team,
@@ -603,16 +579,6 @@
                         <div class="description">
                             <h4>Karel Bilek</h4>
                             <p class="title">{% trans "Cypherfunker" %}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                    <div class="header alena"></div>
-                    <div class="content">
-                        <div class="description">
-                            <h4>Alena Vranova</h4>
-                            <p class="title">{% trans "Champion" %}</p>
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@
   background-color: $c_grey_bg
 
   h2
-    padding: 10px 0 20px 0
+    padding: 10px 0 0 0
 
   h3
     font-size: 1.1em
@@ -83,7 +83,74 @@
     &
       padding-top: 60px
 
+/* BITCOIN SECTION */
 
+.bitcoin-section
+  position: relative
+  background: $c_brownish_black
+  overflow: hidden
+  color: $c_white
+  padding-bottom: 80px
+
+  @media only screen and (min-width: $sm)
+    padding-bottom: 20px
+
+  .heading
+    padding-bottom: 0
+
+    p
+      padding: 20px 0 10px 0
+      max-width: 85%
+      margin: 0 auto
+      color: $c_grey
+      @media only screen and (min-width: $sm)
+        margin: 0
+
+  img.hand
+    max-width: 800px
+    width: 100%
+    max-height: 100%
+    @media only screen and (min-width: $sm)
+      width: 140%
+      margin: 60px 0 -40px -160px
+    @media only screen and (min-width: $md)
+      width: 100%
+      margin: 0 0 -55px -20px
+    @media only screen and (min-width: $lg)
+      width: 100%
+      margin: -30px 0 -60px -20px
+
+/* BUSINESES SECTION */
+
+.business-section
+  background: $c_black
+  color: $c_white
+  padding-bottom: 50px
+
+img.business-logo
+  margin-bottom: 30px
+  max-width: 86px
+  max-height: 46px
+  opacity: .75
+
+/* ALTCOIN SECTION */
+
+.altcoin-section
+  background-color: $c_grey_bg
+
+  .heading
+    padding-bottom: 0
+
+    h3
+      line-height: 2em
+
+    p
+      padding: 20px 0 30px 0
+      max-width: 85%
+      margin: 0 auto
+
+      @media only screen and (min-width: $md)
+        margin: 0
 
 /* USAGE SECTION */
 
@@ -311,10 +378,6 @@
         display: block
         padding-bottom: 100%
 
-      &.alena
-        background: url("/static/images/team_faces/source/alena.jpg")
-        background-repeat: no-repeat
-        background-size: 100%
       &.bach
         background-position: 0 0%
       &.ben

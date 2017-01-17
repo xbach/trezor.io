@@ -124,16 +124,18 @@ $(document).ready(function () {
   $header.css('max-height', h + 'px');
 
   // jumbotron headline fitting
-  $("#headline").fitText(1.1);
-  $("#lead").fitText(1.8);
+  $("#headline").fitText(.7);
+  $("#lead").fitText(2.1);
 
   // typing effect
+  /*
   $('#lead-typer').typed({
     stringsElement: $('#lead-ghost'),
     backDelay: 500,
     backSpeed: 100,
     loop: true
   });
+  */
 
   handleAffil();
 
