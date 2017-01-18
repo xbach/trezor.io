@@ -18,4 +18,9 @@ $(document).ready(function() {
     for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
       $(this).attr("href", "../" + $(this).attr("href"));
   });
+
+  var $error = $('#error'),
+    h = window.innerHeight - 280;
+  // height fixer
+  $error.css('min-height', h + 'px');
 })

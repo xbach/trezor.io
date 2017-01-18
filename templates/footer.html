@@ -1,24 +1,9 @@
 {% load i18n %}
-<footer>
-    <div class="share">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-xs-center">
-                    <h5>Tell a friend ... </h5>
-                    <a href="https://twitter.com/bitcointrezor"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-                    <a href="https://www.reddit.com/r/trezor"><span class="fa fa-reddit-alien" aria-hidden="true"></span></a>
-                    <a href="https://www.instagram.com/bitcointrezor/"><span class="fa fa-instagram" aria-hidden="true"></span></a>
-                    <a href="https://www.facebook.com/BitcoinTrezor/"><span class="fa fa-facebook" aria-hidden="true"></span></a>
-                    <a href="https://github.com/trezor"><span class="fa fa-github-alt" aria-hidden="true"></span></a>
-                    <a href="mailto:support@trezor.io"><span class="fa fa-envelope" aria-hidden="true"></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
+<footer id="subscribe">
     <div class="bottom-part">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2 hidden-sm-down">
                     <a href="{% url '/' %}"><img class="trezor-logo lazy" data-original="{% static '/images/trezor-logo.svg' %}"
                                                  onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                                                  alt="TREZOR best bitcoin wallet and security device logo"/></a>
@@ -29,7 +14,7 @@
                         Czech Republic
                     </p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-12 text-md-left text-sm-center text-xs-center">
                     <ul class="footer-nav">
                         <li class="">
                             <a class="nav-link shop-btn" href="https://shop.trezor.io" data-amount="0">{% trans "Shop" %}</a>
@@ -51,8 +36,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-7" id="mc_embed_signup">
-                    <h5>Don't miss a good news and security updates from TREZOR.</h5>
+                <div class="col-md-7 col-sm-12 text-xs-center text-sm-center text-md-left" id="mc_embed_signup">
+                    <h5>Don't miss good news and security updates from TREZOR.</h5>
                     <form action="//trezor.us7.list-manage.com/subscribe/post?u=a87eb6070c965ef1be1b02854&id=0ac8b24e69" method="post" novalidate target="_blank" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form">
                         <div id="mc_embed_signup_scroll">
                             <input type="email" id="mce-EMAIL" name="EMAIL" class="email-form" required  placeholder="Your E-mail Address">

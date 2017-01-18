@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<section class="start" id="start">
+    <div class="container">
+        <div class="col-xs-12 text-xs-center thank-intro">
+            <div>
+                <h2>{% trans "Thank you!" %}</h2>
+                <p class="lead">You have made the right choice! Now, its time for 3 simple steps before you setup your
+                    device.</p>
+                <a class="arrow" href="#" role="button">{% trans "Go to first step" %}</a>
+            </div>
+        </div>
+        <div class="col-xs-12 step subscribe-step">
+            <div class="row">
+                <div class="col-md-2 text-xs-center"><p class="order">1/3</p></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Stay updated about important news.</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>It is important to stay fully informed about security and feature updates from our
+                                experts.
+                                Please subscribe to our TREZOR newsletter.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <form action="//trezor.us7.list-manage.com/subscribe/post?u=a87eb6070c965ef1be1b02854&id=0ac8b24e69" method="post" novalidate target="_blank" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form">
+                                <div id="mc_embed_signup_scroll">
+                                    <input type="email" id="mce-EMAIL" name="EMAIL" class="email-form" required  placeholder="Your E-mail Address">
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a87eb6070c965ef1be1b02854_0ac8b24e69" tabindex="-1" value=""></div>
+                                    <input class="btn button btn-primary-full" name="submit"  value="Subscribe and continue" type="submit" id="mc-embedded-subscribe" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 step subscribe-step">
+            <div class="row">
+                <div class="col-md-2 text-xs-center"><p class="order">2.</p></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Master the essentials.</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <strong>PIN</strong> is the code you choose to protect your TREZOR. Use at
+                                least 4 different numbers.
+                            </p>
+                            <p>
+                                <strong>Recovery Seed</strong> is the 24-word long recovery phrase, with which you can
+                                restore your
+                                wallet, in case of theft or loss. It is absolutely crucial to write down the seed! The
+                                recovery seed will be generated for you during the setup of your TREZOR.
+                            </p>
+                            <p>
+                                When sending coins, always <strong>double check the receiving address.</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <i>Never make a digital copy of your recovery seed and never upload it online. Keep your
+                                    recovery seed in a safe place. TREZOR cannot be held liable for financial losses
+                                    incurred through the client’s improper care of sensitive information.</i>
+                            </div>
+                            <a class="btn btn-primary-full" role="button">{% trans "Ok, understand" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 step subscribe-step">
+            <div class="row">
+                <div class="col-md-2 text-xs-center"><p class="order">3.</p></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Start the TREZOR setup.</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                Ready to go? First, we will install the firmware on TREZOR. Then, we will go through the
+                                setup itself. It will only take a few minutes!
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-xs-center">
+                            <p>
+                                <i>No worries, we will guide you through it!</i>
+                            </p>
+                            <a class="btn btn-primary-full" role="button">{% trans "Initialize device" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_start.js' %}"></script>
+{% endblock %}
