@@ -5,13 +5,46 @@
     h2
       font-size: 3em
 
-    .btn
+    .arrow
+      cursor: pointer
+      color: $c_green
       margin-top: 20px
+      &:hover
+        color: $c_green
 
   .step
+    display: none
     background: $c_grey_bg
     margin: 10px
 
+    &.subscribe-step
+      .arrow
+        margin-left: 30px
+
+    .content
+      padding: 20px 10px 50px 0
+
+      .email-form
+        width: 90%
+        background: $c_grey_bg
+        border: 2px solid $c_grey
+        padding: 8px
+        margin-bottom: 10px
+        +box-shadow(none)
+        +transition(all .4s ease)
+        +border-radius(.25rem)
+
+        &:focus, &:active
+          background: $c_white
+
+        &.red
+          border-color: $c_red
+
+      p, i
+        font-size: .9em
+
     .order
-      color: $c_white
+      color: $c_grey
+      opacity: .3
       font-size: 5em
+      font-weight: bold
