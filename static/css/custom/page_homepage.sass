@@ -343,7 +343,10 @@ img.business-logo
 
 .devs-section
   background: url("/static/images/devs_bg.png")
+  background-size: auto 100%
   background-repeat: no-repeat
+  background-position: center center
+  +background-size(cover)
 
   h2, h3
     color: $c_white
