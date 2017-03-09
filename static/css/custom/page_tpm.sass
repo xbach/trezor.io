@@ -1,0 +1,60 @@
+.tpm-jumbo
+  min-height: 500px
+  position: relative
+
+  .container
+    position: relative
+    z-index: 2
+    color: $c_white
+
+    .top
+      padding-top: 20px
+
+      h1
+        font-weight: 700
+
+      .lead
+        color: $c_white
+
+    .bottom
+      padding-top: 60px
+
+.overlay-image
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+  background: url("/static/images/tpm-bg.jpg") no-repeat center center fixed
+  +background-size(cover)
+
+.overlay-color
+  opacity: .86
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+  +background-gradient(180deg, $c_tpm_blue_dark_very_much 13%, $c_tpm_blue 100%)
+
+.tpm-info
+  background-color: $c_grey_bg
+  padding: 20px 0 20px 0
+
+.tpm-trezor-owner
+  background-color: $c_white
+
+  h3
+    font-size: 1.1em
+    font-style: $default_font
+    font-weight: bolder
+    color: $c_grey_font
+
+  .text-block
+    max-width: 90%
+    position: relative
+    margin: 0 auto
