@@ -11,8 +11,7 @@ $(document).ready(function () {
   }
 
   var $start = $('#start'),
-    h = window.innerHeight - 280,
-    index = 0;
+    h = window.innerHeight - 280;
   $start.css('min-height', h + 'px');
 
 
@@ -32,10 +31,10 @@ $(document).ready(function () {
   }
 
   function gotoNext() {
-    $("#step" + index).fadeOut('fast', function() {
-      index++;
-      $("#step" + index).fadeIn('fast');
-    })
+      $("#step4").fadeIn('fast');
+      $('html, body').animate({
+          scrollTop: $("#step4").offset().top
+      }, 500);
   }
 
   function isEmail(email) {
