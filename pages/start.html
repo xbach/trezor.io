@@ -6,8 +6,11 @@
         <div class="col-xs-12 text-xs-center thank-intro">
             <div>
                 <h2>{% trans "Thank you!" %}</h2>
-                <p class="lead">You made the right choice! Now, it's time for 3 simple steps before you setup your
-                    device.</p>
+                <p class="lead">
+                    {% blocktrans %}
+                    You made the right choice! Now, it's time for 3 simple steps before you setup your device.
+                    {% endblocktrans %}
+                </p>
             </div>
         </div>
         <div class="col-xs-12 step">
@@ -16,22 +19,27 @@
                 <div class="col-md-10 content">
                     <div class="row">
                         <div class="col-xs-12 text-md-left text-sm-center">
-                            <h4>Learn how PIN works.</h4>
+                            <h4>{% trans "Learn how PIN works." %}</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-12 text-md-left text-sm-center">
                             <p>
+                                {% blocktrans %}
                                 <strong>PIN</strong> is the code you choose to protect your TREZOR. Use at
                                 least 4 different numbers. Try to avoid simple PINs as '1234'.
+                                {% endblocktrans %}
 
                             </p>
                             <p>
-                                When you are setting up your TREZOR for the first time, you’ll have to enter your new
+                                {% blocktrans %}
+                                During the TREZOR setup, you will enter your new
                                 PIN twice. Notice that the numbers shown on TREZOR change between the entries.
+                                {% endblocktrans %}
                             </p>
                             <p>
-                                <a class="arrow" target="_blank" href="https://doc.satoshilabs.com/trezor-user/enteringyourpin.html"
+                                <a class="arrow" target="_blank"
+                                   href="https://doc.satoshilabs.com/trezor-user/enteringyourpin.html"
                                    role="button">{% trans "Learn more about PIN" %}</a>
                             </p>
                         </div>
@@ -39,7 +47,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-xs-12 text-xs-center">
-                                    <iframe width="100%" height="300px" src="https://youtube.com/embed/sx4XzJRpsig"
+                                    <iframe width="90%" height="300px" src="https://youtube.com/embed/sx4XzJRpsig"
                                             frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
@@ -54,32 +62,39 @@
                 <div class="col-md-10 content">
                     <div class="row">
                         <div class="col-xs-12  text-md-left text-sm-center">
-                            <h4>Understand Recovery seed.</h4>
+                            <h4>{% trans "Understand the recovery seed." %}</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 text-md-left text-sm-center">
                             <p>
+                                {% blocktrans %}
                                 <strong>Recovery Seed</strong> is the 24-word long recovery phrase, with which you
                                 can
                                 restore your
                                 wallet, in case of theft or loss. It is absolutely crucial to write down the seed!
                                 The
                                 recovery seed will be generated for you during the setup of your TREZOR.
+                                {% endblocktrans %}
                             </p>
                             <p>
-                                <i class="important">Never make a digital copy of your recovery seed and never upload it
+                                <i class="important">
+                                    {% blocktrans %}
+                                    Never make a digital copy of your recovery seed and never upload it
                                     online. Keep your
                                     recovery seed in a safe place. TREZOR cannot be held liable for financial losses
-                                    incurred through the client’s improper care of sensitive information.</i>
+                                    incurred through the client’s improper care of sensitive information.
+                                    {% endblocktrans %}
+                                </i>
                             </p>
                             <p>
-                                <a class="arrow" target="_blank" href="https://doc.satoshilabs.com/trezor-user/recovery.html"
+                                <a class="arrow" target="_blank"
+                                   href="https://doc.satoshilabs.com/trezor-user/recovery.html"
                                    role="button">{% trans "Learn more about Recovery" %}</a>
                             </p>
                         </div>
                         <div class="col-md-6 text-xs-center">
-                            <img src="https://doc.satoshilabs.com/trezor-user/_images/trezor-reset.jpg" width="100%"
+                            <img src="https://doc.satoshilabs.com/trezor-user/_images/trezor-reset.jpg" width="90%"
                                  alt="">
                         </div>
                     </div>
@@ -92,14 +107,18 @@
                 <div class="col-md-10 content">
                     <div class="row">
                         <div class="col-xs-12 text-md-left text-sm-center">
-                            <h4>Stay updated about important news.</h4>
+                            <h4>{% trans "Stay updated about important news." %}</h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6  text-md-left text-sm-center">
-                            <p>Stay fully informed about security and feature updates from our
-                                experts.
-                                Please subscribe to our TREZOR newsletter.</p>
+                            <p>
+                                {% blocktrans %}
+                                In order to stay fully informed about security and feature updates from our
+                                experts,
+                                please subscribe to our TREZOR newsletter.
+                                {% endblocktrans %}
+                            </p>
                         </div>
                         <div class="col-md-6">
                             <form id="mail-subscribe"
@@ -125,15 +144,15 @@
         <div class="col-xs-12 text-xs-center step4" id="step4">
             <div class="row">
                 <div>
-                    <h4>Ready to go?</h4>
                     <p>
-                        First, we will install the firmware on TREZOR. Then, we will go through the
-                        setup itself.
+                        {% trans "Please take some time to familiarize yourself with our policies first." %}
                     </p>
-                    <a class="arrow" target="_blank" href="https://shop.trezor.io/static/shared/warranty-refund-policy.pdf"
+                    <a class="arrow" target="_blank"
+                       href="https://shop.trezor.io/static/shared/warranty-refund-policy.pdf"
                        role="button">{% trans "Warranty information" %}</a>
-                    <br /><br />
-                    <a class="btn btn-primary-full" href="https://wallet.trezor.io" role="button">{% trans "Ok, I understand" %}</a>
+                    <br/><br/>
+                    <a class="btn btn-primary-full" href="https://wallet.trezor.io" role="button">
+                        {% trans "Done, let's go!" %}</a>
                 </div>
             </div>
         </div>
