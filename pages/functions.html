@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<div class="jumbotron-functions">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7"></div>
+            <div class="col-md-5">
+                <h2>Limitless functions</h2>
+                <p class="lead">
+                    Open Source ideas lead to growing number of functions every day.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="functions-section" id="functions">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-lg-12 text-xs-center">
+                <h2>{% trans "Explore functions." %}</h2>
+                <p>{% trans "From Bitcoin to passwords, accounts, documents or emails." %}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item money">
+                    <h3 class="card-title">{% trans "Wallet for Bitcoin and others" %}</h3>
+
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>The most trusted and secure way to store your bitcoins. Protect a variety of alternative
+                            digital currencies. Litecoin,
+                            DASH and Zcash with a single device.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://wallet.trezor.io" class="arrow">{% trans "Go to Wallet" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item money">
+                    <h3 class="card-title">{% trans "Ethereum integration" %}</h3>
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>
+                            Saved under the same seed, secured by the same technology. Use Ethereum conveniently in
+                            cooperation with our partners at MyEtherWallet
+                        </p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://www.myetherwallet.com" class="arrow">{% trans "Go to MEW" %}</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item identity">
+                    <h3 class="card-title">{% trans "Password Manager" %}</h3>
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>Try out the next-generation password management app. Encrypt passwords separately and sync
+                            them to your private cloud, hassle-free, with TREZOR.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://trezor.io/passwords"
+                       class="arrow">{% trans "Password Manager" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item identity">
+                    <h3 class="card-title">{% trans "Secure Admin SSH Access" %}
+                    </h3>
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>Protect access to your servers, data or websites administration. SSH login with
+                            single or multiple sessions.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://github.com/romanz/trezor-agent" class="arrow">
+                        {% trans "SSH Agent on GitHub" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item identity">
+                    <h3 class="card-title">{% trans "2-Factor Authentication" %}</h3>
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>Safeguard your online accounts and identities. Enable the industry standard FIDO/U2F and use
+                            TREZOR as your security token.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af"
+                       class="arrow">{% trans "More about U2F" %}</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item other">
+                    <h3 class="card-title">{% trans "Sign &amp; Encrypt with GPG" %}</h3>
+
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>TREZOR encrypts every document or
+                            email you create with GPG.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://github.com/romanz/trezor-agent" class="arrow">
+                        {% trans "GPG via SSH Agent"%}</a>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item identity">
+                    <h3 class="card-title">{% trans "Password-less Login" %}</h3>
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>Securely sign up and login with a click of a button, using TREZOR Connect.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://github.com/trezor/connect" class="arrow">
+                        {% trans "TREZOR Connect on GitHub" %}</a>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item other">
+                    <h3 class="card-title">{% trans "Sign &amp; Verify Messages" %}</h3>
+
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>Easily prove your ownership of messages and documents, or verify others.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://doc.satoshilabs.com/trezor-user/messages.html" class="arrow">
+                        {% trans "More about Messages" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-xs-center">
+                <div class="item money">
+
+                    <h3 class="card-title">{% trans "Explore Integrations" %}</h3>
+
+                    <div class="content text-block">
+                        {% blocktrans %}
+                        <p>Connect your TREZOR to third party wallets and services.</p>
+                        {% endblocktrans %}
+                    </div>
+                    <a href="https://doc.satoshilabs.com/trezor-apps/index.html" class="arrow">
+                        {% trans "TREZOR Apps" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_functions.js' %}"></script>
+{% endblock %}
