@@ -6,9 +6,9 @@
         <div class="row">
             <div class="col-md-7"></div>
             <div class="col-md-5">
-                <h2>Limitless functions</h2>
+                <h2>{% trans "Limitless possibilities." %}</h2>
                 <p class="lead">
-                    Open Source ideas lead to growing number of functions every day.
+                    {% trans "Get the most out of your TREZOR." %}
                 </p>
             </div>
         </div>
@@ -16,12 +16,6 @@
 </div>
 <section class="functions-section" id="functions">
     <div class="container">
-        <div class="row heading">
-            <div class="col-lg-12 text-xs-center">
-                <h2>{% trans "Explore functions." %}</h2>
-                <p>{% trans "From Bitcoin to passwords, accounts, documents or emails." %}</p>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-6 col-lg-4 text-xs-center">
                 <div class="item money">
@@ -149,6 +143,39 @@
                     <a href="https://doc.satoshilabs.com/trezor-apps/index.html" class="arrow">
                         {% trans "TREZOR Apps" %}</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="devs-section" id="developers">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-lg-12 text-xs-center">
+                <h2>{% trans "Developers, come along!" %}</h2>
+                <p>Interested in online security and privacy? Care to make the digital world a better
+                    place? Join our open network of security experts and programmers.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 text-xs-center button-area">
+                <br/><br/>
+                <a class="btn btn-third-outline" href="https://github.com/trezor" role="button"><i
+                        class="ion-social-github"></i> {% trans "GitHub Repos"%}</a>
+                <a class="btn btn-third-outline" href="https://gitter.im/trezor/community" role="button"><i
+                        class="ion-android-chat"></i> {% trans "Dev Community Chat"%}</a>
+                <a class="plain btn-primary-noline arrow" href="https://doc.satoshilabs.com/trezor-tech/index.html">
+                    {% trans "Learn from TREZOR Developer's Guide"%}
+                </a>
+            </div>
+            <div class="col-sm-6 col-xs-12 text-sm-left text-xs-center">
+                <h3>{% trans "Learn. Collaborate. Innovate."%}</h3>
+                {% blocktrans %}
+                <p>Join us and work on top-notch global projects related to Bitcoin and security. Become a part of
+                    our team
+                    resposible for several influential projects that marked milestones in the Bitcoin world. We love
+                    to work
+                    with talented and enthusiastic developers, marketers or designers.</p>
+                {% endblocktrans %}
             </div>
         </div>
     </div>
