@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<div class="jumbotron-help">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-xs-center">
+                <h1>{% trans "Help Center." %}</h1>
+                <p class="lead">
+                    {% trans "We are here for you." %}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2 col-md-4 col-sm-4 person text-xs-center">
+                <div class="header pavol"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="help-nav" id="help-center-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="http://satoshilabs.kayako.com/Troubleshooter/Step/View/3" class="nav-link">
+                <i class="fa fa-life-ring" aria-hidden="true"></i>
+                Troubleshooter
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                User Manual
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="http://doc.satoshilabs.com/trezor-faq/index.html" class="nav-link">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                FAQ
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="http://telegram.me/trezortalk" class="nav-link">
+                <i class="fa fa-comments-o" aria-hidden="true"></i>
+                Ask Community
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="help-team">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-xs-12 text-xs-center">
+                <h3>Meet your Support team.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-4 person">
+                <div class="header vojtech"></div>
+                <div class="content">
+                    <div class="description text-xs-center">
+                        <h4>Vojtech</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 person">
+                <div class="header ben"></div>
+                <div class="content">
+                    <div class="description text-xs-center">
+                        <h4>Karel</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 person">
+                <div class="header peca"></div>
+                <div class="content">
+                    <div class="description text-xs-center">
+                        <h4>Jan</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 person">
+                <div class="header peca"></div>
+                <div class="content">
+                    <div class="description text-xs-center">
+                        <h4>Michaela</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="help-content" id="help-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <p>
+                    Welcome, 95% of customer problems can be solved through the Troubleshooter or User Manual.
+                    Can't find what you are looking for?
+                </p>
+            </div>
+            <div class="col-sm-4">
+                System status
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+{% endblock %}
