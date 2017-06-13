@@ -1,0 +1,41 @@
+.jumbotron-help
+  min-height: 320px
+  position: relative
+  // background-image: url("/static/images/bg-help-min.png")
+  background-size: auto 100%
+  background-repeat: no-repeat
+  background-position: center center
+  background-color: $c_green
+  padding-top: 140px
+  color: $c_white
+  +background-size(cover)
+
+  h1
+    font-size: 3.4em
+  .lead
+    color: $c_white
+    font-size: 2.2em
+
+.help-nav
+  background-color: $c_grey_bg
+
+  .nav-link
+    background-color: $c_white
+    text-align: center
+    width: 100%
+    padding: 30px
+    font-weight: bold
+    color: $c_grey_font
+    +transition(all 0.15s ease 0s)
+    +border-radius(4px)
+
+    i
+      margin-bottom: 10px
+      font-size: 2.4em
+      clear: both
+      display: block
+
+    &:hover
+      +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
+      i
+        color: $c_green

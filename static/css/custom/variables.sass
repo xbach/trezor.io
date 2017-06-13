@@ -9,3 +9,42 @@ $default_font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helveti
   position: relative
   top: 40%
   transform: translateY(-40%)
+
+
+.col-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths
+  position: relative
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-5ths
+  -webkit-box-flex: 0
+  -webkit-flex: 0 0 20%
+  -ms-flex: 0 0 20%
+  flex: 0 0 20%
+  max-width: 20%
+
+@media (min-width: $xs)
+  .col-sm-5ths
+    -webkit-box-flex: 0
+    -webkit-flex: 0 0 20%
+    -ms-flex: 0 0 20%
+    flex: 0 0 20%
+    max-width: 20%
+
+@media (min-width: $sm)
+  .col-md-5ths
+    -webkit-box-flex: 0
+    -webkit-flex: 0 0 20%
+    -ms-flex: 0 0 20%
+    flex: 0 0 20%
+    max-width: 20%
+
+@media (min-width: $md)
+  .col-lg-5ths
+    -webkit-box-flex: 0
+    -webkit-flex: 0 0 20%
+    -ms-flex: 0 0 20%
+    flex: 0 0 20%
+    max-width: 20%
+    float: left

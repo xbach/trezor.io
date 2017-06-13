@@ -32,6 +32,72 @@
   width: 100%
   background: $c_black
 
+/* USAGE SECTION */
+
+.usage-section
+
+  .item
+    position: relative
+    display: block
+    height: 200px
+    +transition(all 0.15s ease 0s)
+    +border-radius(4px)
+
+    .wallet-logos
+      position: relative
+      width: 100px
+      height: 100px
+      margin: 0 auto 13px auto
+      background: url("../images/cryptowalleticons.png")
+      background-repeat: no-repeat
+      background-size: 100px auto
+
+    &:hover, &:focus
+      text-decoration: none !important
+      +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
+
+      .wallet-logos
+        background: url("../images/cryptowalleticons-hover.png")
+        background-repeat: no-repeat
+        background-size: 100px auto
+
+      i
+        color: $c_green
+
+    h3
+      font-size: 1.1em
+      padding-top: 5px
+      font-weight: bold
+      color: $c_grey_font
+
+    .usage-icon
+      position: relative
+      color: $c_grey_font
+      font-size: 6em
+      clear: both
+      display: block
+
+      &.btc
+        padding-top: 30px
+
+      .overlay
+        position: absolute
+        width: 100%
+        top: 2px
+        text-align: center
+
+        & > *
+          vertical-align: middle
+          color: $c_white
+          font-size: .3em
+
+        &.passwords
+          letter-spacing: -10px
+          margin-left: -3px
+
+          & > *
+            font-size: .15em
+
 
 /* INTRO SECTION */
 
@@ -136,7 +202,60 @@ img.business-logo
 /* ALTCOIN SECTION */
 
 .altcoin-section
-  background-color: $c_grey_bg
+  background: $c_green
+  color: $c_white
+
+  a
+    color: $c_white
+
+    &:hover, &:focus
+      color: $c_white
+
+  .item
+    min-height: 120px
+    text-align: center
+    color: $c_white
+    +transition(all 0.15s ease 0s)
+    +border-radius(4px)
+
+    &:hover
+      text-decoration: none
+      +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
+
+  .coins
+    padding-top: 38px
+
+  .altcoins-logo
+    background-image: url("/static/images/altcoins/altcoins-logo.png")
+    background-size: 50px auto
+    background-repeat: no-repeat
+    display: block
+    margin: 0 auto 7px auto
+
+    &-dash
+      width: 50px
+      height: 50px
+      background-position: 0 0
+
+    &-etc
+      width: 29px
+      height: 50px
+      background-position: 0 -50px
+
+    &-eth
+      width: 30.3px
+      height: 50px
+      background-position: 0 -100px
+
+    &-ltc
+      width: 50px
+      height: 50px
+      background-position: 0 -150px
+
+    &-zcash
+      width: 50px
+      height: 50px
+      background-position: 0 -200px
 
   .heading
     padding-bottom: 0
@@ -151,26 +270,6 @@ img.business-logo
 
       @media only screen and (min-width: $md)
         margin: 0
-
-/* USAGE SECTION */
-
-.usage-section
-  .item
-    position: relative
-    display: block
-    height: 250px
-
-    h3
-      font-size: 1.1em
-      font-style: $default_font
-      font-weight: bolder
-      color: $c_grey_font
-      
-    .text-block
-      max-width: 90%
-      position: relative
-      margin: 0 auto
-
 
 /* FEATURES SECTION */
 
@@ -240,8 +339,6 @@ img.business-logo
       +border-radius(50%)
       +animation(pulsate 1.8s infinite ease-out 0.4s)
 
-
-
 /* EXPERTS SECTION */
 
 .experts-section
@@ -295,8 +392,6 @@ img.business-logo
         margin-right: 0.25em
         vertical-align: -0.4em
 
-
-
 /* MEDIA SECTION */
 
 .media
@@ -337,8 +432,6 @@ img.business-logo
       display: inline-block
       position: relative
 
-
-
 /* DEVELOPERS SECTION */
 
 .devs-section
@@ -361,8 +454,6 @@ img.business-logo
       display: block
       margin-top: 30px
 
-
-
 /* IDEALS SECTION */
 
 .ideals-section
@@ -372,8 +463,6 @@ img.business-logo
 
   p
     color: $c_grey_bg
-
-
 
 /* TEAM SECTION */
 
@@ -428,7 +517,6 @@ img.business-logo
         background-position: 0 91.666667%
       &.vojtech
         background-position: 0 100%
-
 
     h4
       padding: 0

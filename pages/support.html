@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<div class="jumbotron-help">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-xs-center">
+                <h1>{% trans "Support Center." %}</h1>
+                <!--
+                <p class="lead">
+                    {% trans "We are here for you." %}
+                </p>
+                -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2 col-md-4 col-sm-4 person text-xs-center">
+                <div class="header pavol"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="help-nav" id="help-center-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                User Manual
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="http://doc.satoshilabs.com/trezor-faq/index.html" class="nav-link">
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                FAQ
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://www.reddit.com/r/TREZOR/top/" class="nav-link">
+                <i class="icon-bubbles4" aria-hidden="true"></i>
+                Ask Community
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="help-content" id="help-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <p>
+                    95% of inquiries can be solved through the <a href="http://doc.satoshilabs.com/trezor-faq/index.html">FAQ</a> or via our <a href="https://doc.satoshilabs.com/trezor-user/">User Manual</a>.
+                    <br /><br />
+                    Still can't find what you are looking for?
+                    <br />
+                    Send us a <a href="https://satoshilabs.kayako.com/conversation/new/2">message</a> and our Support Team will respond within one business day (avg. 24 hours).
+                </p>
+            </div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_support.js' %}"></script>
+{% endblock %}
