@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<section class="troubleshooter">
+    <div class="container">
+        <h2>Troubleshooter</h2>
+        <hr />
+        <div id="scene" class="scene">
+            <ul id="content">
+                <li class="hidden model">
+                    <div class="content-wrapper">
+                        <h4 class="header"></h4>
+                        <span class="text"></span>
+                        <ul class="option-list">
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="preloader" class="current">
+                    <div class="loader-wrapper">
+                        <div class="loader" id="loader">Loading...</div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="shadow">
+        <template id="0" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">Hello, do you need help with?</h4>
+                <span class="text"></span>
+                <ul class="option-list">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>17</li>
+                    <li>57</li>
+                </ul>
+            </div>
+        </template>
+    </div>
+</section>
+
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_troubleshooter.js' %}"></script>
+{% endblock %}

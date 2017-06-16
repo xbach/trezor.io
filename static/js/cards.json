@@ -1,0 +1,402 @@
+[
+  {
+    "id": "0",
+    "children": [
+      "1",
+      "2",
+      "17",
+      "57"
+    ],
+    "title": "Hello, do you need help with?"
+  },
+  {
+    "id": "1",
+    "children": [
+      "3",
+      "9",
+      "14",
+      "18",
+      "43",
+      "45",
+      "46",
+      "51",
+      "54",
+      "56"
+    ],
+    "title": "Technical Issues",
+    "contents": "<p>Issue - general questions or issues, technical issues and other.</p>"
+  },
+  {
+    "id": "2",
+    "children": [
+      "15",
+      "16",
+      "21",
+      "22",
+      "23",
+      "32"
+    ],
+    "title": "Ordering & Shipping",
+    "contents": "<p>Order - Did you order TREZOR and you haven't received it yet? Or it didn't catch you at home and it had been sent back to us?</p>"
+  },
+  {
+    "id": "3",
+    "children": [
+      "63",
+      "64"
+    ],
+    "title": "TREZOR Wallet doesn't detect the device.",
+    "contents": "<p>This problem can be caused by many different elements. Let's troubleshoot this further. Please share more information with us.</p>"
+  },
+  {
+    "id": "9",
+    "children": [
+      "38"
+    ],
+    "title": "MyTrezor keeps asking me to download the bridge.",
+    "contents": "<p>This issue usually means that transport method (TREZOR Bridge or TREZOR Chromes extension) wasn't installed, wasn't installed correctly or something in your configuration or browser is blocking the communication or a browser addon may be blocking it as well.</p>"
+  },
+  {
+    "id": "14",
+    "children": [
+      "34"
+    ],
+    "title": "TREZOR won't power up.",
+    "contents": "<p>After plugging the device in, screen won't power up at all.</p>"
+  },
+  {
+    "id": "15",
+    "title": "I ordered TREZOR and still didn't receive it.",
+    "contents": "<p>That's not necessarily a problem. The delivery date actually depends on a lot of factors. Here's the list of provided shipping methods:</p><p><strong>DHL Express shipping</strong></p><p>Default shipping option. DHL Express shipping which costs $29 and it's fully traceable. Delivery time is usually 2-5 business days.</p><p><strong>Standard worldwide shipping</strong></p><p>You can also choose Standard shipping for $10 and the traceability is limited. Delivery time may vary between 5 days to 6 weeks depending on your location and your national post.</p><p><strong>Where can I follow my order (get a tracking number)?</strong></p><p>By logging into <a href=\"https://shop.trezor.io/user/login/\">TREZOR Shop</a> and clicking order creation date on the My Orders page you can see the details of your order. Your user login have been created when you first purchased your TREZOR.</p><p>We will notify you of any significant change to your order by email as well.</p><p>You can track the parcel sent via DHL <a href=\"http://www.dhl.com/en/express/tracking.html\">here</a>. Parcel sent via Standard shipping <a href=\"https://www.ceskaposta.cz/en/trackandtrace\">here</a> and when it leaves the country of origin then continue to the website of postal service in your country.</p>"
+  },
+  {
+    "id": "16",
+    "title": "The order can't be found on tracking system anymore.",
+    "contents": "<p>This situation may be caused by two things:</p><p><strong>1. Package left Europe and it's now untraceable until destination country's postal service claims it. Please be patient.</strong></p><p>After leaving the country of origin, the parcel travels to a foreign country where it is accepted at customs. This is where most of the delays actually happen and it is unfortunate because the delivery will appear in the customer's post tracking system only after it is released by the customs. For example, we have one delivery which was held by US customs office for nearly 6 weeks.</p><p><strong>2. The package got lost. In this case please submit a ticket to contact our customer support.</strong></p><p>In rare cases, usually, when choosing standard shipping, your package may not arrive at all. It is very unfortunate but it can happen occasionally. In such case, we consider it as a <strong>lost package</strong> and we start the <strong>investigation</strong>.</p>"
+  },
+  {
+    "id": "17",
+    "children": [
+      "18",
+      "19"
+    ],
+    "title": "Warranty",
+    "contents": "<p>Is your TREZOR broken or it didn't work when you got it?</p>"
+  },
+  {
+    "id": "18",
+    "children": [
+      "60",
+      "61"
+    ],
+    "title": "My device is clearly broken and I'd like to start RMA process.",
+    "contents": "<p>Examples of the HW issues which are worthy of the RMA process straight away.</p><ul><li>Burnt pixels in screen</li><li>\"Dead screen\"</li><li>Non-responsive device</li><li>Dysfunctional buttons</li></ul><p>If you're facing some of the issues above or different HW failure which clearly wasn't caused by physical damage, please feel free to contact our support.</p><p>Where did you buy your device?</p>"
+  },
+  {
+    "id": "19",
+    "title": "I would like to get details about the warranty.",
+    "contents": "<p><strong>Warranty Period</strong></p><p>We warrant the product, its components, and labor to be free from defects in material and workmanship under regular uses defined in user manuals and this Warranty during the warranty period. The warranty period commences on the date of original purchase and last for one (1) year.</p><p>We further warrant the replaced product and/or its parts or components to be free from defects in material and workmanship for a period of thirty (30) days from the date of replacement, or the remainder of the warranty period, whichever is greater.</p><p><a href=\"https://shop.trezor.io/static/shared/warranty-refund-policy.pdf\">Warranty & Refund Policy</a></p>"
+  },
+  {
+    "id": "21",
+    "title": "I'd like to change an already placed and paid order.",
+    "contents": "<p>XXX</p>"
+  },
+  {
+    "id": "22",
+    "title": "I need to change shipping address.",
+    "contents": "<p>If we've already shipped your package, then this option is unfortunately not possible anymore.</p><p>If we still haven't shipped the package you can login <a title=\"account\" href=\"https://shop.trezor.io/user/profile/\">account</a> and commit the changes yourself.</p>"
+  },
+  {
+    "id": "23",
+    "title": "The parcel din't catch me at home and it had been sent back to us.",
+    "contents": "<p>We're sorry to hear such an issue. Unfortunately, these honest mistakes tend in very rare cases.</p><p><strong>What do now?</strong></p><p>There is nothing to do at the moment. The package will be now returned back to us, we'll contact you if the shipping address is correct and re-ship the package as soon as possible. Free of charge, of course.</p>"
+  },
+  {
+    "id": "24",
+    "title": "How do I create/enter a PIN?",
+    "contents": "<p>PIN is a number combination that you set during the TREZOR initial setup. It protects your TREZOR from being used by unauthorized persons. Just like the PIN for your credit card, it should be only known by you.</p><p><strong>Malware-proof PIN entry</strong></p><p>We have invented a safe way of entering the PIN so that you can use your TREZOR even on the computer with viruses and keyloggers (designed to capture everything as you type).</p><p>When PIN entry is needed from you, a PIN matrix with dots instead of the numbers appears on your computer screen. The TREZOR display will indicate the placement of the numbers, which are always randomly shuffled. Every time you use your TREZOR, you will need to look at the device to find the actual placement of the numbers you want to enter.</p><p>This method protects you from keyloggers - your computer never knows what you are actually entering, only the TREZOR itself \"translates\" the clicked positions into the actual PIN numbers. It also makes it difficult for other people to eye up your PIN code - if somebody is looking over your shoulder, he may see you clicking some blank buttons, but he won't see your PIN digits. The observer would need to see both the TREZOR display and your computer screen, which is quite difficult when you are careful.</p><p>Still a bit of enigma to you? Take a look at this <a href=\"https://youtu.be/9hvLcfJ6DFE?t=103\">video</a>!</p>"
+  },
+  {
+    "id": "25",
+    "title": "I forgot my PIN.",
+    "contents": "<p>Your PIN is independent of the seed. That means, that you can set a new PIN with the TREZOR recovery process in case you forget it. You only need to have access to the seed to do so, which also means that your PIN does NOT protect your seed from being compromised. The PIN is there to protect your device against <em>curious</em> people.</p>"
+  },
+  {
+    "id": "26",
+    "title": "How recovery seed works?",
+    "contents": "<p>The Recovery seed usually contains a sequence of 24 words - uniquely and securely generated inside your TREZOR when you first set it up.</p><p>It is utmost important to keep this backup sentence secret and safe!</p><p>In case your device gets lost, you will need it for recovery - a simple process when you enter the words of your seed, in the order as prompted, into a new TREZOR device. You may also use any other Bitcoin wallet that supports the same standard as TREZOR (<a href=\"https://doc.satoshilabs.com/trezor-tech/cryptography.html#mnemonic-recovery-seed-bip39\">BIP39</a>).</p><p>Do not underestimate the process of writing down the seed; make sure you have all words correctly spelled and in the right order.</p><p>Never make a digital copy of your seed, i.e. do not store it in any form on any computer, mobile phone or cloud storage. Consider your seed compromised once you make a digital copy of it, even if you do it on an offline device such as a copy machine or a digital camera. We cannot stress enough to only store the seed offline - written on a piece of paper, engraved, or with a <a href=\"https://shop.trezor.io/\">Cryptosteel</a>.</p><p>What does the Recovery seed actually represent?</p><p>TREZOR doesn't store anything else than the \"master key\" and the 24 words is your master key translated into worldly language.</p><p>From this master key your TREZOR creates a unique structure of private keys that are then used to:</p><ul><li>Sign your bitcoin transactions.</li><li>Encrypt your passwords in TREZOR Password Manager.</li><li>Log into websites, or servers via SSH.</li><li>Sign messages.</li></ul><p>This means that if you lose your Recovery seed, you may lose access to all of those features. Read more about \"What If\" situations in the <a href=\"https://doc.satoshilabs.com/trezor-faq/threats.html\">TREZOR User Manual</a>.</p>"
+  },
+  {
+    "id": "27",
+    "title": "How passphrase works?",
+    "contents": "<p>A passphrase can be any word, any set of letters or even a sentence. You could also consider the passphrase to be the 25th word of the seed.</p><p>Your passphrase should be memorable, though. Typically, you would not write it down anywhere, to eliminate any possibility of it being discovered. Remember that you are entering the passphrase directly into the computer, and this process is not protected against keyloggers like the PIN entry. For this reason, you should not be tempted to disable your PIN even if you use the passphrase!</p><p>If you enable the passphrase protection, you will be asked for a passphrase every time you connect your TREZOR and work with a bitcoin (altcoin) wallet such as TREZOR Wallet or Electrum.</p><p>The passphrase has a triple security effect.</p><p>1. It makes your TREZOR impervious to physical attack. Even if your TREZOR was stolen and the chip examined under an electron microscope to discover your recovery seed, your bitcoins will still be safe!</p><p>2. It protects your bitcoins in case someone steals your Recovery seed from you. Without your passphrase, the thief won't be able to access your coins.</p><p>3. A passphrase or more passphrases can be used with the same TREZOR device to create the so-called \"hidden wallets,\" giving you a great advantage in situations such as being held at a gunpoint, (also known as the $5-wrench-attack). Use different passphrases to create \"decoy\" wallets with a low balance next to your main wallet. <a href=\"https://doc.satoshilabs.com/trezor-user/advanced_settings.html?highlight=hidden#using-passphrase-encrypted-seeds\">Read more ...</a></p>"
+  },
+  {
+    "id": "28",
+    "title": "What happens if my recovery seed is stolen?",
+    "contents": "<p>You need to keep your recovery seed safe from theft. If your recovery seed is stolen and you haven's set a passphrase protection, then your bitcoins can be stolen as well. However, if you like, TREZOR can protect against recovery seed theft with <a href=\"https://doc.satoshilabs.com/trezor-user/advanced_settings.html#using-passphrase-encrypted-seeds\">a passphrase</a>, and therefore eliminate this risk.</p>"
+  },
+  {
+    "id": "29",
+    "title": "What if my computer that runs my bitcoin wallet is stolen?",
+    "contents": "<p>If your computer gets stolen, just plug your TREZOR to another computer and you'll get your account balance and transaction history. Might your TREZOR get lost as well, simply recover the seed from your paper backup to a new TREZOR device or a TREZOR compatible wallet software.</p>"
+  },
+  {
+    "id": "32",
+    "title": "Start the investigation",
+    "contents": "<p>Hello SatoshiLabs,</p><p>I'd like to inform you that my package got lost. One of the following conditions was met:</p><ul><li>if the package does not leave the country of origin according to it's tracking in 10 days</li><li>if the package does not appear on foreign tracking in 21 days</li><li>if the last update on foreign tracking is older than 10 days</li></ul><p>According to the instructions on your web, I'm asking you to launch the investigation process.</p><p>Thank you.</p>"
+  },
+  {
+    "id": "33",
+    "title": "Report HW failure.",
+    "contents": "<p>Hello SatoshiLabs,</p><p>I'd like to inform you that my device is clearly broken and I believe the issue is caused by the HW malfunction. Please get back to me as soon as possible.</p><p>Thank you.</p>"
+  },
+  {
+    "id": "34",
+    "children": [
+      "35"
+    ],
+    "title": "Please try connect your device with a different micro USB cable.",
+    "contents": "<p>Did this step help? If not, let's troubleshoot this issue even further.</p>"
+  },
+  {
+    "id": "35",
+    "children": [
+      "33",
+      "36"
+    ],
+    "title": "Please connect your TREZOR to a different computer.",
+    "contents": "<p>Did that work?</p>"
+  },
+  {
+    "id": "36",
+    "title": "It works!",
+    "contents": "<p>Great! Good job on fixing the issue.</p>"
+  },
+  {
+    "id": "38",
+    "children": [
+      "39",
+      "40"
+    ],
+    "title": "Check if the process \"trezord\" is running.",
+    "contents": "<p>If you're sure that you've already installed the bridge software and MyTrezor keeps asking you to install it, the process running in the background can be stuck.</p><p>Please go to the task manager of your OS and check if the process called \"trezord\" is currently running.</p><p>Direct link to Bridge software is <a href=\"https://beta-wallet.trezor.io/data/bridge/latest/index.html\">here</a>.</p>"
+  },
+  {
+    "id": "39",
+    "title": "I've restarted the bridge and it works!",
+    "contents": "<p>Yay! Great job on resolving the issue :)</p>"
+  },
+  {
+    "id": "40",
+    "children": [
+      "36",
+      "41"
+    ],
+    "title": "Still nothing(Run the browser in private mode).",
+    "contents": "<p>Okay, there might be some add-on which blocks the communication. Please try running your browser in a private/incognito mode of the browser.</p>"
+  },
+  {
+    "id": "41",
+    "children": [
+      "42"
+    ],
+    "title": "Still nothing. (Try a different major browser)",
+    "contents": "<p>Thanks for the update. So we're facing a more complex issue. Please try to go to TREZOR Wallet in a different browser to see the bridge behaves the same in a different environment. Also, if you're using a Google Chrome, there is a very convenient extension which is fully replaceable</p><p>Download link for the extension <a href=\"https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj\">here</a>.</p><p>Also, feel free to try our beta server <a href=\"https://beta-wallet.trezor.io\">here</a>.</p><p>Download link for <a href=\"https://www.google.com/intl/en/chrome/browser/desktop/\">Google Chrome</a> and <a href=\"https://www.mozilla.org/en-US/firefox/new/\">Firefox</a>.</p>"
+  },
+  {
+    "id": "42",
+    "title": "MyTrezor still doesn't detect the bridge or extension (create a support ticket).",
+    "contents": "<p>Hello,</p><p>I'd like to inform you that I'm having difficulties with TREZOR Wallet. The website doesn't detect bridge software even if I switch to a different browser, use incognito mode or visit the beta website.</p><p>Please contact me and help me to troubleshoot the issue.</p>"
+  },
+  {
+    "id": "43",
+    "children": [
+      "34",
+      "44"
+    ],
+    "title": "MyTrezor \"stucks\". I'm unable to load my accounts.",
+    "contents": "<p>Problem description.</p>"
+  },
+  {
+    "id": "44",
+    "children": [
+      "36"
+    ],
+    "title": "I currently use Safari.",
+    "contents": "<p>We've recently experienced some issues regarding TREZOR in combination with Safari browser. While we don't officially support Safari with TREZOR, we surely want to fix this problem to ensure that TREZOR will be functional with Safari again. Unfortunately, we still don't have any ETA when it will be fixed. Meanwhile, please use a different browser like Chrome or Firefox until this problem is solved.</p><p>Thank you for understanding.</p>"
+  },
+  {
+    "id": "45",
+    "title": "I updated a firmware. My device doesn't work now.",
+    "contents": "<p>If the system does not recognize the device after the firmware update, go to the Device Manager and force the drivers to update. With FIDO implemented, Windows regards TREZOR as a new device, and sometimes the drivers do not update automatically.</p><p>Here are some instructions how to open \"Device manager\" and update necessary drivers depending on the system you're using. TREZOR is usually reported as <em>USB Composite Device</em> in Device manager (rarely, it can be found as \"Human Interface Device\").</p><p><strong>Through Run command</strong></p><ul><li>Press Win + R to open Run command</li><li>Type: devmgmt.msc and hit Enter</li><li><em>Device manager window will appear</em></li><li>Find \"Other devices\" and click on it with right button</li><li>Choose \"Update driver software\"</li></ul><p><strong>Through Search</strong></p><ul><li>Press Win to open the start menu</li><li>Type: Device Manager, until the option shows up and select it</li><li><em>Device manager window will appear</em></li><li>Find \"Other devices\" and click on it with right button</li><li>Choose \"Update driver software\"</li></ul><p>If you're not sure, which driver to update, you can try to unplug and plug your TREZOR again, to see if there are some changes in the current section of \"Device manager\". Deleting the needed driver can also do the trick, as the system will update the driver automatically.</p><p><strong>If in rare cases this didn't help, you may try and solve it in the following way:</strong></p><ul><li>Go to Control Panel / All Control Panel Items / Devices and Printers</li><li>Click on it and check if you see message: \"Needs troubleshooting\"</li><li>Perform the troubleshooting</li><li>Restart the computer</li></ul>"
+  },
+  {
+    "id": "46",
+    "children": [
+      "47",
+      "48"
+    ],
+    "title": "Firmware update went wrong",
+    "contents": "<p>Updating you TREZOR's firmware unlocks brand new features and keeps your device secure. Sometimes it could go south, but solving this issue is usually very easy.</p><p><strong>Updating the Firmware</strong></p><ul><li>Without closing the myTREZOR website, unplug your TREZOR. Now press down both buttons on your TREZOR. Holding down the buttons, plug your TREZOR back in. It may help if you hold your TREZOR from the top in a pinching motion.</li><li>Once you have plugged in your TREZOR you'll see a dialog on the myTREZOR.com website asking if you want to update.</li><li>Press \"Yes, update\"</li><li>Now press the right button on your TREZOR to confirm the update. Wait a few minutes while the update runs. Once it's done you can unplug and replug your TREZOR to finish the update.</li></ul>"
+  },
+  {
+    "id": "47",
+    "children": [
+      "36",
+      "49"
+    ],
+    "title": "Unofficial firmware detected.",
+    "contents": "<p>1. <a href=\"https://doc.satoshilabs.com/trezor-user/updatingfirmware.html\">Run the update again</a>.</p><p>2. Done. Your TREZOR should now work again.</p>"
+  },
+  {
+    "id": "48",
+    "children": [
+      "36",
+      "50"
+    ],
+    "title": "Firmware appears to be broken.",
+    "contents": "<ol><li><a href=\"https://doc.satoshilabs.com/trezor-user/updatingfirmware.html\">Run the update again</a>.</li><li>Done. Your TREZOR should now work again.</li><li>If it still doesn't work please try different USB cable and proceed to step 1.</li></ol>"
+  },
+  {
+    "id": "49",
+    "title": "Issue persists.",
+    "contents": "<p>Hello SatoshiLabs,</p><p>I'd like to inform you that I'm having some issues updating the TREZOR's firmware. It shows error message: \"Unofficial firmware detected\" and your standard troubleshooting procedure won't work.</p><p>Please let me know what's a next step?</p>"
+  },
+  {
+    "id": "50",
+    "title": "Issue persists.",
+    "contents": "<p>Hello SatoshiLabs,</p><p>I'd like to inform you that I'm having some issues updating the TREZOR's firmware. It shows an error message: \"Firmware appears to be broken\" and your standard troubleshooting procedure won't work.</p><p>Please let me know what's a next step?</p>"
+  },
+  {
+    "id": "51",
+    "children": [
+      "52"
+    ],
+    "title": "MyTrezor shows broken or confusing account information",
+    "contents": "<ol><li>Run <a href=\"https://doc.satoshilabs.com/trezor-user/forgetting.html\">Forget device</a></li><li>Unplug your TREZOR</li><li>Plug your TREZOR back in</li></ol>"
+  },
+  {
+    "id": "52",
+    "children": [
+      "36",
+      "53"
+    ],
+    "title": "My balance is still incorrect.",
+    "contents": "<p>Discrepancies in the total balance may often be solved by changing the backend server.</p><ol><li>Scroll down and click \"Application settings\".</li><li>Select a different bitcoin backend server.</li><li>Check if the balance is correct now. </li></ol>"
+  },
+  {
+    "id": "53",
+    "title": "Problem still persists(open a support ticket).",
+    "contents": "<p>Hello SatoshiLabs,</p><p>my current BTC balance is clearly incorrect and none of the suggested troubleshooting methods work.</p><p>Please advise.</p>"
+  },
+  {
+    "id": "54",
+    "children": [
+      "36",
+      "55"
+    ],
+    "title": "MyTrezor stops responding.",
+    "contents": "<ol><li>Unplug your TREZOR</li><li>Refresh <a href=\"https://wallet.trezor.io/\">TREZOR Wallet</a> or try <a href=\"https://beta-wallet.trezor.io\">TREZOR Wallet (Beta)</a></li><li>Plug your TREZOR back in</li></ol><p>You can unplug your TREZOR at any time except during the update procedure. There is no risk of data loss.</p>"
+  },
+  {
+    "id": "55",
+    "title": "Try a different browser instead.",
+    "contents": "<p>Sometimes your browser might be running too many tasks at once or the there is a problem with compatibility. Try accessing the website with a different browser. You can also try to connect your device with a different micro USB cable.</p>"
+  },
+  {
+    "id": "56",
+    "children": [
+      "58",
+      "59"
+    ],
+    "title": "I'm having issues with bridge re-install. (Win)",
+    "contents": "<p>If you see following error message or similar:</p><p><em>Output folder: C:\\Program Files (x86)\\TREZOR Bridge</em></p><p><em>Can't write: C:\\Program Files (x86)\\TREZOR Bridge\\libcrypto-10.dll</em></p><p>You're facing a very simple issue which is easy to resolve. Please uninstall the previous version of TREZOR Bridge first and delete all remaining files, then install the new version.</p>"
+  },
+  {
+    "id": "57",
+    "children": [
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29"
+    ],
+    "title": "General questions",
+    "contents": "<p>List of the Frequently asked questions.</p>"
+  },
+  {
+    "id": "58",
+    "title": "It works!",
+    "contents": "<p>Great job on resolving the issue!</p>"
+  },
+  {
+    "id": "59",
+    "title": "Still doesn't work (open a support ticket)",
+    "contents": "<p>Ticket description.</p>"
+  },
+  {
+    "id": "60",
+    "children": [
+      "33"
+    ],
+    "title": "TREZOR Shop",
+    "contents": "<p>Thank you for the provided information. Please fee free to proceed</p>"
+  },
+  {
+    "id": "61",
+    "title": "Amazon.com",
+    "contents": "<p>According to our Terms & Conditions, all of the RMA's purchased on Amazon are handled and processed by our resellers. Please feel free to contact the reseller directly via the Amazon customer interface.</p><p>Thank you.</p>"
+  },
+  {
+    "id": "63",
+    "children": [
+      "65"
+    ],
+    "title": "MyTrezor shows \"Get started! Connect your TREZOR device to the computer.\\",
+    "contents": "<p>This error message indicates that bridge software/Chrome extension is already running and you should be able to connect your physical device now.</p>"
+  },
+  {
+    "id": "64",
+    "children": [
+      "44",
+      "66"
+    ],
+    "title": "MyTrezor stucks at \"Loading myTREZOR is starting\\",
+    "contents": "<p>Please make sure that you meet all the requirement listed <a href=\"https://doc.satoshilabs.com/trezor-faq/overview.html#which-operating-systems-and-devices-support-trezor\">here</a>. If yes, please follow one of the points below.</p>"
+  },
+  {
+    "id": "65",
+    "children": [
+      "68",
+      "69"
+    ],
+    "title": "Please check if the \"trezord\" process is running.",
+    "contents": "<p>This process is responsible for smooth running of the TREZOR Bridge. If you don't see the process in your task manager, please re-install the Bridge again or you can use our chrome extension if you use Google Chrome.</p><p>Link to download is <a href=\"https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj\">here</a>.</p><p>In case you need a bridge software, the link is <a href=\"https://beta-wallet.trezor.io/data/bridge/latest/index.html\">here</a>.</p>"
+  },
+  {
+    "id": "66",
+    "children": [
+      "67"
+    ],
+    "title": "I use different browser than Safari.",
+    "contents": "<p>Please try to connect your device via a different standard issue micro USB cable.</p><p>Did that work?</p>"
+  },
+  {
+    "id": "67",
+    "title": "Still stuck during loading.",
+    "contents": "<p>Hello SatoshiLabs,</p><p>My accounts are still stuck during the loading. I went through the whole troubleshooting process.</p><p>Please let me know what's next.</p>"
+  },
+  {
+    "id": "68",
+    "title": "I've reinstalled and all works fine now.",
+    "contents": "<p>Amazing, great job on resolving the issue!</p>"
+  },
+  {
+    "id": "69",
+    "title": "Didn't help. (Open ticket)",
+    "contents": "<p>Hello SatoshiLabs,</p><p>I'm still having issue with MyTrezor since it doesn't detect my device and I'd like you to get back to me as soon as possible.</p><p>Thank you.</p>"
+  }
+]
