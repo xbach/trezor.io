@@ -3,22 +3,13 @@
 {% block body %}
 <section class="troubleshooter">
     <div class="container">
-        <h2>Troubleshooter</h2>
+        <h2>{% trans "Troubleshooter" %}</h2>
         <hr/>
         <div id="scene" class="scene">
             <ul id="content">
-                <li class="hidden model">
-                    <div class="content-wrapper">
-                        <h4 class="header"></h4>
-                        <span class="text"></span>
-                        <ul class="option-list">
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                </li>
                 <li id="preloader" class="current">
                     <div class="loader-wrapper">
-                        <div class="loader" id="loader">Loading...</div>
+                        <div class="loader" id="loader">{% trans "Loading..." %}</div>
                     </div>
                 </li>
             </ul>
@@ -27,6 +18,15 @@
     </div>
 
     <div class="shadow">
+        <template id="model">
+            <div class="content-wrapper">
+                <h4 class="header"></h4>
+                <span class="text"></span>
+                <ul class="option-list">
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+        </template>
         <template id="0" class="entry">
             <div class="content-wrapper">
                 <ul class="option-list">
@@ -35,7 +35,7 @@
                     <li>17</li>
                     <li>57</li>
                 </ul>
-                <h4 class="header">Hello, do you need help with?</h4>
+                <h4 class="header">{% trans "Hello, do you need help with?" %}</h4>
 
             </div>
         </template>
@@ -54,8 +54,12 @@
                     <li>54</li>
                     <li>56</li>
                 </ul>
-                <h4 class="header">Technical Issues</h4>
-                <span class="text"><p>Issue - general questions or issues, technical issues and other.</p></span>
+                <h4 class="header">{% trans "Technical Issues" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Issue - general questions or issues, technical issues and other.</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
 
@@ -69,9 +73,12 @@
                     <li>23</li>
                     <li>32</li>
                 </ul>
-                <h4 class="header">Ordering &amp; Shipping</h4>
-                <span class="text"><p>Order - Did you order TREZOR and you haven't received it yet? Or it didn't catch you at home and it
+                <h4 class="header">{% trans "Ordering &amp; Shipping" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Order - Did you order TREZOR and you haven't received it yet? Or it didn't catch you at home and it
     had been sent back to us?</p>
+                    {% endblocktrans %}
                 </span>
             </div>
         </template>
@@ -82,9 +89,14 @@
                     <li>63</li>
                     <li>64</li>
                 </ul>
+                {% blocktrans %}
                 <h4 class="header">TREZOR Wallet doesn't detect the device.</h4>
-                <span class="text"><p>This problem can be caused by many different elements. Let's troubleshoot this further. Please share
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>This problem can be caused by many different elements. Let's troubleshoot this further. Please share
     more information with us.</p>
+                    {% endblocktrans %}
                 </span>
             </div>
         </template>
@@ -93,10 +105,13 @@
                 <ul class="option-list">
                     <li>38</li>
                 </ul>
-                <h4 class="header">MyTrezor keeps asking me to download the bridge.</h4>
-                <span class="text"><p>This issue usually means that transport method (TREZOR Bridge or TREZOR Chromes extension) wasn't
+                <h4 class="header">{% trans "TREZOR Wallet keeps asking me to download the bridge." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>This issue usually means that transport method (TREZOR Bridge or TREZOR Chromes extension) wasn't
     installed, wasn't installed correctly or something in your configuration or browser is blocking the communication or
     a browser addon may be blocking it as well.</p>
+                    {% endblocktrans %}
                 </span>
             </div>
         </template>
@@ -105,14 +120,24 @@
                 <ul class="option-list">
                     <li>34</li>
                 </ul>
+                {% blocktrans %}
                 <h4 class="header">TREZOR won't power up.</h4>
-                <span class="text"><p>After plugging the device in, screen won't power up at all.</p></span>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>After plugging the device in, screen won't power up at all.</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="15" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">I ordered TREZOR and still didn't receive it.</h4>
-                <span class="text"><p>That's not necessarily a problem. The delivery date actually depends on a lot of factors. Here's the
+                {% blocktrans %}
+                <h4 class="header">Ordered TREZOR and still didn't receive it.</h4>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>That's not necessarily a problem. The delivery date actually depends on a lot of factors. Here's the
     list of provided shipping methods:</p><p><strong>DHL Express shipping</strong></p><p>Default
     shipping option. DHL Express shipping which costs $29 and it's fully traceable. Delivery time is usually 2-5
     business days.</p><p><strong>Standard worldwide shipping</strong></p><p>You can
@@ -125,13 +150,18 @@
                         href="http://www.dhl.com/en/express/tracking.html">here</a>. Parcel sent via Standard shipping
     <a href="https://www.ceskaposta.cz/en/trackandtrace">here</a> and when it leaves the country
     of origin then continue to the website of postal service in your country.</p>
-</span>
+                {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="16" class="entry">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <h4 class="header">The order can't be found on tracking system anymore.</h4>
-                <span class="text"><p>This situation may be caused by two things:</p><p><strong>1. Package left Europe
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>This situation may be caused by two things:</p><p><strong>1. Package left Europe
     and it's now untraceable until destination country's postal service claims it. Please be patient.</strong></p><p>After
     leaving the country of origin, the parcel travels to a foreign country where it is accepted at customs. This is
     where most of the delays actually happen and it is unfortunate because the delivery will appear in the customer's
@@ -140,7 +170,8 @@
     submit a ticket to contact our customer support.</strong></p><p>In rare cases, usually, when
     choosing standard shipping, your package may not arrive at all. It is very unfortunate but it can happen
     occasionally. In such case, we consider it as a <strong>lost package</strong> and we start the <strong>investigation</strong>.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="17" class="entry">
@@ -149,8 +180,12 @@
                     <li>18</li>
                     <li>19</li>
                 </ul>
-                <h4 class="header">Warranty</h4>
-                <span class="text"><p>Is your TREZOR broken or it didn't work when you got it?</p></span>
+                <h4 class="header">{% trans "Warranty" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Is your TREZOR broken or it didn't work when you got it?</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="18" class="entry">
@@ -159,19 +194,26 @@
                     <li>60</li>
                     <li>61</li>
                 </ul>
+                {% blocktrans %}
                 <h4 class="header">My device is clearly broken and I'd like to start RMA process.</h4>
-                <span class="text"><p>Examples of the HW issues which are worthy of the RMA process straight away.</p><ul><li>Burnt
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Examples of the HW issues which are worthy of the RMA process straight away.</p><ul><li>Burnt
     pixels in screen</li><li>"Dead screen"</li><li>Non-responsive device</li><li>Dysfunctional
     buttons</li></ul><p>If you're facing some of the issues above or different HW failure which
     clearly wasn't caused by physical damage, please feel free to contact our support.</p><p>Where did you
     buy your device?</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="19" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">I would like to get details about the warranty.</h4>
-                <span class="text"><p><strong>Warranty Period</strong></p><p>We warrant the product, its
+                <h4 class="header">{% trans "I would like to get details about the warranty." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p><strong>Warranty Period</strong></p><p>We warrant the product, its
     components, and labor to be free from defects in material and workmanship under regular uses defined in user manuals
     and this Warranty during the warranty period. The warranty period commences on the date of original purchase and
     last for one (1) year.</p><p>We further warrant the replaced product and/or its parts or components to
@@ -179,38 +221,53 @@
     the remainder of the warranty period, whichever is greater.</p><p><a
                         href="https://shop.trezor.io/static/shared/warranty-refund-policy.pdf">Warranty
     &amp; Refund Policy</a></p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="21" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">I'd like to change an already placed and paid order.</h4>
-                <span class="text"><p>XXX</p></span>
+                <h4 class="header">{% trans "Change an already placed and paid order." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>XXX</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="22" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">I need to change shipping address.</h4>
-                <span class="text"><p>If we've already shipped your package, then this option is unfortunately not possible anymore.</p><p>If
+                <h4 class="header">{% trans "Change shipping address." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>If we've already shipped your package, then this option is unfortunately not possible anymore.</p><p>If
     we still haven't shipped the package you can login <a title="account" href="https://shop.trezor.io/user/profile/">account</a>
     and commit the changes yourself.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="23" class="entry">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <h4 class="header">The parcel din't catch me at home and it had been sent back to us.</h4>
-                <span class="text"><p>We're sorry to hear such an issue. Unfortunately, these honest mistakes tend in very rare cases.</p><p><strong>What
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>We're sorry to hear such an issue. Unfortunately, these honest mistakes tend in very rare cases.</p><p><strong>What
     do now?</strong></p><p>There is nothing to do at the moment. The package will be now returned back
     to us, we'll contact you if the shipping address is correct and re-ship the package as soon as possible. Free of
     charge, of course.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="24" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">How do I create/enter a PIN?</h4>
-                <span class="text"><p>PIN is a number combination that you set during the TREZOR initial setup. It protects your TREZOR
+                <h4 class="header">{% trans "How do I create/enter a PIN?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>PIN is a number combination that you set during the TREZOR initial setup. It protects your TREZOR
     from being used by unauthorized persons. Just like the PIN for your credit card, it should be only known by you.</p><p><strong>Malware-proof
     PIN entry</strong></p><p>We have invented a safe way of entering the PIN so that you can use your
     TREZOR even on the computer with viruses and keyloggers (designed to capture everything as you type).</p><p>When
@@ -223,23 +280,29 @@
     buttons, but he won't see your PIN digits. The observer would need to see both the TREZOR display and your computer
     screen, which is quite difficult when you are careful.</p><p>Still a bit of enigma to you? Take a look
     at this <a href="https://youtu.be/9hvLcfJ6DFE?t=103">video</a>!</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="25" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">I forgot my PIN.</h4>
-                <span class="text"><p>Your PIN is independent of the seed. That means, that you can set a new PIN with the TREZOR recovery
+                <h4 class="header">{% trans "Forgot PIN." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Your PIN is independent of the seed. That means, that you can set a new PIN with the TREZOR recovery
     process in case you forget it. You only need to have access to the seed to do so, which also means that your PIN
     does NOT protect your seed from being compromised. The PIN is there to protect your device against <em>curious</em>
     people.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="26" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">How recovery seed works?</h4>
-                <span class="text"><p>The Recovery seed usually contains a sequence of 24 words - uniquely and securely generated inside
+                <h4 class="header">{% trans "How recovery seed works?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>The Recovery seed usually contains a sequence of 24 words - uniquely and securely generated inside
     your TREZOR when you first set it up.</p><p>It is utmost important to keep this backup sentence secret
     and safe!</p><p>In case your device gets lost, you will need it for recovery - a simple process when you
     enter the words of your seed, in the order as prompted, into a new TREZOR device. You may also use any other Bitcoin
@@ -258,13 +321,16 @@
     into websites, or servers via SSH.</li><li>Sign messages.</li></ul><p>This means that
     if you lose your Recovery seed, you may lose access to all of those features. Read more about "What If"
     situations in the <a href="https://doc.satoshilabs.com/trezor-faq/threats.html">TREZOR User Manual</a>.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="27" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">How passphrase works?</h4>
-                <span class="text"><p>A passphrase can be any word, any set of letters or even a sentence. You could also consider the
+                <h4 class="header">{% trans "How passphrase works?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>A passphrase can be any word, any set of letters or even a sentence. You could also consider the
     passphrase to be the 25th word of the seed.</p><p>Your passphrase should be memorable, though.
     Typically, you would not write it down anywhere, to eliminate any possibility of it being discovered. Remember that
     you are entering the passphrase directly into the computer, and this process is not protected against keyloggers
@@ -280,47 +346,60 @@
     passphrases to create "decoy" wallets with a low balance next to your main wallet. <a
                             href="https://doc.satoshilabs.com/trezor-user/advanced_settings.html?highlight=hidden#using-passphrase-encrypted-seeds">Read
     more ...</a></p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="28" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">What happens if my recovery seed is stolen?</h4>
-                <span class="text"><p>You need to keep your recovery seed safe from theft. If your recovery seed is stolen and you haven's
+                <h4 class="header">{% trans "What happens if my recovery seed is stolen?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>You need to keep your recovery seed safe from theft. If your recovery seed is stolen and you haven's
     set a passphrase protection, then your bitcoins can be stolen as well. However, if you like, TREZOR can protect
     against recovery seed theft with <a
-                            href="https://doc.satoshilabs.com/trezor-user/advanced_settings.html#using-passphrase-encrypted-seeds">a
+                                href="https://doc.satoshilabs.com/trezor-user/advanced_settings.html#using-passphrase-encrypted-seeds">a
     passphrase</a>, and therefore eliminate this risk.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="29" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">What if my computer that runs my bitcoin wallet is stolen?</h4>
-                <span class="text"><p>If your computer gets stolen, just plug your TREZOR to another computer and you'll get your account
+                <h4 class="header">{% trans "What if my computer that runs my bitcoin wallet is stolen?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>If your computer gets stolen, just plug your TREZOR to another computer and you'll get your account
     balance and transaction history. Might your TREZOR get lost as well, simply recover the seed from your paper backup
     to a new TREZOR device or a TREZOR compatible wallet software.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="32" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Start the investigation</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>I'd like to inform you that my package got lost. One of the
+                <h4 class="header">{% trans "Start the investigation" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>I'd like to inform you that my package got lost. One of the
     following conditions was met:</p><ul><li>if the package does not leave the country of origin
     according to it's tracking in 10 days</li><li>if the package does not appear on foreign tracking in 21
     days</li><li>if the last update on foreign tracking is older than 10 days</li></ul><p>According
     to the instructions on your web, I'm asking you to launch the investigation process.</p><p>Thank you.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="33" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Report HW failure.</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>I'd like to inform you that my device is clearly broken and I
+                <h4 class="header">{% trans "Report HW failure." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>I'd like to inform you that my device is clearly broken and I
     believe the issue is caused by the HW malfunction. Please get back to me as soon as possible.</p><p>Thank
     you.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="34" class="entry">
@@ -328,8 +407,14 @@
                 <ul class="option-list">
                     <li>35</li>
                 </ul>
+                {% blocktrans %}
                 <h4 class="header">Please try connect your device with a different micro USB cable.</h4>
-                <span class="text"><p>Did this step help? If not, let's troubleshoot this issue even further.</p></span>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Did this step help? If not, let's troubleshoot this issue even further.</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="35" class="entry">
@@ -338,14 +423,16 @@
                     <li>33</li>
                     <li>36</li>
                 </ul>
-                <h4 class="header">Please connect your TREZOR to a different computer.</h4>
-                <span class="text"><p>Did that work?</p></span>
+                <h4 class="header">{% trans "Please connect your TREZOR to a different computer." %}</h4>
+                <span class="text">
+                    <p>{% trans "Did that work?" %}</p>
+                </span>
             </div>
         </template>
         <template id="36" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">It works!</h4>
-                <span class="text"><p>Great! Good job on fixing the issue.</p></span>
+                <h4 class="header">{% trans "It works!" %}</h4>
+                <span class="text"><p>{% trans "Great! Good job on fixing the issue." %}</p></span>
             </div>
         </template>
         <template id="38" class="entry">
@@ -354,18 +441,23 @@
                     <li>39</li>
                     <li>40</li>
                 </ul>
-                <h4 class="header">Check if the process "trezord" is running.</h4>
-                <span class="text"><p>If you're sure that you've already installed the bridge software and MyTrezor keeps asking you to
+                <h4 class="header">{% trans "Check if the trezord process is running." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>If you're sure that you've already installed the bridge software and TREZOR Wallet keeps asking you to
     install it, the process running in the background can be stuck.</p><p>Please go to the task manager of
     your OS and check if the process called "trezord" is currently running.</p><p>Direct link to
     Bridge software is <a href="https://beta-wallet.trezor.io/data/bridge/latest/index.html">here</a>.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="39" class="entry">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <h4 class="header">I've restarted the bridge and it works!</h4>
-                <span class="text"><p>Yay! Great job on resolving the issue :)</p></span>
+                {% endblocktrans %}
+                <span class="text"><p>{% trans "Yay! Great job on resolving the issue :)" %}</p></span>
             </div>
         </template>
         <template id="40" class="entry">
@@ -374,10 +466,13 @@
                     <li>36</li>
                     <li>41</li>
                 </ul>
-                <h4 class="header">Still nothing(Run the browser in private mode).</h4>
-                <span class="text"><p>Okay, there might be some add-on which blocks the communication. Please try running your browser in a
+                <h4 class="header">{% trans "Still nothing(Run the browser in private mode)." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Okay, there might be some add-on which blocks the communication. Please try running your browser in a
     private/incognito mode of the browser.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="41" class="entry">
@@ -385,22 +480,33 @@
                 <ul class="option-list">
                     <li>42</li>
                 </ul>
-                <h4 class="header">Still nothing. (Try a different major browser)</h4>
-                <span class="text"><p>Thanks for the update. So we're facing a more complex issue. Please try to go to TREZOR Wallet in a
+                <h4 class="header">{% trans "Still nothing. (Try a different major browser)" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Thanks for the update. So we're facing a more complex issue. Please try to go to TREZOR Wallet in a
     different browser to see the bridge behaves the same in a different environment. Also, if you're using a Google
     Chrome, there is a very convenient extension which is fully replaceable</p><p>Download link for the
     extension <a href="https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj">here</a>.</p><p>Also,
     feel free to try our beta server <a href="https://beta-wallet.trezor.io">here</a>.</p><p>Download
     link for <a href="https://www.google.com/intl/en/chrome/browser/desktop/">Google Chrome</a>
-    and <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.</p></span>
+    and <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="42" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">MyTrezor still doesn't detect the bridge or extension (create a support ticket).</h4>
-                <span class="text"><p>Hello,</p><p>I'd like to inform you that I'm having difficulties with TREZOR Wallet. The
+                {% blocktrans %}
+                <h4 class="header">TREZOR Wallet still doesn't detect the bridge or extension (create a support
+                    ticket).</h4>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello,</p><p>I'd like to inform you that I'm having difficulties with TREZOR Wallet. The
     website doesn't detect bridge software even if I switch to a different browser, use incognito mode or visit the beta
-    website.</p><p>Please contact me and help me to troubleshoot the issue.</p></span>
+    website.</p><p>Please contact me and help me to troubleshoot the issue.</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="43" class="entry">
@@ -409,8 +515,10 @@
                     <li>34</li>
                     <li>44</li>
                 </ul>
-                <h4 class="header">MyTrezor "stucks". I'm unable to load my accounts.</h4>
-                <span class="text"><p>Problem description.</p></span>
+                {% blocktrans %}
+                <h4 class="header">TREZOR Wallet "stucks". I'm unable to load my accounts.</h4>
+                {% endblocktrans %}
+                <span class="text"><p>{% trans "Problem description." %}</p></span>
             </div>
         </template>
         <template id="44" class="entry">
@@ -418,18 +526,26 @@
                 <ul class="option-list">
                     <li>36</li>
                 </ul>
-                <h4 class="header">I currently use Safari.</h4>
-                <span class="text"><p>We've recently experienced some issues regarding TREZOR in combination with Safari browser. While we
+                <h4 class="header">{% trans "I currently use Safari." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>We've recently experienced some issues regarding TREZOR in combination with Safari browser. While we
     don't officially support Safari with TREZOR, we surely want to fix this problem to ensure that TREZOR will be
     functional with Safari again. Unfortunately, we still don't have any ETA when it will be fixed. Meanwhile, please
     use a different browser like Chrome or Firefox until this problem is solved.</p><p>Thank you for
-    understanding.</p></span>
+    understanding.</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="45" class="entry">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <h4 class="header">I updated a firmware. My device doesn't work now.</h4>
-                <span class="text"><p>If the system does not recognize the device after the firmware update, go to the Device Manager and
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>If the system does not recognize the device after the firmware update, go to the Device Manager and
     force the drivers to update. With FIDO implemented, Windows regards TREZOR as a new device, and sometimes the
     drivers do not update automatically.</p><p>Here are some instructions how to open "Device manager"
     and update necessary drivers depending on the system you're using. TREZOR is usually reported as <em>USB
@@ -446,7 +562,8 @@
     you may try and solve it in the following way:</strong></p><ul><li>Go to Control Panel / All
     Control Panel Items / Devices and Printers</li><li>Click on it and check if you see message: "Needs
     troubleshooting"</li><li>Perform the troubleshooting</li><li>Restart the computer</li></ul>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="46" class="entry">
@@ -455,15 +572,18 @@
                     <li>47</li>
                     <li>48</li>
                 </ul>
-                <h4 class="header">Firmware update went wrong</h4>
-                <span class="text"><p>Updating you TREZOR's firmware unlocks brand new features and keeps your device secure. Sometimes it
+                <h4 class="header">{% trans "Firmware update went wrong" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Updating you TREZOR's firmware unlocks brand new features and keeps your device secure. Sometimes it
     could go south, but solving this issue is usually very easy.</p><p><strong>Updating the Firmware</strong></p><ul><li>Without
-    closing the myTREZOR website, unplug your TREZOR. Now press down both buttons on your TREZOR. Holding down the
+    closing the TREZOR Wallet website, unplug your TREZOR. Now press down both buttons on your TREZOR. Holding down the
     buttons, plug your TREZOR back in. It may help if you hold your TREZOR from the top in a pinching motion.</li><li>Once
-    you have plugged in your TREZOR you'll see a dialog on the myTREZOR.com website asking if you want to update.</li><li>Press
+    you have plugged in your TREZOR you'll see a dialog on the wallet.trezor.io website asking if you want to update.</li><li>Press
     "Yes, update"</li><li>Now press the right button on your TREZOR to confirm the update. Wait a
     few minutes while the update runs. Once it's done you can unplug and replug your TREZOR to finish the update.</li></ul>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="47" class="entry">
@@ -472,10 +592,13 @@
                     <li>36</li>
                     <li>49</li>
                 </ul>
-                <h4 class="header">Unofficial firmware detected.</h4>
-                <span class="text"><p>1. <a href="https://doc.satoshilabs.com/trezor-user/updatingfirmware.html">Run the
+                <h4 class="header">{% trans "Unofficial firmware detected." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>1. <a href="https://doc.satoshilabs.com/trezor-user/updatingfirmware.html">Run the
     update again</a>.</p><p>2. Done. Your TREZOR should now work again.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="48" class="entry">
@@ -484,29 +607,38 @@
                     <li>36</li>
                     <li>50</li>
                 </ul>
-                <h4 class="header">Firmware appears to be broken.</h4>
-                <span class="text"><ol><li><a href="https://doc.satoshilabs.com/trezor-user/updatingfirmware.html">Run
+                <h4 class="header">{% trans "Firmware appears to be broken." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <ol><li><a href="https://doc.satoshilabs.com/trezor-user/updatingfirmware.html">Run
     the update again</a>.</li><li>Done. Your TREZOR should now work again.</li><li>If it
     still doesn't work please try different USB cable and proceed to step 1.</li></ol>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="49" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Issue persists.</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>I'd like to inform you that I'm having some issues updating the
+                <h4 class="header">{% trans "Issue persists." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>I'd like to inform you that I'm having some issues updating the
     TREZOR's firmware. It shows error message: "Unofficial firmware detected" and your standard
     troubleshooting procedure won't work.</p><p>Please let me know what's a next step?</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="50" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Issue persists.</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>I'd like to inform you that I'm having some issues updating the
+                <h4 class="header">{% trans "Issue persists." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>I'd like to inform you that I'm having some issues updating the
     TREZOR's firmware. It shows an error message: "Firmware appears to be broken" and your standard
     troubleshooting procedure won't work.</p><p>Please let me know what's a next step?</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="51" class="entry">
@@ -514,10 +646,13 @@
                 <ul class="option-list">
                     <li>52</li>
                 </ul>
-                <h4 class="header">MyTrezor shows broken or confusing account information</h4>
-                <span class="text"><ol><li>Run <a href="https://doc.satoshilabs.com/trezor-user/forgetting.html">Forget
+                <h4 class="header">{% trans "TREZOR Wallet shows broken or confusing account information" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <ol><li>Run <a href="https://doc.satoshilabs.com/trezor-user/forgetting.html">Forget
     device</a></li><li>Unplug your TREZOR</li><li>Plug your TREZOR back in</li></ol>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="52" class="entry">
@@ -526,19 +661,25 @@
                     <li>36</li>
                     <li>53</li>
                 </ul>
-                <h4 class="header">My balance is still incorrect.</h4>
-                <span class="text"><p>Discrepancies in the total balance may often be solved by changing the backend server.</p><ol><li>Scroll
+                <h4 class="header">{% trans "My balance is still incorrect." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Discrepancies in the total balance may often be solved by changing the backend server.</p><ol><li>Scroll
     down and click "Application settings".</li><li>Select a different bitcoin backend server.</li><li>Check
     if the balance is correct now. </li></ol>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="53" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Problem still persists(open a support ticket).</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>my current BTC balance is clearly incorrect and none of the
+                <h4 class="header">{% trans "Problem still persists(open a support ticket)." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>my current BTC balance is clearly incorrect and none of the
     suggested troubleshooting methods work.</p><p>Please advise.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="54" class="entry">
@@ -547,21 +688,27 @@
                     <li>36</li>
                     <li>55</li>
                 </ul>
-                <h4 class="header">MyTrezor stops responding.</h4>
-                <span class="text"><ol><li>Unplug your TREZOR</li><li>Refresh <a href="https://wallet.trezor.io/">TREZOR
+                <h4 class="header">{% trans "TREZOR Wallet stops responding." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <ol><li>Unplug your TREZOR</li><li>Refresh <a href="https://wallet.trezor.io/">TREZOR
     Wallet</a> or try <a href="https://beta-wallet.trezor.io">TREZOR Wallet (Beta)</a></li><li>Plug
     your TREZOR back in</li></ol><p>You can unplug your TREZOR at any time except during the update
     procedure. There is no risk of data loss.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="55" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Try a different browser instead.</h4>
-                <span class="text"><p>Sometimes your browser might be running too many tasks at once or the there is a problem with
+                <h4 class="header">{% trans "Try a different browser instead." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Sometimes your browser might be running too many tasks at once or the there is a problem with
     compatibility. Try accessing the website with a different browser. You can also try to connect your device with a
     different micro USB cable.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="56" class="entry">
@@ -570,13 +717,18 @@
                     <li>58</li>
                     <li>59</li>
                 </ul>
-                <h4 class="header">I'm having issues with bridge re-install. (Win)</h4>
-                <span class="text"><p>If you see following error message or similar:</p><p><em>Output folder: C:\Program
+                {% blocktrans %}
+                <h4 class="header">I'm having issues with bridge re-install. (Windows)</h4>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>If you see following error message or similar:</p><p><em>Output folder: C:\Program
     Files (x86)\TREZOR Bridge</em></p><p><em>Can't write: C:\Program Files (x86)\TREZOR
     Bridge\libcrypto-10.dll</em></p><p>You're facing a very simple issue which is easy to resolve.
     Please uninstall the previous version of TREZOR Bridge first and delete all remaining files, then install the new
     version.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="57" class="entry">
@@ -589,20 +741,24 @@
                     <li>28</li>
                     <li>29</li>
                 </ul>
-                <h4 class="header">General questions</h4>
-                <span class="text"><p>List of the Frequently asked questions.</p></span>
+                <h4 class="header">{% trans "General questions" %}</h4>
+                <span class="text">
+                    <p>{% trans "List of the Frequently asked questions." %}</p>
+                </span>
             </div>
         </template>
         <template id="58" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">It works!</h4>
-                <span class="text"><p>Great job on resolving the issue!</p></span>
+                <h4 class="header">{% trans "It works!" %}</h4>
+                <span class="text"><p>{% trans "Great job on resolving the issue!" %}</p></span>
             </div>
         </template>
         <template id="59" class="entry">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <h4 class="header">Still doesn't work (open a support ticket)</h4>
-                <span class="text"><p>Ticket description.</p></span>
+                {% endblocktrans %}
+                <span class="text"><p>{% trans "Ticket description." %}</p></span>
             </div>
         </template>
         <template id="60" class="entry">
@@ -610,17 +766,24 @@
                 <ul class="option-list">
                     <li>33</li>
                 </ul>
-                <h4 class="header">TREZOR Shop</h4>
-                <span class="text"><p>Thank you for the provided information. Please fee free to proceed</p></span>
+                <h4 class="header">{% trans "TREZOR Shop" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Thank you for the provided information. Please fee free to proceed</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="61" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Amazon.com</h4>
-                <span class="text"><p>According to our Terms &amp; Conditions, all of the RMA's purchased on Amazon are handled and
+                <h4 class="header">{% trans "Amazon.com" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>According to our Terms &amp; Conditions, all of the RMA's purchased on Amazon are handled and
     processed by our resellers. Please feel free to contact the reseller directly via the Amazon customer interface.</p><p>Thank
     you.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="63" class="entry">
@@ -628,11 +791,15 @@
                 <ul class="option-list">
                     <li>65</li>
                 </ul>
-                <h4 class="header">MyTrezor shows "Get started! Connect your TREZOR
-                    device to the computer.\</h4>
-                <span class="text"><p>This error message indicates that bridge software/Chrome extension is already running and you should
+                {% blocktrans %}
+                <h4 class="header">Wallet shows "Get started! Connect your TREZOR device to the computer.</h4>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>This error message indicates that bridge software/Chrome extension is already running and you should
     be able to connect your physical device now.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="64" class="entry">
@@ -641,12 +808,16 @@
                     <li>44</li>
                     <li>66</li>
                 </ul>
-                <h4 class="header">MyTrezor stucks at "Loading myTREZOR is
-                    starting\</h4>
-                <span class="text"><p>Please make sure that you meet all the requirement listed <a
-                        href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-operating-systems-and-devices-support-trezor">here</a>.
+                {% blocktrans %}
+                <h4 class="header">Wallet stucks at "Loading TREZOR Wallet is starting"</h4>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Please make sure that you meet all the requirement listed <a
+                            href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-operating-systems-and-devices-support-trezor">here</a>.
     If yes, please follow one of the points below.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="65" class="entry">
@@ -655,14 +826,18 @@
                     <li>68</li>
                     <li>69</li>
                 </ul>
-                <h4 class="header">Please check if the "trezord" process
-                    is running.</h4>
-                <span class="text"><p>This process is responsible for smooth running of the TREZOR Bridge. If you don't see the process in
+                {% blocktrans %}
+                <h4 class="header">Please check if the "trezord" process is running.</h4>
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>This process is responsible for smooth running of the TREZOR Bridge. If you don't see the process in
     your task manager, please re-install the Bridge again or you can use our chrome extension if you use Google Chrome.</p><p>Link
     to download is <a
                             href="https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj">here</a>.</p><p>In
     case you need a bridge software, the link is <a href="https://beta-wallet.trezor.io/data/bridge/latest/index.html">here</a>.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="66" class="entry">
@@ -670,33 +845,44 @@
                 <ul class="option-list">
                     <li>67</li>
                 </ul>
-                <h4 class="header">I use different browser than Safari.</h4>
-                <span class="text"><p>Please try to connect your device via a different standard issue micro USB cable.</p><p>Did
-    that work?</p>
-</span>
+                <h4 class="header">{% trans "I use different browser than Safari." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Please try to connect your device via a different standard issue micro USB cable.</p><p>Did that work?</p>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="67" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">Still stuck during loading.</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>My accounts are still stuck during the loading. I went through
+                <h4 class="header">{% trans "Still stuck during loading." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>My accounts are still stuck during the loading. I went through
     the whole troubleshooting process.</p><p>Please let me know what's next.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
         <template id="68" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">I've reinstalled and all works fine
-                    now.</h4>
-                <span class="text"><p>Amazing, great job on resolving the issue!</p></span>
+                {% blocktrans %}
+                <h4 class="header">I've reinstalled and all works fine now.</h4>
+                {% endblocktrans %}
+                <span class="text"><p>{% trans "Amazing, great job on resolving the issue!" %}</p></span>
             </div>
         </template>
         <template id="69" class="entry">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <h4 class="header">Didn't help. (Open ticket)</h4>
-                <span class="text"><p>Hello SatoshiLabs,</p><p>I'm still having issue with MyTrezor since it doesn't detect my
+                {% endblocktrans %}
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Hello SatoshiLabs,</p><p>I'm still having issue with TREZOR Wallet since it doesn't detect my
     device and I'd like you to get back to me as soon as possible.</p><p>Thank you.</p>
-</span>
+                    {% endblocktrans %}
+                </span>
             </div>
         </template>
     </div>
