@@ -17,31 +17,27 @@
         </div>
     </div>
 
-    <div class="shadow">
-        <template id="model">
-            <div class="content-wrapper">
-                <h4 class="header"></h4>
-                <span class="text"></span>
-                <ul class="option-list">
-                    <li><a href=""></a></li>
-                </ul>
-            </div>
-        </template>
+    <div class="shadow" id="shadow">
         <template id="0" class="entry">
             <div class="content-wrapper">
+                <h4 class="header">{% trans "Hello, do you need help with?" %}</h4>
                 <ul class="option-list">
                     <li>1</li>
                     <li>2</li>
                     <li>17</li>
                     <li>57</li>
                 </ul>
-                <h4 class="header">{% trans "Hello, do you need help with?" %}</h4>
-
             </div>
         </template>
 
         <template id="1" class="entry">
             <div class="content-wrapper">
+                <h4 class="header">{% trans "Technical Issues" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Issue - general questions or issues, technical issues and other.</p>
+                    {% endblocktrans %}
+                </span>
                 <ul class="option-list">
                     <li>3</li>
                     <li>9</li>
@@ -54,17 +50,18 @@
                     <li>54</li>
                     <li>56</li>
                 </ul>
-                <h4 class="header">{% trans "Technical Issues" %}</h4>
-                <span class="text">
-                    {% blocktrans %}
-                    <p>Issue - general questions or issues, technical issues and other.</p>
-                    {% endblocktrans %}
-                </span>
             </div>
         </template>
 
         <template id="2" class="entry">
             <div class="content-wrapper">
+                <h4 class="header">{% trans "Ordering &amp; Shipping" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Order - Did you order TREZOR and you haven't received it yet? Or it didn't catch you at home and it
+    had been sent back to us?</p>
+                    {% endblocktrans %}
+                </span>
                 <ul class="option-list">
                     <li>15</li>
                     <li>16</li>
@@ -73,22 +70,11 @@
                     <li>23</li>
                     <li>32</li>
                 </ul>
-                <h4 class="header">{% trans "Ordering &amp; Shipping" %}</h4>
-                <span class="text">
-                    {% blocktrans %}
-                    <p>Order - Did you order TREZOR and you haven't received it yet? Or it didn't catch you at home and it
-    had been sent back to us?</p>
-                    {% endblocktrans %}
-                </span>
             </div>
         </template>
 
         <template id="3" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>63</li>
-                    <li>64</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">TREZOR Wallet doesn't detect the device.</h4>
                 {% endblocktrans %}
@@ -98,13 +84,14 @@
     more information with us.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>63</li>
+                    <li>64</li>
+                </ul>
             </div>
         </template>
         <template id="9" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>38</li>
-                </ul>
                 <h4 class="header">{% trans "TREZOR Wallet keeps asking me to download the bridge." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -113,13 +100,13 @@
     a browser addon may be blocking it as well.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>38</li>
+                </ul>
             </div>
         </template>
         <template id="14" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>34</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">TREZOR won't power up.</h4>
                 {% endblocktrans %}
@@ -128,6 +115,9 @@
                     <p>After plugging the device in, screen won't power up at all.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>34</li>
+                </ul>
             </div>
         </template>
         <template id="15" class="entry">
@@ -176,24 +166,20 @@
         </template>
         <template id="17" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>18</li>
-                    <li>19</li>
-                </ul>
                 <h4 class="header">{% trans "Warranty" %}</h4>
                 <span class="text">
                     {% blocktrans %}
                     <p>Is your TREZOR broken or it didn't work when you got it?</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>18</li>
+                    <li>19</li>
+                </ul>
             </div>
         </template>
         <template id="18" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>60</li>
-                    <li>61</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">My device is clearly broken and I'd like to start RMA process.</h4>
                 {% endblocktrans %}
@@ -206,6 +192,10 @@
     buy your device?</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>60</li>
+                    <li>61</li>
+                </ul>
             </div>
         </template>
         <template id="19" class="entry">
@@ -404,9 +394,6 @@
         </template>
         <template id="34" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>35</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">Please try connect your device with a different micro USB cable.</h4>
                 {% endblocktrans %}
@@ -415,18 +402,21 @@
                     <p>Did this step help? If not, let's troubleshoot this issue even further.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>35</li>
+                </ul>
             </div>
         </template>
         <template id="35" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>33</li>
-                    <li>36</li>
-                </ul>
                 <h4 class="header">{% trans "Please connect your TREZOR to a different computer." %}</h4>
                 <span class="text">
                     <p>{% trans "Did that work?" %}</p>
                 </span>
+                <ul class="option-list">
+                    <li>33</li>
+                    <li>36</li>
+                </ul>
             </div>
         </template>
         <template id="36" class="entry">
@@ -437,10 +427,6 @@
         </template>
         <template id="38" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>39</li>
-                    <li>40</li>
-                </ul>
                 <h4 class="header">{% trans "Check if the trezord process is running." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -450,6 +436,10 @@
     Bridge software is <a href="https://beta-wallet.trezor.io/data/bridge/latest/index.html">here</a>.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>39</li>
+                    <li>40</li>
+                </ul>
             </div>
         </template>
         <template id="39" class="entry">
@@ -462,10 +452,6 @@
         </template>
         <template id="40" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>36</li>
-                    <li>41</li>
-                </ul>
                 <h4 class="header">{% trans "Still nothing(Run the browser in private mode)." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -473,6 +459,10 @@
     private/incognito mode of the browser.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>36</li>
+                    <li>41</li>
+                </ul>
             </div>
         </template>
         <template id="41" class="entry">
@@ -511,21 +501,18 @@
         </template>
         <template id="43" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>34</li>
-                    <li>44</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">TREZOR Wallet "stucks". I'm unable to load my accounts.</h4>
                 {% endblocktrans %}
                 <span class="text"><p>{% trans "Problem description." %}</p></span>
+                <ul class="option-list">
+                    <li>34</li>
+                    <li>44</li>
+                </ul>
             </div>
         </template>
         <template id="44" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>36</li>
-                </ul>
                 <h4 class="header">{% trans "I currently use Safari." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -536,6 +523,9 @@
     understanding.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>36</li>
+                </ul>
             </div>
         </template>
         <template id="45" class="entry">
@@ -568,10 +558,6 @@
         </template>
         <template id="46" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>47</li>
-                    <li>48</li>
-                </ul>
                 <h4 class="header">{% trans "Firmware update went wrong" %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -584,14 +570,14 @@
     few minutes while the update runs. Once it's done you can unplug and replug your TREZOR to finish the update.</li></ul>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>47</li>
+                    <li>48</li>
+                </ul>
             </div>
         </template>
         <template id="47" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>36</li>
-                    <li>49</li>
-                </ul>
                 <h4 class="header">{% trans "Unofficial firmware detected." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -599,14 +585,14 @@
     update again</a>.</p><p>2. Done. Your TREZOR should now work again.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>36</li>
+                    <li>49</li>
+                </ul>
             </div>
         </template>
         <template id="48" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>36</li>
-                    <li>50</li>
-                </ul>
                 <h4 class="header">{% trans "Firmware appears to be broken." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -615,6 +601,10 @@
     still doesn't work please try different USB cable and proceed to step 1.</li></ol>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>36</li>
+                    <li>50</li>
+                </ul>
             </div>
         </template>
         <template id="49" class="entry">
@@ -643,9 +633,6 @@
         </template>
         <template id="51" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>52</li>
-                </ul>
                 <h4 class="header">{% trans "TREZOR Wallet shows broken or confusing account information" %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -653,14 +640,13 @@
     device</a></li><li>Unplug your TREZOR</li><li>Plug your TREZOR back in</li></ol>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>52</li>
+                </ul>
             </div>
         </template>
         <template id="52" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>36</li>
-                    <li>53</li>
-                </ul>
                 <h4 class="header">{% trans "My balance is still incorrect." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -669,6 +655,10 @@
     if the balance is correct now. </li></ol>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>36</li>
+                    <li>53</li>
+                </ul>
             </div>
         </template>
         <template id="53" class="entry">
@@ -684,10 +674,6 @@
         </template>
         <template id="54" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>36</li>
-                    <li>55</li>
-                </ul>
                 <h4 class="header">{% trans "TREZOR Wallet stops responding." %}</h4>
                 <span class="text">
                     {% blocktrans %}
@@ -697,6 +683,10 @@
     procedure. There is no risk of data loss.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>36</li>
+                    <li>55</li>
+                </ul>
             </div>
         </template>
         <template id="55" class="entry">
@@ -713,10 +703,6 @@
         </template>
         <template id="56" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>58</li>
-                    <li>59</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">I'm having issues with bridge re-install. (Windows)</h4>
                 {% endblocktrans %}
@@ -729,10 +715,18 @@
     version.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>58</li>
+                    <li>59</li>
+                </ul>
             </div>
         </template>
         <template id="57" class="entry">
             <div class="content-wrapper">
+                <h4 class="header">{% trans "General questions" %}</h4>
+                <span class="text">
+                    <p>{% trans "List of the Frequently asked questions." %}</p>
+                </span>
                 <ul class="option-list">
                     <li>24</li>
                     <li>25</li>
@@ -741,10 +735,6 @@
                     <li>28</li>
                     <li>29</li>
                 </ul>
-                <h4 class="header">{% trans "General questions" %}</h4>
-                <span class="text">
-                    <p>{% trans "List of the Frequently asked questions." %}</p>
-                </span>
             </div>
         </template>
         <template id="58" class="entry">
@@ -788,9 +778,6 @@
         </template>
         <template id="63" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>65</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">Wallet shows "Get started! Connect your TREZOR device to the computer.</h4>
                 {% endblocktrans %}
@@ -800,14 +787,13 @@
     be able to connect your physical device now.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>65</li>
+                </ul>
             </div>
         </template>
         <template id="64" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>44</li>
-                    <li>66</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">Wallet stucks at "Loading TREZOR Wallet is starting"</h4>
                 {% endblocktrans %}
@@ -818,14 +804,14 @@
     If yes, please follow one of the points below.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>44</li>
+                    <li>66</li>
+                </ul>
             </div>
         </template>
         <template id="65" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>68</li>
-                    <li>69</li>
-                </ul>
                 {% blocktrans %}
                 <h4 class="header">Please check if the "trezord" process is running.</h4>
                 {% endblocktrans %}
@@ -838,19 +824,23 @@
     case you need a bridge software, the link is <a href="https://beta-wallet.trezor.io/data/bridge/latest/index.html">here</a>.</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>68</li>
+                    <li>69</li>
+                </ul>
             </div>
         </template>
         <template id="66" class="entry">
             <div class="content-wrapper">
-                <ul class="option-list">
-                    <li>67</li>
-                </ul>
                 <h4 class="header">{% trans "I use different browser than Safari." %}</h4>
                 <span class="text">
                     {% blocktrans %}
                     <p>Please try to connect your device via a different standard issue micro USB cable.</p><p>Did that work?</p>
                     {% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>67</li>
+                </ul>
             </div>
         </template>
         <template id="67" class="entry">

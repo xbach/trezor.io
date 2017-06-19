@@ -1,26 +1,30 @@
 $(document).ready(function () {
 
-    function getParameterByName(name, url) {
-        if (!url) {
-            url = window.location.href;
-        }
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    function getParameterByName() {
+       return window.location.hash.split('#')[1];
     }
 
-    function loadById(id) {
-        var $newModel = $( ".model" ).clone();
-        $newModel.find('.header').html(items[id].title);
-        $newModel.find('.text').html(items[id].contents);
-        $newModel.addClass('next');
-        $newModel.removeClass('hidden model');
-        $newModel.prependTo( "#content" );
-        $(".current").removeClass('current').addClass('prev');
-        $newModel.removeClass('next').addClass('current');
+    function prepareLinks() {
+        entries.forEach(function(entry) {
+            var list = entry.content.querySelectorAll('div.content-wrapper > ul.option-list > li');
+            list.forEach(function(child) {
+                var id = child.textContent.toString();
+                var elem = shadow.querySelector("[id='"+id+"']").content;
+                var title = elem.querySelector("h4.header").textContent;
+                var newNode = '<a href="./#'+ id + '">' + title + '</a>';
+                child.innerHTML = newNode;
+            });
+
+        });
+    }
+
+    function setId() {
+        var id = getParameterByName() || 0;
+        var elem = shadow.querySelector("[id='"+id+"']").cloneNode(true);
+        $(".current").remove();
+        $( "#content" ).append( elem.content );
+        $("ul#content > .content-wrapper").addClass("current");
+
     }
 
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -33,15 +37,9 @@ $(document).ready(function () {
         });
     }
 
-    var items = [];
-    var id = getParameterByName('id') || 0;
-
-    $.getJSON( "../static/js/cards.json", function( data ) {
-        setTimeout(function(){
-            items = data;
-            loadById(id)
-        }, 2000);
-    });
-
-
+    var shadow = document.querySelector("#shadow");
+    var entries = shadow.querySelectorAll("template.entry");
+    prepareLinks();
+    setId();
+    window.onhashchange = setId;
 });
