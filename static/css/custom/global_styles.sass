@@ -55,6 +55,24 @@ a.arrow
     position: relative
     padding-left: 4px
 
+a.arrow-back
+  color: $c_green
+  cursor: pointer
+
+  &:hover
+    color: $c_green
+    text-decoration: none
+    &:after
+      +transform(translateX(3px) translateY(0))
+      +transition(transform .1s ease-in-out)
+
+  &:before
+    display: inline-block
+    content: '\276e'
+    position: relative
+    padding-right: 4px
+
+
 section
   padding-top: 80px
   padding-bottom: 80px

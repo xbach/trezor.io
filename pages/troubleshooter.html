@@ -6,10 +6,10 @@
         <h2>{% trans "Troubleshooter" %}</h2>
         <hr/>
         <div id="scene" class="scene">
+            <div class="back-btn">
+                <a href="javascript:history.back()" class="arrow-back">Back</a>
+            </div>
             <ul id="content">
-                <div class="back-btn">
-                    <a href="javascript:history.back()">Back</a>
-                </div>
                 <noscript>
                     <span>Sorry, Troubleshooter works on javascript.</span>
                 </noscript>
@@ -27,6 +27,7 @@
         <template id="0" class="entry">
             <div class="content-wrapper">
                 <h4 class="header">{% trans "Hello, do you need help with?" %}</h4>
+                <span class="text"></span>
                 <ul class="option-list">
                     <li>1</li>
                     <li>2</li>
