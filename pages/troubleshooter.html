@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block body %}
-<section class="troubleshooter">
+<section class="troubleshooter" id="troubleshooter">
     <div class="container">
         <h2>{% trans "Troubleshooter" %}</h2>
         <hr/>
         <div id="scene" class="scene">
             <ul id="content">
+                <div class="back-btn">
+                    <a href="javascript:history.back()">Back</a>
+                </div>
+                <noscript>
+                    <span>Sorry, Troubleshooter works on javascript.</span>
+                </noscript>
                 <li id="preloader" class="current">
                     <div class="loader-wrapper">
                         <div class="loader" id="loader">{% trans "Loading..." %}</div>

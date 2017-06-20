@@ -23,8 +23,9 @@ $(document).ready(function () {
         var elem = shadow.querySelector("[id='"+id+"']").cloneNode(true);
         $(".current").remove();
         $( "#content" ).append( elem.content );
-        $("ul#content > .content-wrapper").addClass("current");
-
+        setTimeout(function(){
+            $("ul#content > .content-wrapper").addClass("current");
+        }, 10);
     }
 
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -39,6 +40,8 @@ $(document).ready(function () {
 
     var shadow = document.querySelector("#shadow");
     var entries = shadow.querySelectorAll("template.entry");
+    var h = window.innerHeight;
+    $('#troubleshooter').css('min-height', h + 'px');
     prepareLinks();
     setId();
     window.onhashchange = setId;

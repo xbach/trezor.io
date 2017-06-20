@@ -14,13 +14,21 @@
 
       .content-wrapper
         position: relative
+        text-align: center
+        left: 100px
+        opacity: 0
+        +transition(all .5s ease-out)
+
+        &.current
+          left: 0
+          opacity: 1
 
         ul.option-list
           display: inline-block
           list-style: none
           position: relative
           padding: 0
-          margin: 0 auto
+          margin: 30px auto 0 auto
           border: 1px solid $c_green
           width: auto
           +border-radius(3px)
@@ -37,7 +45,11 @@
 
         .header
           font-weight: bold
+          text-align: left
           padding-bottom: 20px
+
+        .text
+          text-align: left
 
       & > li
         position: relative
@@ -47,7 +59,11 @@
         top: 0
         margin: 0
         padding: 20px 15%
-        +transition(left 1s linear)
+
+
+
+  .back-btn
+    position: absolute
 
 
   .loader-wrapper
