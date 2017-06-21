@@ -240,7 +240,7 @@
                 <span class="text">
                     {% blocktrans %}
                     <p>If we've already shipped your package, then this option is unfortunately not possible anymore.</p><p>If
-    we still haven't shipped the package you can login to your e-shop <a title="account" href="https://shop.trezor.io/user/profile/">account</a>
+    we still haven't shipped the package you can login to your e-shop<a title="account" href="https://shop.trezor.io/user/profile/">account</a>
     and commit the changes yourself.</p>
                     {% endblocktrans %}
                 </span>
