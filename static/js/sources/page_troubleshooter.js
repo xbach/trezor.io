@@ -27,6 +27,7 @@ $(document).ready(function () {
         $( "#content" ).append( elem.content );
         setTimeout(function(){
             $("ul#content > .content-wrapper").addClass("current");
+            $("html, body").animate({ scrollTop: 0 }, "fast");
             if(id !== 0) {
                 setTimeout(function(){
                     $(".back-btn").detach().appendTo(".content-wrapper > span.text");
