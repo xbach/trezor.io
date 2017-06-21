@@ -19,22 +19,26 @@ $(document).ready(function () {
     }
 
     function setId() {
-        var id = getParameterByName() || 0;
-        var elem = shadow.querySelector("[id='"+id+"']").cloneNode(true);
-        $(".back-btn").hide();
-        $(".back-btn").detach().appendTo("#scene");
-        $(".current").remove();
-        $( "#content" ).append( elem.content );
-        setTimeout(function(){
-            $("ul#content > .content-wrapper").addClass("current");
-            $("html, body").animate({ scrollTop: 0 }, "fast");
-            if(id !== 0) {
-                setTimeout(function(){
-                    $(".back-btn").detach().appendTo(".content-wrapper > span.text");
-                    $(".back-btn").slideDown();
-                }, 900);
-            }
-        }, 10);
+        try {
+            var id = getParameterByName() || 0;
+            var elem = shadow.querySelector("[id='"+id+"']").cloneNode(true);
+            $(".back-btn").hide();
+            $(".back-btn").detach().appendTo("#scene");
+            $(".current").remove();
+            $( "#content" ).append( elem.content );
+            setTimeout(function(){
+                $("ul#content > .content-wrapper").addClass("current");
+                $("html, body").animate({ scrollTop: 0 }, "fast");
+                if(id !== 0) {
+                    setTimeout(function(){
+                        $(".back-btn").detach().appendTo(".content-wrapper > span.text");
+                        $(".back-btn").slideDown();
+                    }, 900);
+                }
+            }, 10);
+        } catch (e) {
+            throw e;
+        }
     }
 
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
