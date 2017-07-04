@@ -43,13 +43,14 @@
                 <span class="text">
                 </span>
                 <ul class="option-list">
+                    <li>64</li>
+                    <li>79</li>
                     <li>14</li>
-                    <li>3</li>
                     <li>9</li>
                     <li>18</li>
                     <li>43</li>
-                    <li>79</li>
                     <li>81</li>
+                    <li>3</li>
                     <li>45</li>
                     <li>46</li>
                     <li>51</li>
@@ -137,19 +138,23 @@
                 {% endblocktrans %}
                 <span class="text">
                     {% blocktrans %}
-                    <p>That's not necessarily a problem. The delivery date actually depends on a lot of factors. Here's the
-    list of provided shipping methods:</p><p><strong>DHL Express shipping</strong></p><p>Default
-    shipping option. DHL Express shipping which costs €26 and it's fully traceable. Delivery time is usually 2-5
-    business days.</p><p><strong>Standard shipping</strong></p><p>You can
-    also choose Standard shipping (available only to countries in EU) for €9 and the traceability is limited. Delivery time may vary between 5 days to 6
-    weeks depending on your location and your national post.</p><p><strong>Where can I follow my order
-    (get a tracking number)?</strong></p><p>By logging into <a href="https://shop.trezor.io/user/login/">TREZOR
-    Shop</a> and clicking order creation date on the My Orders page you can see the details of your order. Your
-    user login have been created when you first purchased your TREZOR.</p><p>We will notify you of any
-    significant change to your order by email as well.</p><p>You can track the parcel sent via DHL <a
-                        href="http://www.dhl.com/en/express/tracking.html">here</a>. Parcel sent via Standard shipping
-    <a href="https://www.ceskaposta.cz/en/trackandtrace">here</a> and when it leaves the country
-    of origin then continue to the website of postal service in your country.</p>
+                    <p>That's not necessarily a problem. The delivery date actually depends on a lot of factors.</p>
+                    <p><strong>Where can I follow my order (get a tracking number)?</strong></p>
+                    <p>By logging into <a href="https://shop.trezor.io/user/login/">TREZOR
+    Shop account</a> and clicking order creation date on the My Orders page you can see the details of your order. Your
+    user login have been created when you first purchased your TREZOR.</p>
+                    <p><strong>DHL Express shipping</strong></p>
+                    <p>Default shipping option and it's fully traceable. Delivery time is usually 2-5 business days. You can track the parcel sent via <a
+                            href="http://www.dhl.com/en/express/tracking.html">DHL tracking</a></p>
+                    <p><strong>Standard shipping</strong></p>
+                    <p>Standard shipping (available only to countries in EU) traceability is limited. Delivery time may vary between 5 days to 6
+                        weeks depending on your location and your national post. Nevertheless, parcel sent via Standard shipping can be <a
+                                href="https://www.ceskaposta.cz/en/trackandtrace">traced as well</a> and when it leaves the country
+    of origin then continue to the website of postal service in your country.
+                    </p>
+                    <br/>
+                    <p>Thank you for your patience!<br/>We will notify you of any
+    significant change to your order by email as well.</p>
                 {% endblocktrans %}
                 </span>
             </div>
@@ -193,7 +198,7 @@
         <template id="18" class="entry">
             <div class="content-wrapper">
                 {% blocktrans %}
-                <h4 class="header">My TREZOR is clearly broken.</h4>
+                <h4 class="header">TREZOR device is clearly broken.</h4>
                 {% endblocktrans %}
                 <span class="text">
                     {% blocktrans %}
@@ -289,7 +294,7 @@
         </template>
         <template id="25" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "Forgot PIN." %}</h4>
+                <h4 class="header">{% trans "I forgot my PIN?" %}</h4>
                 <span class="text">
                     {% blocktrans %}
                     <p>Your PIN is independent of the seed. That means, that you can set a new PIN with the TREZOR recovery
@@ -364,7 +369,7 @@
         </template>
         <template id="28" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "What happens if my recovery seed is stolen?" %}</h4>
+                <h4 class="header">{% trans "My recovery seed is stolen?" %}</h4>
                 <span class="text">
                     {% blocktrans %}
                     <p>You need to keep your recovery seed safe from theft. If your recovery seed is stolen and you haven's
@@ -751,17 +756,16 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     <p>{% trans "List of the Frequently asked questions." %}</p>
                 </span>
                 <ul class="option-list">
-                    <li>24</li>
-                    <li>25</li>
+                    <li>73</li>
+                    <li>74</li>
                     <li>26</li>
                     <li>27</li>
+                    <li>24</li>
                     <li>82</li>
-                    <li>28</li>
-                    <li>73</li>
                     <li>83</li>
                     <li>84</li>
-                    <li>85</li>
                     <li>86</li>
+                    <li>91</li>
                 </ul>
             </div>
         </template>
@@ -955,7 +959,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
         </template>
         <template id="73" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "What cryptocurrencies are supported by TREZOR?" %}</h4>
+                <h4 class="header">{% trans "Supported cryptocurrencies." %}</h4>
                 <span class="text">
                     {% blocktrans %}
                    <p>Our <a href="http://wallet.trezor.io">TREZOR wallet</a> supports directly Bitcoin, Litecoin, Dash and ZCash; others can be supported through third-party wallets (like <a
@@ -1076,7 +1080,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
         </template>
         <template id="79" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "My TREZOR is randomly freezing during various processes." %}</h4>
+                <h4 class="header">{% trans "TREZOR is freezing during various processes." %}</h4>
                 <span class="text">
                     {% blocktrans %}
                    <p>In such a situation, it is necessary to try your TREZOR with different USB cables, USB ports and on another computer before the RMA process for exchanging your TREZOR can be started.</p>
@@ -1134,20 +1138,21 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
         </template>
         <template id="82" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "The basics of sending and receiving with TREZOR." %}</h4>
+                <h4 class="header">{% trans "Sending and receiving with TREZOR." %}</h4>
                 <span class="text">
                     {% blocktrans %}
                    <p>The instructions are written for Bitcoin, but can be used even for Litecoin, Dash and ZCash. Please don't be mislead by the screenshots, the procedure is the same.
                    </p>
-                    <p>The manual for <a href="http://doc.satoshilabs.com/trezor-user/receivingpayments.html">receiving</a> and for <a
-                        href="http://doc.satoshilabs.com/trezor-user/makingpayments.html">sending.</a></p>
+                    <p>The manual for <a
+                            href="http://doc.satoshilabs.com/trezor-user/receivingpayments.html">receiving</a> and for <a
+                            href="http://doc.satoshilabs.com/trezor-user/makingpayments.html">sending.</a></p>
                     {% endblocktrans %}
                 </span>
             </div>
         </template>
         <template id="83" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "I want to join your Affiliate/Reseller program." %}</h4>
+                <h4 class="header">{% trans "I want to be Affiliate/Reseller." %}</h4>
                 <span class="text">
                     {% blocktrans %}
                    <p>We're very pleased and excited that you've decided to apply for Affiliate / Reseller Partnership.
@@ -1161,7 +1166,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
         </template>
         <template id="84" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "Are my coins in danger because of UASF (other fork)?" %}</h4>
+                <h4 class="header">{% trans "What UASF (other fork) means?" %}</h4>
                 <span class="text">
                     {% blocktrans %}
                    <p>TREZOR is UASF ready in the same way as for Bitcoin Unlimited fork. Users will be free to choose in User Interface. No need to be concerned. 
@@ -1174,14 +1179,14 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
         </template>
         <template id="85" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "What will happen if your company suddenly shut downs?" %}</h4>
+                <h4 class="header">{% trans "Your company suddenly shut downs?" %}</h4>
                 <span class="text">
                     {% blocktrans %}
                    <p>First of all, we certainly didn't plan to stop our business, but even if something unexpected happens, you can use a variety of compatible third-party services for using TREZOR 
                    or only for recovery process that let you access the funds directly in the respective wallet. 
                    </p>
                     <p>Here you can find the <a
-                        href="http://doc.satoshilabs.com/trezor-apps/index.html#recovering-funds-without-trezor-device">full list</a> of compatible services.
+                            href="http://doc.satoshilabs.com/trezor-apps/index.html#recovering-funds-without-trezor-device">full list</a> of compatible services.
                    Moreover, TREZOR is an open source project, so it is possible to use the code and build your own solution.</p>
                     {% endblocktrans %}
                 </span>
@@ -1250,8 +1255,20 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     {% blocktrans %}
                    <p>You can pay with Bitcoins or with a credit card. Please visit our <a
                            href="https://shop.trezor.io/">e-shop</a> and see for yourself :).</p>
-                    {% endblocktrans %} 
+                    {% endblocktrans %}
                 </span>
+            </div>
+        </template>
+        <template id="91" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "What if..." %}</h4>
+                <span class="text">
+                </span>
+                <ul class="option-list">
+                    <li>25</li>
+                    <li>28</li>
+                    <li>85</li>
+                </ul>
             </div>
         </template>
     </div>
