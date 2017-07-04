@@ -17,21 +17,54 @@
     font-size: 2.2em
 
 .help-nav
-  background-color: $c_grey_bg
+  background: $c_grey_bg
+  background: -webkit-linear-gradient($c_white, $c_grey_bg)
+  background: -o-linear-gradient($c_white, $c_grey_bg)
+  background: -moz-linear-gradient($c_white, $c_grey_bg)
+  background: linear-gradient($c_white, $c_grey_bg)
+
+  & > .container > .row
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+
+    @media only screen and (max-width: $md)
+      display: block
+
+  .large-tile
+    padding-top: 20px
+    & > .nav-link
+      margin-top: 0
+      font-size: 1.4em
+      margin-bottom: 20px
+      i
+        font-size: 3em
+        margin: 20px 0 20px 0
+
+    @media only screen and (max-width: $md)
+      padding-top: 0
+      & > .nav-link
+        margin-top: 20px
+        i
+          font-size: 1.6em
+          margin: 0 0 6px 0
 
   .nav-link
     background-color: $c_white
+    box-shadow: 0 12px 24px 0 rgba(31, 31, 31, 0.05)
     text-align: center
     width: 100%
-    padding: 30px
+    height: 100%
+    padding: 20px
+    margin-top: 20px
     font-weight: bold
     color: $c_grey_font
     +transition(all 0.15s ease 0s)
     +border-radius(4px)
-
     i
-      margin-bottom: 10px
-      font-size: 2.4em
+      margin-bottom: 6px
+      font-size: 1.6em
       clear: both
       display: block
 
