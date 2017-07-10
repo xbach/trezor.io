@@ -7,6 +7,7 @@
   background-position: center center
   background-color: $c_green
   padding-top: 140px
+  padding-bottom: 120px
   color: $c_white
   +background-size(cover)
 
@@ -14,7 +15,33 @@
     font-size: 3.4em
   .lead
     color: $c_white
-    font-size: 2.2em
+    font-size: 2em
+
+  .input-wrapper
+    position: relative
+    display: inline-block
+    +border-radius(4px)
+    padding-left: 20px
+    background-color: $c_white
+    border: 1px solid #d1d5d7
+
+    &:before
+      font-family: 'FontAwesome'
+      color: $c_grey
+      position: relative
+      left: -5px
+      content: "\f002"
+
+    input
+      position: relative
+      min-width: 450px
+      padding: 0.8em 1em 0.8em 0
+      border: 0
+      outline: none
+      +transition(all 0.15s ease 0s)
+
+    @media only screen and (max-width: $md)
+      width: 90%
 
 .help-nav
   background: $c_grey_bg
