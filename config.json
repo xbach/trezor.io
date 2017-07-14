@@ -2,8 +2,7 @@
   "site-url": "https://trezor.io",
   "USE_L10N" : true,
   "fingerprint": [
-    "js",
-    "css"
+    "js"
   ],
   "optimize": [
     "js",
