@@ -138,6 +138,11 @@ $(document).ready(function () {
     // console.log(title, text);
   }
 
+  function canUseWebP() {
+    var elem = document.createElement('canvas');
+    return !!(elem.getContext && elem.getContext('2d')) ? elem.toDataURL('image/webp').indexOf('data:image/webp') === 0 : false;
+  }
+
   function drawLinesNCircle (trgtX, trgtY, txtX, txtY, titleWidth) {
     // paint source target circle
     ctx.beginPath();
@@ -191,7 +196,7 @@ $(document).ready(function () {
   img.onload = function () {
     draw(null);
   };
-  img.src = "./static/images/trezor-black-select.png";
+  img.src = canUseWebP() ? "./static/images/trezor-black-select.webp" : "./static/images/trezor-black-select.png";
   $(window).resize(function () {
     draw(null);
   });

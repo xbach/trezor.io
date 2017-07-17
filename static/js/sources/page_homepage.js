@@ -8,17 +8,17 @@ $(document).ready(function () {
       },
       shuffled = $.map(allElems, function () {
         var random = getRandom(allElems.length),
-          randEl = $(allElems[ random ]).clone(true)[ 0 ];
+          randEl = $(allElems[random]).clone(true)[0];
         allElems.splice(random, 1);
         return randEl;
       });
     this.each(function (i) {
-      $(this).replaceWith($(shuffled[ i ]));
+      $(this).replaceWith($(shuffled[i]));
     });
     return $(shuffled);
   };
 
-  function getParameterByName (name, url) {
+  function getParameterByName(name, url) {
     if (!url) {
       url = window.location.href;
     }
@@ -26,30 +26,30 @@ $(document).ready(function () {
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
       results = regex.exec(url);
     if (!results) return null;
-    if (!results[ 2 ]) return '';
-    return decodeURIComponent(results[ 2 ].replace(/\+/g, " "));
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
 
-  function domain (url) {
+  function domain(url) {
     var m = url.match(/:\/\/(.[^\/]+)/);
-    return m ? m[ 1 ] : null;
+    return m ? m[1] : null;
   }
 
-  function hexlify (str) {
+  function hexlify(str) {
     var hex = '';
     for (var i = 0; i < str.length; i++)
       hex += str.charCodeAt(i).toString(16);
     return hex;
   }
 
-  function prepareAffilAnchors (str) {
+  function prepareAffilAnchors(str) {
     $('a.shop-btn').each(function (idx) {
       var attr = $(this).attr('href');
       $(this).attr('href', attr + str);
     });
   }
 
-  function domainKey (url) {
+  function domainKey(url) {
     var parser = document.createElement('a');
     parser.href = url;
     //remove second level subdomain
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
   }
 
-  function handleAffil () {
+  function handleAffil() {
     var aParam = getParameterByName('a');
     if (aParam) {
       prepareAffilAnchors('?a=' + aParam);
@@ -77,7 +77,7 @@ $(document).ready(function () {
     }
   }
 
-  function scrolled (event) {
+  function scrolled(event) {
     var scrollPos = $(document).scrollTop();
     $('.scrollTo').each(function () {
       var currLink = $(this);
@@ -92,13 +92,13 @@ $(document).ready(function () {
     });
   }
 
-  function createStickyNav (sticky) {
+  function createStickyNav(sticky) {
     if (typeof sticky !== 'undefined') {
       $(document).on('scroll', scrolled);
     }
   }
 
-  function shuffleTeam (team) {
+  function shuffleTeam(team) {
     if (typeof team !== 'undefined') {
       team.shuffle();
     }
@@ -127,26 +127,9 @@ $(document).ready(function () {
   $("#headline").fitText(.7);
   $("#lead").fitText(2.1);
 
-  // typing effect
-  /*
-  $('#lead-typer').typed({
-    stringsElement: $('#lead-ghost'),
-    backDelay: 500,
-    backSpeed: 100,
-    loop: true
-  });
-  */
 
   handleAffil();
 
-  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-    webkitRequestAnimationFrame || msRequestAnimationFrame;
-  if (raf) {
-    raf(function() {
-      $("img.lazy").lazyload({
-        threshold : 500
-      }); })
-  };
 
   shuffleTeam($('.shuffle'));
   createStickyNav($("#sticky-nav"));
@@ -177,7 +160,7 @@ $($('.team-section .person .header')[0]).click(function () {
 });
 
 function laundromat() {
-  $('.team-section .person .header').each(function() {
+  $('.team-section .person .header').each(function () {
     var obj = $(this);
     var time = Math.random() * 2;
     var spin = Math.random() < 0.5;
@@ -190,8 +173,9 @@ function laundromat() {
 }
 
 function laundromatOff() {
-  $('.team-section .person .header').each(function() {
+  $('.team-section .person .header').each(function () {
     var obj = $(this);
     obj.css('animation', '');
   });
 }
+

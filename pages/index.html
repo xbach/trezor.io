@@ -2,7 +2,7 @@
 {% load i18n %}
 {% block body %}
 <header id="header">
-    <div class="jumbotron" id="jumbotron">
+    <div class="jumbotron webp" id="jumbotron">
         <div class="container">
             <div class="top">
                 <div class="width-wrapper">
@@ -20,7 +20,7 @@
             </div>
             <div class="bottom">
                 <p class="text-xs-center">
-                    <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button">
+                    <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button" aria-label="Buy TREZOR for €89">
                         {% trans "Buy for €89" %}</a>
                 <div class="hidden-xs-down platform-icons">
                     <div>{% trans "Supported platforms:" %}</div>
@@ -45,15 +45,17 @@
         <div class="nav-inline nav" id="sub-nav">
             <a class="nav-link" href="{% url '/' %}">
                 <img class="trezor-logo lazy" data-original="{% static '/images/trezor-logo.svg' %}"
+                     data-progressive="{% static '/images/trezor-logo.svg' %}"
+                     src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                      onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
-                     alt="TREZOR security device logo"/>
+                     alt="TREZOR Bitcoin Wallet and security device logo"/>
             </a>
             <a class="nav-link active scrollTo hidden-sm-down" href="#usage">{% trans "Usage" %}</a>
             <a class="nav-link scrollTo hidden-sm-down" href="#features">{% trans "Features" %}</a>
             <a class="nav-link scrollTo hidden-sm-down" href="#specification">{% trans "Specs" %}</a>
             <a class="nav-link scrollTo hidden-sm-down" href="#developers">{% trans "Developers" %}</a>
             <a class="nav-link scrollTo hidden-sm-down" href="#team">{% trans "Team" %}</a>
-            <a class="btn btn-third-outline buy float-sm-right shop-btn" href="https://shop.trezor.io" role="button">
+            <a class="btn btn-third-outline buy float-sm-right shop-btn" href="https://shop.trezor.io" role="button"  aria-label="Buy TREZOR for €89">
                 {% trans "Buy for €89"%}
             </a>
         </div>
@@ -127,7 +129,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
-                            <div class="presentation setup"></div>
+                            <div class="presentation setup webp"></div>
                             <h3>{% trans "Quick setup." %}</h3>
                             {% blocktrans %}
                             <p>Get your TREZOR ready within minutes in a completely private, registration-free
@@ -140,7 +142,7 @@
 
                     <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
-                            <div class="presentation use"></div>
+                            <div class="presentation use webp"></div>
                             <h3>{% trans "Use with ease." %}</h3>
                             {% blocktrans %}
                             <p>Using TREZOR is easy. Just follow the instructions on the display and click the button
@@ -151,7 +153,7 @@
 
                     <div class="col-md-4 col-sm-12 text-xs-center">
                         <div class="text-block">
-                            <div class="presentation recover"></div>
+                            <div class="presentation recover webp"></div>
                             <h3>{% trans "Lost? Restore." %}</h3>
                             {% blocktrans %}
                             <p>No worries, use your secret words to quickly regain access to all your
@@ -169,10 +171,15 @@
             <div class="container">
                 <div class="row heading">
                     <div class="col-md-6 hidden-sm-down">
-                        <img class="hand lazy hidden-sm-down" data-original="{% static '/images/trezor-hand.png' %}"/>
+                        <img class="hand lazy hidden-sm-down"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             data-progressive="{% static '/images/trezor-hand.webp' %}"
+                             data-original="{% static '/images/trezor-hand.png' %}"
+                             alt="TREZOR Wallet in hand"
+                        />
                     </div>
                     <div class="col-md-6 col-sm-12 text-sm-center text-md-left text-xs-center">
-                        <h2>{% trans "TREZOR as Bitcoin wallet." %}</h2>
+                        <h2>{% trans "TREZOR as a Bitcoin wallet." %}</h2>
                         {% blocktrans %}
                         <p>The most trusted and secure way to store your bitcoins. Isolate your private keys into the
                             safety of TREZOR and enjoy Bitcoin without risk. The best protection at no cost to your
@@ -196,19 +203,31 @@
                             <div class="col-md-4 text-xs-center">
                                 <a href="https://bitstamp.net">
                                     <img class="bitstamp business-logo lazy"
-                                         data-original="{% static '/static/images/business_logos/bitstamp.png' %}"/>
+                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                         data-progressive="{% static '/static/images/business_logos/bitstamp.png' %}"
+                                         data-original="{% static '/static/images/business_logos/bitstamp.png' %}"
+                                         alt="bitstamp logo"
+                                    />
                                 </a>
                             </div>
                             <div class="col-md-4 text-xs-center">
-                                <a href="https://cashila.com">
-                                    <img class="cashila business-logo lazy"
-                                         data-original="{% static '/static/images/business_logos/cashila.png' %}"/>
+                                <a href="https://bitex.la/">
+                                    <img class="bitexla business-logo lazy"
+                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                         data-progressive="{% static '/static/images/business_logos/bitexla.png' %}"
+                                         data-original="{% static '/static/images/business_logos/bitexla.png' %}"
+                                         alt="bitexla logo"
+                                    />
                                 </a>
                             </div>
                             <div class="col-md-4 text-xs-center">
                                 <a href="https://wallet.mycelium.com/">
                                     <img class="mycelium business-logo lazy"
-                                         data-original="{% static '/static/images/business_logos/mycelium.png' %}"/>
+                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                         data-progressive="{% static '/static/images/business_logos/mycelium.png' %}"
+                                         data-original="{% static '/static/images/business_logos/mycelium.png' %}"
+                                         alt="mycelium logo"
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -216,19 +235,31 @@
                             <div class="col-md-4 text-xs-center">
                                 <a href="https://coinpayments.net">
                                     <img class="coinpayments business-logo lazy"
-                                         data-original="{% static '/static/images/business_logos/coinpayments.png' %}"/>
+                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                         data-progressive="{% static '/static/images/business_logos/coinpayments.png' %}"
+                                         data-original="{% static '/static/images/business_logos/coinpayments.png' %}"
+                                         alt="coinpayments logo"
+                                    />
                                 </a>
                             </div>
                             <div class="col-md-4 text-xs-center">
                                 <a href="https://copay.io/">
                                     <img class="bitpay business-logo lazy"
-                                         data-original="{% static '/static/images/business_logos/bitpay.png' %}"/>
+                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                         data-progressive="{% static '/static/images/business_logos/bitpay.png' %}"
+                                         data-original="{% static '/static/images/business_logos/bitpay.png' %}"
+                                         alt="bitstamp logo"
+                                    />
                                 </a>
                             </div>
                             <div class="col-md-4 text-xs-center">
                                 <a href="https://bitwala.io">
                                     <img class="bitwala business-logo lazy"
-                                         data-original="{% static '/static/images/business_logos/bitwala.png' %}"/>
+                                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                         data-progressive="{% static '/static/images/business_logos/bitwala.png' %}"
+                                         data-original="{% static '/static/images/business_logos/bitwala.png' %}"
+                                         alt="bitwala logo"
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -242,32 +273,37 @@
                 <div class="row heading">
                     <div class="col-lg-6">
                         <div class="row coins">
-                            <a href="https://blog.trezor.io/trezor-beta-wallet-supports-segwit-on-litecoin-b4762ad8ec32" class="item">
+                            <a href="https://blog.trezor.io/trezor-beta-wallet-supports-segwit-on-litecoin-b4762ad8ec32"
+                               class="item">
                                 <div class="col-sm-5ths col-xs-12">
                                     <i class="altcoins-logo altcoins-logo-ltc"></i>
                                     <div>{% trans "Litecoin" %}</div>
                                 </div>
                             </a>
-                            <a href="https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08" class="item">
+                            <a href="https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08"
+                               class="item">
                                 <div class="col-sm-5ths col-xs-12">
                                     <i class="altcoins-logo altcoins-logo-eth"></i>
                                     <div>{% trans "Ethereum" %}</div>
 
                                 </div>
                             </a>
-                            <a href="https://blog.trezor.io/multi-currency-support-bitcoin-dash-and-zcash-in-trezor-wallet-7377d812112a" class="item">
+                            <a href="https://blog.trezor.io/multi-currency-support-bitcoin-dash-and-zcash-in-trezor-wallet-7377d812112a"
+                               class="item">
                                 <div class="col-sm-5ths col-xs-12">
                                     <i class="altcoins-logo altcoins-logo-dash"></i>
                                     <div>{% trans "Dash" %}</div>
                                 </div>
                             </a>
-                            <a href="https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08" class="item">
+                            <a href="https://blog.trezor.io/trezor-integration-with-myetherwallet-3e217a652e08"
+                               class="item">
                                 <div class="col-sm-5ths col-xs-12">
                                     <i class="altcoins-logo altcoins-logo-etc"></i>
                                     <div>{% trans "Ethereum Classic" %}</div>
                                 </div>
                             </a>
-                            <a href="https://blog.trezor.io/multi-currency-support-bitcoin-dash-and-zcash-in-trezor-wallet-7377d812112a" class="item">
+                            <a href="https://blog.trezor.io/multi-currency-support-bitcoin-dash-and-zcash-in-trezor-wallet-7377d812112a"
+                               class="item">
                                 <div class="col-sm-5ths col-xs-12">
                                     <i class="altcoins-logo altcoins-logo-zcash"></i>
                                     <div>{% trans "ZCash" %}</div>
@@ -284,7 +320,8 @@
                 </div>
                 <div class="row footing">
                     <div class="col-xs-12 text-xs-center">
-                        <a href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-coins-are-currently-supported" class="arrow">Explore all supported coins</a>
+                        <a href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-coins-are-currently-supported"
+                           class="arrow">Explore all supported coins</a>
                     </div>
                 </div>
             </div>
@@ -303,7 +340,10 @@
                 </div>
                 <div class="hidden-lg-up" id="features-list">
                     <div class="col-md-12 text-xs-center">
-                        <img class="trezor-render lazy" data-original="{% static '/images/trezor-black-select.png' %}"
+                        <img class="trezor-render lazy"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             data-progressive="{% static '/images/trezor-black-select.webp' %}"
+                             data-original="{% static '/images/trezor-black-select.png' %}"
                              alt="TREZOR is wallet for bitcoin as well as security device"/>
                     </div>
                     <div class="1 entry text-xs-center col-md-6" id="case">
@@ -317,7 +357,8 @@
                     </div>
                     <div class="3 entry text-xs-center col-md-6" id="display">
                         <h3>{% trans "Trust your own eyes" %}</h3>
-                        <p>{% blocktrans %}Check important transaction details before you confirm. <br/>This display will
+                        <p>{% blocktrans %}Check important transaction details before you confirm. <br/>This display
+                            will
                             always tell you the truth.
                             {% endblocktrans %}</p>
                     </div>
@@ -352,7 +393,7 @@
                 </div>
                 <div class="row experts">
                     <div class="col-md-4 text-xs-center">
-                        <div class="header balaji"></div>
+                        <div class="header balaji webp"></div>
                         <h3>Balaji S. Srinivasan, PhD</h3>
                         <p class="title">{% trans "CEO and Cofounder, 21" %}</p>
                         <blockquote>
@@ -363,7 +404,7 @@
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
-                        <div class="header pamela"></div>
+                        <div class="header pamela webp"></div>
                         <h3>Pamela Morgan</h3>
                         <p class="title">{% trans " CEO Third Key Solutions LLC" %}</p>
                         <blockquote>
@@ -373,7 +414,7 @@
                         </blockquote>
                     </div>
                     <div class="col-md-4 text-xs-center">
-                        <div class="header jon"></div>
+                        <div class="header jon webp"></div>
                         <h3>Jon Matonis</h3>
                         <p class="title">{% trans "Economist" %}</p>
                         <blockquote>
@@ -397,32 +438,50 @@
                 <div class="row media">
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://www.forbes.com/sites/ericxlmu/2014/10/15/meet-trezor-a-bitcoin-safe-that-can-fit-into-your-pocket/">
-                            <img class="lazy" data-original="{% static '/images/logos/forbes-logo.png' %}"
+                            <img class="lazy"
+                                 data-progressive="{% static '/images/logos/forbes-logo.png' %}"
+                                 data-original="{% static '/images/logos/forbes-logo.png' %}"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                  alt="Forbes mentions TREZOR as wallet for bitcoin with smart design."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://edition.cnn.com/videos/business/2015/01/06/exp-qmb-patrick-murck.cnn">
-                            <img class="lazy" data-original="{% static '/images/logos/cnn-logo.png' %}"
+                            <img class="lazy"
+                                 data-progressive="{% static '/images/logos/cnn-logo.png' %}"
+                                 data-original="{% static '/images/logos/cnn-logo.png' %}"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                  alt="CNN show where TREZOR is mentioned as bitcoin secured hardware wallet."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name/">
-                            <img class="lazy" data-original="{% static '/images/logos/coindesk-logo.png' %}"
+                            <img class="lazy"
+                                 data-progressive="{% static '/images/logos/coindesk-logo.png' %}"
+                                 data-original="{% static '/images/logos/coindesk-logo.png' %}"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                  alt="Review of TREZOR hardware wallet for bitcoins and security crypto vault."/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="https://cointelegraph.com/news/trezor-offers-password-less-login-to-other-websites-adds-dash">
-                            <img class="lazy" data-original="{% static '/images/logos/cointelegraph-logo.png' %}"
+                            <img class="lazy"
+                                 data-progressive="{% static '/images/logos/cointelegraph-logo.png' %}"
+                                 data-original="{% static '/images/logos/cointelegraph-logo.png' %}"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                  alt="Cointelegraph review of password-less login via TREZOR security device"/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="http://insidebitcoins.com/news/bitcoin-hardware-wallets-could-become-as-ubiquitous-as-smartphones/27208">
-                            <img class="lazy" data-original="{% static '/images/logos/insidebtc-logo.png' %}"
+                            <img class="lazy"
+                                 data-progressive="{% static '/images/logos/insidebtc-logo.png' %}"
+                                 data-original="{% static '/images/logos/insidebtc-logo.png' %}"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                  alt="Logo of Bitcoin inside and review of TREZOR"/></a>
                     </div>
                     <div class="col-lg-2 col-md-3  col-sm-6 text-xs-center">
                         <a href="https://bitcoinmagazine.com/17223/trezor-the-bitcoin-wallet-unicorn/">
-                            <img class="lazy" data-original="{% static '/images/logos/btcmag-logo.png' %}"
+                            <img class="lazy"
+                                 data-progressive="{% static '/images/logos/btcmag-logo.png' %}"
+                                 data-original="{% static '/images/logos/btcmag-logo.png' %}"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                                  alt="Bitcoin magazine logo and TREZOR hardware wallet review"/></a>
                     </div>
                 </div>
@@ -466,7 +525,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 hidden-md-down ">
-                    <img class="shape lazy" data-original="{% static '/images/trezor_shape3.svg' %}"
+                    <img class="shape lazy"
+                         data-progressive="{% static '/images/trezor_shape3.min.svg' %}"
+                         data-original="{% static '/images/trezor_shape3.min.svg' %}"
+                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                         onerror="this.src='{% static '/images/trezor_shape3.png' %}'; this.onerror=null;"
                          alt="Shape of TREZOR security device"/>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -487,13 +550,17 @@
                     </div>
                 </div>
                 <div class="col-xs-12 hidden-lg-up ">
-                    <img class="shape lazy" data-original="{% static '/images/trezor_shape3.svg' %}"
+                    <img class="shape lazy"
+                         data-progressive="{% static '/images/trezor_shape3.min.svg' %}"
+                         data-original="{% static '/images/trezor_shape3.min.svg' %}"
+                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                         onerror="this.src='{% static '/images/trezor_shape3.png' %}'; this.onerror=null;"
                          alt="Shape of TREZOR security device"/>
                 </div>
             </div>
         </div>
     </section>
-    <section class="devs-section" id="developers">
+    <section class="devs-section webp" id="developers">
         <div class="container">
             <div class="row heading">
                 <div class="col-lg-12 text-xs-center">
@@ -505,11 +572,11 @@
             <div class="row">
                 <div class="col-sm-6 text-xs-center button-area">
                     <br/><br/>
-                    <a class="btn btn-third-outline" href="https://github.com/trezor" role="button"><i
+                    <a class="btn btn-third-outline" href="https://github.com/trezor" role="button"  aria-label="Visit our Github"><i
                             class="ion-social-github"></i> {% trans "GitHub Repos"%}</a>
-                    <a class="btn btn-third-outline" href="https://gitter.im/trezor/community" role="button"><i
+                    <a class="btn btn-third-outline" href="https://gitter.im/trezor/community" role="button"  aria-label="Dev Community Chat"><i
                             class="ion-android-chat"></i> {% trans "Dev Community Chat"%}</a>
-                    <a class="plain btn-primary-noline arrow" href="https://doc.satoshilabs.com/trezor-tech/index.html">
+                    <a class="plain btn-primary-noline arrow" href="https://doc.satoshilabs.com/trezor-tech/index.html"  aria-label="Learn more from Trezor developers guide">
                         {% trans "Learn from TREZOR Developer's Guide"%}
                     </a>
                 </div>
@@ -566,7 +633,7 @@
 
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person text-xs-center">
-                        <div class="header pepitka"></div>
+                        <div class="header pepitka webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Pepita</h4>
@@ -576,7 +643,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header marek"></div>
+                        <div class="header marek webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Marek "Slush" Palatinus</h4>
@@ -586,7 +653,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header pavol"></div>
+                        <div class="header pavol webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Pavol "Stick" Rusnak</h4>
@@ -596,7 +663,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header peter"></div>
+                        <div class="header peter webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Peter "Buly" Bulak</h4>
@@ -606,7 +673,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header jochen"></div>
+                        <div class="header jochen webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Jochen Hoenicke</h4>
@@ -616,7 +683,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header peca"></div>
+                        <div class="header peca webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Jan Pecinovsky</h4>
@@ -626,7 +693,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header kata"></div>
+                        <div class="header kata webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Katerina Nemeckova</h4>
@@ -636,7 +703,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header honza"></div>
+                        <div class="header honza webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Jan Pochyla</h4>
@@ -647,7 +714,7 @@
 
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header karel"></div>
+                        <div class="header karel webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Karel Bilek</h4>
@@ -657,7 +724,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header jensen"></div>
+                        <div class="header jensen webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Peter Jensen</h4>
@@ -667,7 +734,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header vojtech"></div>
+                        <div class="header vojtech webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Vojtech Cerny</h4>
@@ -678,7 +745,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header ben"></div>
+                        <div class="header ben webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Karel Bencic</h4>
@@ -688,7 +755,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header bach"></div>
+                        <div class="header bach webp"></div>
                         <div class="content">
                             <div class="description">
                                 <h4>Bach Nguyen</h4>

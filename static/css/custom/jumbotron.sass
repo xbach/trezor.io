@@ -6,18 +6,31 @@
   padding: 0
   text-align: center
   margin-bottom: 0
-  background-image: url("/static/images/photos/1-600.jpg")
+  background-image: url("/static/images/photos/1-600.webp")
   background-size: auto 100%
   background-repeat: no-repeat
   background-position: center center
   +background-size(cover)
   +border-radius(0)
   @media only screen and (min-width: 400px)
-    background-image: url("/static/images/photos/1-1200.jpg")
+    background-image: url("/static/images/photos/1-1200.webp")
   @media only screen and (min-width: 600px)
-    background-image: url("/static/images/photos/1-1200.jpg")
+    background-image: url("/static/images/photos/1-1200.webp")
   @media only screen and (min-width: 800px)
-    background-image: url("/static/images/photos/1-1500.jpg")
+    background-image: url("/static/images/photos/1-1500.webp")
+
+  &.no-webp
+    background-image: url("/static/images/photos/1-600.jpg")
+    background-size: auto 100%
+    background-repeat: no-repeat
+    background-position: center center
+    +background-size(cover)
+    @media only screen and (min-width: 400px)
+      background-image: url("/static/images/photos/1-1200.jpg")
+    @media only screen and (min-width: 600px)
+      background-image: url("/static/images/photos/1-1200.jpg")
+    @media only screen and (min-width: 800px)
+      background-image: url("/static/images/photos/1-1500.jpg")
 
 
   .container

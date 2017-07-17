@@ -6,16 +6,6 @@ $(document).ready(function () {
         $("#url").text(param);
     }
 
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) {
-        raf(function () {
-            $("img.lazy").lazyload({
-                threshold: 500
-            });
-        });
-    }
-
     function getParameterByName(name, url) {
         if (!url) {
             url = window.location.href;

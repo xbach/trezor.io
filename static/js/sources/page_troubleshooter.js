@@ -41,16 +41,6 @@ $(document).ready(function () {
         }
     }
 
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) {
-        raf(function () {
-            $("img.lazy").lazyload({
-                threshold: 500
-            });
-        });
-    }
-
     var shadow = document.querySelector("#shadow");
     var entries = shadow.querySelectorAll("template.entry");
     var h = window.innerHeight;

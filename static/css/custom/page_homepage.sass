@@ -125,11 +125,16 @@
     max-height: 200px
     position: relative
     margin: 0 auto
-    background: url("../images/photos/usage.png")
-    background-repeat: no-repeat
-    background-size: 450%
     +box-shadow(0 0 24px rgba(0, 0, 0, 0.05))
     +border-radius(50%)
+    background: url("../images/photos/usage.webp")
+    background-repeat: no-repeat
+    background-size: 450%
+
+    &.no-webp
+      background: url("../images/photos/usage.png")
+      background-repeat: no-repeat
+      background-size: 450%
 
     &:after
       content: ""
@@ -352,10 +357,16 @@ img.business-logo
       position: relative
       margin: 0 auto
       margin-bottom: 8px
-      background: url("/static/images/experts_faces/experts.png")
+      background: url("/static/images/experts_faces/experts.webp")
       background-repeat: no-repeat
       background-size: 240px
       +border-radius(50%)
+
+      &.no-webp
+        background: url("/static/images/experts_faces/experts.png")
+        background-repeat: no-repeat
+        background-size: 240px
+        +border-radius(50%)
 
       &:after
         content: ""
@@ -400,7 +411,11 @@ img.business-logo
     margin: 20px
     opacity: .6
     width: auto
+    cursor: pointer
     +grey(100%)
+
+    &:hover
+      +grey(0)
 
 /* SPECIFICATION SECTION */
 
@@ -435,11 +450,18 @@ img.business-logo
 /* DEVELOPERS SECTION */
 
 .devs-section
-  background: url("/static/images/devs_bg.png")
+  background: url("/static/images/devs_bg.webp")
   background-size: auto 100%
   background-repeat: no-repeat
   background-position: center center
   +background-size(cover)
+
+  &.no-webp
+    background: url("/static/images/devs_bg.png")
+    background-size: auto 100%
+    background-repeat: no-repeat
+    background-position: center center
+    +background-size(cover)
 
   h2, h3
     color: $c_white
@@ -480,11 +502,15 @@ img.business-logo
       margin: 0 auto
       margin-bottom: 8px
       margin-top: 20px
-      background: url("/static/images/team_faces/faces.png")
+      +border-radius(50%)
+      background: url("/static/images/team_faces/faces.webp")
       background-repeat: no-repeat
       background-size: 100%
 
-      +border-radius(50%)
+      &.no-webp
+        background: url("/static/images/team_faces/faces.png")
+        background-repeat: no-repeat
+        background-size: 100%
 
       &:after
         content: ""
