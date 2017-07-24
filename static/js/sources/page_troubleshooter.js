@@ -60,7 +60,7 @@ $(document).ready(function () {
     $('#troubleshooter').css('min-height', h - 170 + 'px');
     prepareLinks();
     setId();
-    
+
     window.onhashchange = setId;
     window.gotoTroubleshooter = function() {
         location.href = tb_link+'?technical='+tech+steps;
