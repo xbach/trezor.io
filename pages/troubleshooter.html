@@ -33,6 +33,7 @@
                     <li>2</li>
                     <li>17</li>
                     <li>57</li>
+                    <li>95</li>
                 </ul>
             </div>
         </template>
@@ -157,6 +158,9 @@
     				<p>In case you need to contact our Support Team regarding your order, please <a href="https://satoshilabs.kayako.com/conversation/new/10">submit a ticket here</a>.</p> 
     				{% endblocktrans %}
                 </span>
+                <ul class="option-list">
+                    <li>96</li>
+                </ul>
             </div>
         </template>
         <template id="16" class="entry">
@@ -761,6 +765,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     <p>{% trans "List of the Frequently asked questions." %}</p>
                 </span>
                 <ul class="option-list">
+                    <li>95</li>
                     <li>73</li>
                     <li>74</li>
                     <li>26</li>
@@ -1293,6 +1298,28 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <span class="text">
                     {% blocktrans %}
                     <p>Sorry for the inconvenience, please <a href="#" onclick="return gotoTroubleshooter()" class="troubleshooterLink">send us a message</a> including the information about the issue and details like your operating system and our Support Team will answer in a timely manner.</p>
+                    {% endblocktrans %}
+                </span>
+            </div>
+        </template>
+        <template id="95" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "Bitcoin Cash" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>Bitcoin cash Wallet and Bitcoin cash claim tool are currently not functional due to our bug fix being deployed. The backend server is now re-indexing. ETA: can take hours.<br /><br />Please refer to <a href="https://twitter.com/trezor">our Twitter</a> for newest updates.<br />For more information read <a href="https://blog.trezor.io/claim-bcash-bitcoin-cash-bch-bcc-trezor-wallet-f0a810d5864a">article on Medium</a>.</p>
+                    {% endblocktrans %}
+                </span>
+            </div>
+        </template>
+        <template id="96" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "Why has my order On Hold status?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>This status means that there is some problem regarding your order like <em>incomplete or non exist address</em>. In these situations, the customer is always contacted
+                   on the email provided when creating the order in our <a title="e-shop" href="https://shop.trezor.io/">e-shop</a> to resolve any discrepancies. It may be also related to the customer request
+                   to cancel or change the order, so it is not accidentally shipped before the proper update.</p>
                     {% endblocktrans %}
                 </span>
             </div>
