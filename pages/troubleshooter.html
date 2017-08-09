@@ -33,7 +33,7 @@
                     <li>2</li>
                     <li>17</li>
                     <li>57</li>
-                    <li>95</li>
+                    <li>97</li>
                 </ul>
             </div>
         </template>
@@ -765,7 +765,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     <p>{% trans "List of the Frequently asked questions." %}</p>
                 </span>
                 <ul class="option-list">
-                    <li>95</li>
+                    <li>97</li>
                     <li>73</li>
                     <li>74</li>
                     <li>26</li>
@@ -976,6 +976,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                            href="myetherwallet.com">MyEtherWallet</a> for ETH/ETC and ERC-20 tokens, as an example).
                    </p>
                     <p>There are no wallet interfaces, which support TREZOR device for Dogecoin and Namecoin at the moment. They are only supported by the firmware.</p>
+                    <p>For more informations, visit our <a href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-coins-are-currently-supported">FAQ page</a> describing supported coins.</p>
                     {% endblocktrans %}
                 </span>
                 <ul class="option-list">
@@ -1302,16 +1303,6 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 </span>
             </div>
         </template>
-        <template id="95" class="entry">
-            <div class="content-wrapper">
-                <h4 class="header">{% trans "Bitcoin Cash" %}</h4>
-                <span class="text">
-                    {% blocktrans %}
-                    <p>Bitcoin cash Wallet and Bitcoin cash claim tool are currently not functional due to our bug fix being deployed. The backend server is now re-indexing. ETA: can take hours.<br /><br />Please refer to <a href="https://twitter.com/trezor">our Twitter</a> for newest updates.<br />For more information read <a href="https://blog.trezor.io/claim-bcash-bitcoin-cash-bch-bcc-trezor-wallet-f0a810d5864a">article on Medium</a>.</p>
-                    {% endblocktrans %}
-                </span>
-            </div>
-        </template>
         <template id="96" class="entry">
             <div class="content-wrapper">
                 <h4 class="header">{% trans "Why has my order On Hold status?" %}</h4>
@@ -1320,6 +1311,21 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     <p>This status means that there is some problem regarding your order like <em>incomplete or non exist address</em>. In these situations, the customer is always contacted
                    on the email provided when creating the order in our <a title="e-shop" href="https://shop.trezor.io/">e-shop</a> to resolve any discrepancies. It may be also related to the customer request
                    to cancel or change the order, so it is not accidentally shipped before the proper update.</p>
+                    {% endblocktrans %}
+                </span>
+            </div>
+        </template>
+        <template id="97" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "Bitcoin Cash" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+                        <a href="https://beta-wallet.trezor.io/">TREZOR Beta Wallet</a> supports Bitcoin Cash (BCH). If you had bitcoins on your TREZOR before August 1, 2017, then you can claim your Bitcoin Cash coins using our <a
+                            href="https://trezor.io/claim-bch/">Bitcoin Cash claim tool</a>.
+                    <br/><br/>
+                        Please, for more information read <a title="claim bitcoin cash" href="https://blog.trezor.io/claim-bcash-bitcoin-cash-bch-bcc-trezor-wallet-f0a810d5864a">our article with details</a>.
+                    </p>
                     {% endblocktrans %}
                 </span>
             </div>
