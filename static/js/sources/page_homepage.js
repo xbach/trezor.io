@@ -160,7 +160,7 @@ $($('.team-section .person .header')[0]).click(function () {
 });
 
 function laundromat() {
-  $('.team-section .person .header').each(function () {
+  $('.team-section .person .header, .team-section .person .header2').each(function () {
     var obj = $(this);
     var time = Math.random() * 2;
     var spin = Math.random() < 0.5;
@@ -173,7 +173,7 @@ function laundromat() {
 }
 
 function laundromatOff() {
-  $('.team-section .person .header').each(function () {
+  $('.team-section .person .header, .team-section .person .header2').each(function () {
     var obj = $(this);
     obj.css('animation', '');
   });
