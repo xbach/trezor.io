@@ -492,7 +492,7 @@ img.business-logo
   background-color: $c_grey_bg
 
   .person
-    .header
+    .header, .header2
       width: 100%
       max-width: 179px
       max-height: 179px
@@ -516,6 +516,8 @@ img.business-logo
         content: ""
         display: block
         padding-bottom: 100%
+
+    .header
 
       &.bach
         background-position: 0 0%
@@ -542,6 +544,35 @@ img.business-logo
       &.peter
         background-position: 0 91.666667%
       &.vojtech
+        background-position: 0 100%
+
+    .header2
+      background: url("/static/images/team_faces/faces2.webp")
+      background-repeat: no-repeat
+      background-size: 100%
+
+      &.no-webp
+        background: url("/static/images/team_faces/faces2.png")
+        background-repeat: no-repeat
+        background-size: 100%
+
+      &.boso
+        background-position: 0 0%
+      &.daria
+        background-position: 0 12.5%
+      &.dorian
+        background-position: 0 25%
+      &.jakub
+        background-position: 0 37.5%
+      &.jan
+        background-position: 0 50%
+      &.mara
+        background-position: 0 62.5%
+      &.misa
+        background-position: 0 75%
+      &.sipak
+        background-position: 0 87.5%
+      &.szymon
         background-position: 0 100%
 
     h4
