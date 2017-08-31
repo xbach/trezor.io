@@ -56,8 +56,6 @@ $(document).ready(function () {
 
     var shadow = document.querySelector("#shadow");
     var entries = shadow.querySelectorAll("template.entry");
-    var h = window.innerHeight;
-    $('#troubleshooter').css('min-height', h - 170 + 'px');
     prepareLinks();
     setId();
 

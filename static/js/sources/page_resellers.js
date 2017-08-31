@@ -9,10 +9,6 @@
 
 $(document).ready(function() {
 
-  var $resellers = $('#resellers'),
-    h = window.innerHeight - 280;
-  // height fixer
-  $resellers.css('min-height', h + 'px');
 
   var fileUrl = 'https://docs.google.com/spreadsheets/d/15gAG4xt0pNeRBZBr8E4q0HBoWgK0u7rvzn6Llb7GegQ/export?format=csv';
 

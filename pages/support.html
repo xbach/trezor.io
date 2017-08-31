@@ -2,6 +2,16 @@
 {% load i18n %}
 {% block body %}
 <div class="jumbotron-help">
+    <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            <source src="{% static '/static/video/MP4/Working-Space.mp4' %}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="{% static '/static/video/WEBM/Working-Space.webm' %}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="{% static '/static/video/snapshots/Working-Space.jpg' %}" alt="">
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-xs-center">
@@ -20,21 +30,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3  col-md-6 large-tile">
-                <a href="{% url '/troubleshooter' %}" class="nav-link">
+                <a href="{% url '/troubleshooter/#1' %}" class="nav-link">
                     <i class="fa fa-life-ring" aria-hidden="true"></i>
-                    Troubleshooter
+                    Technical Issues
                 </a>
             </div>
             <div class="col-lg-3  col-md-6 large-tile">
-                <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
-                    <i class="fa fa-address-book-o" aria-hidden="true"></i>
-                    User Manual
+                <a href="{% url '/troubleshooter/#2' %}" class="nav-link">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    Orders &amp; Shipping
                 </a>
             </div>
             <div class="col-lg-3 col-md-12">
                 <div class="row">
                     <div class="col-xs-12">
-                        <a href="http://doc.satoshilabs.com/trezor-faq/index.html" class="nav-link">
+                        <a href="{% url '/troubleshooter/#57' %}" class="nav-link">
                             <i class="fa fa-question-circle-o" aria-hidden="true"></i>
                             FAQ
                         </a>
@@ -50,15 +60,15 @@
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-xs-12">
-                        <a href="{% url '/troubleshooter/#2' %}" class="nav-link">
-                            <i class="fa fa-truck" aria-hidden="true"></i>
-                            Orders &amp; Shipping
+                        <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                            User Manual
                         </a>
                     </div>
                     <div class="col-xs-12">
                         <a href="https://www.reddit.com/r/TREZOR/top/?sort=top&t=week" class="nav-link">
                             <i class="icon-bubbles4" aria-hidden="true"></i>
-                            Ask the Community
+                            Community Advice
                         </a>
                     </div>
                 </div>
