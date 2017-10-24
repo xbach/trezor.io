@@ -1380,9 +1380,11 @@ Please, for more information read <a title="claim bitcoin cash"
                 <span class="text">
                     {% blocktrans %}
                     <p>
-                        Currently, we are more inclined to “No”, as Bitcoin Gold does not have strong, two-way replay protection implemented. This would be dangerous for your bitcoins, as spending Bitcoin Gold could theoretically spend your bitcoins too. Therefore, there will be no automatic splitting tool, like the one we made for Bitcoin Cash.
+                        TREZOR (the device) supports Bitcoin Gold. As previously mentioned, at the moment of the fork, if you have bitcoins on your TREZOR, you will also receive bitcoin gold on your TREZOR (both new and legacy accounts are supported in bitcoin gold). If you simply wish to hold BTC and BTG, there is no further action required from you.
                     <br/><br/>
-                        If replay protection is implemented, then we will reconsider. But developing support for a new coin takes time, as does the testing process for a new firmware. So, if Bitcoin Gold forks in less than a week, it is likely that we will not have support on Day 1.
+                        However, as Bitcoin Gold currently lacks replay protection, TREZOR Wallet will not support Bitcoin Gold yet, as it would endanger your bitcoins. Once the Bitcoin Gold team implements replay protection, and the blockchain will be stable and viable, we will start our work to implement support in TREZOR Wallet.
+                    <br/><br/>
+                        More information <a href="https://blog.trezor.io/trezor-statement-on-bitcoin-gold-fork-78cebc0532c7">available on our blog</a>.
                     </p>
                     {% endblocktrans %}
                 </span>
