@@ -4,6 +4,13 @@
 <section class="resellers" id="resellers">
     <div class="container">
         <h1>Resellers</h1>
+
+      <div class="search_form">
+        <form action="trezor.io/resellers/resellers_earch.html" type="get" class="input-wrapper">
+          <input type="search" name="company_search" placeholder="search for companies" id="search">
+        </form>
+      </div>
+
         <hr>
         <div id="content">
             <div class="loader-wrapper">
@@ -11,13 +18,27 @@
             </div>
         </div>
     </div>
+
+
+
+
     <div class="tpl-ghost">
+
         <article id="area">
-            <div class="reseller-card">
+
+            <div class="resellers-card">
+              <div class="placeholder_img">
+                 <img class='backup_picture' src='../static/images/logo.png' alt='image not found' onerror="this.src='../static/images/logo.png'"/>
+
+              </div>
+              <div class="placeholder_text">
                 <div class="name"></div>
-                <div class="address"></div>
-                <div class="phone"></div>
-                <div class="email"></div>
+                  <div class="street"></div>
+                  <div class="street2"></div>
+                  <div class="city"></div>
+                  <div class="country"></div>
+                  <a href="" class="get_contact">get contact</a>
+              </div>
             </div>
         </article>
     </div>
