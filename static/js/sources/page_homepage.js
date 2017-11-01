@@ -110,7 +110,7 @@ $(document).ready(function () {
     win = $('html'),
     $jumbo = $('#jumbotron'),
     $header = $('#header'),
-    h = window.innerHeight;
+    h = window.innerHeight + 260;
 
   // reorder platform icons
   if (navigator.appVersion.indexOf("Win") != -1) OSName = "win";

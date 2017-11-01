@@ -2,20 +2,25 @@
 {% load i18n %}
 {% block body %}
 <header id="header">
+    <section class="t-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-xs-center">
+                    <h2>Limited pre-order of TREZOR model T.</h2>
+                    <p>Explore the new hardware wallet—the safe place for your coins.</p>
+                    <a class="btn btn-third-outline buy shop-btn" href="https://preorder.trezor.io/" role="button"  aria-label="Buy TREZOR for €89">
+                        {% trans "Show me"%}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="jumbotron webp" id="jumbotron">
         <div class="container">
             <div class="top">
                 <div class="width-wrapper">
                     <h1 class="display-4 text-xs-center" id="headline">{% trans "Bitcoin wallet." %}</h1>
                     <p class="lead" id="lead">The original &amp; most secure hardware wallet.</p>
-                    <!--
-                    <div class="lead-ghost" id="lead-ghost">
-                        <p>{% trans "bitcoins." %}</p>
-                        <p>{% trans "passwords." %}</p>
-                        <p>{% trans "accounts." %}</p>
-                        <p>{% trans "emails." %}</p>
-                    </div>
-                    -->
                 </div>
             </div>
             <div class="bottom">
