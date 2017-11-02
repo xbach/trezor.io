@@ -10,9 +10,16 @@
 $(document).ready(function() {
 
 
-  var fileUrl = 'https://docs.google.com/spreadsheets/d/15gAG4xt0pNeRBZBr8E4q0HBoWgK0u7rvzn6Llb7GegQ/export?format=csv';
+  //var fileUrl = 'https://docs.google.com/spreadsheets/d/15gAG4xt0pNeRBZBr8E4q0HBoWgK0u7rvzn6Llb7GegQ/export?format=csv';
 
+//var fileUrl = 'https://docs.google.com/spreadsheets/d/1U1tuTCMsiVZh0E0MreUsrCwnR6IukK-E9-yvKKhhI-U/export?format=csv';
+  var fileUrl = 'https://docs.google.com/spreadsheets/d/1fB9JxhTguK-wLJ8qGMBDIUa2I9Fo8byocPiTpuczV80/export?format=csv';
+  var default_image = 'https://www.google.cz/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiIgPmc4OPWAhXL1RoKHThiAJcQjRwIBw&url=http%3A%2F%2Fwww.clipartpanda.com%2Fcategories%2Fcircle-clip-art-black-white&psig=AOvVaw0pTyAdz279esr4G_aisZoa&ust=1507645749715983';
   $("#content").empty();
+  function handleImageError() {
+        
+  }
+
   Papa.parse(fileUrl, {
     header: true,
     download: true,
@@ -23,15 +30,25 @@ $(document).ready(function() {
     step: function(row) {
       var element = $("#area").clone();
       console.warn(row.data[0]);
-      $(element).find(".name").text(row.data[0].first_name + ' ' + row.data[0].last_name);
-      $(element).find(".address").text(row.data[0].street + ' ' + row.data[0].city);
+      $(element).find(".backup_picture").attr('src',row.data[0].photo_url);
+
+      $(element).find(".name").text(row.data[0].name);
+      $(element).find(".street").text(row.data[0].street);
+      $(element).find(".street2").text(row.data[0].street2);
+      $(element).find(".city").text(row.data[0].zip + ' ' + row.data[0].city);
+      $(element).find(".country").text(row.data[0].country);
+
       $(element).find(".phone").text(row.data[0].phone);
       $(element).find(".email").text(row.data[0].email);
       $("#content").append($(element).html());
     },
+
+
+
     complete: function() {
       console.log("All done!");
     }
   });
+
 
 });
