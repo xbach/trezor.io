@@ -10,7 +10,7 @@
 $(document).ready(function() {
 
   var fileUrl = 'https://docs.google.com/spreadsheets/d/1fB9JxhTguK-wLJ8qGMBDIUa2I9Fo8byocPiTpuczV80/export?format=csv';
-
+  var records = [];
   $("#content").empty();
   Papa.parse(fileUrl, {
     header: true,
@@ -20,15 +20,25 @@ $(document).ready(function() {
     },
     step: function(row) {
       var element = $("#area").clone();
+      records.push(row.data[0]);
       $(element).find(".picture").attr('src',row.data[0].photo_url);
       $(element).find(".name").text(row.data[0].name);
       $(element).find(".country").text(row.data[0].country);
+      $(element).find(".name").attr('data-id', records.length - 1);
       $("#content").append($(element).html());
     },
     complete: function() {
-      console.log("All done!");
+      console.log("All done!", records);
     }
   });
+
+  $('#myModal').on('show.bs.modal', function (e) {
+    var id = $(e.relatedTarget).find(".name").attr('data-id');
+    var rec = records[id];
+    $('#myModal').find('.title').text(rec.name)
+    $('#myModal').find(".picture").attr('src',rec.photo_url);
+  });
+
 
   $('#search').keyup(function(){
     var valThis = $(this).val().toLowerCase();

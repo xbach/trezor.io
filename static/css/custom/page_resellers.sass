@@ -51,8 +51,18 @@
       border: 0
       text-align: left
 
+  .modal
+    .picture
+      max-width: 40px
+      max-height: 40px
+
+    h5.modal-title > span.title
+      font-weight: bold
+
   &-card
     margin: 10px
+    min-width: 260px
+    width: 31%
     background: $c_white
     float: left
     align-content: center
@@ -77,17 +87,19 @@
         max-width: 48px
 
     .placeholder-text
-      margin: 15px 0 15px 10px
+      max-width: 70%
+      margin: 15px 0 20px 10px
       display: inline-block
-      width: 225px
       text-overflow: ellipsis
 
-    .name
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
-      font-size: 1.1em
+      .name
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        font-size: 1.1em
 
-    .country
-      color: $c_grey_font
-      font-weight: lighter
+      .country
+        font-size: 90%
+        margin-top: -3px
+        color: $c_grey_font
+        font-weight: lighter

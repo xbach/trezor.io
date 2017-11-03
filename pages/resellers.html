@@ -22,10 +22,10 @@
 
     <div class="tpl-ghost">
         <article id="area">
-            <div class="resellers-card">
+            <div class="resellers-card" data-toggle="modal" data-target="#myModal">
                 <div class="img-wrapper">
                     <img class="picture" src="../static/images/logo.png" alt="image not found"
-                         onerror="this.src='../static/images/logo.png'"/>
+                         onerror="this.src='../static/images/reseller.png'"/>
                 </div>
                 <div class="placeholder-text">
                     <div class="name"></div>
@@ -33,6 +33,29 @@
                 </div>
             </div>
         </article>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><img class="picture" src="../static/images/logo.png" alt="image not found"
+                                                                         onerror="this.src='../static/images/reseller.png'"/> <span class="title">Modal title</span></h5>
+                </div>
+                <div class="modal-body">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-full" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock body %}
