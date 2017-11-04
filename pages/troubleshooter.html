@@ -780,6 +780,8 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     <p>{% trans "List of the Frequently asked questions." %}</p>
                 </span>
                 <ul class="option-list">
+                    <li>101</li>
+                    <li>100</li>
                     <li>99</li>
                     <li>97</li>
                     <li>73</li>
@@ -1348,9 +1350,9 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     {% blocktrans %}
                     <p>
                         TREZOR Wallet supports Bitcoin Cash (BCH). If you had bitcoins on your TREZOR before August 1, 2017, then you can claim your Bitcoin Cash coins using our Bitcoin Cash claim tool.
-<br /><br />
+<br/><br/>
 There is no limit for the claiming, you can do it anytime you want.
-<br /><br />
+<br/><br/>
 Please, for more information read <a title="claim bitcoin cash"
                                      href="https://blog.trezor.io/claim-bcash-bitcoin-cash-bch-bcc-trezor-wallet-f0a810d5864a">our article with details</a>.
                     </p>
@@ -1380,11 +1382,63 @@ Please, for more information read <a title="claim bitcoin cash"
                 <span class="text">
                     {% blocktrans %}
                     <p>
-                        TREZOR (the device) supports Bitcoin Gold. As previously mentioned, at the moment of the fork, if you have bitcoins on your TREZOR, you will also receive bitcoin gold on your TREZOR (both new and legacy accounts are supported in bitcoin gold). If you simply wish to hold BTC and BTG, there is no further action required from you.
+                        TREZOR (the device) supports Bitcoin Gold. As previously mentioned, at the moment of the fork, if you have bitcoins on your TREZOR, you will also have a possibility to claim bitcoin gold on your TREZOR (both new and legacy accounts are supported in bitcoin gold) once the bitcoin gold network is active. If you simply wish to hold BTC and BTG, there is no further action required from you.
                     <br/><br/>
-                        However, as Bitcoin Gold currently lacks replay protection, TREZOR Wallet will not support Bitcoin Gold yet, as it would endanger your bitcoins. Once the Bitcoin Gold team implements replay protection, and the blockchain will be stable and viable, we will start our work to implement support in TREZOR Wallet.
+                        However, as Bitcoin Gold currently lacks stable network, TREZOR Wallet will not support Bitcoin Gold yet, as it would endanger your bitcoins. Once the Bitcoin Gold team implements the necessary aspects, and the blockchain will be stable and viable, we will reconsider to implement support in TREZOR Wallet.
                     <br/><br/>
-                        More information <a href="https://blog.trezor.io/trezor-statement-on-bitcoin-gold-fork-78cebc0532c7">available on our blog</a>.
+                        More information <a
+                            href="https://blog.trezor.io/trezor-statement-on-bitcoin-gold-fork-78cebc0532c7">available on our blog</a>.
+                    </p>
+                    {% endblocktrans %}
+                </span>
+            </div>
+        </template>
+        <template id="100" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "Will you support SegWit 2x fork?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+                        We are still evaluating SegWit2x support. After the last hard fork, we won't promise anything before knowing fully what we are dealing with, but we are also working on a manual way to split the coins.
+                    <br/><br/>
+                        We will release an official statement in a timely manner.
+                    </p>
+                    {% endblocktrans %}
+                </span>
+            </div>
+        </template>
+        <template id="101" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "New TREZOR model T comparison" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>What are the differences between original TREZOR One and new TREZOR T?</p>
+                    <br/><br/>
+                    <p>
+                        <strong>Hardware</strong>
+                    </p>
+                        <ul>
+                            <li>Big touchscreen with vibrant colors (no need for physical buttons, safer recovery and entering PIN/Passphrase directly on the screen.)</li>
+                            <li>Slot for microSD card (it will be possible to encrypt data stored on it)</li>
+                            <li>USB-C connector</li>
+                            <li>Faster CPU</li>
+                            <li>More info, including <a
+                                    href="https://blog.trezor.io/pre-order-your-new-trezor-model-t-cf2a3426cf03">technical specification</a>.</li>
+                            <li>Windows users, please check Device Manager if TREZOR is not recognized repeatedly.</li>
+                        </ul>
+                    <br/><br/>
+                    <p>
+                        <strong>Sofware</strong>
+                    </p>
+                    <ul>
+                        <li>TREZOR T runs on entirely new firmware called TREZOR Core. It will allow much faster development for new features, some of which will be portable back to TREZOR One.</li>
+                        <li>New software stack means easier integration for new coins (more supported cryptocurrencies).</li>
+                    </ul>
+                    <br/><br/>
+                    <p>
+                    <strong>What happens to TREZOR One in the future?</strong>
+                    <br/>
+                    We will keep selling TREZOR One even when TREZOR T is out. Those two models are focusing different market segment and should not be a competition for each other. We will keep supporting TREZOR One, including security updates.
                     </p>
                     {% endblocktrans %}
                 </span>
