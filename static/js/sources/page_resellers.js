@@ -8,8 +8,8 @@
 
 
 $(document).ready(function() {
-
-  var fileUrl = 'https://docs.google.com/spreadsheets/d/1fB9JxhTguK-wLJ8qGMBDIUa2I9Fo8byocPiTpuczV80/export?format=csv';
+  var fileUrl = 'https://docs.google.com/spreadsheets/d/1AmFRx_CchdkQ0tbpvPE6Qa65ZjA0r_e0sPF7NoBFRlw/export?format=csv';
+  var imgPhoto = 'https://logo.clearbit.com/';
   var records = [];
   $("#content").empty();
   Papa.parse(fileUrl, {
@@ -20,31 +20,109 @@ $(document).ready(function() {
     },
     step: function(row) {
       var element = $("#area").clone();
-      records.push(row.data[0]);
-      $(element).find(".picture").attr('src',row.data[0].photo_url);
-      $(element).find(".name").text(row.data[0].name);
-      $(element).find(".country").text(row.data[0].country);
+      var data = row.data[0];
+      var name = data.name || '';
+      var imgLink = data.web1 || '';
+      data.image = imgPhoto + imgLink + '?s=128';
+      var country = data.country || '';
+      records.push(data);
+      $(element).find(".picture").attr('src',data.image);
+      $(element).find(".name").text(name);
+      $(element).find(".country").text(country);
       $(element).find(".name").attr('data-id', records.length - 1);
       $("#content").append($(element).html());
     },
     complete: function() {
-      console.log("All done!", records);
+      console.log("All done!");
     }
   });
 
   $('#myModal').on('show.bs.modal', function (e) {
     var id = $(e.relatedTarget).find(".name").attr('data-id');
     var rec = records[id];
-    $('#myModal').find('.title').text(rec.name)
-    $('#myModal').find(".picture").attr('src',rec.photo_url);
+
+    $('#myModal').find('.title').text(rec.name);
+    $('#myModal').find(".picture").attr('src',rec.image);
+
+    // web addresses
+    if(typeof rec.web1 !== "undefined" && !!rec.web1.length) {
+      $('.web1').html("<a href=" + rec.web1 + ">" + rec.web1 + "</a>");
+      $('#webs').show();
+      $('#web1-box').show();
+      if(typeof rec.web2 !== "undefined" && !!rec.web2.length) {
+        $('.web2').html("<a href=" + rec.web2 + ">" + rec.web2 + "</a>");
+        $('#web2-box').show();
+        if(typeof rec.web3 !== "undefined" && !!rec.web3.length) {
+          $('.web3').html("<a href=" + rec.web3 + ">" + rec.web3 + "</a>");
+          $('#web3-box').show();
+        }else {
+          $('#web3-box').hide();
+        }
+      }else {
+        $('#web2-box').hide();
+        $('#web3-box').hide();
+      }
+    } else {
+      $('#webs').hide();
+    }
+
+    // email
+    if(typeof rec.email !== "undefined" && !!rec.email.length) {
+      $('.email').text(rec.email);
+      $('#email-box').show();
+    } else {
+      $('#email-box').hide();
+    }
+
+    // phone
+    if(typeof rec.phone !== "undefined" && !!rec.phone.length) {
+      $('.phone').text(rec.phone);
+      $('#phone-box').show();
+    } else {
+      $('#phone-box').hide();
+    }
+
+    // address
+    var address = '';
+    if(typeof rec.street !== "undefined" && !!rec.street.length) {
+      address += rec.street;
+    }
+    if(typeof rec.street2 !== "undefined" && !!rec.street2.length) {
+      address += ' ' + rec.street2;
+    }
+    if(typeof rec.zip !== "undefined" && !!rec.zip.length) {
+      address += ' ' + rec.zip;
+    }
+    if(typeof rec.city !== "undefined" && !!rec.city.length) {
+      address += ' ' + rec.city;
+    }
+    if(typeof rec.country !== "undefined" && !!rec.country.length) {
+      address += ' ' + rec.country;
+    }
+    $('.address').text(address);
+
+    // shop
+    if(typeof rec.shop !== "undefined" && !!rec.shop.length) {
+      $('.shop').text(rec.shop);
+      $('#shop-box').show();
+    } else {
+      $('#shop-box').hide();
+    }
+
+
   });
 
 
   $('#search').keyup(function(){
     var valThis = $(this).val().toLowerCase();
     $('#content>div.resellers-card').each(function(){
-      var name = $(this).find(".name").text().toLowerCase();
-      (name.indexOf(valThis) === 0) ? $(this).show() : $(this).hide();
+      if (!!valThis.length) {
+        var name = $(this).find(".name").text().toLowerCase();
+        var country = $(this).find(".country").text().toLowerCase();
+        (country.indexOf(valThis) === 0) || (name.indexOf(valThis) === 0) ? $(this).show() : $(this).hide();
+      } else {
+        $(this).show()
+      }
     });
   });
 });

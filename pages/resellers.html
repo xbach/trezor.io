@@ -35,18 +35,30 @@
         </article>
     </div>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><img class="picture" src="../static/images/logo.png" alt="image not found"
-                                                                         onerror="this.src='../static/images/reseller.png'"/> <span class="title">Modal title</span></h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><img class="picture" src="../static/images/logo.png"
+                                                                        alt="image not found"
+                                                                        onerror="this.src='../static/images/reseller.png'"/>
+                        <span class="title">Modal title</span></h5>
                 </div>
                 <div class="modal-body">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div id="webs">
+                        <div class="box" id="web1-box "><strong>Web:</strong> <span class="web1"></span></div>
+                        <div class="box" id="web2-box"><strong>Web:</strong> <span class="web2"></span></div>
+                        <div class="box" id="web3-box"><strong>Web:</strong> <span class="web3"></span></div>
+                    </div>
+                    <div class="box" id="email-box"><strong>Email:</strong> <span class="email"></span></div>
+                    <div class="box" id="phone-box"><strong>Phone:</strong> <span class="phone"></span></div>
+                    <div class="box" id="address-box"><br><strong>Address:</strong>
+                        <div class="address"></div>
+                    </div>
+                    <div class="box" id="shop-box"><br><strong>Shop address:</strong>
+                        <div class="shop"></div>
+                    </div>
                     <div></div>
 
 
@@ -56,6 +68,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <small class="attribution">Logos provided by Clearbit.</small>
     </div>
 </section>
 {% endblock body %}
