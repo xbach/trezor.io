@@ -37,6 +37,10 @@ $(document).ready(function() {
     }
   });
 
+  $('#js-search').on("keypress", function(event) {
+    return event.keyCode != 13;
+  });
+
   $('#myModal').on('show.bs.modal', function (e) {
     var id = $(e.relatedTarget).find(".name").attr('data-id');
     var rec = records[id];
