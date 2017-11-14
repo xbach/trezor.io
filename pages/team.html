@@ -1,245 +1,242 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block body %}
-<header id="header">
-        <section class="team-section">
-            <div class="container">
-                <div class="row heading">
-                    <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Meet our team" %}</h2>
-                        {% blocktrans %}
-                        <p>Our team features some of the most recognized Bitcoin and security experts, a dedicated support team, as well as the most qualified Jack Russell in the world.</p>
-                        {% endblocktrans %}
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person text-xs-center">
-                        <div class="header pepitka webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Pepita</h4>
-                                <p class="title">{% trans "Door Supervisor" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header marek webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Marek "Slush" Palatinus</h4>
-                                <p class="title">{% trans "Architect" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header pavol webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Pavol "Stick" Rusnak</h4>
-                                <p class="title">{% trans "Alchemist" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header peter webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Peter "Buly" Bulak</h4>
-                                <p class="title">{% trans "Catalyst" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header jochen webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jochen Hoenicke</h4>
-                                <p class="title">{% trans "Hacker" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header peca webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jan Pecinovsky</h4>
-                                <p class="title">{% trans "Sales" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header kata webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Katerina Nemeckova</h4>
-                                <p class="title">{% trans "Office" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header honza webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jan Pochyla</h4>
-                                <p class="title">{% trans "Developer" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header karel webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Karel Bilek</h4>
-                                <p class="title">{% trans "Cypherfunker" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header jensen webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Peter Jensen</h4>
-                                <p class="title">{% trans "Developer" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header vojtech webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Vojtech Cerny</h4>
-                                <p class="title">{% trans "Marketing" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header ben webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Karel Bencic</h4>
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header bach webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Bach Nguyen</h4>
-                                <p class="title">{% trans "Marketing" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 boso webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Tomas Bosansky</h4>
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 daria webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Daria Roik</h4>
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 dorian webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Dorian Podulka</h4>
-                                <p class="title">{% trans "Developer" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 jakub webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jakub Seidl</h4>
-                                <p class="title">{% trans "Office" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 jan webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jan Kovarik</h4>
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 mara webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Marek Blahuta</h4>
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 misa webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Michaela Hertusova</h4>
-                                <p class="title">{% trans "Sales" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 sipak webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Martin Sip</h4>
-                                <p class="title">{% trans "Evangelist" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header2 szymon webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Szymon Lesisz</h4>
-                                <p class="title">{% trans "Developer" %}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+<section class="team-section">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-lg-12  text-xs-center">
+                <h2>{% trans "Meet our team" %}</h2>
+                {% blocktrans %}
+                <p>Our team features some of the most recognized Bitcoin and security experts, a dedicated support team,
+                    as well as the most qualified Jack Russell in the world.</p>
+                {% endblocktrans %}
             </div>
-        </section>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person text-xs-center">
+                <div class="header pepitka webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Pepita</h4>
+                        <p class="title">{% trans "Door Supervisor" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header marek webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Marek "Slush" Palatinus</h4>
+                        <p class="title">{% trans "Architect" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header pavol webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Pavol "Stick" Rusnak</h4>
+                        <p class="title">{% trans "Alchemist" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header peter webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Peter "Buly" Bulak</h4>
+                        <p class="title">{% trans "Catalyst" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header jochen webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Jochen Hoenicke</h4>
+                        <p class="title">{% trans "Hacker" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header peca webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Jan Pecinovsky</h4>
+                        <p class="title">{% trans "Sales" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header kata webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Katerina Nemeckova</h4>
+                        <p class="title">{% trans "Office" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header honza webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Jan Pochyla</h4>
+                        <p class="title">{% trans "Developer" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header karel webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Karel Bilek</h4>
+                        <p class="title">{% trans "Cypherfunker" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header jensen webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Peter Jensen</h4>
+                        <p class="title">{% trans "Developer" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header vojtech webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Vojtech Cerny</h4>
+                        <p class="title">{% trans "Marketing" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header ben webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Karel Bencic</h4>
+                        <p class="title">{% trans "Support" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header bach webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Bach Nguyen</h4>
+                        <p class="title">{% trans "Marketing" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 boso webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Tomas Bosansky</h4>
+                        <p class="title">{% trans "Support" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 daria webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Daria Roik</h4>
+                        <p class="title">{% trans "Support" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 dorian webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Dorian Podulka</h4>
+                        <p class="title">{% trans "Developer" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 jakub webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Jakub Seidl</h4>
+                        <p class="title">{% trans "Office" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 jan webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Jan Kovarik</h4>
+                        <p class="title">{% trans "Support" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 mara webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Marek Blahuta</h4>
+                        <p class="title">{% trans "Support" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 misa webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Michaela Hertusova</h4>
+                        <p class="title">{% trans "Sales" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 sipak webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Martin Sip</h4>
+                        <p class="title">{% trans "Evangelist" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
+                <div class="header2 szymon webp"></div>
+                <div class="content">
+                    <div class="description">
+                        <h4>Szymon Lesisz</h4>
+                        <p class="title">{% trans "Developer" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</main>
+</section>
 {% endblock %}
 
 {% block scripts %}
