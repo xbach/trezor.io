@@ -1,20 +1,43 @@
 .t-banner
   background: $c_brownish_black
-  position: relative
+  position: absolute
   display: block
   width: 100%
   height: 260px
   z-index: 3
+  overflow: hidden
 
   h2
     color: $c_white !important
+
+    @media screen and (max-width: $md)
+    font-size: 28px
     @media screen and (max-width: $sm)
-      font-size: 20px
-      
+      font-size: 16px
+
   p
-    color: $c_white !important
+    color: $c_grey !important
+
+  img.trezor-t
+    max-width: 246px
+    width: 100%
+    max-height: 100%
+
+    @media only screen and (min-width: $sm)
+      width: 130%
+      margin: -30px 0 0 -30px
+    @media only screen and (min-width: $md)
+      width: 100%
+      margin: -30px 0 0 -30px
+    @media only screen and (min-width: $lg)
+      width: 80%
+      margin: -30px 0 0 -30px
 
 
+.whitespace
+  width: 100%
+  height: 260px
+  display: block
 /* SUB NAVIGATION */
 
 .sub-nav
@@ -197,9 +220,10 @@
         margin: 0
 
   img.hand
-    max-width: 800px
-    width: 100%
-    max-height: 100%
+      max-width: 800px
+      width: 100%
+      max-height: 100%
+
     @media only screen and (min-width: $sm)
       width: 140%
       margin: 60px 0 -40px -160px
@@ -505,16 +529,14 @@ img.business-logo
   p
     color: $c_grey_bg
 
-/* TEAM SECTION */
+/* CEO SECTION */
 
-.team-section
-  background-color: $c_grey_bg
-
-  .person
-    .header, .header2
+.ceo-section
+  .ceos
+    .header
       width: 100%
-      max-width: 179px
-      max-height: 179px
+      max-width: 280px
+      max-height: 280px
       display: block
       overflow: hidden
       position: relative
@@ -522,84 +544,27 @@ img.business-logo
       margin-bottom: 8px
       margin-top: 20px
       +border-radius(50%)
-      background: url("/static/images/team_faces/faces.webp")
-      background-repeat: no-repeat
-      background-size: 100%
-
-      &.no-webp
-        background: url("/static/images/team_faces/faces.png")
-        background-repeat: no-repeat
-        background-size: 100%
 
       &:after
         content: ""
         display: block
         padding-bottom: 100%
 
-    .header
-
-      &.bach
-        background-position: 0 0%
-      &.ben
-        background-position: 0 8.333333%
-      &.honza
-        background-position: 0 16.666667%
-      &.jensen
-        background-position: 0 25%
-      &.jochen
-        background-position: 0 33.334%
-      &.karel
-        background-position: 0 41.666667%
-      &.kata
-        background-position: 0 50%
-      &.marek
-        background-position: 0 58.334%
-      &.pavol
-        background-position: 0 66.666667%
-      &.peca
-        background-position: 0 75%
-      &.pepitka
-        background-position: 0 83.334%
-      &.peter
-        background-position: 0 91.666667%
-      &.vojtech
-        background-position: 0 100%
-
-    .header2
-      background: url("/static/images/team_faces/faces2.webp")
+    .stick
+      background: url("/static/images/team_faces/stick.png")
       background-repeat: no-repeat
       background-size: 100%
 
-      &.no-webp
-        background: url("/static/images/team_faces/faces2.png")
-        background-repeat: no-repeat
-        background-size: 100%
+    .slush
+      background: url("/static/images/team_faces/slush.png")
+      background-repeat: no-repeat
+      background-size: 100%
 
-      &.boso
-        background-position: 0 0%
-      &.daria
-        background-position: 0 12.5%
-      &.dorian
-        background-position: 0 25%
-      &.jakub
-        background-position: 0 37.5%
-      &.jan
-        background-position: 0 50%
-      &.mara
-        background-position: 0 62.5%
-      &.misa
-        background-position: 0 75%
-      &.sipak
-        background-position: 0 87.5%
-      &.szymon
-        background-position: 0 100%
-
-    h4
-      padding: 0
-      margin: 0
-      font-size: 1em
+    h3
+      font-size: 1.3em
+      padding-top: 25px
 
     .title
-      line-height: 1.2em
       font-weight: bold
+      margin-top: -15px
       color: $c_grey
