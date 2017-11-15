@@ -110,7 +110,7 @@ $(document).ready(function () {
     win = $('html'),
     $jumbo = $('#jumbotron'),
     $header = $('#header'),
-    h = window.innerHeight;
+    h = window.innerHeight + 260;
 
   // reorder platform icons
   if (navigator.appVersion.indexOf("Win") != -1) OSName = "win";
@@ -146,36 +146,3 @@ $(document).ready(function () {
   });
 
 });
-
-var pepitacounter = 0;
-$($('.team-section .person .header')[0]).click(function () {
-  pepitacounter++;
-  if (pepitacounter === 5) {
-    laundromat();
-  }
-  if (pepitacounter === 6) {
-    laundromatOff();
-    pepitacounter = 0;
-  }
-});
-
-function laundromat() {
-  $('.team-section .person .header').each(function () {
-    var obj = $(this);
-    var time = Math.random() * 2;
-    var spin = Math.random() < 0.5;
-    if (spin) {
-      obj.css('animation', 'laundromat-right ' + time + 's linear infinite');
-    } else {
-      obj.css('animation', 'laundromat-left ' + time + 's linear infinite');
-    }
-  });
-}
-
-function laundromatOff() {
-  $('.team-section .person .header').each(function () {
-    var obj = $(this);
-    obj.css('animation', '');
-  });
-}
-

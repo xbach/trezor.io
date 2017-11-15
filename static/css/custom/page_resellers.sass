@@ -1,0 +1,109 @@
+.tpl-area,
+.tpl-area *
+  display: none !important
+
+.resellers
+  min-height: 100%
+  padding-bottom: 0
+
+  .tpl-ghost
+    display: none
+
+  h1
+    display: inline-block
+    width: auto
+    height: auto
+    margin-top: 0
+
+
+  .search-form
+    display: inline-block
+    height: auto
+    margin-top: 0
+    float: right
+    background-color: $c_grey
+
+  .input-wrapper
+    position: relative
+    display: inline-block
+    background-color: $c_white
+    border: 1px solid $c_white
+    min-width: 100%
+    z-index: 3
+    +border-radius(4px)
+
+    @media only screen and (max-width: $sm)
+      min-width: 100%
+
+    &:before
+      font-family: 'FontAwesome'
+      color: $c_grey
+      position: absolute
+      left: 10px
+      top: 12px
+      z-index: 1
+      content: "\f002"
+
+    input
+      width: 100%
+      height: 40px
+      padding-left: 35px
+      padding-top: 10px
+      border: 0
+      text-align: left
+
+  .modal
+    .picture
+      max-width: 40px
+      max-height: 40px
+
+    h5.modal-title > span.title
+      font-weight: bold
+
+    #webs > .box
+      word-break: break-all
+
+  &-card
+    margin: 10px
+    min-width: 260px
+    width: 31%
+    background: $c_white
+    float: left
+    align-content: center
+    padding: 5px 5px 0 10px
+    cursor: pointer
+    +transition(all 0.15s ease 0s)
+    +border-radius(4px)
+
+    &:hover
+      +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
+
+    .img-wrapper
+      display: inline-block
+      height: 48px
+      width: 48px
+      vertical-align: top
+      margin-left: 10px
+      margin-top: 15px
+
+      .picture
+        max-height: 48px
+        max-width: 48px
+
+    .placeholder-text
+      max-width: 70%
+      margin: 15px 0 20px 10px
+      display: inline-block
+      text-overflow: ellipsis
+
+      .name
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        font-size: 1.1em
+
+      .country
+        font-size: 90%
+        margin-top: -3px
+        color: $c_grey_font
+        font-weight: lighter

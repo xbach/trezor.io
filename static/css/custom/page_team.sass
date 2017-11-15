@@ -1,0 +1,105 @@
+
+/* TEAM SECTION */
+.team-section
+  background-color: $c_grey_bg
+
+  .person
+    .header, .header2
+      width: 100%
+      max-width: 179px
+      max-height: 179px
+      display: block
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      margin-top: 20px
+      +border-radius(50%)
+
+      &.no-webp
+
+        background-repeat: no-repeat
+        background-size: 100%
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+
+    .header
+
+      background: url("/static/images/team_faces/faces.webp")
+      background-repeat: no-repeat
+      background-size: 100%
+
+      &.no-webp
+        background: url("/static/images/team_faces/faces.png")
+        background-repeat: no-repeat
+        background-size: 100%
+
+      &.bach
+        background-position: 0 0%
+      &.ben
+        background-position: 0 8.333333%
+      &.honza
+        background-position: 0 16.666667%
+      &.jensen
+        background-position: 0 25%
+      &.jochen
+        background-position: 0 33.334%
+      &.karel
+        background-position: 0 41.666667%
+      &.kata
+        background-position: 0 50%
+      &.marek
+        background-position: 0 58.334%
+      &.pavol
+        background-position: 0 66.666667%
+      &.peca
+        background-position: 0 75%
+      &.pepitka
+        background-position: 0 83.334%
+      &.peter
+        background-position: 0 91.666667%
+      &.vojtech
+        background-position: 0 100%
+
+    .header2
+      background: url("/static/images/team_faces/faces2.webp")
+      background-repeat: no-repeat
+      background-size: 100%
+
+      &.no-webp
+        background: url("/static/images/team_faces/faces2.png")
+        background-repeat: no-repeat
+        background-size: 100%
+
+      &.boso
+        background-position: 0 0%
+      &.daria
+        background-position: 0 12.5%
+      &.dorian
+        background-position: 0 25%
+      &.jakub
+        background-position: 0 37.5%
+      &.jan
+        background-position: 0 50%
+      &.mara
+        background-position: 0 62.5%
+      &.misa
+        background-position: 0 75%
+      &.sipak
+        background-position: 0 87.5%
+      &.szymon
+        background-position: 0 100%
+
+    h4
+      font-size: 1em
+      margin: 0
+      padding: 0
+
+    .title
+      font-size: 1.2em
+      font-weight: bold
+      color: $c_grey

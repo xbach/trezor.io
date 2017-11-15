@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<section class="resellers" id="resellers">
+    <div class="container">
+        <h1>Resellers</h1>
+
+        <div class="search_form">
+            <form action="trezor.io/resellers/resellers_earch.html" type="get" class="input-wrapper" id="js-search">
+                <input type="search" name="company_search" placeholder="Quick filter" id="search">
+            </form>
+        </div>
+
+        <hr>
+        <div id="content" class="row">
+            <div class="loader-wrapper">
+                <div class="loader" id="loader">{% trans "Loading..." %}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tpl-ghost">
+        <article id="area">
+            <div class="resellers-card" data-toggle="modal" data-target="#myModal">
+                <div class="img-wrapper">
+                    <img class="picture" src="../static/images/logo.png" alt="image not found"
+                         onerror="this.src='../static/images/reseller.png'"/>
+                </div>
+                <div class="placeholder-text">
+                    <div class="name"></div>
+                    <div class="country"></div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><img class="picture" src="../static/images/logo.png"
+                                                                        alt="image not found"
+                                                                        onerror="this.src='../static/images/reseller.png'"/>
+                        <span class="title">Modal title</span></h5>
+                </div>
+                <div class="modal-body">
+                    <div id="webs">
+                        <div class="box" id="web1-box "><strong>Web:</strong> <span class="web1"></span></div>
+                        <div class="box" id="web2-box"><strong>Web:</strong> <span class="web2"></span></div>
+                        <div class="box" id="web3-box"><strong>Web:</strong> <span class="web3"></span></div>
+                    </div>
+                    <div class="box" id="email-box"><strong>Email:</strong> <span class="email"></span></div>
+                    <div class="box" id="phone-box"><strong>Phone:</strong> <span class="phone"></span></div>
+                    <div class="box" id="address-box"><br><strong>Address:</strong>
+                        <div class="address"></div>
+                    </div>
+                    <div class="box" id="shop-box"><br><strong>Shop address:</strong>
+                        <div class="shop"></div>
+                    </div>
+                    <div></div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-full" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <small class="attribution">Logos provided by Clearbit.</small>
+    </div>
+</section>
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_resellers.js' %}"></script>
+{% endblock %}

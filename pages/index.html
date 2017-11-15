@@ -2,20 +2,29 @@
 {% load i18n %}
 {% block body %}
 <header id="header">
+    <section class="t-banner">
+        <div class="container">
+          <div class="row heading">
+            <div class="col-md-3 hidden-sm-down">
+              <img class="trezor-t hidden-sm-down" src="/static/images/trezor-t.png" alt="TREZOR T">
+            </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 text-sm-center text-md-left text-xs-center">
+                    <h2>Limited pre-order of TREZOR model T.</h2>
+                    <p>Explore the new hardware wallet — the safe place for your coins.</p>
+                    <a class="btn btn-third-outline buy shop-btn" href="https://preorder.trezor.io/" role="button"  aria-label="Buy TREZOR for €89">
+                        {% trans "Show me"%}
+                   </a>
+               </div>
+          </div>
+        </div>
+    </section>
+    <div class="whitespace"></div>
     <div class="jumbotron webp" id="jumbotron">
         <div class="container">
             <div class="top">
                 <div class="width-wrapper">
                     <h1 class="display-4 text-xs-center" id="headline">{% trans "Bitcoin wallet." %}</h1>
                     <p class="lead" id="lead">The original &amp; most secure hardware wallet.</p>
-                    <!--
-                    <div class="lead-ghost" id="lead-ghost">
-                        <p>{% trans "bitcoins." %}</p>
-                        <p>{% trans "passwords." %}</p>
-                        <p>{% trans "accounts." %}</p>
-                        <p>{% trans "emails." %}</p>
-                    </div>
-                    -->
                 </div>
             </div>
             <div class="bottom">
@@ -39,15 +48,15 @@
                 <a href="./start" class="arrow">{% trans "Start now"%}</a></p>
         </div>
     </div>
+
 </header>
 <div class="sticky hidden-xs-down" id="sticky-nav">
     <div class="container sub-nav">
         <div class="nav-inline nav" id="sub-nav">
             <a class="nav-link" href="{% url '/' %}">
-                <img class="trezor-logo lazy" data-original="{% static '/images/trezor-logo.svg' %}"
-                     data-progressive="{% static '/images/trezor-logo.svg' %}"
+                <img class="trezor-logo lazy" data-original="{% static '/images/trezor-logo.png' %}"
+                     data-progressive="{% static '/images/trezor-logo.png' %}"
                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                     onerror="this.src='{% static '/images/trezor-logo.png' %}'; this.onerror=null;"
                      alt="TREZOR Bitcoin Wallet and security device logo"/>
             </a>
             <a class="nav-link active scrollTo hidden-sm-down" href="#usage">{% trans "Usage" %}</a>
@@ -535,7 +544,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="row spec">
                         <p class="spec-block">
-                            <b>Connection</b><span>MicroUSB to desktop or mobile</span>
+                            <b>Connection</b><span>Micro USB to desktop or mobile</span>
                         </p>
                         <p class="spec-block">
                             <b>Desktop</b><span>Windows, macOS, Linux</span>
@@ -615,155 +624,45 @@
                 </div>
             </div>
         </section>
-        <section class="team-section">
+        <section class="ceo-section">
             <div class="container">
                 <div class="row heading">
                     <div class="col-lg-12  text-xs-center">
-                        <h2>{% trans "Meet our team." %}</h2>
+                        <h2>{% trans "You are in a good company." %}</h2>
                         {% blocktrans %}
-                        <p>Our team features some of the most recognized Bitcoin and security experts, a dedicated
-                            support
-                            team,
-                            as well as the most qualified Jack Russell in the world.</p>
+                        <p>Led by renowned experts of the crypto industry.</p>
                         {% endblocktrans %}
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row ceos">
 
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person text-xs-center">
-                        <div class="header pepitka webp"></div>
+                    <div class="col-md-6 text-xs-center person shuffle">
+                        <div class="header slush lazy"></div>
                         <div class="content">
                             <div class="description">
-                                <h4>Pepita</h4>
-                                <p class="title">{% trans "Door Supervisor" %}</p>
+                                <h3>Marek "Slush" Palatinus</h3>
+                                <p class="title">{% trans "CEO & Founder" %}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header marek webp"></div>
+                    <div class="col-md-6 text-xs-center person shuffle">
+                        <div class="header stick lazy"></div>
                         <div class="content">
                             <div class="description">
-                                <h4>Marek "Slush" Palatinus</h4>
-                                <p class="title">{% trans "Architect" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header pavol webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Pavol "Stick" Rusnak</h4>
-                                <p class="title">{% trans "Alchemist" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header peter webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Peter "Buly" Bulak</h4>
-                                <p class="title">{% trans "Catalyst" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header jochen webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jochen Hoenicke</h4>
-                                <p class="title">{% trans "Hacker" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header peca webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jan Pecinovsky</h4>
-                                <p class="title">{% trans "Operations" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header kata webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Katerina Nemeckova</h4>
-                                <p class="title">{% trans "Office" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header honza webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Jan Pochyla</h4>
-                                <p class="title">{% trans "Developer" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header karel webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Karel Bilek</h4>
-                                <p class="title">{% trans "Cypherfunker" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header jensen webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Peter Jensen</h4>
-                                <p class="title">{% trans "Developer" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header vojtech webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Vojtech Cerny</h4>
-
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header ben webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Karel Bencic</h4>
-                                <p class="title">{% trans "Support" %}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-4 person shuffle text-xs-center">
-                        <div class="header bach webp"></div>
-                        <div class="content">
-                            <div class="description">
-                                <h4>Bach Nguyen</h4>
-                                <p class="title">{% trans "Marketing" %}</p>
+                                <h3>Pavol “Stick” Rusnak</h3>
+                                <p class="title">{% trans "CTO & Founder" %}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row footing">
+                  <div class="col-xs-12 text-xs-center">
+                    <a class="arrow" href="/team/" role="button" aria-label="TREZOR team">Show me all team members</a>
+                  </div>
+                </div>
+              </div>
 
             </div>
         </section>
